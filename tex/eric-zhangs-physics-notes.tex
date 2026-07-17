@@ -142,9 +142,20 @@ where \(d\) is the distance between center of mass and pivot.
 Simple springs operate are governed by only Newton's 2nd Law and Hooke's Law.
 
 \begin{align}
-    F &= ma = m\ddot{x} \\
-    F &= -kx
+    F              &= ma = m\ddot{x} \\
+    F              &= -kx \\
+    m\ddot{x}      &= -kx \\
+    m\ddot{x} + kx &= 0
 \end{align}
+
+Solution forms:
+\begin{itemize}
+    \item \(x(t) = A\cos\left(\omega_0 t\right) + B\sin\left(\omega_0 t\right)\)
+    \item \(x(t) = A\cos\left(\omega_0 t + \phi\right)\)
+    \item \(x(t) = z_0 e^{i \omega_0 t} + z^*_0 e^{i \omega_0 t}\)
+    \item \(\tilde{x}(t) = A e^{i \phi} e^{i \omega_0 t}\),
+          where \(\Re[\tilde{x}(t)] = x(t)\)
+\end{itemize}
 
 \chapter{Electrical Circuits}
 
