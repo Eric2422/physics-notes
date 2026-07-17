@@ -1,0 +1,92 @@
+\documentclass[a4paper, titlepage]{book}
+
+\usepackage{amsmath}
+\numberwithin{equation}{section}
+\usepackage{amssymb}
+\usepackage{csquotes}
+\MakeOuterQuote{"}
+\usepackage[useregional]{datetime2}
+\DTMsetstyle{iso}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks = true,
+    allcolors = blue
+}
+\usepackage{indentfirst}
+\usepackage[skip=5pt, indent=30pt]{parskip}
+\usepackage{pgf}
+\usepackage{physics2}
+\usepackage{siunitx}
+\sisetup{
+    input-digits = 0123456789\pi,
+    inter-unit-product = \cdot,
+}
+
+
+\title{
+    Eric Zhang's Physics Notes \\
+    \large Volume 2: Electricity and Magnetism
+}
+\author{Eric Zhang}
+\date{\today}
+
+
+\begin{document}
+\frontmatter
+\maketitle
+\tableofcontents
+
+
+\mainmatter
+
+\chapter{The Electric Force}
+
+\textbf{Electric charge} is denoted by the symbol \(q\) or sometimes \(Q\),
+and its SI unit is the coulomb (C).
+
+Charge can be either positive or negative,
+with protons carrying a positive charge and electrons carrying a negative charge.
+
+The \textbf{Law of Conservation of Charge} states that charge can not created or destroyed,
+only transferred,
+and the net charge has to remain constant.
+There are two ways to charge and discharge (i.e., move charges):
+\begin{itemize}
+    \item Conduction -- friction (triboelectricity) or contact
+    \item Induction -- contactless
+\end{itemize}
+
+Charged objects exert an \textbf{electric force} on other charged objects around them.
+The magnitude of the electric force can be given by \textbf{Coulomb's Law}:
+\begin{equation}
+    F = k\frac{q_1 q_2}{r^2}
+\end{equation}
+where
+\begin{itemize}
+    \item \(F\) is the force \emph{both} objects experience as given by Newton's Third Law.
+    \item \(k \approx \qty{8.99e-9}{\newton \meter\squared \per \coulomb\squared}\)
+          and is called the Coulomb constant.
+    \item \(q_1\) and \(q_2\) are the two charges of the two objects.
+          Note that both values are signed.
+    \item \(r\) is the distance between the two particles.
+\end{itemize}
+Objects with charges of the same sign will repel each other,
+while objects with charges of opposite signs will attract each other.
+Thus, Coulomb's Law will give a \emph{negative} value for attraction
+and a \emph{positive} value for repulsion.
+
+\chapter{Maxwell's Equations}
+
+
+\appendix
+\chapter{Mathematics and Notation}
+
+\section{Vectors} \label{section:vectors}
+
+\subsection{Vectors vs. Scalars}
+
+\backmatter
+\chapter{References}
+
+
+\end{document}
