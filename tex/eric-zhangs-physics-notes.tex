@@ -129,9 +129,49 @@ Recommended mathematical topics: \ref{section:complex-and-imaginary-numbers}
 \textbf{Imaginary numbers} are the set of all numbers that can be written in the form \(bi\),
 where \(b \in \mathbb{R}\).
 
-Likewise, \textbf{complex numbers}, denoted by \(\mathbb{C}\),
+\textbf{complex numbers}, denoted by \(\mathbb{C}\),
 are the set of all numbers that can be written in the form \(a + bi\),
 where \(a,~b \in \mathbb{R}\).
+
+\(a\) is known as the \textbf{real part},
+and \(b\) is known as the \textbf{imaginary part}.
+Note that this means the imaginary part is \emph{real}.
+Given the complex number \(z = a + bi\),
+\(\mathrm{Re}[z] = \Re[z] = a\), and \(\mathrm{Im}[z] = \Im[z] = b\).
+
+The \textbf{complex conjugate} of \(z = a + bi\) is given by \(z^* = a - bi\).
+
+\subsection{Complex Plane}
+
+Complex numbers can be represented as 2D vectors on a plane,
+with the x-axis being the real part (i.e., \(a\)),
+and the y-axis being the imaginary part (i.e., \(b\)).
+
+Given a complex number \(z\),
+its magnitude \(\left\|z\right\|\) is given by Pythagorean's Theorem:
+\begin{equation}
+    \left\|z\right\| = \sqrt{\Re[z]^2 + \Im[z]^2} = \sqrt{z z^*}
+\end{equation}
+
+Its angle \(\phi\) is derived through trigonometry
+(be careful about the general limitations of \(\arctan\) on calculators):
+\begin{equation}
+    \phi = \arctan\left(\frac{\Im[z]}{\Re[z]}\right)
+\end{equation}
+
+\subsection{Euler's Formula}
+
+Euler's formula:
+\begin{equation}
+    e^{i \theta} = \cos\theta + i \sin\theta
+\end{equation}
+
+\begin{equation}
+    \therefore e^{a + bi} = e^a e^{bi} = e^a \left(\cos b + i \sin b\right)
+\end{equation}
+
+Oftentimes, working with the complex exponential is easier than the trigonometric functions.
+
 
 \backmatter
 \chapter{References}
