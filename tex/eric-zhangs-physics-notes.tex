@@ -55,7 +55,6 @@ including links to the relevant sections.
 
 However, these notes currently do not cover calculus, linear algebra,
 or differential equations.
-They may be added a later date.
 
 
 \mainmatter
@@ -156,6 +155,20 @@ Solution forms:
     \item \(\tilde{x}(t) = A e^{i \phi} e^{i \omega_0 t}\),
           where \(\Re[\tilde{x}(t)] = x(t)\)
 \end{itemize}
+
+\begin{equation}
+    \tilde{v}(t) = \frac{d}{dt} \tilde{x}(t)
+    = i\omega_0 A e^{i\phi} e^{\omega_0 t}
+    = i\omega_0 \tilde{x}(t)
+\end{equation}
+The factor of \(i\) gives a \qty{90}{\degree} phase shift.
+
+\begin{equation}
+    \tilde{a}(t) = \frac{d}{dt} \tilde{v}(t)
+    = -\omega_0^2 A e^{i\phi} e^{\omega_0 t}
+    = -\omega_0^2 \tilde{x}(t)
+\end{equation}
+The minus signifies a \qty{180}{\degree} phase shift.
 
 \chapter{Electrical Circuits}
 
