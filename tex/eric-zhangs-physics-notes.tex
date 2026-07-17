@@ -53,8 +53,15 @@ These notes are structured in a way to separate physics and mathematical techniq
 Each chapter contains a list of the recommended mathematical topics,
 including links to the relevant sections.
 
+However, these notes currently do not cover calculus, linear algebra,
+or differential equations.
+They may be added a later date.
+
+
 \mainmatter
 \part{Mechanics}
+
+Recommended mathematical topics: \ref{section:vectors}
 
 \part{Electricity and Magnetism}
 
@@ -99,13 +106,60 @@ and a \emph{positive} value for repulsion.
 \chapter{Maxwell's Equations}
 
 
-\part{Waves and Oscillations} \label{ch:waves-and-oscillations}
+\part{Waves and Oscillations} \label{part:waves-and-oscillations}
 
 Recommended mathematical topics: \ref{section:complex-and-imaginary-numbers}
 
-\chapter{Springs}
+\chapter{Springs and Pendulums}
+
+\section{Pendulums}
+
+Simple pendulum have a massles rod/string;
+\(\therefore\) they have no moment of inertia.
+
+By Newton's 2nd Law:
+\begin{align}
+    F = ma \\
+    -mg \sin \theta = m \ell \ddot{\theta}
+\end{align}
+
+For angles less than approximately \qty{14}{\degree},
+the small angle approximation results in a error of less than 1\% in the gravitational force:
+\begin{align}
+    \sin\theta \approx \theta \\
+    \therefore -mg\theta            &\approx m \ell \ddot{\theta} \\
+    \ddot{\theta} + \omega^2 \theta &\approx 0,~\omega = \sqrt{\frac{g}{\ell}}
+\end{align}
+
+For physical pendulums, rotational inertia \(\ne 0\).
+\begin{align}
+    -mgd \sin\theta                &=       I \ddot{\theta} \\
+    \ddot{\theta} + \omega^2\theta &\approx 0,~\omega = \sqrt{\frac{mgd}{I}}
+\end{align}
+where \(d\) is the distance between center of mass and pivot.
+
+\section{Simple Springs}
+Simple springs operate are governed by only Newton's 2nd Law and Hooke's Law.
+
+\begin{align}
+    F &= ma = m\ddot{x} \\
+    F &= -kx
+\end{align}
+
+\chapter{Electrical Circuits}
 
 \chapter{Fourier Analysis}
+
+\chapter{Multiple Oscillators}
+
+\chapter{Transverse Waves}
+
+\chapter{Longitudinal Waves}
+
+\chapter{Dispersion}
+
+\chapter{Electromagnetic Waves}
+
 
 \part{Special and General Relativity}
 
@@ -123,6 +177,8 @@ Recommended mathematical topics: \ref{section:complex-and-imaginary-numbers}
 \chapter{Mathematics and Notation}
 
 \section{Vectors} \label{section:vectors}
+
+\subsection{Vectors vs. Scalars}
 
 \section{Complex and Imaginary Numbers} \label{section:complex-and-imaginary-numbers}
 
