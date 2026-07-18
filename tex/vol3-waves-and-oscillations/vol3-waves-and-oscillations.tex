@@ -143,29 +143,80 @@ and the equation of motion is:
     \end{aligned}
 \end{equation}
 
-Some textbooks defined \(\gamma\) as \(\frac{b}{2m}\).
+Some textbooks define \(\gamma\) as \(\frac{b}{2m}\).
+
+We plug a guess of the form \(\boldsymbol{\hat{x}}(t) = A e^{i \phi} e^{i \beta t}\)
+into the equation and get
+\begin{equation}
+    \beta = \frac{i \gamma \pm \sqrt{4\omega_0^2 - \omega^2}}{2}
+\end{equation}
+\begin{equation}
+    \boldsymbol{\hat{x}}(t)
+    = A e^{i\phi} e^{-\frac{\gamma}{2}t} e^{\pm i \left(\sqrt{\omega_0^2 - \frac{\gamma^2}{4}}\right) t}
+\end{equation}
 
 Damped oscillators have three possible behaviors
 depending on the ratio between the damping coefficient \(\gamma\)
 and the natural frequency \(\omega_0\).
 The \textbf{quality factor} or \textbf{\(\boldsymbol{Q}\) factor} is defined as
 \begin{equation}
-    Q = \frac{\omega_0}{\gamma
-}
+    Q = \frac{\omega_0}{\gamma}
 \end{equation}
 
 The three cases are as follows.
 
 \subsection{Underdamped}
 
-General solution:
 \begin{equation}
-    \tilde{x}(t) = A e^{i\phi} e^{}
+    \begin{aligned}
+        \gamma                          &< 2 \omega_0 \\
+        \omega_0^2 - \frac{\gamma^2}{4} &> 0 \\
+        Q > \frac{1}{2}
+    \end{aligned}
+\end{equation}
+
+Where the \textbf{damped frequency} is
+\begin{equation}
+    \omega_u = \sqrt{\omega_0^2 - \frac{\gamma^2}{4}}
+\end{equation}
+\begin{equation}
+    \tilde{x}(t) = A e^{i\phi} e^{-\frac{\gamma}{2} t} e^{\pm i \omega_u t}
+\end{equation}
+
+\(e^{-\frac{\gamma}{2} t}\) forms an envelope for the solution,
+i.e., \(\left|x(t) \le A e^{-\frac{\gamma}{2} t}\right|\).
+
+Note that although the amplitude decays, the frequency does \emph{not}.
+
+\subsection{Overdamped}
+
+\begin{equation}
+    \begin{aligned}
+        \gamma                          &> 2 \omega_0 \\
+        \omega_0^2 - \frac{\gamma^2}{4} &< 0 \\
+        Q < \frac{1}{2}
+    \end{aligned}
+\end{equation}
+
+\begin{equation}
+    \mu = \frac{\gamma}{2} \pm \sqrt{\frac{\gamma^2}{4} - \omega_0^2}
+\end{equation}
+\begin{equation}
+    \begin{aligned}
+        \boldsymbol{\hat{x}}(t)
+        = A e^{i \phi} e^{-\mu t}
+    \end{aligned}
 \end{equation}
 
 \subsection{Critically Damped}
 
-\subsection{Overdamped}
+\begin{equation}
+    \begin{aligned}
+        \gamma                          &= 2 \omega_0 \\
+        \omega_0^2 - \frac{\gamma^2}{4} &= 0 \\
+        Q = \frac{1}{2}
+    \end{aligned}
+\end{equation}
 
 
 \section{Driven, Undamped Springs}
