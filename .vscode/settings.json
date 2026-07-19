@@ -3,6 +3,7 @@
         "amsmath",
         "amssymb",
         "csquotes",
+        "mathrm",
         "sisetup",
         "siunitx"
     ]
