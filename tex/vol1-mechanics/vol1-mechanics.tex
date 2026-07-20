@@ -140,26 +140,46 @@ Larger arrows indicate larger forces.
 
 \chapter{Gravity}
 
-Gravitational force:
+\textbf{Gravitational force} outside of a body:
 \begin{equation}
-    F_g = G \frac{m_1 m_2}{r^2}
+    \left\| F_\mathrm{g} \right\| = G \frac{m_1 m_2}{r^2}
 \end{equation}
 
-Gravitational energy:
+\textbf{Gravitational energy} outside of a body:
 \begin{equation}
-    U_g = G \frac{m_1 m_2}{r}
+    U_\mathrm{g} = G \frac{m_1 m_2}{r}
 \end{equation}
 
-Gravitational field:
+\textbf{Gravitational field} outside of a body:
 \begin{equation}
     \left\| \bm{g} \right\| = G \frac{m}{r^2}
 \end{equation}
 
-Gravitational potential:
+For the gravitational field \emph{inside} a sphere,
+if \(r\) is the distance from the center,
+\(\rho(r)\) is the density as a function of \(r\),
+and \(R'\) is the radius of an imaginary inner sphere,
+the magnitude of the gravitational field at \(R'\) distance from the center is
 \begin{equation}
-    V_g = G \frac{m}{r}
+        \left\| \bm{g} \right\| = \frac{G}{R'^2} \int_{0}^{R'} 4\pi r^2 \rho(r) \odif{r}
 \end{equation}
 
+For a sphere of constant density \(\rho\), mass \(M\), and radius \(R\),
+the gravitational field \(\bm{g}\) increases linearly
+as distance from the center \(R'\) increases, when \(R' < R\).
+\begin{equation}
+    \begin{aligned}
+        \left\| \bm{g} \right\| &= \frac{G}{R'^2} \int_{0}^{R'} 4\pi r^2 \rho \odif{r} \\
+        &= \frac{4 G \pi \rho}{R'^2} \int_{0}^{R'} r^2 \odif{r} \\
+        &= \frac{4 G \pi \rho}{R'^2} \frac{R'^3}{3} \\
+        &= \frac{4}{3} \pi G \rho R'
+    \end{aligned}
+\end{equation}
+
+\textbf{Gravitational potential} outside of a sphere:
+\begin{equation}
+    V_\mathrm{g} = G \frac{m}{r}
+\end{equation}
 
 \appendix
 
