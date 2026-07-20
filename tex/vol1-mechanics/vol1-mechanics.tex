@@ -28,16 +28,16 @@ The below \textbf{kinematic equations} are only true under constant acceleration
 \end{equation}
 \begin{equation}
     \begin{aligned}
-        \Delta x = v_0 t + \frac{1}{2} a t^2
+        \Delta{x} = v_0 t + \frac{1}{2} a t^2
         \qquad \mathrm{or} \qquad
         x = x_0 + v_0 t + \frac{1}{2} a t^2
     \end{aligned}
 \end{equation}
 \begin{equation}
-    v_\mathrm{f}^2 = v_0^2 + 2a \Delta x
+    v_\mathrm{f}^2 = v_0^2 + 2a \Delta{x}
 \end{equation}
 \begin{equation}
-    \Delta x = \frac{v_0 + v_\mathrm{f}}{2} t
+    \Delta{x} = \frac{v_0 + v_\mathrm{f}}{2} t
 \end{equation}
 
 
@@ -127,7 +127,7 @@ Skip to Chapter~\ref*{ch:free-body-diagrams}:~\nameref{ch:free-body-diagrams}
 For an area,
 \begin{equation}
     x_\mathrm{cm} = \frac{\int y \sigma(x, y) \odif{x}}{\int \int \sigma(x, y) \odif{x} \odif{y}}
-\end{equation}    
+\end{equation}
 
 
 \chapter{Free-Body Diagrams} \label{ch:free-body-diagrams}
@@ -221,9 +221,9 @@ where
 
 In all cases,
 \begin{equation}
-    \mu_\mathrm{s} > \mu_\mathrm{k}
+    \mu_\mathrm{k} < \mu_\mathrm{s}
 \end{equation}
-In other words, kinetic friction is less than the maximum static friction:
+In other words, kinetic friction is always less than the maximum static friction:
 \begin{equation}
     F_\mathrm{fk} < \mu_\mathrm{s} F_\mathrm{N}
 \end{equation}
@@ -236,10 +236,10 @@ The proper formula for \textbf{drag} is
 \end{equation}
 where
 \begin{itemize}
-    \item \(A\) is the frontal area
-    \item \(\rho\) is the fluid density
-    \item \(v\) is the relative velocity between object and fluid
-    \item \(C_\mathrm{D}\) is the experimentally-determined drag coefficient,
+    \item \(A\) is the frontal area.
+    \item \(\rho\) is the fluid density.
+    \item \(v\) is the relative velocity between object and fluid.
+    \item \(C_\mathrm{D}\) is an experimentally-determined drag coefficient,
           which is influenced by factors such as material, shape, etc.
 \end{itemize}
 
@@ -252,8 +252,8 @@ A simpler approximation for drag is
 \end{equation}
 where
 \begin{itemize}
-    \item \(b\) is the an experimentally-determined constant
-    \item \(v\) is the relative velocity between object and fluid
+    \item \(b\) is an experimentally-determined constant.
+    \item \(v\) is the relative velocity between object and fluid.
 \end{itemize}
 
 \textbf{Terminal velocity} is when the forces from gravity and drag
@@ -322,6 +322,51 @@ Integrate again to find position:
                e^{-\frac{b}{m} t}
     \end{aligned}
 \end{equation}
+
+
+\chapter{Springs}
+
+\textbf{Hooke's Law} applies to \textbf{ideal springs}
+(i.e., springs with no energy loss).
+\begin{equation}
+    F_\mathrm{s} = -k \Delta{x}
+\end{equation}
+where
+\begin{itemize}
+    \item \(F_\mathrm{s}\) is the force of the spring.
+    \item \(k\) is the \textbf{spring constant}.
+    \item \(\Delta{x}\) is the displacement of the end of the spring from its rest position.
+\end{itemize}
+
+\section{Multiple Springs}
+
+Springs can be connected in \textbf{series} or \textbf{parallel}.
+In either case, they act like a single spring.
+
+\subsection{Springs in Series}
+
+Springs in series are connected side by side.
+Each spring experiences the same force.
+
+The net springsconstant is given by
+\begin{equation}
+    \frac{1}{k_\mathrm{k}} = \sigma \frac{1}{k_i}
+\end{equation}
+In practice,
+this means that springs connected in series are equivalent to a single weaker spring.
+
+
+\subsection{Springs in Parallel}
+
+Springs in parallel are connected end to end.
+Each spring stretches the same distance.
+
+The net spring constant is given by
+\begin{equation}
+    k_\mathrm{net} = \sigma k_i
+\end{equation}
+In practice,
+this means that springs connected in parallel are equivalent to a single stronger spring.
 
 
 \appendix
