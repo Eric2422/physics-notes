@@ -121,7 +121,7 @@ However, this requires multivariable calculus,
 so AP Physics C: Mechanics does not ask us to do this.
 
 For completeness, it will be included.
-Skip to \sectRef{ch:free-body-diagrams} if you are uninterested.
+Skip to \secRef{ch:free-body-diagrams} if you are uninterested.
 
 For an area,
 \begin{equation}
@@ -389,13 +389,13 @@ where
     \item \(T\) is the revolution period.
 \end{itemize}
 Its acceleration is given by
-\begin{equation}
+\begin{equation} \label{eq:centripetal-acceleration}
     a = \frac{2 \pi v}{T} = \frac{4 \pi ^2 r}{T^2} = \frac{v^2}{r}
 \end{equation}
 where \(a\) is the acceleration.
 
 Revolution period:
-\begin{equation}
+\begin{equation} \label{eq:revolution-period}
     T = \frac{2 \pi r}{v}
 \end{equation}
 
@@ -405,11 +405,42 @@ Revolution period:
 \end{equation}
 
 \textbf{Critical velocity} is the minimum velocity need for circular motion.
+To find the critical velocity for a given centripetal force \(F\),
+use \eqRef{eq:centripetal-force}:
+\begin{equation}
+    \begin{aligned}
+        m \frac{v^2}{r} &= F \\
+        v &= \sqrt{\frac{F r}{m}}
+    \end{aligned}
+\end{equation}
 
 \section{Orbital Velocity}
 
-Combining Newton's law of gravity, \eqPgRef{eq:newtons-law-of-gravity}
+Let \(m\) and \(M\) be the masses of two bodies such that \(m \ll M\).
+Combining Newton's law of gravity
+---\eqRef{eq:newtons-law-of-gravity}---
+with \eqRef{eq:centripetal-force}:
+\begin{equation}
+    \begin{aligned}
+        G \frac{M m}{r^2} &= m \frac{v^2}{r} \\
+        G \frac{M}{r} &= v^2 \\
+        \sqrt{G \frac{M}{r}} &= v \\
+    \end{aligned}
+\end{equation}
+Using \eqRef{eq:revolution-period}:
+\begin{equation}
+    \begin{aligned}
+        \sqrt{G \frac{M}{r}} &= \frac{2 \pi r}{T} \\
+        T &= \frac{2 \pi r}{\sqrt{G \frac{M}{r}}} \\
+        &= \frac{2\pi r^{3/2}}{\sqrt{G M}} \\
+        T^2 &= \frac{4 \pi^2}{GM} r^3 \\
+    \end{aligned}
+\end{equation}
 
+This derivation leads us to \textbf{Kepler's 3rd law}:
+\begin{equation}
+    T^2 \propto r^3
+\end{equation}
 
 
 \appendix
