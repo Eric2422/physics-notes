@@ -87,7 +87,7 @@ e.g., distance.
 
 \section{Linear Mass Density}
 
-Linear mass density is mass per length, e.g.,
+\textbf{Linear mass density} is mass per length, e.g.,
 kilograms per meter \(\unit{\kilogram \per \meter}\).
 \begin{equation}
     \lambda = \frac{m}{\ell}
@@ -141,8 +141,8 @@ Larger arrows indicate larger forces.
 
 \chapter{Gravity}
 
-\textbf{Gravitational force} outside of a body:
-\begin{equation}
+\textbf{Gravitational force} outside of a body is given by \textbf{Newton's law of gravity}:
+\begin{equation} \label{eq:newtons-law-of-gravity}
     \left\| F_\mathrm{g} \right\| = G \frac{m_1 m_2}{r^2}
 \end{equation}
 
@@ -203,7 +203,7 @@ Kinetic friction:
 \end{equation}
 where
 \begin{itemize}
-    \item \(F_\mathrm{fk}\) is the force of kinetic friction.
+    \item \(F_\mathrm{fk}\) is the magnitude of kinetic friction.
     \item \(\mu_\mathrm{k}\) is the coefficient of kinetic friction.
     \item \(F_\mathrm{N}\) is the normal force.
 \end{itemize}
@@ -214,7 +214,7 @@ Static friction:
 \end{equation}
 where
 \begin{itemize}
-    \item \(F_\mathrm{fs}\) is the force of static friction.
+    \item \(F_\mathrm{fs}\) is the magnitude of static friction.
     \item \(\mu_\mathrm{s}\) is the coefficient of static friction.
     \item \(F_\mathrm{N}\) is the normal force.
 \end{itemize}
@@ -230,12 +230,15 @@ In other words, kinetic friction is always less than the maximum static friction
 
 \section{Drag}
 
-The proper formula for \textbf{drag} is
+\textbf{Drag} is a force that acts opposite to the movement of a body in fluid.
+
+The proper formula for drag is
 \begin{equation}
     F_\mathrm{D} = \frac{1}{2} \rho v^2 C_\mathrm{D} A
 \end{equation}
 where
 \begin{itemize}
+    \item \(F_\mathrm{D}\) is the magnitude of the drag force.
     \item \(A\) is the frontal area.
     \item \(\rho\) is the fluid density.
     \item \(v\) is the relative velocity between object and fluid.
@@ -248,10 +251,11 @@ The above formula is more appropriate for higher level college physics.
 
 A simpler approximation for drag is
 \begin{equation}
-    F_\mathrm{D} = bv
+    \bm{F_\mathrm{D}} = -b \bm{v}
 \end{equation}
 where
 \begin{itemize}
+    \item \(\bm{F_\mathrm{D}}\) is the drag acting upon the object.
     \item \(b\) is an experimentally-determined constant.
     \item \(v\) is the relative velocity between object and fluid.
 \end{itemize}
@@ -326,14 +330,15 @@ Integrate again to find position:
 
 \chapter{Springs}
 
-\textbf{Hooke's Law} applies to \textbf{ideal springs}
+\textbf{Hooke's law} applies to \textbf{ideal springs}
 (i.e., springs with no energy loss).
+It states:
 \begin{equation}
     F_\mathrm{s} = -k \Delta{x}
 \end{equation}
 where
 \begin{itemize}
-    \item \(F_\mathrm{s}\) is the force of the spring.
+    \item \(F_\mathrm{s}\) is the magnitude of the spring force.
     \item \(k\) is the \textbf{spring constant}.
     \item \(\Delta{x}\) is the displacement of the end of the spring from its rest position.
 \end{itemize}
@@ -367,6 +372,45 @@ The net spring constant is given by
 \end{equation}
 In practice,
 this means that springs connected in parallel are equivalent to a single stronger spring.
+
+
+\chapter{Circular Motion}
+
+\textbf{Centripetal acceleration} is "center-seeking" acceleration.
+
+Moving in a circle with constant speed is \textbf{uniform circular motion}.
+Its velocity is given by
+\begin{equation}
+    v = \frac{2 \pi r}{T}
+\end{equation}
+where
+\begin{itemize}
+    \item \(v\) is the velocity.
+    \item \(r\) is the radius.
+    \item \(T\) is the revolution period.
+\end{itemize}
+Its acceleration is given by
+\begin{equation}
+    a = \frac{2 \pi v}{T} = \frac{4 \pi ^2 r}{T^2} = \frac{v^2}{r}
+\end{equation}
+where \(a\) is the acceleration.
+
+Revolution period:
+\begin{equation}
+    T = \frac{2 \pi r}{v}
+\end{equation}
+
+\textbf{Centripetal force}:
+\begin{equation} \label{eq:centripetal-force}
+    F = m \frac{v^2}{r}
+\end{equation}
+
+\textbf{Critical velocity} is the minimum velocity need for circular motion.
+
+\section{Orbital Velocity}
+
+Combining \autoref{eq:newtons-law-of-gravity} (pg.~\pageref{eq:newtons-law-of-gravity})
+
 
 
 \appendix
