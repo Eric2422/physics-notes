@@ -24,20 +24,20 @@
 
 The below \textbf{kinematic equations} are only true under constant acceleration.
 \begin{equation}
-    v_\mathrm{f} = v_\mathrm{0} + at
+    v_\mathrm{f} = v_0 + at
 \end{equation}
 \begin{equation}
     \begin{aligned}
-        \Delta x = v_\mathrm{0} t + \frac{1}{2} a t^2
+        \Delta x = v_0 t + \frac{1}{2} a t^2
         \qquad \mathrm{or} \qquad
-        x = x_\mathrm{0} + v_\mathrm{0} t + \frac{1}{2} a t^2
+        x = x_0 + v_0 t + \frac{1}{2} a t^2
     \end{aligned}
 \end{equation}
 \begin{equation}
-    v_\mathrm{f}^2 = v_\mathrm{0}^2 + 2a \Delta x
+    v_\mathrm{f}^2 = v_0^2 + 2a \Delta x
 \end{equation}
 \begin{equation}
-    \Delta x = \frac{v_\mathrm{0} + v_\mathrm{f}}{2} t
+    \Delta x = \frac{v_0 + v_\mathrm{f}}{2} t
 \end{equation}
 
 
@@ -93,7 +93,7 @@ kilograms per meter \(\unit{\kilogram \per \meter}\).
     \lambda = \frac{m}{\ell}
 \end{equation}
 
-Instantaneous linear mass density as a function of distance is thus
+\(therefore\) Instantaneous linear mass density as a function of distance is
 \begin{equation}
     \lambda(r) = \odv{m}{r}
 \end{equation}
@@ -102,7 +102,7 @@ which we can arrange into
     \odif{m} = \lambda(r) \odif{r}
 \end{equation}
 
-Plugging back into Eq.~\ref{eq:continuous-com}:
+Plugging back into Eq.~\ref{eq:continuous-com} (pg.~\pageref*{eq:continuous-com}):
 \begin{equation}
     r_{\mathrm{cm}} = \frac{\int r \lambda(r) \odif{r}}{\int \lambda(r) \odif{r}}
 \end{equation}
@@ -121,7 +121,8 @@ However, this requires multivariable calculus,
 so AP Physics C: Mechanics does not ask us to do this.
 
 For completeness, it will be included.
-Skip to \ref{ch:free-body-diagrams} if you are uninterested.
+Skip to Chapter~\ref*{ch:free-body-diagrams}:~\nameref{ch:free-body-diagrams}
+(pg.~\pageref*{ch:free-body-diagrams}) if you are uninterested.
 
 For an area,
 \begin{equation}
@@ -191,36 +192,40 @@ as distance from the center \(R'\) increases, when \(R' < R\).
 Types of \textbf{friction}:
 \begin{itemize}
     \item \textbf{Kinetic friction} is between two surfaces with non-zero relative velocity.
-          Constant.
-    \item \textbf{Static friction} is between two surfaces with zero relative velocity.
-          Increases as the force attempting to move the object increases.
+          It is constant and independent of the object's velocity.
+    \item \textbf{Static friction} is between two surfaces with zero relative velocity
+          and increases as the force attempting to move the object increases.
 \end{itemize}
 
 Kinetic friction:
 \begin{equation}
-    F_\mathrm{fk} = \mu_\mathrm{s} F_\mathrm{N}
+    F_\mathrm{fk} = \mu_\mathrm{k} F_\mathrm{N}
 \end{equation}
 where
 \begin{itemize}
     \item \(F_\mathrm{fk}\) is the force of kinetic friction.
-    \item \(\mu_k\) is the coefficient of kinetic friction.
+    \item \(\mu_\mathrm{k}\) is the coefficient of kinetic friction.
     \item \(F_\mathrm{N}\) is the normal force.
 \end{itemize}
 
 Static friction:
 \begin{equation}
-    F_\mathrm{fk} \le \mu_\mathrm{s} F_\mathrm{N}
+    F_\mathrm{fs} \le \mu_\mathrm{s} F_\mathrm{N}
 \end{equation}
 where
 \begin{itemize}
     \item \(F_\mathrm{fs}\) is the force of static friction.
-    \item \(\mu_s\) is the coefficient of static friction.
+    \item \(\mu_\mathrm{s}\) is the coefficient of static friction.
     \item \(F_\mathrm{N}\) is the normal force.
 \end{itemize}
 
 In all cases,
 \begin{equation}
     \mu_\mathrm{s} > \mu_\mathrm{k}
+\end{equation}
+In other words, kinetic friction is less than the maximum static friction:
+\begin{equation}
+    F_\mathrm{fk} < \mu_\mathrm{s} F_\mathrm{N}
 \end{equation}
 
 \section{Drag}
@@ -231,15 +236,15 @@ The proper formula for \textbf{drag} is
 \end{equation}
 where
 \begin{itemize}
-    \item \(A =\) frontal area
-    \item \(\rho =\) fluid density
-    \item \(v =\) relative velocity between object and fluid
-    \item \(C_\mathrm{D} =\) experimentally-determined drag coefficient,
+    \item \(A\) is the frontal area
+    \item \(\rho\) is the fluid density
+    \item \(v\) is the relative velocity between object and fluid
+    \item \(C_\mathrm{D}\) is the experimentally-determined drag coefficient,
           which is influenced by factors such as material, shape, etc.
 \end{itemize}
 
 However, this is way too complicated for AP Physics C: Mechanics.
-The above formula is more appropriate for college physics.
+The above formula is more appropriate for higher level college physics.
 
 A simpler approximation for drag is
 \begin{equation}
@@ -247,9 +252,49 @@ A simpler approximation for drag is
 \end{equation}
 where
 \begin{itemize}
-    \item \(b =\) an experimentally-determined constant
-    \item \(v =\) relative velocity between object and fluid
+    \item \(b\) is the an experimentally-determined constant
+    \item \(v\) is the relative velocity between object and fluid
 \end{itemize}
+
+\textbf{Terminal velocity} is when the forces from gravity and drag
+balance out each other.
+\(\therefore\) Acceleration is 0 at terminal velocity.
+With linear drag, given that up is positive, terminal velocity is achieved at
+\begin{equation} \label{eq:linear-terminal-velocity}
+    \begin{aligned}
+        bv_\mathrm{t} - mg &= 0 \\
+        bv_\mathrm{t} &= mg \\
+        v_\mathrm{t} &= \frac{m}{b} g \\
+    \end{aligned}
+\end{equation}
+
+Velocity of a free-falling object experiencing linear drag:
+\begin{equation*}
+    \begin{aligned}
+        F &= ma \\
+        mg - bv &= ma \\
+        mg - bv &= m \odv{v}{t} \\
+        \odv{v}{t} + \frac{b}{m} v &= g \\
+        \odv{}{t} \left[ v e^{\frac{b}{m} t} \right] &= g e^{\frac{b}{m} t} \\
+        v e^{\frac{b}{m} t} &= \frac{m}{b} g e^{\frac{b}{m}t} + C\\
+        v &= \frac{m}{b} g + C e^{-\frac{b}{m} t} \\
+    \end{aligned}
+\end{equation*}
+Plug in the initial condition \(v(0) = v_0\):
+\begin{equation*}
+    \begin{aligned}
+        v_0 &= \frac{m}{b} g + C e^{-\frac{b}{m} 0} \\
+        v_0 &= \frac{m}{b} g + C \\
+        C &= \frac{m}{b} g - v_0 \\
+        v &= \frac{m}{b} g + \left( \frac{m}{b} g - v_0 \right) e^{-\frac{b}{m} t}
+    \end{aligned}
+\end{equation*}
+Using terminal velocity as given in Eq.~\ref{eq:linear-terminal-velocity}
+(pg.~\pageref*{eq:linear-terminal-velocity}),
+the velocity function of a falling body with linear drag is
+\begin{equation}
+    v(t) = v_\mathrm{t} + \left( v_\mathrm{t} - v_0 \right) e^{-\frac{b}{m} t}
+\end{equation}
 
 
 \appendix
