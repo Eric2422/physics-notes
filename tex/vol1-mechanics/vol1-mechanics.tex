@@ -140,20 +140,22 @@ Larger arrows indicate larger forces.
 
 \chapter{Gravity}
 
-\textbf{Gravitational force} outside of a body is given by \textbf{Newton's law of gravity}:
+\textbf{Gravitational force} outside of a sphere is given by \textbf{Newton's law of gravity}:
 \begin{equation} \label{eq:newtons-law-of-gravity}
     \left\| F_\mathrm{g} \right\| = G \frac{m_1 m_2}{r^2}
 \end{equation}
+where
+\begin{itemize}
+    \item \(G\) is the universal gravitational constant.
+    \item \(m_1\) and \(m_2\) are the masses of the two objects.
+    \item \(r\) is the distance between the two.
+\end{itemize}
 
-\textbf{Gravitational energy} outside of a body:
-\begin{equation}
-    U_\mathrm{g} = G \frac{m_1 m_2}{r}
-\end{equation}
-
-\textbf{Gravitational field} outside of a body:
+\textbf{Gravitational field} outside of a sphere:
 \begin{equation}
     \left\| \bm{g} \right\| = G \frac{m}{r^2}
 \end{equation}
+where \(m\) is the mass of the sphere.
 
 For the gravitational field \emph{inside} a sphere,
 if \(r\) is the distance from the center,
@@ -174,11 +176,6 @@ as distance from the center \(R'\) increases, when \(R' < R\).
         &= \frac{4 G \pi \rho}{R'^2} \frac{R'^3}{3} \\
         &= \frac{4}{3} \pi G \rho R'
     \end{aligned}
-\end{equation}
-
-\textbf{Gravitational potential} outside of a sphere:
-\begin{equation}
-    V_\mathrm{g} = G \frac{m}{r}
 \end{equation}
 
 
@@ -329,10 +326,8 @@ Integrate again to find position:
 
 \chapter{Springs}
 
-\textbf{Hooke's law} applies to \textbf{ideal springs}
-(i.e., springs with no energy loss).
-It states:
-\begin{equation}
+\textbf{Ideal springs} are springs that perfectly follow \textbf{Hooke's law}:
+\begin{equation} \label{eq:hookes-law}
     F_\mathrm{s} = -k \Delta{x}
 \end{equation}
 where
@@ -440,6 +435,63 @@ Using \eqRef{eq:revolution-period}:
 This derivation leads us to \textbf{Kepler's third law}:
 \begin{equation}
     T^2 \propto r^3
+\end{equation}
+
+
+\chapter{Energy}
+
+By definition, \textbf{conservative forces} are ones where the \textbf{work} done is \textbf{path-independent},
+i.e., work along a \textbf{closed loop} is 0.
+
+The equation for \textbf{potential energy} is
+\begin{equation}
+    U = - \int \bm{F} \cdot \odif{\bm{r}}
+\end{equation}
+
+\section{Gravitational Potential Energy}
+
+Assuming a constant gravitational field,
+the difference in gravitational potential energy is
+\begin{equation}
+    \begin{aligned}
+        U_\mathrm{g} &= - \int -mg \odif{y} \\
+        \Delta{U_\mathrm{g}} &= mg \Delta{y}
+    \end{aligned}
+\end{equation}
+
+If the gravitational field is not constant, use Newton's law of gravity, \eqRef{eq:newtons-law-of-gravity}:
+\begin{equation}
+    \begin{aligned}
+        U_\mathrm{g} &= - \int -G \frac{m_1 m_2}{r^2} \odif{r} \\
+        \Delta{U_\mathrm{g}} &= -G \frac{m_1 m_2}{\Delta{r}}
+    \end{aligned}
+\end{equation}
+
+\section{Elastic Potential Energy}
+
+\textbf{Elastic potential energy} for a general spring with force function \(F(x)\):
+\begin{equation} \label{eq:general-elastic-potential-energy}
+    \begin{aligned}
+        U_\mathrm{e} &= - \int F(x) \odif{x} \\
+    \end{aligned}
+\end{equation}
+
+For ideal springs, we use Hooke's law, \eqRef{eq:hookes-law}:
+\begin{equation}
+    \begin{aligned}
+        \Delta{U_\mathrm{e}} &= - \int -kx \odif{x} \\
+        &= \frac{1}{2} k (\Delta{x})^2
+    \end{aligned}
+\end{equation}
+
+The derivation from \eqRef{eq:general-elastic-potential-energy}
+can also be used with non-linear springs.
+For example, for a spring with force function \(F(x) = -k x^\frac{4}{3}\),
+\begin{equation}
+    \begin{aligned}
+        U_\mathrm{e} &= - \int -k x^\frac{4}{3} \odif{x} \\
+        \Delta{U_\mathrm{e}} &= \frac{3}{7} k x^\frac{7}{3}
+    \end{aligned}
 \end{equation}
 
 
