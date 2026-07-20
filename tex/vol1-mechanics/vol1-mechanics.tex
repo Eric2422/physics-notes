@@ -268,32 +268,59 @@ With linear drag, given that up is positive, terminal velocity is achieved at
     \end{aligned}
 \end{equation}
 
+\textit{
+Author's note:
+I do not have the derivations for the position and velocity of fallling objects with linear drag in my notes,
+so I do not remember the exact process taught in class.
+The following has been solved using a technique I learned from a later differential equations class,
+so it probably differs from what was taught in AP Physics C: Mechanics.
+}
+
+\textit{
+If you are curious why the derivations are not in my notes,
+I was attempting to work with quadratic drag during class instead of paying attention to the lecture.
+}
+
 Velocity of a free-falling object experiencing linear drag:
-\begin{equation*}
+\begin{equation}
     \begin{aligned}
         F &= ma \\
         mg - bv &= ma \\
         mg - bv &= m \odv{v}{t} \\
         \odv{v}{t} + \frac{b}{m} v &= g \\
         \odv{}{t} \left[ v e^{\frac{b}{m} t} \right] &= g e^{\frac{b}{m} t} \\
-        v e^{\frac{b}{m} t} &= \frac{m}{b} g e^{\frac{b}{m}t} + C\\
+        v e^{\frac{b}{m} t} &= \int g e^{\frac{b}{m} t} \odif{t} \\
+        v e^{\frac{b}{m} t} &= \frac{m}{b} g e^{\frac{b}{m}t} + C \\
         v &= \frac{m}{b} g + C e^{-\frac{b}{m} t} \\
     \end{aligned}
-\end{equation*}
-Plug in the initial condition \(v(0) = v_0\):
-\begin{equation*}
+\end{equation}
+Solve for \(C\) using the initial condition \(v(0) = v_0\):
+\begin{equation}
     \begin{aligned}
         v_0 &= \frac{m}{b} g + C e^{-\frac{b}{m} 0} \\
         v_0 &= \frac{m}{b} g + C \\
         C &= \frac{m}{b} g - v_0 \\
         v &= \frac{m}{b} g + \left( \frac{m}{b} g - v_0 \right) e^{-\frac{b}{m} t}
     \end{aligned}
-\end{equation*}
+\end{equation}
 Using terminal velocity as given in Eq.~\ref{eq:linear-terminal-velocity}
 (pg.~\pageref*{eq:linear-terminal-velocity}),
-the velocity function of a falling body with linear drag is
+the velocity of a falling body with linear drag is
 \begin{equation}
-    v(t) = v_\mathrm{t} + \left( v_\mathrm{t} - v_0 \right) e^{-\frac{b}{m} t}
+    v = v_\mathrm{t} + \left( v_\mathrm{t} - v_0 \right) e^{-\frac{b}{m} t}
+\end{equation}
+
+Integrate again to find position:
+\begin{equation}
+    \begin{aligned}
+        \odv{y}{t} &= v_\mathrm{t} + \left( v_\mathrm{t} - v_0 \right) e^{-\frac{b}{m} t} \\
+        y &= \int v_\mathrm{t} + \left( v_\mathrm{t} - v_0 \right) e^{-\frac{b}{m} t} \odif{t} \\
+        y &= y_0
+             + v_\mathrm{t} t
+             + \left( v_0 - v_\mathrm{t} \right)
+               \frac{m}{b}
+               e^{-\frac{b}{m} t}
+    \end{aligned}
 \end{equation}
 
 
