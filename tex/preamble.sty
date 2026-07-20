@@ -1,25 +1,35 @@
-\usepackage{amsmath}
-\numberwithin{equation}{section}
-\usepackage{amssymb}
-\usepackage{bm}
+% Page formatting
+\usepackage{indentfirst}
+\usepackage[skip=5pt, indent=30pt]{parskip}
+\usepackage{pgf}
+
+\raggedbottom
+
+% General typesetting
 \usepackage{csquotes}
 \MakeOuterQuote{"}
-\usepackage[useregional]{datetime2}
-\DTMsetstyle{iso}
-\usepackage{derivative}
+
+% References
 \usepackage{hyperref}
 \hypersetup{
     colorlinks = true,
     allcolors = blue
 }
-\usepackage{indentfirst}
-\usepackage[skip=5pt, indent=30pt]{parskip}
-\usepackage{pgf}
-\usepackage{physics2}
+\usepackage{cleveref}
+
+% Units and time
+\usepackage[useregional]{datetime2}
+\DTMsetstyle{iso}
 \usepackage{siunitx}
 \sisetup{
     input-digits = 0123456789\pi,
     inter-unit-product = \cdot,
 }
 
-\raggedbottom
+% Math and science
+\usepackage{amsmath}
+\numberwithin{equation}{section}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{derivative}
+\usepackage{physics2}
