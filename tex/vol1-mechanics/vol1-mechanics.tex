@@ -49,7 +49,7 @@ There are two ways to experimentally determine an object's \textbf{center of mas
 \begin{itemize}
     \item Balancing the object, e.g., on your finger or penciltip.
     \item Plumb lines (in AP Physics C: Mechanics, I did this with irregularly-shaped cardboard cutouts)
-          \begin{enumerate}
+        \begin{enumerate}
             \item Hang the object from any point, allowing it to hang freely.
             \item Using a plumb bob (string with a weight),
                   find the line directly down from the point of attachment.
@@ -57,7 +57,7 @@ There are two ways to experimentally determine an object's \textbf{center of mas
             \item Repeat steps 1 and 3 multiple times with different points.
             \item Find where the lines intersect.
                   This should be the center of mass.
-          \end{enumerate}
+        \end{enumerate}
 \end{itemize}
 
 Determing the CoM theoretically
@@ -543,7 +543,7 @@ Instantaneous power:
 
 \section{Momentum}
 
-Definition of \textbf{momentum} (for classical mechanics anyway):
+\textbf{Momentum} is symbolized by \(\bm{p}\):
 \begin{equation}
     \bm{p} = m \bm{v}
 \end{equation}
@@ -567,7 +567,7 @@ For objects with constant mass,
     \Delta{\bm{p}} = m \Delta{\bm{v}}
 \end{equation}
 
-\begin{equation}
+\begin{equation} \label{eq:force-momentum}
     \begin{aligned}
         \odv{\bm{p}}{t} &= m \odv{\bm{v}}{t} \\
         \odv{\bm{p}}{t} &= m \bm{a} \\
@@ -582,10 +582,55 @@ In integral form,
 
 \section{Impulse}
 
+\textbf{Impulse} is symbolized by \(\bm{J}\)
+and has SI units of \(\unit{\newton \second}\) or \(\unit{\kilogram \metre \per \second}\)
+In the simple case where \(\odv{\bm{F}}{t} = 0\),
+\begin{equation}
+    \bm{J} = \bm{F} t
+\end{equation}
+The more general equation is
+\begin{equation}
+    \int \bm{F}(t) \odif{t}
+\end{equation}
+\begin{equation}
+    \therefore \bm{J} = \Delta{\bm{p}}
+\end{equation}
+where \(\Delta{\bm{p}}\) is the change in momentum.
+
 \section{Conservation of Momentum}
+
+Because of \eqRef{eq:force-momentum} and Newton's first law,
+when there is no external force, \(\Delta{\bm{p}} = \bm{0}\),
+i.e, the final and initial momentum have to be equal.
+
+Types of \textbf{collisions}:
+\begin{itemize}
+    \item \textbf{Elastic}
+        \begin{itemize}
+            \item Kinetic energy is conserved.
+            \item Objects bounce apart with the same energy they collided with.
+        \end{itemize}
+    \item \textbf{Inelastic}
+        \begin{itemize}
+            \item Kinetic energy is lost.
+            \item Objects bounce apart with less energy or not all.
+                  The case where the objects do not bounce at all
+                  is known as \textbf{perfectly inelastic}
+        \end{itemize}
+    \item \textbf{Explosion}
+        \begin{itemize}
+            \item Kinetic energy is gained.
+            \item Objects bounce apart.
+        \end{itemize}
+\end{itemize}
+
+Practically speaking, no collision is perfectly elastic or inelastic;
+they are on a sliding continuum between the two.
 
 
 \chapter{Torque and Rotational Dynamics}
+
+\section{Rotational Kinematics}
 
 \section{Parallel Axis Theorem}
 
