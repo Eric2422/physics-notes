@@ -160,21 +160,21 @@ where \(m\) is the mass of the sphere.
 For the gravitational field \emph{inside} a sphere,
 if \(r\) is the distance from the center,
 \(\rho(r)\) is the density as a function of \(r\),
-and \(R'\) is the radius of an imaginary inner sphere,
-the magnitude of the gravitational field at \(R'\) distance from the center is
+and \(R_\mathrm{i}\) is the radius of an imaginary inner sphere,
+the magnitude of the gravitational field at \(R_\mathrm{i}\) distance from the center is
 \begin{equation}
-        \left\| \bm{g} \right\| = \frac{G}{R'^2} \int_{0}^{R'} 4\pi r^2 \rho(r) \odif{r}
+        \left\| \bm{g} \right\| = \frac{G}{R_\mathrm{i}^2} \int_{0}^{R_\mathrm{i}} 4\pi r^2 \rho(r) \odif{r}
 \end{equation}
 
 For a sphere of constant density \(\rho\), mass \(M\), and radius \(R\),
 the gravitational field \(\bm{g}\) increases linearly
-as distance from the center \(R'\) increases, when \(R' < R\).
+as distance from the center \(R_\mathrm{i}\) increases, when \(R_\mathrm{i} < R\).
 \begin{equation}
     \begin{aligned}
-        \left\| \bm{g} \right\| &= \frac{G}{R'^2} \int_{0}^{R'} 4\pi r^2 \rho \odif{r} \\
-        &= \frac{4 G \pi \rho}{R'^2} \int_{0}^{R'} r^2 \odif{r} \\
-        &= \frac{4 G \pi \rho}{R'^2} \frac{R'^3}{3} \\
-        &= \frac{4}{3} \pi G \rho R'
+        \left\| \bm{g} \right\| &= \frac{G}{R_\mathrm{i}^2} \int_{0}^{R_\mathrm{i}} 4\pi r^2 \rho \odif{r} \\
+        &= \frac{4 G \pi \rho}{R_\mathrm{i}^2} \int_{0}^{R_\mathrm{i}} r^2 \odif{r} \\
+        &= \frac{4 G \pi \rho}{R_\mathrm{i}^2} \frac{R_\mathrm{i}^3}{3} \\
+        &= \frac{4}{3} \pi G \rho R_\mathrm{i}
     \end{aligned}
 \end{equation}
 
