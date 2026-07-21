@@ -64,14 +64,14 @@ depends on whether the mass distribution is \textbf{discrete} or \textbf{continu
 For discrete masses (e.g., several balls):
 \begin{equation}
     \begin{aligned}
-        x_{\mathrm{cm}} = \frac{\Sigma m_i x_i}{m_i} \\
-        y_{\mathrm{cm}} = \frac{\Sigma m_i y_i}{m_i} \\
-        z_{\mathrm{cm}} = \frac{\Sigma m_i z_i}{m_i}
+        x_{\mathrm{cm}} = \frac{\sum m_i x_i}{m_i} \\
+        y_{\mathrm{cm}} = \frac{\sum m_i y_i}{m_i} \\
+        z_{\mathrm{cm}} = \frac{\sum m_i z_i}{m_i}
     \end{aligned}
 \end{equation}
 More compactly,
 \begin{equation}
-    \bm{r_{\mathrm{cm}}} = \frac{\Sigma m_i \bm{r_i}}{m_i}
+    \bm{r_{\mathrm{cm}}} = \frac{\sum m_i \bm{r_i}}{m_i}
 \end{equation}
 
 
@@ -526,7 +526,8 @@ it \emph{gains} potential energy.
 
 \chapter{Power}
 
-Power is work per unit of time.
+Power is work done per unit of time.
+
 Average power:
 \begin{equation}
     P_\mathrm{avg} = \frac{W}{\Delta{t}} = \frac{\Delta{E}}{\Delta{t}}
@@ -549,14 +550,44 @@ Instantaneous power:
 
 \section{Momentum}
 
-\textbf{Momentum}:
+Definition of \textbf{momentum} (for classical mechanics anyway):
 \begin{equation}
     \bm{p} = m \bm{v}
 \end{equation}
+where
+\begin{itemize}
+    \item \(\bm{p}\) is the momentum.
+    \item \(m\) is the mass.
+    \item \(\bm{v}\) is the velocity.
+\end{itemize}
 
+The SI unit of momentum is \(\unit{\kilogram \metre \per \second}\)
+or \(\unit{\newton \second}\)
+
+A system's momentum is the sum of its parts' momenta:
+\begin{equation}
+    \bm{p}_\mathrm{system} = \sum m_i \bm{v}_i
+\end{equation}
+
+For objects with constant mass,
+\begin{equation}
+    \Delta{\bm{p}} = m \Delta{\bm{v}}
+\end{equation}
+
+\begin{equation}
+    \begin{aligned}
+        \odv{\bm{p}}{t} &= m \odv{\bm{v}}{t} \\
+        \odv{\bm{p}}{t} &= m \bm{a} \\
+        \bm{F} &= \odv{\bm{p}}{t}
+    \end{aligned}
+\end{equation}
+
+In integral form,
+\begin{equation}
+    \int \bm{F}_\mathrm{net} \odif{t} = \Delta{\bm{p}}
+\end{equation}
 
 \section{Impulse}
-
 
 \section{Conservation of Momentum}
 
@@ -584,7 +615,7 @@ Instantaneous power:
 
 \chapter{Oscillations}
 
-\section{Pendulums}
+\section{Pendula}
 
 \section{Resonance}
 
