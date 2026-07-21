@@ -444,7 +444,7 @@ By definition, \textbf{conservative forces} are ones where the \textbf{work} don
 i.e., work along a \textbf{closed loop} is 0.
 
 The equation for \textbf{potential energy} is
-\begin{equation}
+\begin{equation} \label{eq:potential-energy}
     U = - \int \bm{F} \cdot \odif{\bm{r}}
 \end{equation}
 
@@ -498,7 +498,7 @@ For example, for a spring with force function \(F(x) = -k x^\frac{4}{3}\),
 \chapter{Work}
 
 Work formula:
-\begin{equation}
+\begin{equation} \label{eq:work}
     \begin{aligned}
         W &= \int \bm{F} \cdot \odif{\bm{x}} \\
         &= \int_{b}^{a} \bm{F}(\bm{r}(t)) \cdot \bm{r}'(t) \odif{t} \\
@@ -511,7 +511,38 @@ where
     \item \(\bm{T}\) is the tangent.
 \end{itemize}
 
+Compare the equation for work---\eqRef{eq:work}---
+with the equation for potential energy---\eqRef{eq:potential-energy}.
+Therefore, for conservative forces,
+\begin{equation}
+    W = - \Delta{U}
+\end{equation}
+
+Be careful about the signs for work.
+If a \emph{system} does positive work, it \emph{loses} potential energy.
+Conversely, if an external force acts does positive work \emph{upon the system},
+it \emph{gains} potential energy.
+
+
 \chapter{Power}
+
+Power is work per unit of time.
+Average power:
+\begin{equation}
+    P_\mathrm{avg} = \frac{W}{\Delta{t}} = \frac{\Delta{E}}{\Delta{t}}
+\end{equation}
+where
+\begin{itemize}
+    \item \(P_\mathrm{avg}\) is the average power.
+    \item \(W\) is work done.
+    \item \(\Delta{t}\) is the change in time.
+    \item \(\Delta{E}\) is the change in energy.
+\end{itemize}
+
+Instantaneous power:
+\begin{equation}
+    P = \odv{E}{t}
+\end{equation}
 
 
 \chapter{Linear Momentum}
