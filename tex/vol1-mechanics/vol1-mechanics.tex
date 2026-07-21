@@ -20,7 +20,7 @@
 \mainmatter
 
 
-\chapter{Kinematic Equations}
+\chapter{Kinematics}
 
 The below \textbf{kinematic equations} are only true under constant acceleration.
 \begin{equation}
@@ -41,7 +41,9 @@ The below \textbf{kinematic equations} are only true under constant acceleration
 \end{equation}
 
 
-\chapter{Center of Mass}
+\chapter{Force and Translational Dynamics}
+
+\section{Center of Mass}
 
 There are two ways to experimentally determine an object's \textbf{center of mass (CoM)}:
 \begin{itemize}
@@ -85,7 +87,7 @@ Integrating with respect to mass is difficult,
 so let us find a way to make mass dependent on something easier,
 e.g., distance.
 
-\section{Linear Mass Density}
+\subsection{Linear Mass Density}
 
 \textbf{Linear mass density} is mass per length, e.g.,
 kilograms per meter \(\unit{\kilogram \per \meter}\).
@@ -109,7 +111,7 @@ Plugging back into \cref{eq:continuous-com} (\cpageref{eq:continuous-com}):
 With this equation,
 we can find the CoM as long as the linear mass density is integrable.
 
-\section{Area and Volume Mass Density}
+\subsection{Area and Volume Mass Density}
 
 For higher dimensions, area and volume mass density exist,
 with symbols of \(\sigma\) and \(\rho\)
@@ -128,8 +130,7 @@ For an area,
     x_\mathrm{cm} = \frac{\int y \sigma(x, y) \odif{x}}{\int \int \sigma(x, y) \odif{x} \odif{y}}
 \end{equation}
 
-
-\chapter{Free-Body Diagrams} \label{ch:free-body-diagrams}
+\section{Free-Body Diagrams} \label{ch:free-body-diagrams}
 
 Free-body diagrams are a simple means of illustrating the forces acting upon a body.
 Draw the body as a simple shape such as a dot or box,
@@ -138,7 +139,7 @@ Larger arrows indicate larger forces.
 
 (Drawing in \LaTeX\ is a pain. Graphical example to be added later.)
 
-\chapter{Gravity}
+\section{Gravity}
 
 \textbf{Gravitational force} outside of a sphere is given by \textbf{Newton's law of gravity}:
 \begin{equation} \label{eq:newtons-law-of-gravity}
@@ -178,12 +179,11 @@ as distance from the center \(R_\mathrm{i}\) increases, when \(R_\mathrm{i} < R\
     \end{aligned}
 \end{equation}
 
-
-\chapter{Resistive Forces}
+\section{Resistive Forces}
 
 \textbf{Resistive forces} act opposite to the direction of movement.
 
-\section{Friction}
+\subsection{Friction}
 
 Types of \textbf{friction}:
 \begin{itemize}
@@ -224,7 +224,7 @@ In other words, kinetic friction is always less than the maximum static friction
     F_\mathrm{fk} < \mu_\mathrm{s} F_\mathrm{N}
 \end{equation}
 
-\section{Drag}
+\subsection{Drag}
 
 \textbf{Drag} is a force that acts opposite to the movement of a body in fluid.
 
@@ -323,8 +323,7 @@ Integrate again to find position:
     \end{aligned}
 \end{equation}
 
-
-\chapter{Springs}
+\section{Springs}
 
 \textbf{Ideal springs} are springs that perfectly follow \textbf{Hooke's law}:
 \begin{equation} \label{eq:hookes-law}
@@ -337,16 +336,13 @@ where
     \item \(\Delta{x}\) is the displacement of the end of the spring from its rest position.
 \end{itemize}
 
-\section{Multiple Springs}
+\subsection{Multiple Springs}
 
 Springs can be connected in \textbf{series} or \textbf{parallel}.
 In either case, they act like a single spring.
 
-\subsection{Springs in Series}
-
 Springs in series are connected side by side.
 Each spring experiences the same force.
-
 The net spring constant is given by
 \begin{equation}
     \frac{1}{k_\mathrm{k}} = \sigma \frac{1}{k_i}
@@ -354,12 +350,8 @@ The net spring constant is given by
 In practice,
 this means that springs connected in series are equivalent to a single weaker spring.
 
-
-\subsection{Springs in Parallel}
-
 Springs in parallel are connected end to end.
 Each spring stretches the same distance.
-
 The net spring constant is given by
 \begin{equation}
     k_\mathrm{net} = \sigma k_i
@@ -367,8 +359,7 @@ The net spring constant is given by
 In practice,
 this means that springs connected in parallel are equivalent to a single stronger spring.
 
-
-\chapter{Circular Motion}
+\section{Circular Motion}
 
 \textbf{Centripetal acceleration} is "center-seeking" acceleration.
 
@@ -409,7 +400,7 @@ use \eqRef{eq:centripetal-force}:
     \end{aligned}
 \end{equation}
 
-\section{Orbital Velocity}
+\subsection{Orbital Velocity}
 
 Let \(m\) and \(M\) be the masses of two bodies such that \(m \ll M\).
 Combining Newton's law of gravity
@@ -438,7 +429,9 @@ This derivation leads us to \textbf{Kepler's third law}:
 \end{equation}
 
 
-\chapter{Energy}
+\chapter{Work, Energy, and Power}
+
+\section{Energy}
 
 By definition, \textbf{conservative forces} are ones where the \textbf{work} done is \textbf{path-independent},
 i.e., work along a \textbf{closed loop} is 0.
@@ -448,7 +441,7 @@ The equation for \textbf{potential energy} is
     U = - \int \bm{F} \cdot \odif{\bm{r}}
 \end{equation}
 
-\section{Gravitational Potential Energy}
+\subsection{Gravitational Potential Energy}
 
 Assuming a constant gravitational field,
 the difference in gravitational potential energy is
@@ -467,7 +460,7 @@ If the gravitational field is not constant, use Newton's law of gravity, \eqRef{
     \end{aligned}
 \end{equation}
 
-\section{Elastic Potential Energy}
+\subsection{Elastic Potential Energy}
 
 \textbf{Elastic potential energy} for a general spring with force function \(F(x)\):
 \begin{equation} \label{eq:general-elastic-potential-energy}
@@ -495,7 +488,7 @@ For example, for a spring with force function \(F(x) = -k x^\frac{4}{3}\),
 \end{equation}
 
 
-\chapter{Work}
+\section{Work}
 
 Work formula:
 \begin{equation} \label{eq:work}
@@ -524,7 +517,7 @@ Conversely, if an external force acts does positive work \emph{upon the system},
 it \emph{gains} potential energy.
 
 
-\chapter{Power}
+\section{Power}
 
 Power is work done per unit of time.
 
@@ -546,7 +539,7 @@ Instantaneous power:
 \end{equation}
 
 
-\chapter{Linear Momentum and Impulse}
+\chapter{Linear Momentum}
 
 \section{Momentum}
 
@@ -592,25 +585,26 @@ In integral form,
 \section{Conservation of Momentum}
 
 
-\chapter{Rotation Kinematics}
-
-\section{Parallel Axis Theorem}
-
-\section{Torque}
-
-\section{Rolling without Slipping}
+\chapter{Torque and Rotational Dynamics}
 
 
-\chapter{Rotational Kinetic Energy}
+\chapter{Energy and Momentum of Rotating Systems}
 
+\section{Rotation Kinematics}
 
-\chapter{Rotational Work}
+\subsection{Parallel Axis Theorem}
 
+\subsection{Torque}
 
-\chapter{Angular Momentum}
+\subsection{Rolling without Slipping}
 
+\section{Rotational Kinetic Energy}
 
-\chapter{Orbits}
+\section{Rotational Work}
+
+\section{Angular Momentum}
+
+\section{Orbits}
 
 
 \chapter{Oscillations}
