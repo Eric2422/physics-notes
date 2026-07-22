@@ -22,6 +22,27 @@
 
 \chapter{Kinematics}
 
+\section{Newton's Laws of Motion}
+
+\begin{enumerate}
+    \item \label{itm:newtons-1st-law}
+        An stationary object stays at rest,
+        and a moving object continues moving with constant velocity,
+        until acted upon by an external force.
+    \item
+        \begin{equation} \label{eq:newtons-2nd-law}
+            \bm{F} = m\bm{a}
+        \end{equation}
+        where
+        \begin{itemize}
+            \item \(\bm{F}\) is the the force exerted on the object.
+            \item \(m\) is the mass of the object.
+            \item \(\bm{a}\) is the acceleration of the object.
+        \end{itemize}
+    \item \label{itm:newtons-3rd-law} 
+        Each force has an equal and opposite reacting force.
+\end{enumerate}
+
 \section{Kinematic Equations}
 
 The below \textbf{kinematic equations} are only true under constant acceleration.
@@ -277,7 +298,8 @@ If you are curious why the derivations are not in my notes,
 I was attempting to work with quadratic drag during class instead of paying attention to the lecture.
 }
 
-Velocity of a free-falling object experiencing linear drag:
+Velocity of a free-falling object experiencing linear drag,
+using Newton's second law, \eqRef{eq:newtons-2nd-law}:
 \begin{equation}
     \begin{aligned}
         F &= ma \\
@@ -598,7 +620,8 @@ where \(\Delta{\bm{p}}\) is the change in momentum.
 
 \section{Conservation of Momentum}
 
-Because of \eqRef{eq:force-momentum} and Newton's first law,
+Because of \eqRef{eq:force-momentum} and Newton's first law
+(\cpageref{itm:newtons-1st-law}),
 when there is no external force, \(\Delta{\bm{p}} = \bm{0}\),
 i.e, the final and initial momentum have to be equal.
 
