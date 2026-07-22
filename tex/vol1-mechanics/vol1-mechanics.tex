@@ -187,10 +187,11 @@ Larger arrows indicate larger forces.
 
 \textbf{Gravitational force} outside of a sphere is given by \textbf{Newton's law of gravity}:
 \begin{equation} \label{eq:newtons-law-of-gravity}
-    \left\| F_\mathrm{g} \right\| = G \frac{m_1 m_2}{r^2}
+    F = G \frac{m_1 m_2}{r^2}
 \end{equation}
 where
 \begin{itemize}
+    \item \(F\) is the magnitude of the gravitational force.
     \item \(G\) is the universal gravitational constant.
     \item \(m_1\) and \(m_2\) are the masses of the two objects.
     \item \(r\) is the distance between the two.
@@ -198,9 +199,13 @@ where
 
 \textbf{Gravitational field} outside of a sphere:
 \begin{equation}
-    \left\| \bm{g} \right\| = G \frac{m}{r^2}
+    g = G \frac{m}{r^2}
 \end{equation}
-where \(m\) is the mass of the sphere.
+where
+\begin{itemize}
+    \item \(g\) is the gravitational force.
+    \item \(m\) is the mass of the sphere.
+\end{itemize}
 
 For the gravitational field \emph{inside} a sphere,
 if \(r\) is the distance from the center,
@@ -208,7 +213,7 @@ if \(r\) is the distance from the center,
 and \(R_\mathrm{i}\) is the radius of an imaginary inner sphere,
 the magnitude of the gravitational field at \(R_\mathrm{i}\) distance from the center is
 \begin{equation}
-        \left\| \bm{g} \right\| = \frac{G}{R_\mathrm{i}^2} \int_{0}^{R_\mathrm{i}} 4\pi r^2 \rho(r) \odif{r}
+        g = \frac{G}{R_\mathrm{i}^2} \int_{0}^{R_\mathrm{i}} 4\pi r^2 \rho(r) \odif{r}
 \end{equation}
 
 For a sphere of constant density \(\rho\), mass \(M\), and radius \(R\),
@@ -216,7 +221,7 @@ the gravitational field \(\bm{g}\) increases linearly
 as distance from the center \(R_\mathrm{i}\) increases, when \(R_\mathrm{i} < R\).
 \begin{equation}
     \begin{aligned}
-        \left\| \bm{g} \right\| &= \frac{G}{R_\mathrm{i}^2} \int_{0}^{R_\mathrm{i}} 4\pi r^2 \rho \odif{r} \\
+        g &= \frac{G}{R_\mathrm{i}^2} \int_{0}^{R_\mathrm{i}} 4\pi r^2 \rho \odif{r} \\
         &= \frac{4 G \pi \rho}{R_\mathrm{i}^2} \int_{0}^{R_\mathrm{i}} r^2 \odif{r} \\
         &= \frac{4 G \pi \rho}{R_\mathrm{i}^2} \frac{R_\mathrm{i}^3}{3} \\
         &= \frac{4}{3} \pi G \rho R_\mathrm{i}
@@ -313,16 +318,19 @@ With linear drag, given that up is positive, terminal velocity is achieved at
 \end{equation}
 
 \textit{
-Author's note:
-I do not have the derivations for the position and velocity of fallling objects with linear drag in my notes,
-so I do not remember the exact process taught in class.
-The following has been solved using a technique I learned from a later differential equations class,
-so it probably differs from what was taught in AP Physics C: Mechanics.
+    Author's note:
+    I do not have the derivations
+    for the position and velocity of fallling objects with linear drag in my notes,
+    so I do not remember the exact process taught in class.
+    The following has been solved
+    using a technique I learned from a later differential equations class,
+    so it probably differs from what was taught in AP Physics C: Mechanics.
 }
 
 \textit{
-If you are curious why the derivations are not in my notes,
-I was attempting to work with quadratic drag during class instead of paying attention to the lecture.
+    If you are curious why the derivations are not in my notes,
+    I was attempting to work with quadratic drag during class
+    instead of paying attention to the lecture.
 }
 
 Velocity of a free-falling object experiencing linear drag,
@@ -333,6 +341,7 @@ using Newton's second law of motion, \eqRef{eq:newtons-2nd-law}:
         mg - bv &= ma \\
         mg - bv &= m \odv{v}{t} \\
         \odv{v}{t} + \frac{b}{m} v &= g \\
+        \odv{v}{t} e^{\frac{b}{m} t} + \frac{b}{m} e^{\frac{b}{m} t} v &= g e^{\frac{b}{m} t} \\
         \odv{}{t} \left[ v e^{\frac{b}{m} t} \right] &= g e^{\frac{b}{m} t} \\
         v e^{\frac{b}{m} t} &= \int g e^{\frac{b}{m} t} \odif{t} \\
         v e^{\frac{b}{m} t} &= \frac{m}{b} g e^{\frac{b}{m}t} + C \\
