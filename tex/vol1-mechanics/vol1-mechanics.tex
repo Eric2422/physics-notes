@@ -46,16 +46,24 @@
 \section{Kinematic Equations}
 
 The below \textbf{kinematic equations} are only true under constant acceleration.
-\begin{gather}
-    v_\mathrm{f} = v_0 + at \\
+\begin{gather} \label{eq:linear-kinematic}
     {
         \Delta{x} = v_0 t + \frac{1}{2} a t^2
         \qquad \mathrm{or} \qquad
         x = x_0 + v_0 t + \frac{1}{2} a t^2
     } \\
-    v_\mathrm{f}^2 = v_0^2 + 2a \Delta{x} \\
+    v_\mathrm{f} = v_0 + a t \\
+    v_\mathrm{f}^2 = v_0^2 + 2 a \Delta{x} \\
     \Delta{x} = \frac{v_0 + v_\mathrm{f}}{2} t
 \end{gather}
+where
+\begin{itemize}
+    \item \(x\) is the position.
+    \item \(v\) is velocity.
+    \item \(a\) is acceleration.
+    \item \(t\) is time.
+    \item \(_0\) indicates initial.
+\end{itemize}
 
 
 \chapter{Force and Translational Dynamics}
@@ -654,11 +662,124 @@ they are on a sliding continuum between the two.
 
 \section{Rotational Kinematics}
 
-\begin{align}
-    \theta &= \theta_0 + \omega_0 t + \frac{1}{2} \alpha t^2 \\
+Rotational motion is the motion of spinning objects.
+Instead of measuring distance, we measure angle.
+
+Similarly to the linear kinematic equations
+under constant linear acceleration (\cpageref{eq:linear-kinematic}),
+there are \textbf{rotational kinematic equations}
+under constant \textbf{angular acceleration}:
+\begin{gather}
+    {
+        \Delta{\theta} = \omega_0 t + \frac{1}{2} \alpha t^2
+        \qquad \mathrm{or} \qquad
+        \theta = \theta_0 + \omega_0 t + \frac{1}{2} \alpha t^2
+    } \\
+    \omega_\mathrm{f} = \omega_0 + \alpha t \\
+    \omega_\mathrm{f}^2 = \omega_0^2 + 2 \alpha \Delta{\theta} \\
+    \Delta{\theta} = \frac{\omega_0 + \omega_\mathrm{f}}{2} t
+\end{gather}
+where
+\begin{itemize}
+    \item \(\theta\) is the angle.
+    \item \(\omega\) is the \textbf{angular velocity}.
+    \item \(\alpha\) is the angular acceleration.
+    \item \(t\) is the time.
+    \item \(_0\) indicates initial.
+\end{itemize}
+
+\textbf{Arc length}:
+\begin{equation}
+    s = r \theta
+\end{equation}
+where \(\theta\) is teh angle in radians.
+It does not work in degrees.
+
+\textbf{Tangential velocity}:
+\begin{equation}
+    v_\mathrm{t} = r \omega
+\end{equation}
+
+\textbf{Tangential acceleration}:
+\begin{equation}
+    a_\mathrm{t} = r \alpha
+\end{equation}
+
+\subsection{Moment of Inertia}
+
+\textbf{Moment of inertia} or \textbf{rotational inertia} is the angular analogue of mass,
+describing how much a body resists rotational acceleration.
+For discrete masses:
+\begin{equation}
+    I = \sum m_i r_i^2
+\end{equation}
+where
+\begin{itemize}
+    \item \(I\) is the overall moment of inertia.
+    \item \(m_i\) is the mass of each particle.
+    \item \(r_i\) is the distance of each particle from the \textbf{axis of rotation}.
+\end{itemize}
+For continuous masses:
+\begin{equation}
+    I = \int r^2 \odif{m}
+\end{equation}
+Since \(\lambda(r) = \odv{m}{r}\),
+\begin{equation*}
+    \odif{m} = \lambda(r) \odif{r}
+\end{equation*}
+\begin{equation}
+    \therefore I = \int r^2 \lambda(r) \odif{r}
+\end{equation}
+
+Rod of uniform density \(\lambda\), length \(\ell\) and mass \(M\)
+rotating about an axis perpendicular to its length and passing through the center:
+\begin{align} \label{eq:uniform-rod-rotational-inertia}
+    I &= 2 \int_{0}^{\frac{\ell}{2}} r^2 \odif{m} \\
+    &= 2 \int_{0}^{\frac{\ell}{2}} r^2 \lambda \odif{r} \\
+    &= 2 \lambda \int_{0}^{\frac{\ell}{2}} r^2 \odif{r} \\
+    &= 2 \lambda \left[ \frac{1}{3} r^3 \right]^\frac{\ell}{2}_0 \\
+    &= \frac{2 \lambda}{3} \frac{\ell^3}{8} \\
+    &= \lambda \frac{\ell^3}{12} \\
+    &= \frac{1}{12} M \ell^2
 \end{align}
 
-\section{Parallel Axis Theorem}
+\emph{Author's note: needs image}
+
+Note that the \(r\) in these formulas
+means that objects have lower moment of inertia
+when the axis of rotation is closer to their center of mass
+than when it is far from the center of mass,
+e.g., it is easier to spin a stick at the middle than at either end.
+
+If we already know the rotational inertia of an object
+when rotating about an axis passing through its center of mass,
+the \textbf{parallel axis theorem} allows us to determine the rotational inertia
+when it is rotating around a new axis parallel to the original axis.
+\begin{equation}
+    I = I_\mathrm{cm} + m d^2
+\end{equation}
+where
+\begin{itemize}
+    \item \(I\) is the new moment of inertia.
+    \item \(I_\mathrm{cm}\) is the moment of inertia
+          when rotating around the center of mass.
+    \item \(m\) is the mass of the object.
+    \item \(d\) is the distance between the two axes.
+\end{itemize}
+
+\emph{Author's note: needs image}
+
+Using the uniform rod as an example again
+---\eqRef{eq:uniform-rod-rotational-inertia}---
+if we rotated the rod around its end instead of its center,
+its rotational inertia would be
+\begin{equation}
+    \begin{aligned}
+        I &= \frac{1}{12} M \ell^2
+             + M \left( \frac{\ell}{2} \right)^2 \\
+        &= \frac{1}{3} M \ell^2
+    \end{aligned}
+\end{equation}
 
 \section{Torque}
 
