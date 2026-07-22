@@ -181,7 +181,7 @@ Draw the body as a simple shape such as a dot or box,
 then add labeled arrows to represent the forces acting in each direction.
 Larger arrows indicate larger forces.
 
-(Drawing in \LaTeX\ is a pain. Graphical example to be added later.)
+\emph{To-do: add images}
 
 \section{Gravity}
 
@@ -779,7 +779,7 @@ when the axis of rotation is closer to their center of mass
 than when it is far from the center of mass,
 e.g., it is easier to spin a stick at the middle than at either end.
 A more interesting example is that a full can rolls down a slope faster than an empty can does.
-The full can's mass is concentrated in the center,
+The full can's mass is more concentrated in the center,
 reducing its moment of inertia and thus giving it greater acceleration.
 
 If we already know the rotational inertia of an object
@@ -850,7 +850,7 @@ and the direction of the applied force is given by the \textbf{right-hand rule}.
 
 \subsection{Atwood Machines with Pulley of Non-Negligible Mass}
 
-An Atwood machine is a pair of masses connected by a rope and hung over a pulley.
+An \textbf{Atwood machine} is a pair of masses connected by a rope and hung over a pulley.
 
 Let
 \begin{itemize}
@@ -895,7 +895,45 @@ From \eqRef{eq:newtons-2nd-law-rotational},
     \end{gathered}
 \end{equation}
 
-\section{Rolling without Slipping}
+\section{Rolling}
+
+Objects need static friction to roll.
+If there is no static friction, the object simply slides rather than rolling.
+If the static friction is insufficient, the object \textbf{rolls with slipping},
+which causes energy loss.
+If the static friction reaches a critical point, it \textbf{rolls without slipping},
+which does not cause energy loss.
+Practically, rolling without slipping is impossible;
+there will always be some energy lost.
+
+Let
+\begin{itemize}
+    \item \(r\) be the radius of an object rolling down a ramp.
+    \item \(m\) be the mass of the rolling object.
+    \item \(\theta\) be the angle of the ramp from the horizontal.
+    \item \(\mu_\mathrm{s}\) be the static friction of the ramp.
+    \item \(F_\mathrm{N}\) be the normal force experienced by the object.
+    \item \(F_\mathrm{f}\) be the frictional force experienced by the object.
+\end{itemize}
+
+Deriving \(\mu_\mathrm{s}\):
+\begin{equation}
+    \begin{gathered}
+        F_\mathrm{N} = m g \cos\theta \\
+        \therefore F_\mathrm{f} = \mu_\mathrm{s} m g \cos\theta \\
+        \begin{aligned}
+            m g \sin\theta - F_\mathrm{f} &= m a \\
+            m g \sin\theta - \mu_s m g \cos\theta &= m a \\
+        \end{aligned} \\
+        \begin{aligned}
+            \tau &= I \alpha \\
+            r F_\mathrm{f} &= I \alpha \\
+            \alpha &= \frac{5 r F_\mathrm{f}}{I} \\
+            &= \frac{5 \mu_\mathrm{s} r m g \cos\theta}{I}
+        \end{aligned}
+    \end{gathered}
+\end{equation}
+
 
 \chapter{Energy and Momentum of Rotating Systems}
 
