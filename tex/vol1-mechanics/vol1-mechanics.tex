@@ -19,25 +19,21 @@
 
 \chapter{Introduction}
 
-Some of the content of this volume
-may seem excessively simple and obvious
+Some of the content of this volume may seem excessively simple and obvious
 to someone who has learned the basic of mechanics,
 e.g., the kinematic equations.
 
 However, I studied electricity and magnetism before I studied mechanics,
-so I started mechanics
-knowing just Newton's three laws of motion,
-his law of gravity,
-and the formula for gravitational potential energy.
+so I started mechanics knowing just Newton's three laws of motion,
+his law of gravity, and the formula for gravitational potential energy.
 
-In fact,
-many of the concepts in mechanics I learned
+In fact, many of the concepts in mechanics I learned
 by relating them to concepts from electricity and magnetism,
 e.g., springs to capacitors and gravity to electric force.
 Since it is unlikely that the reader
 has learned electricity and magnetism before mechanics,
 such analogies have been excised from this volume.
-They will surface again in Vol.~2: Electricity and Magnetism.
+They will resurface in Vol.~2: Electricity and Magnetism.
 
 
 \mainmatter
@@ -806,13 +802,78 @@ its rotational inertia would be
 
 \section{Torque}
 
-Torque is the rotational analogue to linear force:
+\textbf{Torque} is the rotational analogue to linear force:
 \begin{equation}
-    \bm{\tau} = \bm{F} \times \bm{r}
+    \begin{aligned}
+        \bm{\tau} &= \bm{r} \times \bm{F} \\
+        \tau &= r F \sin\theta
+    \end{aligned}
+\end{equation}
+where
+\begin{itemize}
+    \item \(\bm{\tau}\) is the torque vector, and \(\tau\) is its magnitude.
+    \item \(\bm{r}\) is the position vector from the axis of rotation
+          to the point where the force is applied, and \(r\) is its magnitude.
+    \item \(\bm{F}\) is the force applied, and \(F\) is its magnitude.
+    \item \(\theta\) is the angle between the force and the position vector.
+\end{itemize}
+
+\textbf{Newton's second law for rotational movement}:
+\begin{equation} \label{eq:newtons-2nd-law-rotational}
+    \begin{aligned}
+        \bm{\tau} &= I \bm{\alpha} \\
+        \tau &= I \alpha
+    \end{aligned}
+\end{equation}
+
+\subsection{Atwood Machines with Pulley of Non-Negligible Mass}
+
+An Atwood machine is a pair of masses connected by a rope and hung over a pulley.
+
+Let
+\begin{itemize}
+    \item \(m_1\) and \(m_2\) be
+          the masses on the left and right respectively.
+    \item \(M\) be the mass of the pulley.
+    \item \(F_1\) be the total force exerted on \(m_1\),
+          and similarly for \(F_2\).
+    \item \(F_\mathrm{T1}\) be the force of tension exerted on \(m_1\)
+          and similarly for \(F_\mathrm{T2}\).
+    \item \(R\) be the radius of the pulley.
+    \item \(a\) be the linear acceleration that both masses experience.
+\end{itemize}
+
+From \eqRef{eq:newtons-2nd-law-rotational},
+\begin{equation}
+    \begin{gathered}
+        \begin{aligned}
+            \tau &= I \alpha \\
+            &= I \frac{a}{R}
+        \end{aligned} \\
+        \begin{aligned}
+            F_1 &= F_\mathrm{T1} - m_1 g \\
+            F_2 &= F_\mathrm{T2} - m_2 g \\
+            F_\mathrm{T1} - m_1 g &= m_1 a \\
+            F_\mathrm{T1} &= m_1 a + m_1 g \\
+            F_\mathrm{T2} - m_2 g &= m_2 a \\
+            F_\mathrm{T2} &= m_2 a + m_2 g \\
+        \end{aligned} \\
+        \\
+        \begin{aligned}
+            R F_\mathrm{T2} - R F_\mathrm{T1} &= \frac{1}{2} M R a \\
+            F_\mathrm{T2} - F_\mathrm{T1} &= \frac{1}{2} M a \\
+            m_2 a + m_2 g - \left( m_1 a + m_1 g \right) &= \frac{1}{2} M a \\
+            m_2 g - m_1 g &= \frac{1}{2} M a - m_2 a + m_1 a \\
+            \left( m_2 - m_1 \right) g &= \left( \frac{1}{2} M - m_2 + m_1 \right) a \\
+        \end{aligned} \\
+        \begin{aligned}
+            a &= \frac{\left( m_2 - m_1 \right) g}{\frac{1}{2} M - m_2 + m_1} \\
+            &= \frac{2 \left( m_2 - m_1 \right) g}{M - 2 \left( m_2 + m_1 \right)}
+        \end{aligned}
+    \end{gathered}
 \end{equation}
 
 \section{Rolling without Slipping}
-
 
 \chapter{Energy and Momentum of Rotating Systems}
 
