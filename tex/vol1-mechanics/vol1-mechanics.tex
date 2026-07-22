@@ -25,22 +25,16 @@
 \section{Kinematic Equations}
 
 The below \textbf{kinematic equations} are only true under constant acceleration.
-\begin{equation}
-    v_\mathrm{f} = v_0 + at
-\end{equation}
-\begin{equation}
-    \begin{aligned}
+\begin{gather}
+    v_\mathrm{f} = v_0 + at \\
+    {
         \Delta{x} = v_0 t + \frac{1}{2} a t^2
         \qquad \mathrm{or} \qquad
         x = x_0 + v_0 t + \frac{1}{2} a t^2
-    \end{aligned}
-\end{equation}
-\begin{equation}
-    v_\mathrm{f}^2 = v_0^2 + 2a \Delta{x}
-\end{equation}
-\begin{equation}
+    } \\
+    v_\mathrm{f}^2 = v_0^2 + 2a \Delta{x} \\
     \Delta{x} = \frac{v_0 + v_\mathrm{f}}{2} t
-\end{equation}
+\end{gather}
 
 
 \chapter{Force and Translational Dynamics}
@@ -296,14 +290,16 @@ Velocity of a free-falling object experiencing linear drag:
         v &= \frac{m}{b} g + C e^{-\frac{b}{m} t} \\
     \end{aligned}
 \end{equation}
-Solve for \(C\) using the initial condition \(v(0) = v_0\):
+Solving for \(C\) using the initial condition \(v(0) = v_0\):
 \begin{equation}
-    \begin{aligned}
-        v_0 &= \frac{m}{b} g + C e^{-\frac{b}{m} 0} \\
-        v_0 &= \frac{m}{b} g + C \\
-        C &= \frac{m}{b} g - v_0 \\
-        v &= \frac{m}{b} g + \left( \frac{m}{b} g - v_0 \right) e^{-\frac{b}{m} t}
-    \end{aligned}
+    \begin{gathered}
+        \begin{aligned}
+            v_0 &= \frac{m}{b} g + C e^{-\frac{b}{m} 0} \\
+            v_0 &= \frac{m}{b} g + C
+        \end{aligned} \\
+        C = \frac{m}{b} g - v_0 \\
+        v = \frac{m}{b} g + \left( \frac{m}{b} g - v_0 \right) e^{-\frac{b}{m} t}
+    \end{gathered}
 \end{equation}
 Using terminal velocity as given in \cref{eq:linear-terminal-velocity}
 (\cpageref{eq:linear-terminal-velocity}),
@@ -412,15 +408,16 @@ with \eqRef{eq:centripetal-force}:
     \begin{aligned}
         G \frac{M m}{r^2} &= m \frac{v^2}{r} \\
         G \frac{M}{r} &= v^2 \\
-        \sqrt{G \frac{M}{r}} &= v \\
+        v &= \sqrt{G \frac{M}{r}} \\
     \end{aligned}
 \end{equation}
 Using \eqRef{eq:revolution-period}:
 \begin{equation}
     \begin{aligned}
-        \sqrt{G \frac{M}{r}} &= \frac{2 \pi r}{T} \\
-        T &= \frac{2 \pi r}{\sqrt{G \frac{M}{r}}} \\
-        &= \frac{2\pi r^{3/2}}{\sqrt{G M}} \\
+        \frac{2 \pi r}{T} &= \sqrt{G \frac{M}{r}} \\
+        \frac{T}{2 \pi r} &= \frac{1}{\sqrt{G \frac{M}{r}}} \\
+        &= \sqrt{\frac{r}{G M}} \\
+        T &= \frac{2 \pi r^{3/2}}{\sqrt{G M}} \\
         T^2 &= \frac{4 \pi^2}{GM} r^3 \\
     \end{aligned}
 \end{equation}
@@ -633,6 +630,10 @@ they are on a sliding continuum between the two.
 \chapter{Torque and Rotational Dynamics}
 
 \section{Rotational Kinematics}
+
+\begin{align}
+    \theta &= \theta_0 + \omega_0 t + \frac{1}{2} \alpha t^2 \\
+\end{align}
 
 \section{Parallel Axis Theorem}
 
