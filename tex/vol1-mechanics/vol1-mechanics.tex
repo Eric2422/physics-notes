@@ -388,7 +388,9 @@ Integrate again to find position:
 where
 \begin{itemize}
     \item \(F_\mathrm{s}\) is the magnitude of the spring force.
-    \item \(k\) is the \textbf{spring constant}.
+    \item \(k\) is the \textbf{spring constant},
+          essentially a measure of how stiff the spring is,
+          with SI units of \(\unit{\newton \per \metre}\).
     \item \(\Delta{x}\) is the displacement of the end of the spring from its rest position.
 \end{itemize}
 
@@ -459,8 +461,8 @@ use \eqRef{eq:centripetal-force}:
 \subsection{Orbital Velocity}
 
 Let \(m\) and \(M\) be the masses of two bodies such that \(m \ll M\).
-Combining Newton's law of gravity
----\eqRef{eq:newtons-law-of-gravity}---
+Combining Newton's law of gravity,
+\eqRef{eq:newtons-law-of-gravity},
 with \eqRef{eq:centripetal-force}:
 \begin{equation}
     \begin{aligned}
@@ -572,8 +574,8 @@ where
     \item \(\bm{T}\) is the tangent.
 \end{itemize}
 
-Compare the equation for work---\eqRef{eq:work}---
-with the equation for potential energy---\eqRef{eq:potential-energy}.
+Compare the equation for work, \eqRef{eq:work},
+with the equation for potential energy, \eqRef{eq:potential-energy}.
 Therefore, for conservative forces,
 \begin{equation}
     W = - \Delta{U}
@@ -811,8 +813,8 @@ where
 
 \emph{To-do: add image}
 
-Using the uniform rod as an example again
----\eqRef{eq:uniform-rod-rotational-inertia}---
+Using the uniform rod as an example again,
+\eqRef{eq:uniform-rod-rotational-inertia},
 if we rotated the rod around its end instead of its center,
 its rotational inertia would be
 \begin{equation}
@@ -1026,18 +1028,32 @@ Orbits are governed by Kepler's three laws of planetary motion:
 \chapter{Oscillations}
 
 \textbf{Oscillations} are sinusoidal behaviors demonstrated by certain systems.
-Oscillations can be defined by four parameters:
+Oscillations can be defined by three parameters.
+Let
 \begin{itemize}
-    \item \textbf{Amplitude}
-    \item \textbf{Angular frequency}
-    \item \textbf{Phase}
-    \item \textbf{Midpoint}
+    \item \(A\) be the \textbf{amplitude} (usually ),
+           which is the difference between the maximum and minimum values,
+           including negative values.
+           In mechanics, this will usually be distance or angle,
+           but it can also be things such as velocity or acceleration.
+           Beyond mechanics, it could be in dimensions such as charge, current,
+           or voltage.
+    \item \(\omega\) be the \textbf{angular frequency},
+          which is a measure of how fast the oscillation cycles.
+          It has SI units of \(\unit{\radian \per \second}\).
+    \item \(\phi\) be the \textbf{phase},
+          which is the horizontal translation of the cycle.
+          It has SI units of \(\unit{\radian}\).
 \end{itemize}
+Thus, a general form looks like
+\begin{equation}
+    f(t) = A \cos(\omega + \phi)
+\end{equation}
 
 \section{Springs}
 
-For perfectly Hookean springs
----see \eqRef{eq:hookes-law}---,
+For perfectly Hookean springs,
+see \eqRef{eq:hookes-law},
 the angular frequency is given by
 \begin{equation}
     \omega = \sqrt{\frac{k}{m}}
@@ -1045,21 +1061,25 @@ the angular frequency is given by
 where
 \begin{itemize}
     \item \(\omega\) is the angular frequency of the oscillation.
-    \item 
+    \item \(k\) is the spring constant.
+    \item \(m\) is the mass of the object attached to the end of the spring.
 \end{itemize}
 
 \section{Pendula}
 
+A \textbf{pendulum} (plural \emph{\textbf{pendulums}} or \emph{\textbf{pendula}})
 The oscillation of pendula is determined by gravity.
 
-For ideal pendula (i.e., ones negligible moment of inertia),
+For ideal pendula, i.e., ones with negligible moment of inertia,
 the angular frequency is given by
 \begin{equation}
     \omega = \sqrt{\frac{g}{\ell}}
 \end{equation}
 where
 \begin{itemize}
-    \item 
+    \item \(\omega\) is the angular frequency.
+    \item \(g\) is the local gravitational acceleration.
+    \item \(\ell\) is the length of the pendulum.
 \end{itemize}
 
 \section{Resonance}
