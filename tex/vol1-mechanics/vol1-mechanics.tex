@@ -848,7 +848,7 @@ and the direction of the applied force is given by the \textbf{right-hand rule}.
     \end{aligned}
 \end{equation}
 
-\subsection{Atwood Machines with Pulley of Non-Negligible Mass}
+\subsection{Atwood Machines with a Pulley of Non-Negligible Mass}
 
 An \textbf{Atwood machine} is a pair of masses connected by a rope and hung over a pulley.
 
@@ -862,6 +862,7 @@ Let
     \item \(F_\mathrm{T1}\) be the force of tension exerted on \(m_1\)
           and similarly for \(F_\mathrm{T2}\).
     \item \(R\) be the radius of the pulley.
+    \item \(\alpha\) be the angular acceleration of the pulley.
     \item \(a\) be the linear acceleration that both masses experience.
 \end{itemize}
 
@@ -882,7 +883,7 @@ From \eqRef{eq:newtons-2nd-law-rotational},
         \end{aligned} \\
         \\
         \begin{aligned}
-            R F_\mathrm{T2} - R F_\mathrm{T1} &= \frac{1}{2} M R a \\
+            R F_\mathrm{T2} - R F_\mathrm{T1} &= \frac{1}{2} MR a \\
             F_\mathrm{T2} - F_\mathrm{T1} &= \frac{1}{2} M a \\
             m_2 a + m_2 g - \left( m_1 a + m_1 g \right) &= \frac{1}{2} M a \\
             m_2 g - m_1 g &= \frac{1}{2} M a - m_2 a + m_1 a \\
@@ -898,17 +899,32 @@ From \eqRef{eq:newtons-2nd-law-rotational},
 \section{Rolling}
 
 Objects need static friction to roll.
-If there is no static friction, the object simply slides rather than rolling.
+
+If there is no static friction, the object simply slides rather than rolling,
+which causes no energy loss.
+The tangential acceleration is 0,
+but the acceleration of the center of mass is non-zero.
+
 If the static friction is insufficient, the object \textbf{rolls with slipping},
 which causes energy loss.
+The tangential acceleration and the acceleration of the center of mass are not equal.
+
 If the static friction reaches a critical point, it \textbf{rolls without slipping},
 which does not cause energy loss.
+The tangential acceleration and the acceleration of the center of mass are equal.
+\begin{equation}
+    a_\mathrm{t} = a_\mathrm{cm}
+\end{equation}
+
 Practically, rolling without slipping is impossible;
 there will always be some energy lost.
 
+Imagine an object rolling down a ramp without slipping.
 Let
 \begin{itemize}
     \item \(r\) be the radius of an object rolling down a ramp.
+    \item \(\alpha\) be the angular acceleration of the rolling object.
+    \item \(a\) be the linear acceleration.
     \item \(m\) be the mass of the rolling object.
     \item \(\theta\) be the angle of the ramp from the horizontal.
     \item \(\mu_\mathrm{s}\) be the static friction of the ramp.
@@ -917,21 +933,45 @@ Let
 \end{itemize}
 
 Deriving \(\mu_\mathrm{s}\):
+\begin{gather}
+    \begin{aligned}
+        F_\mathrm{N} &= m g \cos\theta \\
+        \therefore F_\mathrm{f} &= \mu_\mathrm{s} m g \cos\theta \\
+    \end{aligned} \\
+    \nonumber \\
+    \begin{aligned} \label{eq:rolling-static-friction}
+        m g \sin\theta - F_\mathrm{f} &= m a \\
+        m g \sin\theta - \mu_\mathrm{s} m g \cos\theta &= m a \\
+        \mu_\mathrm{s} &= - \frac{a}{g \cos\theta} + \tan\theta \\
+    \end{aligned} \\
+    \nonumber \\
+    \begin{aligned} \label{eq:rolling-angular-accleration}
+        \tau &= I \alpha \\
+        r F_\mathrm{f} &= I \alpha \\
+        \alpha &= \frac{r F_\mathrm{f}}{I} \\
+        &= \frac{r \mu_\mathrm{s} m g \cos\theta}{I} \\
+    \end{aligned}
+\end{gather}
+Plug in \eqRef{eq:rolling-angular-accleration}:
 \begin{equation}
-    \begin{gathered}
-        F_\mathrm{N} = m g \cos\theta \\
-        \therefore F_\mathrm{f} = \mu_\mathrm{s} m g \cos\theta \\
-        \begin{aligned}
-            m g \sin\theta - F_\mathrm{f} &= m a \\
-            m g \sin\theta - \mu_s m g \cos\theta &= m a \\
-        \end{aligned} \\
-        \begin{aligned}
-            \tau &= I \alpha \\
-            r F_\mathrm{f} &= I \alpha \\
-            \alpha &= \frac{5 r F_\mathrm{f}}{I} \\
-            &= \frac{5 \mu_\mathrm{s} r m g \cos\theta}{I}
-        \end{aligned}
-    \end{gathered}
+    \begin{aligned} \label{eq:rolling-accleration}
+        a &= r \alpha \\
+        &= \frac{r^2 \mu_\mathrm{s} m g \cos\theta}{I} \\
+    \end{aligned}
+\end{equation}
+Plug \cref{eq:rolling-accleration} into \eqRef{eq:rolling-static-friction}:
+\begin{equation}
+    \begin{aligned}
+        \mu_\mathrm{s} &= - \frac{
+                            \frac{r^2 \mu_\mathrm{s} m g \cos\theta}{I}
+                        }
+                        {g \cos\theta}
+                        + \tan\theta \\
+        &= - \frac{r^2 \mu_\mathrm{s} m}{I} + \tan\theta \\
+        \mu_\mathrm{s} + \frac{r^2 \mu_\mathrm{s} m}{I} &= \tan\theta \\
+        \mu_\mathrm{s} \left( \frac{r^2 m}{I} \right) &= \tan\theta \\
+        \mu_\mathrm{s} &= \frac{I \tan\theta}{m r^2}
+    \end{aligned}
 \end{equation}
 
 
