@@ -72,16 +72,20 @@ The below \textbf{kinematic equations} are only true under constant acceleration
         x = x_0 + v_0 t + \frac{1}{2} a t^2
     } \\
     v_\mathrm{f} = v_0 + a t \\
-    v_\mathrm{f}^2 = v_0^2 + 2 a \Delta{x} \\
+    v^2 = v_0^2 + 2 a \Delta{x} \\
     \Delta{x} = \frac{v_0 + v_\mathrm{f}}{2} t
 \end{gather}
 where
 \begin{itemize}
-    \item \(x\) is the position.
-    \item \(v\) is velocity.
-    \item \(a\) is acceleration.
-    \item \(t\) is time.
-    \item \(_0\) indicates initial.
+    \item
+        \(x_0\) is the initial position,
+        \(x_\mathrm{f}\) is the final position,
+        and \(\Delta{x}\) is the change in position.
+    \item
+        \(v_0\) is the initial velocity,
+        and \(v_\mathrm{f}\) is the final velocity.
+    \item \(a\) is the acceleration.
+    \item \(t\) is the time elapsed.
 \end{itemize}
 
 
@@ -92,15 +96,18 @@ where
 There are two ways to experimentally determine an object's \textbf{center of mass (CoM)}:
 \begin{itemize}
     \item Balancing the object, e.g., on your finger or penciltip.
-    \item Plumb lines (in AP Physics C: Mechanics, I did this with irregularly-shaped cardboard cutouts)
+    \item
+        Plumb lines (in AP Physics C: Mechanics, I did this with irregularly-shaped cardboard cutouts)
         \begin{enumerate}
             \item Hang the object from any point, allowing it to hang freely.
-            \item Using a plumb bob (string with a weight),
-                  find the line directly down from the point of attachment.
+            \item
+                Using a plumb bob (string with a weight),
+                find the line directly down from the point of attachment.
             \item Mark this line on the object.
             \item Repeat steps 1 and 3 multiple times with different points.
-            \item Find where the lines intersect.
-                  This should be the center of mass.
+            \item
+                Find where the lines intersect.
+                This should be the center of mass.
         \end{enumerate}
 \end{itemize}
 
@@ -181,7 +188,7 @@ Draw the body as a simple shape such as a dot or box,
 then add labeled arrows to represent the forces acting in each direction.
 Larger arrows indicate larger forces.
 
-\emph{To-do: add images}
+% To-do: add images
 
 \section{Gravity}
 
@@ -236,10 +243,12 @@ as distance from the center \(R_\mathrm{i}\) increases, when \(R_\mathrm{i} < R\
 
 Types of \textbf{friction}:
 \begin{itemize}
-    \item \textbf{Kinetic friction} is between two surfaces with non-zero relative velocity.
-          It is constant and independent of the object's velocity.
-    \item \textbf{Static friction} is between two surfaces with zero relative velocity
-          and increases as the force attempting to move the object increases.
+    \item
+        \textbf{Kinetic friction} is between two surfaces with non-zero relative velocity.
+        It is constant and independent of the object's velocity.
+    \item
+        \textbf{Static friction} is between two surfaces with zero relative velocity
+        and increases as the force attempting to move the object increases.
 \end{itemize}
 
 Kinetic friction:
@@ -287,8 +296,9 @@ where
     \item \(A\) is the frontal area.
     \item \(\rho\) is the fluid density.
     \item \(v\) is the relative velocity between object and fluid.
-    \item \(C_\mathrm{D}\) is an experimentally-determined drag coefficient,
-          which is influenced by factors such as material, shape, etc.
+    \item
+        \(C_\mathrm{D}\) is an experimentally-determined drag coefficient,
+        which is influenced by factors such as material, shape, etc.
 \end{itemize}
 
 However, this is way too complicated for AP Physics C: Mechanics.
@@ -388,9 +398,10 @@ Integrate again to find position:
 where
 \begin{itemize}
     \item \(F_\mathrm{s}\) is the magnitude of the spring force.
-    \item \(k\) is the \textbf{spring constant},
-          essentially a measure of how stiff the spring is,
-          with SI units of \(\unit{\newton \per \metre}\).
+    \item
+        \(k\) is the \textbf{spring constant},
+        essentially a measure of how stiff the spring is,
+        with SI units of \(\unit{\newton \per \metre}\).
     \item \(\Delta{x}\) is the displacement of the end of the spring from its rest position.
 \end{itemize}
 
@@ -676,19 +687,22 @@ i.e, the final and initial momentum have to be equal.
 
 Types of \textbf{collisions}:
 \begin{itemize}
-    \item \textbf{Elastic}
+    \item
+        \textbf{Elastic}
         \begin{itemize}
             \item Kinetic energy is conserved.
             \item Objects bounce apart with the same energy they collided with.
         \end{itemize}
-    \item \textbf{Inelastic}
+    \item
+        \textbf{Inelastic}
         \begin{itemize}
             \item Kinetic energy is lost.
             \item Objects bounce apart with less energy or not all.
                   The case where the objects do not bounce at all
                   is known as \textbf{perfectly inelastic}
         \end{itemize}
-    \item \textbf{Explosion}
+    \item
+        \textbf{Explosion}
         \begin{itemize}
             \item Kinetic energy is gained.
             \item Objects bounce apart.
@@ -714,7 +728,7 @@ under constant \textbf{angular acceleration}:
     {
         \Delta{\theta} = \omega_0 t + \frac{1}{2} \alpha t^2
         \qquad \mathrm{or} \qquad
-        \theta = \theta_0 + \omega_0 t + \frac{1}{2} \alpha t^2
+        \theta_\mathrm{f} = \theta_0 + \omega_0 t + \frac{1}{2} \alpha t^2
     } \\
     \omega_\mathrm{f} = \omega_0 + \alpha t \\
     \omega_\mathrm{f}^2 = \omega_0^2 + 2 \alpha \Delta{\theta} \\
@@ -722,11 +736,15 @@ under constant \textbf{angular acceleration}:
 \end{gather}
 where
 \begin{itemize}
-    \item \(\theta\) is the angle.
-    \item \(\omega\) is the \textbf{angular velocity}.
+    \item
+        \(\theta_0\) is the initial angle,
+        \(\theta_\mathrm{f}\) is the final angle,
+        and \(\Delta{\theta}\) is the change in angle.
+    \item 
+        \(\omega_0\) is the initial \textbf{angular velocity},
+        and \(\omega_\mathrm{f}\) is the final angular velocity.
     \item \(\alpha\) is the angular acceleration.
-    \item \(t\) is the time.
-    \item \(_0\) indicates initial.
+    \item \(t\) is the time elapsed.
 \end{itemize}
 
 \textbf{Arc length}:
@@ -784,7 +802,7 @@ rotating about an axis perpendicular to its length and passing through the cente
     &= \frac{1}{12} M \ell^2
 \end{align}
 
-\emph{To-do: add image}
+% To-do: add image
 
 Note that the \(r\) in these formulas
 means that objects have lower moment of inertia
@@ -805,13 +823,14 @@ when it is rotating around a new axis parallel to the original axis.
 where
 \begin{itemize}
     \item \(I\) is the new moment of inertia.
-    \item \(I_\mathrm{cm}\) is the moment of inertia
-          when rotating around the center of mass.
+    \item 
+        \(I_\mathrm{cm}\) is the moment of inertia
+        when rotating around the center of mass.
     \item \(m\) is the mass of the object.
     \item \(d\) is the distance between the two axes.
 \end{itemize}
 
-\emph{To-do: add image}
+% To-do: add image
 
 Using the uniform rod as an example again,
 \eqRef{eq:uniform-rod-rotational-inertia},
@@ -851,7 +870,7 @@ and the direction of the applied force is given by the \textbf{right-hand rule}.
     \item Your right thumb points in the direction of the torque.
 \end{itemize}
 
-\emph{To-do: add image}
+% To-do: add image
 
 \textbf{Newton's second law for rotational movement}:
 \begin{equation} \label{eq:newtons-2nd-law-rotational}
@@ -867,13 +886,16 @@ An \textbf{Atwood machine} is a pair of masses connected by a rope and hung over
 
 Let
 \begin{itemize}
-    \item \(m_1\) and \(m_2\) be
-          the masses on the left and right respectively.
+    \item
+        \(m_1\) and \(m_2\) be
+        the masses on the left and right respectively.
     \item \(M\) be the mass of the pulley.
-    \item \(F_1\) be the total force exerted on \(m_1\),
-          and similarly for \(F_2\).
-    \item \(F_\mathrm{T1}\) be the force of tension exerted on \(m_1\)
-          and similarly for \(F_\mathrm{T2}\).
+    \item
+        \(F_1\) be the total force exerted on \(m_1\),
+        and similarly for \(F_2\).
+    \item
+        \(F_\mathrm{T1}\) be the force of tension exerted on \(m_1\)
+        and similarly for \(F_\mathrm{T2}\).
     \item \(R\) be the radius of the pulley.
     \item \(\alpha\) be the angular acceleration of the pulley.
     \item \(a\) be the linear acceleration that both masses experience.
@@ -1014,14 +1036,14 @@ where
 Unsurprisingly, \textbf{angular momentum} is the rotational analogue to linear momentum.
 It is defined by the following equation:
 \begin{equation}
-    L = 
+    L =
 \end{equation}
 
 \section{Orbits}
 
 Orbits are governed by Kepler's three laws of planetary motion:
 \begin{enumerate}
-    \item 
+    \item
 \end{enumerate}
 
 
@@ -1031,21 +1053,24 @@ Orbits are governed by Kepler's three laws of planetary motion:
 Oscillations can be defined by three parameters.
 Let
 \begin{itemize}
-    \item \(A\) be the \textbf{amplitude} (usually ),
-           which is the difference between the maximum and minimum values,
-           including negative values.
-           In mechanics, this will usually be distance or angle,
-           but it can also be things such as velocity or acceleration.
-           Beyond mechanics, it could be in dimensions such as charge, current,
-           or voltage.
-    \item \(\omega\) be the \textbf{angular frequency},
-          which is a measure of how fast the oscillation cycles.
-          It has SI units of \(\unit{\radian \per \second}\).
-    \item \(\phi\) be the \textbf{phase},
-          which is the horizontal translation of the cycle.
-          It has SI units of \(\unit{\radian}\).
+    \item
+        \(A\) be the \textbf{amplitude} (usually ),
+        which is the difference between the maximum and minimum values,
+        including negative values.
+        In mechanics, this will usually be distance or angle,
+        but it can also be things such as velocity or acceleration.
+        Beyond mechanics, it could be in dimensions such as charge, current,
+        or voltage.
+    \item
+        \(\omega\) be the \textbf{angular frequency},
+        which is a measure of how fast the oscillation cycles.
+        It has SI units of \(\unit{\radian \per \second}\).
+    \item
+        \(\phi\) be the \textbf{phase},
+        which is the horizontal translation of the cycle.
+        It has SI units of \(\unit{\radian}\).
 \end{itemize}
-Thus, a general form looks like
+Thus, the general form looks like
 \begin{equation}
     f(t) = A \cos(\omega + \phi)
 \end{equation}
