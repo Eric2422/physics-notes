@@ -490,6 +490,17 @@ This derivation leads us to \textbf{Kepler's third law}:
 
 \section{Energy}
 
+In Newtonian mechanics, kinetic energy is given by
+\begin{equation} \label{eq:linear-kinetic-energy}
+    E_\mathrm{K} = \frac{1}{2} m v^2
+\end{equation}
+where
+\begin{itemize}
+    \item \(E_\mathrm{K}\) is the kinetic energy of the object.
+    \item \(m\) is the mass of the object.
+    \item \(v\) is the velocity of the object.
+\end{itemize}
+
 By definition, \textbf{conservative forces} are ones where the \textbf{work} done is \textbf{path-independent},
 i.e., work along a \textbf{closed loop} is 0.
 
@@ -967,10 +978,11 @@ Plug \cref{eq:rolling-accleration} into \eqRef{eq:rolling-static-friction}:
                         }
                         {g \cos\theta}
                         + \tan\theta \\
-        &= - \frac{r^2 \mu_\mathrm{s} m}{I} + \tan\theta \\
-        \mu_\mathrm{s} + \frac{r^2 \mu_\mathrm{s} m}{I} &= \tan\theta \\
-        \mu_\mathrm{s} \left( \frac{r^2 m}{I} \right) &= \tan\theta \\
-        \mu_\mathrm{s} &= \frac{I \tan\theta}{m r^2}
+        &= - \frac{\mu_\mathrm{s} m r^2}{I} + \tan\theta \\
+        \mu_\mathrm{s} + \frac{\mu_\mathrm{s} m r^2}{I} &= \tan\theta \\
+        \mu_\mathrm{s} \left( 1 + \frac{m r^2}{I} \right) &= \tan\theta \\
+        \mu_\mathrm{s} &= \frac{\tan\theta}{1 + \frac{m r^2}{I}} \\
+        &= \frac{I \tan\theta}{I + m r^2}
     \end{aligned}
 \end{equation}
 
@@ -978,6 +990,8 @@ Plug \cref{eq:rolling-accleration} into \eqRef{eq:rolling-static-friction}:
 \chapter{Energy and Momentum of Rotating Systems}
 
 \section{Rotational Kinetic Energy}
+
+Similarly to the formula for linear kinetic energy in \eqRef{eq:linear-kinetic-energy}
 
 \section{Rotational Work}
 
