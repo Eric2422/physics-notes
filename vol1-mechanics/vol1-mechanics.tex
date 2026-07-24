@@ -1068,6 +1068,8 @@ In elliptical \textbf{orbits}, objects orbit around the center of mass,
 in this context, called the \textbf{barycenter}.
 Angular momentum is conserved.
 
+% To-do: add image
+
 Imagine two bodies orbitting each other,
 with one labeled A and the other labeled B.
 Let
@@ -1077,19 +1079,67 @@ Let
     \item \(v_\mathrm{A}\) and \(v_\mathrm{B}\) be the velocities of A and B, respectively.
     \item \(r_\mathrm{A}\) and \(r_\mathrm{B}\) be the distances of A and B to their barycenter, respectively.
 \end{itemize}
-
-% To-do: add image
-
 \begin{align}
     L_\mathrm{A} &= L_\mathrm{B} \\
     m_\mathrm{A} v_\mathrm{A} r_\mathrm{A} &= m_\mathrm{B} v_\mathrm{B} r_\mathrm{B}
 \end{align}
-
-If \(m_\mathrm{A} = \mathrm{B}\), then:
 \begin{equation}
     \begin{aligned}
-        v_\mathrm{A} &= v_\mathrm{B} \frac{r_\mathrm{B}}{r_\mathrm{A}} \\
-        v_\mathrm{B} &= v_\mathrm{A} \frac{r_\mathrm{A}}{r_\mathrm{B}}
+        v_\mathrm{A} &= v_\mathrm{B} \frac{m_\mathrm{B} r_\mathrm{B}}{m_\mathrm{A} r_\mathrm{A}} \\
+        v_\mathrm{B} &= v_\mathrm{A} \frac{m_\mathrm{A} r_\mathrm{A}}{m_\mathrm{B} r_\mathrm{B}}
+    \end{aligned}
+\end{equation}
+The above equations suggest that A moves much faster
+when A is close to the barycenter,
+and similarly for B.
+
+Mechanical energy of orbiting bodies:
+\begin{gather}
+    E = U + E_\mathrm{K} \\
+    \begin{aligned}
+        U &= - \int F \odif{r} \\
+        &= - \int G \frac{m_1 m_2}{r^2} \odif{r} \\
+        &= -G \frac{m_1 m_2}{r} \\
+    \end{aligned}
+\end{gather}
+
+\begin{gather}
+    E_\mathrm{K} = \frac{1}{2} m v^2 \\
+    \begin{aligned}
+        a_\mathrm{c} &= \frac{v^2}{r} \\
+        \therefore v^2 &= a_\mathrm{c} r \\
+    \end{aligned} \\
+    E_\mathrm{K} = \frac{1}{2} m a_\mathrm{c} r \\
+    m a_\mathrm{c} = F_\mathrm{g} = G \frac{m_1 m_2}{r^2} \\
+    \begin{aligned}
+        E_\mathrm{K} &= \frac{1}{2} \frac{G m_1 m_2}{r^2} r \\
+        &= \frac{G m_1 m_2}{2 r} \\
+    \end{aligned}
+\end{gather}
+
+\begin{equation}
+    \begin{aligned}
+        E &= - \frac{G m_1 m_2}{r} + \frac{G m_1 m_2}{2 r} \\
+        &= - \frac{G m_1 m_2}{2 r}
+    \end{aligned}
+\end{equation}
+
+\subsection{Escape Velocities}
+
+Let
+\begin{itemize}
+    \item \(M\) be the mass of the larger body, e.g., a planet.
+    \item \(m\) be the mass of the escaping body, e.g., a spaceship.
+    \item \(r\) the radius of the larger body.
+    \item \(v\) be the escape velocity.
+\end{itemize}
+\(- \frac{G M m}{r} + \frac{1}{2} m v^2\) is the total energy.
+To escape, you need both 0 gravitational potential energy and 0 kinetic energy:
+\begin{equation}
+    \begin{aligned}
+        - \frac{G M m}{r} + \frac{1}{2} m v^2 &= 0 \\
+        \frac{1}{2} m v^2 &= \frac{G M m}{r} \\
+        v &= \sqrt{\frac{2 G M}{r}}
     \end{aligned}
 \end{equation}
 
@@ -1101,7 +1151,7 @@ Oscillations can be defined by three parameters.
 Let
 \begin{itemize}
     \item
-        \(A\) be the \textbf{amplitude} (usually ),
+        \(A\) be the \textbf{amplitude},
         which is the difference between the maximum and minimum values,
         including negative values.
         In mechanics, this will usually be distance or angle,
