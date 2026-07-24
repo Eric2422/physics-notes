@@ -26,6 +26,12 @@
 \usepackage[capitalize]{cleveref}
 \crefname{page}{p.}{pp.}
 
+% Citations
+\usepackage[
+    backend=biber,
+    style=phys,
+]{biblatex}
+
 % Reference number, name, and page number.
 \newcommand{\secRef}[1]{\Cref*{#1}:~\nameref{#1}~(\cpageref{#1})}
 % Reference equation with page number

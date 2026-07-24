@@ -10,7 +10,6 @@
 \author{Eric Zhang}
 \date{\today}
 
-
 \begin{document}
 \frontmatter
 \maketitle
@@ -1052,11 +1051,11 @@ Objects moving in a straight lines also have angular momentum:
     \end{aligned}
 \end{equation}
 
-\subsection{Cosnervation of Angular Momentum}
+\subsection{Conservation of Angular Momentum}
 
 Similarly to linear momentum, angular momentum must be conserved.
 
-The most famous demonstration of conservation of angular momentum
+The most famous demonstration of \textbf{conservation of angular momentum}
 is a person pulling in their arms while they are spinning.
 Pulling in their arms decreases the radius between their arms and center of mass,
 reducing moment of inertia.
@@ -1065,13 +1064,34 @@ their angular velocity increases to compensate.
 
 \section{Orbits}
 
-Orbits are governed by Kepler's three laws of planetary motion:
-\begin{enumerate}
-    \item
-        All orbits are ellipses,
-        with the system's center of mass being located at one of the foci.
-        In this context, the center of mass is also called the \(barycenter\).
-\end{enumerate}
+In elliptical \textbf{orbits}, objects orbit around the center of mass,
+in this context, called the \textbf{barycenter}.
+Angular momentum is conserved.
+
+Imagine two bodies orbitting each other,
+with one labeled A and the other labeled B.
+Let
+\begin{itemize}
+    \item \(L_\mathrm{A}\) and \(L_\mathrm{B}\) be the angular momenta of A and B, respectively.
+    \item \(m_\mathrm{A}\) and \(m_\mathrm{B}\) be the masses of A and B, respectively.
+    \item \(v_\mathrm{A}\) and \(v_\mathrm{B}\) be the velocities of A and B, respectively.
+    \item \(r_\mathrm{A}\) and \(r_\mathrm{B}\) be the distances of A and B to their barycenter, respectively.
+\end{itemize}
+
+% To-do: add image
+
+\begin{align}
+    L_\mathrm{A} &= L_\mathrm{B} \\
+    m_\mathrm{A} v_\mathrm{A} r_\mathrm{A} &= m_\mathrm{B} v_\mathrm{B} r_\mathrm{B}
+\end{align}
+
+If \(m_\mathrm{A} = \mathrm{B}\), then:
+\begin{equation}
+    \begin{aligned}
+        v_\mathrm{A} &= v_\mathrm{B} \frac{r_\mathrm{B}}{r_\mathrm{A}} \\
+        v_\mathrm{B} &= v_\mathrm{A} \frac{r_\mathrm{A}}{r_\mathrm{B}}
+    \end{aligned}
+\end{equation}
 
 
 \chapter{Oscillations}
@@ -1291,19 +1311,5 @@ and your thumb \(\bm{w}\).
 
 \backmatter
 \chapter{References}
-
-\begin{thebibliography}{99}
-
-\bibitem{nasa-barycenter}
-  NASA.
-  \textit{What Is a Barycenter?}.
-  Addison Wesley, Massachusetts,
-  2nd edition,
-  1994.
-
-\end{thebibliography}
-
-\textsuperscript{1} NASA. What Is a Barycenter?. https://spaceplace.nasa.gov/barycenter/en/ (Accessed 23 July 2026)
-
 
 \end{document}
