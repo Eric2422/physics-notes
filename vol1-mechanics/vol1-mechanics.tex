@@ -153,7 +153,7 @@ kilograms per meter \(\unit{\kilogram \per \meter}\).
     \lambda = \frac{m}{\ell}
 \end{equation}
 
-\(therefore\) Instantaneous linear mass density as a function of distance is
+\(\therefore\) Instantaneous linear mass density as a function of distance is
 \begin{equation}
     \lambda(r) = \odv{m}{r}
 \end{equation}
@@ -181,11 +181,38 @@ However, this requires multivariable calculus,
 so AP Physics C: Mechanics does not ask us to do this.
 
 For completeness, it will be included.
-Skip to \nameRef{sec:free-body-diagrams} if you are uninterested.
+Skip to \nameRef{sec:free-body-diagrams} if you are uninterested
+or unfamiliar with multivariable calculus.
 
-For an area,
+The concept itself is not that difficult actually.
+You just compress the higher dimension density functions
+down into a linear density function using integration.
+
+For an area density:
 \begin{equation}
-    x_\mathrm{cm} = \frac{\int y \sigma(x, y) \odif{x}}{\int \int \sigma(x, y) \odif{x} \odif{y}}
+    \begin{aligned}
+        x_\mathrm{cm} &=
+            \frac{\iiint_V x \rho(x, y, z) \odif{A}}
+            {\iiint_V \rho(x, y) \odif{V}} \\
+        y_\mathrm{cm} &=
+            \frac{\iiint_V y \rho(x, y, z) \odif{A}}
+            {\iiint_V \rho(x, y) \odif{V}}
+    \end{aligned}
+\end{equation}
+
+For a volume density:
+\begin{equation}
+    \begin{aligned}
+        x_\mathrm{cm} &=
+            \frac{\iiint_V x \rho(x, y, z) \odif{V}}
+            {\iiint_V \rho(x, y, z) \odif{V}} \\
+        y_\mathrm{cm} &=
+            \frac{\iiint_V y \rho(x, y, z) \odif{V}}
+            {\iiint_V \rho(x, y, z) \odif{V}} \\
+        z_\mathrm{cm} &=
+            \frac{\iiint_V z \rho(x, y, z) \odif{V}}
+            {\iiint_V \rho(x, y, z) \odif{V}} \\
+    \end{aligned}
 \end{equation}
 
 \section{Free-Body Diagrams} \label{sec:free-body-diagrams}
