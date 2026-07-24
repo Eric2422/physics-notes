@@ -1147,6 +1147,34 @@ In a \textbf{torsion pendulum}, an object is hung on a string,
 and the string is twisted,
 which creates a restorative force of torsion
 that causes the object to rotate in an oscillatory manner.
+For a torsion pendulum,
+the SI units for the spring constant \(k\) is \(\unit{\newton \per \radian}\).
+
+Skipping the differential equations, the derivation for a torsion pendulum is
+\begin{equation}
+    \begin{aligned}
+        \sum \tau &= I \alpha \\
+        - \tau &= I \alpha \\
+        - k \theta &= I \odv[2]{\theta}{t} \\
+        - \frac{k}{I} \theta &= \odv[2]{\theta}{t} \\
+        \theta(t) = \theta_\mathrm{max} \cos(\omega t + \phi)
+    \end{aligned}
+\end{equation}
+where
+\begin{itemize}
+    \item
+        \(\theta_\mathrm{max}\) is the amplitude.
+        If the initial angular velocity is 0,
+        then \(\theta_\mathrm{max}\) will be the initial angle.
+        Elsewise, you will have to solve for \(\theta_\mathrm{max}\)
+        using the initial angle and angular velocity.
+    \item \(\omega = \sqrt{\frac{k}{I}}\) is the angular frequency.
+    \item
+        \(\phi\) is the phase shift.
+        If the initial angular velocity is 0, \(\phi = 0\).
+        Elsewise, you will have to solve for \(\phi\)
+        using the initial angle and angular velocity.
+\end{itemize}
 
 
 \appendix
