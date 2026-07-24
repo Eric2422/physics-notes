@@ -173,7 +173,7 @@ However, this requires multivariable calculus,
 so AP Physics C: Mechanics does not ask us to do this.
 
 For completeness, it will be included.
-Skip to \secRef{section:free-body-diagrams} if you are uninterested.
+Skip to \nameRef{section:free-body-diagrams} if you are uninterested.
 
 For an area,
 \begin{equation}
@@ -468,7 +468,7 @@ use \eqRef{eq:centripetal-force}:
     \end{aligned}
 \end{equation}
 
-\subsection{Orbital Velocity}
+\subsection{Orbital Velocity} \label{subsec:orbital-velocity}
 
 Let \(m\) and \(M\) be the masses of two bodies such that \(m \ll M\).
 Combining Newton's law of gravity,
@@ -492,11 +492,11 @@ Using \eqRef{eq:revolution-period}:
     \end{aligned}
 \end{equation}
 
-This derivation leads us to \textbf{Kepler's third law}:
-\begin{equation}
+This derivation leads us to \textbf{Kepler's third law of planetary motion}:
+\begin{equation} \label{eq:kepler-3rd-law}
     T^2 \propto r^3
 \end{equation}
-
+For more details on planetary motion, see \nameRef{sec:orbits}.
 
 \chapter{Work, Energy, and Power}
 
@@ -679,7 +679,8 @@ where \(\Delta{\bm{p}}\) is the change in momentum.
 
 \section{Conservation of Momentum}
 
-Because of \eqRef{eq:force-momentum} and Newton's first law of motion
+Because of \eqRef{eq:force-momentum}
+and \hyperref[itm:newtons-1st-law]{Newton's first law of motion}
 (\cpageref{itm:newtons-1st-law}),
 when there is no external force, \(\Delta{\bm{p}} = \bm{0}\),
 i.e, the final and initial momentum have to be equal.
@@ -1062,15 +1063,29 @@ reducing moment of inertia.
 Since angular momentum must be conserved,
 their angular velocity increases to compensate.
 
-\section{Orbits}
+\section{Orbits} \label{sec:orbits}
 
-In elliptical \textbf{orbits}, objects orbit around the center of mass,
+\textbf{Kepler's laws of planetary motion} 
+escribe the motion of planets orbiting around a star.
+\begin{enumerate}
+    \item
+        Planetary orbits are elliptical,
+        with the star at one of the ellipse's foci.
+    \item \label{itm:keplers-2nd-law}
+        The line between the star and an orbiting planet
+        sweeps across equal amounts of area in equal amounts of time.
+    \item
+        \(T^2 \propto r^3\).
+        See \nameRef{subsec:orbital-velocity} for the derivation.
+\end{enumerate}
+
+In elliptical \textbf{orbits}, both objects orbit around the center of mass,
 in this context, called the \textbf{barycenter}.
 Angular momentum is conserved.
 
 % To-do: add image
 
-Imagine two bodies orbitting each other,
+Imagine two bodies orbiting each other,
 with one labeled A and the other labeled B.
 Let
 \begin{itemize}
@@ -1093,8 +1108,11 @@ The above equations suggest that A moves much faster
 when A is close to the barycenter,
 and similarly for B.
 
-This leads us to \textbf{Kepler's second law}:
-
+This conclusion is actually a consequence of
+\hyperref[itm:keplers-2nd-law]{Kepler's second law of planetary motion}.
+Since planetary motion is an ellipse,
+for the same amount of time to sweep the same area,
+the planet would have to travel faster to compensate for the smaller radius.
 
 Mechanical energy of orbiting bodies:
 \begin{gather}
