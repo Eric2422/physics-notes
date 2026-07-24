@@ -354,8 +354,8 @@ Velocity of a free-falling object experiencing linear drag,
 using Newton's second law of motion, \eqRef{eq:newtons-2nd-law}:
 \begin{equation}
     \begin{aligned}
-        F &= ma \\
-        mg - bv &= ma \\
+        F &= m a\\
+        mg - bv &= m a\\
         mg - bv &= m \odv{v}{t} \\
         \odv{v}{t} + \frac{b}{m} v &= g \\
         \odv{v}{t} e^{\frac{b}{m} t} + \frac{b}{m} e^{\frac{b}{m} t} v &= g e^{\frac{b}{m} t} \\
@@ -563,7 +563,7 @@ If the gravitational field is not constant, use Newton's law of gravity, \eqRef{
 For ideal springs, we use Hooke's law, \eqRef{eq:hookes-law}:
 \begin{equation}
     \begin{aligned}
-        \Delta{U_\mathrm{e}} &= - \int -kx \odif{x} \\
+        \Delta{U_\mathrm{e}} &= - \int -k x \odif{x} \\
         &= \frac{1}{2} k (\Delta{x})^2
     \end{aligned}
 \end{equation}
@@ -794,16 +794,14 @@ where
     \item \(r_i\) is the distance of each particle from the \textbf{axis of rotation}.
 \end{itemize}
 For continuous masses:
-\begin{equation}
-    I = \int r^2 \odif{m}
-\end{equation}
-Since \(\lambda(r) = \odv{m}{r}\),
-\begin{equation*}
-    \odif{m} = \lambda(r) \odif{r}
-\end{equation*}
-\begin{equation}
+\begin{gather}
+    I = \int r^2 \odif{m} \\
+    \begin{aligned}
+        \lambda(r) &= \odv{m}{r} \\
+        \therefore \odif{m} &= \lambda(r) \odif{r}
+    \end{aligned} \\
     \therefore I = \int r^2 \lambda(r) \odif{r}
-\end{equation}
+\end{gather}
 
 Rod of uniform density \(\lambda\), length \(\ell\) and mass \(M\)
 rotating about an axis perpendicular to its length and passing through the center:
@@ -933,7 +931,7 @@ From \eqRef{eq:newtons-2nd-law-rotational},
         \end{aligned} \\
         \\
         \begin{aligned}
-            R F_\mathrm{T2} - R F_\mathrm{T1} &= \frac{1}{2} MR a \\
+            R F_\mathrm{T2} - R F_\mathrm{T1} &= \frac{1}{2} M R a \\
             F_\mathrm{T2} - F_\mathrm{T1} &= \frac{1}{2} M a \\
             m_2 a + m_2 g - \left( m_1 a + m_1 g \right) &= \frac{1}{2} M a \\
             m_2 g - m_1 g &= \frac{1}{2} M a - m_2 a + m_1 a \\
@@ -1245,46 +1243,114 @@ The period \(T\) can be expressed in terms of angular frequency as
 
 \section{Spring Oscillators}
 
-For perfectly Hookean springs,
-see \eqRef{eq:hookes-law},
-the angular frequency is given by
+\textbf{Spring oscillators} are composed of a mass
+attached to the end of a spring.
+
+Let
+\begin{itemize}
+    \item \(x\) be the position of the mass.
+    \item \(a\) be the acceleration of the mass.
+    \item \(m\) be the mass attached to the spring.
+    \item \(k\) be the spring constant of the spring.
+    \item \(t\) be the time.
+\end{itemize}
+
+Derivation of the position function:
 \begin{equation}
-    \omega = \sqrt{\frac{k}{m}}
+    \begin{aligned}
+        F &= m a \\
+        -k x &= m \odv[2]{x}{t} \\
+        \odv[2]{x}{t} &= - \frac{k}{m} x
+    \end{aligned}
 \end{equation}
+We know that the answer when differentiated twice
+is is proportional to the negative of itself,
+so we can guess the following solution:
+\begin{align}
+    x(t) &= A \cos(\omega t + \phi) \\
+    v(t) = \odv{x}{t} &= - A \omega \sin(\omega t + \phi) \\
+    a(t) = \odv{v}{t} = \odv[2]{x}{t} &= - A \omega^2 \cos(\omega t + \phi)
+\end{align}
 where
 \begin{itemize}
-    \item \(\omega\) is the angular frequency of the oscillation.
-    \item \(k\) is the spring constant.
-    \item \(m\) is the mass of the object attached to the end of the spring.
+    \item \(A\) is the amplitude, which is determined by our initial conditions.
+    \item
+        \(\omega\) is the angular frequency as given by the equation
+        \begin{equation}
+            \omega = \sqrt{\frac{k}{m}}
+        \end{equation}
+    \item \(\phi\) is the phase, which is determined by our initial conditions.
 \end{itemize}
+
 
 \section{Pendula}
 
-A \textbf{pendulum} (plural \emph{\textbf{pendulums}} or \emph{\textbf{pendula}})
+A \textbf{pendulum}
+(plural \emph{\textbf{pendulums}} or \emph{\textbf{pendula}})
+is a swinging rod, possibly with a mass attached to the end.
+A grandfather clock is a good example of a pendulum.
+
 The oscillation of pendula is determined by gravity.
 
-For ideal pendula, i.e., ones with negligible moment of inertia,
-the angular frequency is given by
-\begin{equation}
-    \omega = \sqrt{\frac{g}{\ell}}
+\subsection{Ideal Pendula}
+
+Derivation of the angle function for ideal pendula,
+i.e., ones with negligible moment of inertia:
+\begin{equation} \label{eq:pendulum-forces}
+    \begin{aligned}
+        F = m a \\
+        - m g \sin\theta = m a \\
+        - g \sin\theta = a \\
+    \end{aligned}
 \end{equation}
-where
-\begin{itemize}
-    \item \(\omega\) is the angular frequency.
-    \item \(g\) is the local gravitational acceleration.
-    \item \(\ell\) is the length of the pendulum.
-\end{itemize}
+The arc length \(s\) is given by
+\begin{equation}
+    \begin{aligned}
+        s = \ell \theta \\
+        \therefore a = \ell \odv[2]{\theta}{t}
+    \end{aligned}
+\end{equation}
+Plug back into \cref{eq:pendulum-forces}:
+\begin{equation}
+    \begin{aligned}
+        - g \sin\theta &= \ell \odv[2]{\theta}{t} \\
+        \odv[2]{\theta}{t} + \frac{g}{\ell} \sin\theta &= 0
+    \end{aligned}
+\end{equation}
+The \textbf{small-angle approximation} tells us that for sufficiently small angles
+(\qty{0.24}{\radian} gives less than 1\% error),
+\begin{gather}
+    \sin\theta \approx \theta \\
+    \therefore \odv[2]{\theta}{t} + \frac{g}{\ell} \theta \approx 0
+\end{gather}
+If we guess like we did for the spring oscillators, we find
+\begin{equation}
+    \theta(t) = A \cos(\omega t + \phi)
+\end{equation}
+where \(\omega = \sqrt{\frac{g}{\ell}}\).
 
-\section{Resonance}
+\subsection{Physical Pendula}
 
-When something is oscillating,
-and an external force is applied at the same frequency as the oscillation,
-the amplitude of the oscillation will increase.
-This phenomena is known as \textbf{resonance}.
+\textbf{Physical pendula} have non-negligible moment of inertia.
+
+Let \(r\) be the distance between the axis of rotation and center of mass.
+Derivation of angle function for a physical pendulum:
+\begin{equation}
+    \begin{aligned}
+        \tau &= I \alpha \\
+        &= I \odv[2]{\theta}{t} \\
+        - r m g \sin\theta &= I \odv[2]{\theta}{t} \\
+        \odv[2]{\theta}{t} + \frac{r m g \sin\theta}{I} &= 0 \\
+        \odv[2]{\theta}{t} + \frac{r m g \theta}{I} &\approx 0 \\
+    \end{aligned}
+\end{equation}
+We get the result
+\begin{equation}
+    \theta(t) = A \cos(\omega t + \phi)
+\end{equation}
+where \(\omega = \sqrt{\frac{r m g}{I}}\).
 
 \section{Torsion Pendula}
-
-\textbf{Torsion}
 
 \textbf{Torsion} is a torque caused by twisting an object around its axis of rotation.
 In a \textbf{torsion pendulum}, an object is hung on a string,
@@ -1319,6 +1385,13 @@ where
         Elsewise, you will have to solve for \(\phi\)
         using the initial angle and angular velocity.
 \end{itemize}
+
+\section{Resonance}
+
+When something is oscillating,
+and an external force is applied at the same frequency as the oscillation,
+the amplitude of the oscillation will increase.
+This phenomena is known as \textbf{resonance}.
 
 
 \appendix
