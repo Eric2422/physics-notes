@@ -10,6 +10,8 @@
 \author{Eric Zhang}
 \date{\today}
 
+\addbibresource{references.bib}
+
 \begin{document}
 \frontmatter
 \maketitle
@@ -35,7 +37,6 @@ such analogies have been excised from this volume.
 They will resurface in Vol.~2: Electricity and Magnetism.
 
 
-\chapter*{title}
 \mainmatter
 
 
@@ -234,7 +235,9 @@ Larger arrows indicate larger forces.
 where
 \begin{itemize}
     \item \(F\) is the magnitude of the gravitational force.
-    \item \(G\) is the universal gravitational constant.
+    \item 
+        \(G = \qty{6.674 30(15)e-11}{\metre \cubed \per \kilogram \per \second \squared}\)
+        is the universal gravitational constant. \cite{nist-G}
     \item \(m_1\) and \(m_2\) are the masses of the two objects.
     \item \(r\) is the distance between the two.
 \end{itemize}
@@ -1462,8 +1465,6 @@ and a semi-minor axis, i.e., half the minor axis.
 
 
 \backmatter
-
-
-\chapter{References}
+\printbibliography[title={References}]
 
 \end{document}
