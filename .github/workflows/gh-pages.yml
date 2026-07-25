@@ -38,6 +38,7 @@ jobs:
         run: |
           mkdir ./public
           cp **/*.pdf ./public
+          cp README.md ./public
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
