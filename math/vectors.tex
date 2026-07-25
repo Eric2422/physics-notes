@@ -1,0 +1,107 @@
+
+
+\chapter{Vectors} \label{ch:vectors}
+
+\begin{center}
+    \begin{tabular}{ c|c }
+    \textbf{Vector}                                    & \textbf{Scalar} \\
+    \hline
+    Has both \textbf{direction} and \textbf{magnitude} & Has only magnitude \\
+    Displacement                                       & Length/distance \\
+    Velocity                                           & Speed \\
+    Gravitational fields                               & Mass
+    \end{tabular}
+\end{center}
+
+\section{Notation}
+
+2D:
+\begin{equation}
+    \vec{v}
+    = \bm{v}
+    = \langle v_x, v_y \rangle
+    = \left( v_x, v_y \right)
+    = v_x \bm{\hat{\imath}} + v_y \bm{\hat{\jmath}}
+\end{equation}
+
+3D:
+\begin{equation}
+    \vec{v}
+    = \bm{v}
+    = \langle v_x, v_y, v_z \rangle
+    = \left( v_x, v_y, v_z \right)
+    = v_x \bm{\hat{\imath}} + v_y \bm{\hat{\jmath}} + v_z \bm{\hat{k}}
+\end{equation}
+
+Note that \(\vec{v}\) is more common in handwriting,
+and \(\bm{v}\) is more common in print.
+
+See \nameref{sec:unit-vectors} (\cpageref{sec:unit-vectors})
+for information about \(\bm{\hat{\imath}}\),
+\(\bm{\hat{\jmath}}\), and \(\bm{\hat{k}}\).
+
+\section{Magnitude}
+
+\textbf{Magnitude} is the size of the vector.
+
+2D:
+\begin{equation}
+    \left\|\bm{v}\right\| = \sqrt{{v_x}^2 + {v_y}^2}
+\end{equation}
+
+3D:
+\begin{equation}
+    \left\|\bm{v}\right\| = \sqrt{{v_x}^2 + {v_y}^2 + {v_z}^2}
+\end{equation}
+
+\section{Unit Vectors} \label{sec:unit-vectors}
+
+\textbf{Units vectors} are vectors with a magnitude of 1.
+They are denoted using a "hat", e.g., \(\hat{v}\) is "v-hat".
+
+The \textbf{standard unit vectors} are
+\begin{equation}
+    \begin{aligned}
+        \bm{\hat{\imath}} &= \bm{\hat{x}} = \langle 1, 0, 0 \rangle, \\
+        \bm{\hat{\jmath}} &= \bm{\hat{y}} = \langle 0, 1, 0 \rangle, \\
+        \bm{\hat{z}} &= \bm{\hat{z}} = \langle 0, 0, 1 \rangle
+    \end{aligned}
+\end{equation}
+
+\section{Operations}
+
+Vector addition:
+\begin{equation}
+    \bm{u} + \bm{v} = \langle u_x + v_x, u_y + v_y, u_z + v_z \rangle
+\end{equation}
+
+Scalar multiplication:
+\begin{equation}
+    c \bm{v} = \langle c v_x, c v_y, c v_z \rangle
+\end{equation}
+
+Dot product:
+\begin{equation}
+    \begin{aligned}
+        \bm{u} \cdot \bm{v} &= u_x v_x + u_y v_y + u_z v_z \\
+        &= \left\|\bm{u}\right\| \left\|\bm{v}\right\| \cos\theta
+    \end{aligned}
+\end{equation}
+
+Cross product:
+\begin{equation}
+    \begin{aligned}
+        \bm{u} \times \bm{v}
+        &= \langle u_y v_z - u_z v_y, u_z v_a - u_a v_z, u_a v_y - u_y v_a\rangle \\
+        &= \left\|\bm{u}\right\| \left\|\bm{v}\right\| \bm{\hat{w}} \sin\theta \\
+        &= \bm{w}
+    \end{aligned}
+\end{equation}
+where \(\bm{\hat{w}}\) is a unit vector
+orthogonal to both \(\bm{u}\) and \(\bm{v}\)
+as given by the \textbf{right-hand rule}.
+Hold your index, middle, and thumb fingers
+such that all three are perpendicular to each other.
+Your index finger represents \(\bm{u}\),
+your middle finger \(\bm{v}\),
+and your thumb \(\bm{w}\).
