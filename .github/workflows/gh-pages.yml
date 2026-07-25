@@ -34,20 +34,13 @@ jobs:
           root_file: "vol*/*.tex"
           work_in_root_file_dir: true
 
-      - name: Move to root
+      - name: Move files
         run: |
-          mv **/*.pdf .
-
-      - name: Upload PDF file
-        uses: actions/upload-artifact@v6
-        with:
-          name: PDF
-          path: |
-            "*.pdf"
-            README.md
+          mkdir ./public
+          cp **/*.pdf ./public
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          publish_dir: ./public
