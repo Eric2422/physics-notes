@@ -43,7 +43,7 @@ jobs:
         with:
           name: PDF
           path: |
-            "**/*.pdf"
+            "*.pdf"
             README.md
 
       - name: Deploy to GitHub Pages
