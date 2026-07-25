@@ -30,9 +30,6 @@ jobs:
         with:
           root_file: "vol*/*.tex"
           work_in_root_file_dir: true
-      
-      - run: |
-          sudo mv main.html index.html
 
       - name: Upload PDF file
         uses: actions/upload-artifact@v6
