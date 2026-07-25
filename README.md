@@ -1,4 +1,4 @@
-# 张炳坤的物理笔记（Eric Zhang's Physics Notes）
+# Eric Zhang's Physics Notes
 
 These documents were created as a collection and expansion of my physics notes
 from AP Physics C: Electricity and Magnetism, AP Physics C: Mechanics,
