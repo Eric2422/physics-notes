@@ -43,6 +43,12 @@ jobs:
           cp **/*.pdf ./public/
           cp README.md ./public/
 
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./public
+          destination: ./_site
+
       - name: Upload artifacts
         id: deployment
         uses: actions/upload-pages-artifact@v3
