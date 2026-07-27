@@ -40,11 +40,14 @@ jobs:
           cp **/*.pdf ./public/
           cp README.md ./public/
 
-      - uses: actions/upload-artifact@v7
+      - name: Upload artifacts
+        id: deployment
+        uses: actions/upload-pages-artifact@v3
         with:
           name: pdf-files
           path: ./public/
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+  deploy:
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
