@@ -45,6 +45,7 @@ jobs:
 
       - name: Move files
         run: |
+          mkdir ./assets/
           cp **/*.pdf ./assets/
           cp README.md ./index.md
 
