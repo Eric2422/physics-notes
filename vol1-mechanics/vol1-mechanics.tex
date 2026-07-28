@@ -329,6 +329,7 @@ where
     \item \(b\) is an experimentally-determined constant.
     \item \(v\) is the relative velocity between object and fluid.
 \end{itemize}
+\vfil
 
 \textbf{Terminal velocity} is when the forces from gravity and drag
 balance out each other.
@@ -351,8 +352,7 @@ using Newton's second law of motion, \eqRef{eq:newtons-2nd-law}
     The following has been solved
     using a technique I learned from a later differential equations class,
     so it probably differs from what was taught in AP Physics C: Mechanics.
-}
-:
+}:
 \begin{equation}
     \begin{aligned}
         F &= m a\\
@@ -383,6 +383,7 @@ the velocity of a falling body with linear drag is
 \begin{equation}
     v = v_\mathrm{t} + \left( v_\mathrm{t} - v_0 \right) e^{-\frac{b}{m} t}
 \end{equation}
+\vfil
 
 Integrate again to find position:
 \begin{equation}
@@ -800,12 +801,10 @@ where
 For continuous masses:
 \begin{gather}
     I = \int r^2 \odif{m} \\
-    \nonumber \\
     \begin{aligned}
         \lambda(r) &= \odv{m}{r} \\
-        \therefore \odif{m} &= \lambda(r) \odif{r}
+        \odif{m} &= \lambda(r) \odif{r}
     \end{aligned} \\
-    \nonumber \\
     \therefore I = \int r^2 \lambda(r) \odif{r}
 \end{gather}
 
