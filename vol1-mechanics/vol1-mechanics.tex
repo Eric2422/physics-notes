@@ -40,6 +40,7 @@
     \item \label{itm:newtons-3rd-law}
         Each force has an equal and opposite reacting force.
 \end{enumerate}
+\vfil
 
 \section{Kinematic Equations}
 
@@ -341,8 +342,9 @@ With linear drag, given that up is positive, terminal velocity is achieved at
     \end{aligned}
 \end{equation}
 
-\textit{
-    Author's note:
+Let us derive the velocity of a free-falling object experiencing linear drag
+using Newton's second law of motion, \eqRef{eq:newtons-2nd-law}
+\footnote{
     I do not have the derivations
     for the position and velocity of fallling objects with linear drag in my notes,
     so I do not remember the exact process taught in class.
@@ -350,15 +352,7 @@ With linear drag, given that up is positive, terminal velocity is achieved at
     using a technique I learned from a later differential equations class,
     so it probably differs from what was taught in AP Physics C: Mechanics.
 }
-
-\textit{
-    If you are curious why the derivations are not in my notes,
-    I was attempting to work with quadratic drag during class
-    instead of paying attention to the lecture.
-}
-
-Velocity of a free-falling object experiencing linear drag,
-using Newton's second law of motion, \eqRef{eq:newtons-2nd-law}:
+:
 \begin{equation}
     \begin{aligned}
         F &= m a\\
@@ -377,9 +371,9 @@ Solving for \(C\) using the initial condition \(v(0) = v_0\):
     \begin{gathered}
         \begin{aligned}
             v_0 &= \frac{m}{b} g + C e^{-\frac{b}{m} 0} \\
-            v_0 &= \frac{m}{b} g + C
+            v_0 &= \frac{m}{b} g + C \\
+            C &= \frac{m}{b} g - v_0 \\
         \end{aligned} \\
-        C = \frac{m}{b} g - v_0 \\
         v = \frac{m}{b} g + \left( \frac{m}{b} g - v_0 \right) e^{-\frac{b}{m} t}
     \end{gathered}
 \end{equation}
