@@ -31,6 +31,12 @@ jobs:
       - name: Setup pages
         uses: actions/configure-pages@v5
 
+      - name: Setup Ruby for Jekyll
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v4
         with:
@@ -41,19 +47,19 @@ jobs:
         run: |
           mkdir ./public/
           cp **/*.pdf ./public/
-          cp README.md ./public/
+          cp README.md ./public/index.md
 
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./public
-          destination: ./_site
+          destination: ./_site/
 
       - name: Upload artifacts
         id: deployment
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public/
+          path: ./_site/
 
   deploy:
     environment:
