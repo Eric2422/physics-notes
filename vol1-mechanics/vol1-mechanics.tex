@@ -925,36 +925,38 @@ Let
     \item \(\alpha\) be the angular acceleration of the pulley.
     \item \(a\) be the linear acceleration that both masses experience.
 \end{itemize}
-\vfil
 
 From \eqRef{eq:newtons-2nd-law-rotational},
+\begin{equation*}
+    \begin{aligned}
+        \tau &= I \alpha \\
+        &= I \frac{a}{R} \\
+    \end{aligned} 
+\end{equation*}
 \begin{equation}
-    \begin{gathered}
-        \begin{aligned}
-            \tau &= I \alpha \\
-            &= I \frac{a}{R}
-        \end{aligned} \\
-        \begin{aligned}
-            F_1 &= F_\mathrm{T1} - m_1 g \\
-            F_2 &= F_\mathrm{T2} - m_2 g \\
-            F_\mathrm{T1} - m_1 g &= m_1 a \\
-            F_\mathrm{T1} &= m_1 a + m_1 g \\
-            F_\mathrm{T2} - m_2 g &= m_2 a \\
-            F_\mathrm{T2} &= m_2 a + m_2 g \\
-        \end{aligned} \\
-        \\
-        \begin{aligned}
-            R F_\mathrm{T2} - R F_\mathrm{T1} &= \frac{1}{2} M R a \\
-            F_\mathrm{T2} - F_\mathrm{T1} &= \frac{1}{2} M a \\
-            m_2 a + m_2 g - \left( m_1 a + m_1 g \right) &= \frac{1}{2} M a \\
-            m_2 g - m_1 g &= \frac{1}{2} M a - m_2 a + m_1 a \\
-            \left( m_2 - m_1 \right) g &= \left( \frac{1}{2} M - m_2 + m_1 \right) a \\
-        \end{aligned} \\
-        \begin{aligned}
-            a &= \frac{\left( m_2 - m_1 \right) g}{\frac{1}{2} M - m_2 + m_1} \\
-            &= \frac{2 \left( m_2 - m_1 \right) g}{M - 2 \left( m_2 + m_1 \right)}
-        \end{aligned}
-    \end{gathered}
+    \begin{aligned}
+        F_1 &= F_\mathrm{T1} - m_1 g \\
+        F_2 &= F_\mathrm{T2} - m_2 g \\
+        F_\mathrm{T1} - m_1 g &= m_1 a \\
+        F_\mathrm{T1} &= m_1 a + m_1 g \\
+        F_\mathrm{T2} - m_2 g &= m_2 a \\
+        F_\mathrm{T2} &= m_2 a + m_2 g \\
+    \end{aligned} 
+\end{equation}
+\begin{equation}
+    \begin{aligned}
+        R F_\mathrm{T2} - R F_\mathrm{T1} &= \frac{1}{2} M R a \\
+        F_\mathrm{T2} - F_\mathrm{T1} &= \frac{1}{2} M a \\
+        m_2 a + m_2 g - \left( m_1 a + m_1 g \right) &= \frac{1}{2} M a \\
+        m_2 g - m_1 g &= \frac{1}{2} M a - m_2 a + m_1 a \\
+        \left( m_2 - m_1 \right) g &= \left( \frac{1}{2} M - m_2 + m_1 \right) a \\
+    \end{aligned}
+\end{equation}
+\begin{equation}
+    \begin{aligned}
+        a &= \frac{\left( m_2 - m_1 \right) g}{\frac{1}{2} M - m_2 + m_1} \\
+        &= \frac{2 \left( m_2 - m_1 \right) g}{M - 2 \left( m_2 + m_1 \right)}
+    \end{aligned}
 \end{equation}
 \vfil
 
@@ -977,7 +979,6 @@ The tangential velocity and the velocity of the center of mass are equal.
 \begin{equation}
     a_\mathrm{t} = a_\mathrm{cm}
 \end{equation}
-\vfil
 
 Imagine an object rolling down a ramp without slipping.
 Let
@@ -1168,7 +1169,6 @@ Mechanical energy of orbiting bodies:
         &= -G \frac{m_1 m_2}{r} \\
     \end{aligned}
 \end{gather}
-
 \begin{gather}
     E_\mathrm{K} = \frac{1}{2} m v^2 \\
     \begin{aligned}
@@ -1182,7 +1182,6 @@ Mechanical energy of orbiting bodies:
         &= \frac{G m_1 m_2}{2 r} \\
     \end{aligned}
 \end{gather}
-
 \begin{equation}
     \begin{aligned}
         E &= - \frac{G m_1 m_2}{r} + \frac{G m_1 m_2}{2 r} \\
