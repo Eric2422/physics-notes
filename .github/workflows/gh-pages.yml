@@ -45,14 +45,13 @@ jobs:
 
       - name: Move files
         run: |
-          mkdir ./public/
-          cp **/*.pdf ./public/
-          cp README.md ./public/index.md
+          cp **/*.pdf ./assets/
+          cp README.md ./index.md
 
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./public
+          source: ./
           destination: ./_site/
 
       - name: Upload artifacts
