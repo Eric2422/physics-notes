@@ -585,7 +585,7 @@ For example, for a spring with force function \(F(x) = -k x^\frac{4}{3}\),
         \Delta{U_\mathrm{e}} &= \frac{3}{7} k x^\frac{7}{3}
     \end{aligned}
 \end{equation}
-\vfill
+\vfil
 
 \section{Work}
 
@@ -907,7 +907,7 @@ and the direction of the applied force is given by the \textbf{right-hand rule}.
     \end{aligned}
 \end{equation}
 
-\subsection{Atwood Machines with a Pulley of Non-Negligible Mass}
+\subsection{Atwood Machines}
 
 An \textbf{Atwood machine} is a pair of masses connected by a rope and hung over a pulley.
 
@@ -960,23 +960,24 @@ From \eqRef{eq:newtons-2nd-law-rotational},
 
 \section{Rolling}
 
-Objects need static friction to roll.
+Objects need friction to roll.
 
-If there is no static friction, the object simply slides rather than rolling,
+If there is no friction, the object simply slides rather than rolling,
 which causes no energy loss.
-The tangential acceleration is 0,
-but the acceleration of the center of mass is non-zero.
+The tangential velocity is 0,
+but the velocity of the center of mass is non-zero.
 
 If the static friction is insufficient, the object \textbf{rolls with slipping},
 which causes energy loss.
-The tangential acceleration and the acceleration of the center of mass are not equal.
+The tangential velocity is less than the velocity of the center of mass.
 
 If the static friction reaches a critical point, it \textbf{rolls without slipping},
 which does not cause energy loss.
-The tangential acceleration and the acceleration of the center of mass are equal.
+The tangential velocity and the velocity of the center of mass are equal.
 \begin{equation}
     a_\mathrm{t} = a_\mathrm{cm}
 \end{equation}
+\vfil
 
 Imagine an object rolling down a ramp without slipping.
 Let
@@ -992,25 +993,27 @@ Let
 \end{itemize}
 
 Deriving \(\mu_\mathrm{s}\):
-\begin{gather}
+\begin{equation}
     \begin{aligned}
         F_\mathrm{N} &= m g \cos\theta \\
-        \therefore F_\mathrm{f} &= \mu_\mathrm{s} m g \cos\theta \\
-    \end{aligned} \\
-    \nonumber \\
-    \begin{aligned} \label{eq:rolling-static-friction}
+        \therefore F_\mathrm{f} &= \mu_\mathrm{s} m g \cos\theta
+    \end{aligned}
+\end{equation}
+\begin{equation} \label{eq:rolling-static-friction}
+    \begin{aligned}
         m g \sin\theta - F_\mathrm{f} &= m a \\
         m g \sin\theta - \mu_\mathrm{s} m g \cos\theta &= m a \\
         \mu_\mathrm{s} &= - \frac{a}{g \cos\theta} + \tan\theta \\
-    \end{aligned} \\
-    \nonumber \\
-    \begin{aligned} \label{eq:rolling-angular-accleration}
+    \end{aligned}
+\end{equation}
+\begin{equation} \label{eq:rolling-angular-accleration}
+    \begin{aligned} 
         \tau &= I \alpha \\
         r F_\mathrm{f} &= I \alpha \\
         \alpha &= \frac{r F_\mathrm{f}}{I} \\
         &= \frac{r \mu_\mathrm{s} m g \cos\theta}{I} \\
     \end{aligned}
-\end{gather}
+\end{equation}
 Plug in \eqRef{eq:rolling-angular-accleration}:
 \begin{equation}
     \begin{aligned} \label{eq:rolling-accleration}
