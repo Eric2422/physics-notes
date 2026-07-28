@@ -28,13 +28,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup pages
+      - name: Setup GitHub pages
         uses: actions/configure-pages@v5
 
       - name: Setup Ruby for Jekyll
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.3'
+          ruby-version: '4.0'
           bundler-cache: true
 
       - name: Compile LaTeX document
