@@ -171,11 +171,11 @@ For an area density:
 \begin{equation}
     \begin{aligned}
         x_\mathrm{cm} &=
-            \frac{\iiint_V x \rho(x, y, z) \odif{A}}
-            {\iiint_V \rho(x, y) \odif{V}} \\
+            \frac{\iint_A x \sigma(x, y, z) \odif{A}}
+            {\iint_A \sigma(x, y) \odif{A}} \\
         y_\mathrm{cm} &=
-            \frac{\iiint_V y \rho(x, y, z) \odif{A}}
-            {\iiint_V \rho(x, y) \odif{V}}
+            \frac{\iint_A y \sigma(x, y, z) \odif{A}}
+            {\iint_A \sigma(x, y) \odif{A}}
     \end{aligned}
 \end{equation}
 
@@ -383,7 +383,7 @@ the velocity of a falling body with linear drag is
 \begin{equation}
     v = v_\mathrm{t} + \left( v_\mathrm{t} - v_0 \right) e^{-\frac{b}{m} t}
 \end{equation}
-\vfill
+\vfil
 
 Integrate again to find position:
 \begin{equation}
@@ -798,7 +798,7 @@ where
     \item \(m_i\) is the mass of each particle.
     \item \(r_i\) is the distance of each particle from the \textbf{axis of rotation}.
 \end{itemize}
-\vfill
+\vfil
 
 For continuous masses:
 \begin{gather}
@@ -906,7 +906,8 @@ and the direction of the applied force is given by the \textbf{right-hand rule}.
 
 \subsection{Atwood Machines}
 
-An \textbf{Atwood machine} is a pair of masses connected by a rope and hung over a pulley.
+An \textbf{Atwood machine} is a pair of masses connected by a rope
+and hung over a pulley.
 
 Let
 \begin{itemize}
@@ -924,7 +925,7 @@ Let
     \item \(\alpha\) be the angular acceleration of the pulley.
     \item \(a\) be the linear acceleration that both masses experience.
 \end{itemize}
-\vfill
+\vfil
 
 From \eqRef{eq:newtons-2nd-law-rotational},
 \begin{equation}
