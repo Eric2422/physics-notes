@@ -1,3 +1,24 @@
+% Citations
+\usepackage[
+    backend=biber,
+    style=phys,
+]{biblatex}
+
+
+% General typesetting
+\usepackage{csquotes}
+\MakeOuterQuote{"}
+
+
+% Math and science
+\usepackage{amsmath}
+\numberwithin{equation}{section}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{derivative}
+\usepackage{physics2}
+
+
 % Page formatting
 \usepackage{indentfirst}
 \usepackage{setspace}
@@ -13,17 +34,6 @@
     \date{\today}
 }
 
-% General typesetting
-\usepackage{csquotes}
-\MakeOuterQuote{"}
-
-% Math and science
-\usepackage{amsmath}
-\numberwithin{equation}{section}
-\usepackage{amssymb}
-\usepackage{bm}
-\usepackage{derivative}
-\usepackage{physics2}
 
 % References
 \usepackage{hyperref}
@@ -34,16 +44,11 @@
 \usepackage[capitalize]{cleveref}
 \crefname{page}{p.}{pp.}
 
-% Citations
-\usepackage[
-    backend=biber,
-    style=phys,
-]{biblatex}
-
 % Reference number, name, and page number.
 \newcommand{\nameRef}[1]{\Cref*{#1}: \nameref{#1} (\cpageref{#1})}
 % Reference equation with page number
 \newcommand{\eqRef}[1]{\cref{#1} (\cpageref{#1})}
+
 
 % Units and time
 \usepackage[useregional]{datetime2}
