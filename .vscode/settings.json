@@ -13,6 +13,7 @@
         "Savart",
         "sisetup",
         "siunitx",
+        "textbf",
         "Undriven"
     ]
 }

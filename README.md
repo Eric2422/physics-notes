@@ -1,4 +1,4 @@
-# Eric Zhang's Physics Notes
+# Physics Notes
 
 These documents were created as a collection and expansion of my physics notes
 from AP Physics C: Electricity and Magnetism, AP Physics C: Mechanics,

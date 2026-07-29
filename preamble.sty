@@ -1,20 +1,21 @@
-% Citations
+%% Citations
 \usepackage[
     backend=biber,
     style=phys,
 ]{biblatex}
+\addbibresource{references.bib}
 
 
-% General typesetting
+%% General typesetting
 \usepackage{csquotes}
 \MakeOuterQuote{"}
 
 
-% Graphics and plots
+%% Graphics and plots
 \usepackage{pgf}
 
 
-% Math and science
+%% Math and science
 \usepackage{amsmath}
 \allowdisplaybreaks[4]
 \numberwithin{equation}{chapter}
@@ -24,11 +25,33 @@
 \usepackage{physics2}
 
 
-% Page formatting
+%% Page formatting
 \usepackage{indentfirst}
 \usepackage{setspace}
 \doublespacing
 
+
+%% References
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks = true,
+    allcolors = blue
+}
+\usepackage[capitalize]{cleveref}
+\crefname{page}{p.}{pp.}
+
+
+%% Units and time
+\usepackage[useregional]{datetime2}
+\DTMsetstyle{iso}
+\usepackage{siunitx}
+\sisetup{
+    input-digits = 0123456789\pi,
+    inter-unit-product = \cdot,
+}
+
+
+%% Custom commands
 \newcommand{\customTitle}[2]{
     \title{
         Eric Zhang's Physics Notes \\
@@ -41,26 +64,30 @@
     \date{\today}
 }
 
-% References
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks = true,
-    allcolors = blue
+\newcommand{\titlePage}[2]{
+    \begin{titlepage}
+        \centering
+        \doublespacing
+
+        \Huge
+        \textbf{Physics Notes} \\
+        \vspace{0.5cm}
+
+        \huge
+        Volume #1: #2 \\
+        \vfill
+
+        \LARGE
+        Eric Zhang \\
+        \vfill
+
+        \Large
+        \url{https://github.com/Eric2422/physics-notes} \\
+        \today
+    \end{titlepage}
 }
-\usepackage[capitalize]{cleveref}
-\crefname{page}{p.}{pp.}
 
 % Reference number, name, and page number.
 \newcommand{\nameRef}[1]{\Cref*{#1}: \nameref{#1} (\cpageref{#1})}
 % Reference equation with page number
 \newcommand{\eqRef}[1]{\cref{#1} (\cpageref{#1})}
-
-
-% Units and time
-\usepackage[useregional]{datetime2}
-\DTMsetstyle{iso}
-\usepackage{siunitx}
-\sisetup{
-    input-digits = 0123456789\pi,
-    inter-unit-product = \cdot,
-}
