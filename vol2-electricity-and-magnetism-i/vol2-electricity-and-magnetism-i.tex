@@ -109,6 +109,49 @@ and when a field exits, the flux is positive.
 As a result, all fields that originate outside the closed surface
 result in a net flux of 0.
 
+In the case of electric fields,
+this means that only electric charges inside a closed surface
+contributes to the electric flux.
+This conclusion leads us to \textbf{Gauss's law}:
+\begin{equation} \label{eq:gausss-law}
+    \oiint \bm{E} \cdot \odif{\bm{A}} = \frac{q}{\epsilon_0}
+\end{equation}
+where
+\begin{itemize}
+    \item \(\bm{E}\) is the electric field.
+    \item
+        \(q\) is the charge enclosed by the surface.
+        Some authors may use \(q_\mathrm{en}\)
+        to emphasized that it must be enclosed.
+\end{itemize}
+
+Gauss's law is a generalization of Coulomb's law,
+so we can show that Gauss's law simplies down to Coulomb's law
+for the case of a charge particle in a spheral surface.
+Let 
+\begin{itemize}
+    \item \(\bm{E}\) be the electric field and \(B\) be its magnitude.
+    \item
+        \(\bm{A}\) be the area vector of the spherical surface
+        and \(A\) be its magnitude.
+    \item \(r\) be the radius of the spherical surface.
+\end{itemize}
+The surface area of sphere is given by
+\begin{equation}
+    A = 4 \pi r^2
+\end{equation}
+Since electric fields radiate in a sphere,
+the electric field and area are orthogonal at all points.
+\begin{equation}
+    \bm{E} \cdot \odif{\bm{A}} = E \odif{A}
+\end{equation}
+If we integrate the surface of the sphere,
+we will find
+\begin{equation}
+    \Phi_E = E 4 \pi r^2
+\end{equation}
+By Gauss's law, \eqref{eq:gausss-law},
+
 
 \chapter{Electric Potential}
 
