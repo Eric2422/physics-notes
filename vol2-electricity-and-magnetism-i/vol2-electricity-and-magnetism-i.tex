@@ -36,7 +36,7 @@ There are two ways to charge and discharge (i.e., move charges):
 
 Charged objects exert an \textbf{electric force} on other charged objects around them.
 The magnitude of the electric force can be given by \textbf{Coulomb's law}:
-\begin{equation}
+\begin{equation} \label{eq:coulombs-law}
     F = k\frac{q_1 q_2}{r^2}
 \end{equation}
 where
@@ -55,12 +55,41 @@ and a \emph{positive} value for repulsion.
 
 \section{Electric Flux}
 
-As
+\textbf{Flux}, symbolized by \(\Phi\),
+is the amount of field that passes through a \textbf{surface},
+which may be imaginary.
+The general formula for the electric flux \(\Phi_E\) is
+\begin{equation}
+    \Phi_E = \iint_S \bm{E}(\bm{r}) \cdot \odif{\bm{S}}
+\end{equation}
+where
+\begin{itemize}
+    \item \(S\) is the surface to integrate over.
+    \item \(\bm{E}(\bm{r})\) is the function of electric field in a 3D space.
+\end{itemize}
+
+For introductory electricity and magnetism,
+we usually focus on a few simpler cases.
+
+Surfaces can be either open (e.g., a window pane) or closed (e.g., a box).
+For the case of a constant electric field passing through an flat open surface,
+the flux equation simplifies to
+\begin{equation}
+    \begin{aligned}
+        \Phi = \bm{E} \cdot \bm{A} \\
+        \Phi = E A \cos\theta
+    \end{aligned}
+\end{equation}
+where
+\begin{itemize}
+    \item \(\bm{E}\) is the electric field vector, and \(E\) is its magnitude.
+    \item \(\bm{A}\) is area vector, and \(A\) is its magnitude.
+\end{itemize}
 
 
 \chapter{Electric Potential}
 
-Electric potential energy is denoted by 
+Electric potential energy is denoted by \(U_\mathrm{E}\)
 
 
 \chapter{Conductors and Capacitors}
