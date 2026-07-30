@@ -31,17 +31,19 @@ There are two ways to charge and discharge (i.e., move charges):
     \item Conduction -- friction (triboelectricity) or contact
     \item Induction -- contactless
 \end{itemize}
+\vfil
 
 \section{Coulomb's Law}
 
 Charged objects exert an \textbf{electric force} on other charged objects around them.
-The magnitude of the electric force can be given by \textbf{Coulomb's law}:
+The magnitude of the electric force around a charged particle or sphere
+can be given by \textbf{Coulomb's law}:
 \begin{equation} \label{eq:coulombs-law}
     F = k\frac{q_1 q_2}{r^2}
 \end{equation}
 where
 \begin{itemize}
-    \item \(F\) is the force \emph{both} objects experience as given by Newton's Third law.
+    \item \(F\) is the force that \emph{both} objects experience.
     \item \(k \approx \qty{8.99e-9}{\newton \meter\squared \per \coulomb\squared}\)
           and is called the Coulomb constant.
     \item \(q_1\) and \(q_2\) are the two charges of the two objects.
@@ -58,38 +60,54 @@ and a \emph{positive} value for repulsion.
 \textbf{Flux}, symbolized by \(\Phi\),
 is the amount of field that passes through a \textbf{surface},
 which may be imaginary.
-The general formula for the electric flux \(\Phi_E\) is
+The word flux is derived from the Latin word for "flow"
+in analogy to flowing water.
+
+The general formula for flux is
 \begin{equation}
-    \Phi_E = \iint_S \bm{E}(\bm{r}) \cdot \odif{\bm{S}}
+    \Phi_ = \iint_S \bm{E}(\bm{r}) \cdot \odif{\bm{S}}
 \end{equation}
 where
 \begin{itemize}
     \item \(S\) is the surface to integrate over.
-    \item \(\bm{E}(\bm{r})\) is the function of electric field in a 3D space.
+    \item \(\bm{F}(\bm{r})\) is the function of the field in 3D space.
 \end{itemize}
 
 For introductory electricity and magnetism,
 we usually focus on a few simpler cases.
 
 Surfaces can be either open (e.g., a window pane) or closed (e.g., a box).
+
 For the case of a uniform electric field passing through an flat open surface,
 the flux equation simplifies to
 \begin{equation}
     \begin{aligned}
-        \Phi = \bm{E} \cdot \bm{A} \\
-        \Phi = E A \cos\theta
+        \Phi_E = \bm{E} \cdot \bm{A} \\
+        \Phi_E = E A \cos\theta
     \end{aligned}
 \end{equation}
 where
 \begin{itemize}
-    \item \(\bm{E}\) is the electric field vector, and \(E\) is its magnitude.
+    \item \(\Phi_E\) is the electric flux.
+    \item \(\bm{E}\) is the electric field vector and \(E\) is its magnitude.
     \item
-        \(\bm{A}\) is area vector, and \(A\) is its magnitude.
-        Note \(\bm{A}\) is in the direction of the normal vector.
+        \(\bm{A}\) is area vector and \(A\) is its magnitude.
+        Note \(\bm{A}\) is in the direction of the area's normal vector.
     \item
         \(\theta\) is the angle between the electric field
-        and the normal vector of \(A\).
+        and the area's normal vector.
 \end{itemize}
+Our surface in this case is infinitely thin.
+By intuition, when \(\theta\) is \(\qty{90}{\degree}\),
+there is no area to intercept the electric field,
+thus the flux is 0.
+
+The case of a closed surface is slightly more complicated.
+For a closed surface, fields can flow both in and out.
+When a field enters a closed surface, the flux is negative,
+and when a field exits, the flux is positive.
+As a result, all fields that originate outside the closed surface
+result in a net flux of 0.
 
 
 \chapter{Electric Potential}
