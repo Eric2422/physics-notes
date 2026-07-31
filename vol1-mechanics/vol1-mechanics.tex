@@ -101,20 +101,20 @@ depends on whether the mass distribution is \textbf{discrete} or \textbf{continu
 For discrete masses (e.g., several balls):
 \begin{equation}
     \begin{aligned}
-        x_{\mathrm{cm}} = \frac{\sum m_i x_i}{m_i} \\
-        y_{\mathrm{cm}} = \frac{\sum m_i y_i}{m_i} \\
-        z_{\mathrm{cm}} = \frac{\sum m_i z_i}{m_i}
+        x_{\mathrm{cm}} = \frac{\sum_i m_i x_i}{m_i} \\
+        y_{\mathrm{cm}} = \frac{\sum_i m_i y_i}{m_i} \\
+        z_{\mathrm{cm}} = \frac{\sum_i m_i z_i}{m_i}
     \end{aligned}
 \end{equation}
 More compactly,
 \begin{equation}
-    \bm{r_{\mathrm{cm}}} = \frac{\sum m_i \bm{r_i}}{m_i}
+    \bm{r_{\mathrm{cm}}} = \frac{\sum_i m_i \bm{r}_i}{m_i}
 \end{equation}
 
 
 For a continuous mass distribution:
 \begin{equation} \label{eq:continuous-com}
-    \bm{r}_{\mathrm{cm}} = \frac{\int \bm{r} \odif{m}}{\int \odif{m}}
+    \bm{r_{\mathrm{cm}}} = \frac{\int \bm{r} \odif{m}}{\int \odif{m}}
 \end{equation}
 where \(\odif{m}\) is a small amount of mass.
 
@@ -418,7 +418,7 @@ Springs in series are connected side by side.
 Each spring experiences the same force.
 The net spring constant is given by
 \begin{equation}
-    \frac{1}{k_\mathrm{k}} = \sum \frac{1}{k_i}
+    \frac{1}{k_\mathrm{k}} = \sum_i \frac{1}{k_i}
 \end{equation}
 In practice,
 this means that springs connected in series are equivalent to a single weaker spring.
@@ -427,7 +427,7 @@ Springs in parallel are connected end to end.
 Each spring stretches the same distance.
 The net spring constant is given by
 \begin{equation}
-    k_\mathrm{net} = \sum k_i
+    k_\mathrm{net} = \sum_i k_i
 \end{equation}
 In practice,
 this means that springs connected in parallel are equivalent to a single stronger spring.
@@ -650,7 +650,7 @@ or \(\unit{\newton \second}\)
 
 A system's momentum is the sum of its parts' momenta:
 \begin{equation}
-    \bm{p}_\mathrm{system} = \sum m_i \bm{v}_i
+    \bm{p}_\mathrm{system} = \sum_i m_i \bm{v}_i
 \end{equation}
 
 For objects with constant mass,
@@ -785,7 +785,7 @@ describing how much a body resists rotational acceleration.
 
 For discrete masses:
 \begin{equation}
-    I = \sum m_i r_i^2
+    I = \sum_i m_i r_i^2
 \end{equation}
 where
 \begin{itemize}
@@ -1388,7 +1388,6 @@ the SI units for the spring constant \(k\) is \(\unit{\newton \per \radian}\).
 Skipping the differential equations, the derivation for a torsion pendulum is
 \begin{equation}
     \begin{aligned}
-        \sum \tau &= I \alpha \\
         - \tau &= I \alpha \\
         - k \theta &= I \odv[2]{\theta}{t} \\
         - \frac{k}{I} \theta &= \odv[2]{\theta}{t} \\
