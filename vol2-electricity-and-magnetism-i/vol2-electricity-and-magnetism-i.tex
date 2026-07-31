@@ -15,7 +15,7 @@
 
 \chapter{Electric Charges, Fields, and Gauss's Law}
 
-\section{Electric Charges}
+\section{Electric Charges} \label{sec:electric-charges}
 
 \textbf{Electric charge} is denoted by the symbol \(q\) or sometimes \(Q\),
 and its SI unit is the coulomb (C).
@@ -184,6 +184,37 @@ or volts (\unit{\volt}).
 \chapter{Electric Circuits}
 
 \section{Ohm's Law}
+
+\textbf{Ohm's law}:
+\begin{equation}
+    V = I R
+\end{equation}
+where
+\begin{itemize}
+    \item \(V\) is the voltage.
+    \item \(I\) is the current.
+    \item \(R\) is the resistance.
+\end{itemize}
+
+\section{Kirchoff's Laws}
+
+\textbf{Kirchoff's laws}:
+\begin{enumerate}
+    \item
+        \textbf{Kirchoff's junction rule}
+        states that the total input current and total output current of a junction
+        must be equal to each other:
+        \begin{equation}
+            I_\mathrm{in} = I_\mathrm{out}
+        \end{equation}
+        This follows from the conservation of charge (\cpageref{sec:electric-charges}).
+    \item
+        \textbf{Kirchoff's loop rule} states that all the voltages in a closed circuit
+        must add up to \(\qty{0}{\volt}\):
+        \begin{equation}
+            \sum_i V_i = 0
+        \end{equation}
+\end{enumerate}
 
 \section{Gauss's Law of Magnetism}
 
