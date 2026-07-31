@@ -39,16 +39,23 @@ Charged objects exert an \textbf{electric force} on other charged objects around
 The magnitude of the electric force around a charged particle or sphere
 can be given by \textbf{Coulomb's law}:
 \begin{equation} \label{eq:coulombs-law}
-    F = k\frac{q_1 q_2}{r^2}
+    \begin{aligned}
+        F &= \frac{q_1 q_2}{r^2} \\
+        &= \frac{q_1 q_2}{4 \pi \epsilon_0 r^2}
+    \end{aligned}
 \end{equation}
 where
 \begin{itemize}
     \item \(F\) is the force that \emph{both} objects experience.
-    \item \(k \approx \qty{8.99e-9}{\newton \meter\squared \per \coulomb\squared}\)
-          and is called the Coulomb constant.
-    \item \(q_1\) and \(q_2\) are the two charges of the two objects.
-          Note that both values are signed.
+    \item \(k = \frac{1}{4 \pi \epsilon_0}\) is the \textbf{Coulomb constant}.
+    \item
+        \(q_1\) and \(q_2\) are the two charges of the two objects. 
+        Note that both values are signed.
     \item \(r\) is the distance between the two particles.
+    \item
+        \(\epsilon_0 = \qty{8.854 187 8188(14)e-12}{\farad \per \meter}\)
+        is the \textbf{permittivity of free space}
+        or \textbf{vacuum permittivity}. \autocite{nist-epsilon_0}
 \end{itemize}
 Objects with charges of the same sign will repel each other,
 while objects with charges of opposite signs will attract each other.
@@ -60,12 +67,12 @@ and a \emph{positive} value for repulsion.
 \textbf{Flux}, symbolized by \(\Phi\),
 is the amount of field that passes through a \textbf{surface},
 which may be imaginary.
-The word flux is derived from the Latin word for "flow"
+The word "flux" is derived from the Latin word for "flow"
 in analogy to flowing water.
 
 The general formula for flux is
 \begin{equation}
-    \Phi_ = \iint_S \bm{E}(\bm{r}) \cdot \odif{\bm{S}}
+    \Phi = \iint_S \bm{F}(\bm{r}) \cdot \odif{\bm{S}}
 \end{equation}
 where
 \begin{itemize}
@@ -135,7 +142,7 @@ Let
         and \(A\) be its magnitude.
     \item \(r\) be the radius of the spherical surface.
     \item \(\bm{E}\) be the electric field and \(E\) be its magnitude.
-    \item \(Phi_E\) is the electric flux
+    \item \(\Phi_E\) is the electric flux.
     \item \(q\) be the enclosed charge.
 \end{itemize}
 The surface area of sphere is given by
