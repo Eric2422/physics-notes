@@ -17,5 +17,5 @@
         "textbf",
         "Undriven"
     ],
-    "latex-workshop.latex.search.rootFiles.exclude": ["./template/*.tex"]
+    "latex-workshop.latex.watch.files.ignore": ["./template/*"]
 }
