@@ -156,7 +156,7 @@ result in a net flux of 0.
 
 This means that only electric charges inside a closed surface
 contributes to the electric flux,
-which leads us to \textbf{Gauss's law}:
+which leads us to \textbf{Gauss's law} in integral form:
 \begin{equation} \label{eq:gausss-law}
     \oiint \bm{E} \cdot \odif{\bm{A}} = \frac{q}{\epsilon_0}
 \end{equation}
@@ -270,10 +270,31 @@ where
 
 \chapter{Magnetic Fields and Electromagnetism}
 
+There are actually two different magnetic fields:
+the \textbf{\(\bm{B}\) field} and the \textbf{\(\bm{H}\) field}.
+For this volume, we are only concerned with the \(\bm{B}\) field.
+
 \section{Ampère's Law}
+
+Electric currents generate magnetic fields around themselves.
+Ignoring edge effects, for a sufficiently long wire with constant current,
+the magnetic field is given by \textbf{Ampere's law}:
+\begin{equation}
+    B = \frac{I \mu_0}{2 \pi r}
+\end{equation}
+where
+\begin{itemize}
+    \item \(B\) is the magnitude of the magnetic field.
+    \item \(I\) is the current.
+    \item \(\mu_0\) is the \textbf{permittivity of free space} or \textbf{vacuum permittivity}.
+    \item \(r\) is the distance from the wire.
+\end{itemize}
 
 \section{Biot-Savart Law}
 
+\textbf{Biot-Savart's law} is a generalization of Ampère's law
+to wires that are not sufficiently long
+and points where edge effects become non-negligible.
 
 \chapter{Electromagnetic Induction}
 
