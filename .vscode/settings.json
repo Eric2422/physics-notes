@@ -16,5 +16,6 @@
         "siunitx",
         "textbf",
         "Undriven"
-    ]
+    ],
+    "latex-workshop.latex.search.rootFiles.exclude": ["./template/*.tex"]
 }
