@@ -41,16 +41,18 @@
 \section{Kinematic Equations}
 
 The below \textbf{kinematic equations} are only true under constant acceleration.
-\begin{gather} \label{eq:linear-kinematic}
-    {
-        \Delta{x} = v_0 t + \frac{1}{2} a t^2
-        \qquad \mathrm{or} \qquad
-        x = x_0 + v_0 t + \frac{1}{2} a t^2
-    } \\
-    v_\mathrm{f} = v_0 + a t \\
-    v^2 = v_0^2 + 2 a \Delta{x} \\
-    \Delta{x} = \frac{v_0 + v_\mathrm{f}}{2} t
-\end{gather}
+\begin{subequations}
+    \begin{gather} \label{eq:linear-kinematic}
+        {
+            \Delta{x} = v_0 t + \frac{1}{2} a t^2
+            \qquad \mathrm{or} \qquad
+            x = x_0 + v_0 t + \frac{1}{2} a t^2
+        } \\
+        v_\mathrm{f} = v_0 + a t \\
+        v^2 = v_0^2 + 2 a \Delta{x} \\
+        \Delta{x} = \frac{v_0 + v_\mathrm{f}}{2} t
+    \end{gather}
+\end{subequations}
 where
 \begin{itemize}
     \item
@@ -731,16 +733,18 @@ Similarly to the linear kinematic equations
 under constant linear acceleration (\cpageref{eq:linear-kinematic}),
 there are \textbf{rotational kinematic equations}
 under constant \textbf{angular acceleration}:
-\begin{gather}
-    {
-        \Delta{\theta} = \omega_0 t + \frac{1}{2} \alpha t^2
-        \qquad \mathrm{or} \qquad
-        \theta_\mathrm{f} = \theta_0 + \omega_0 t + \frac{1}{2} \alpha t^2
-    } \\
-    \omega_\mathrm{f} = \omega_0 + \alpha t \\
-    \omega_\mathrm{f}^2 = \omega_0^2 + 2 \alpha \Delta{\theta} \\
-    \Delta{\theta} = \frac{\omega_0 + \omega_\mathrm{f}}{2} t
-\end{gather}
+\begin{subequations}
+    \begin{gather}
+        {
+            \Delta{\theta} = \omega_0 t + \frac{1}{2} \alpha t^2
+            \qquad \mathrm{or} \qquad
+            \theta_\mathrm{f} = \theta_0 + \omega_0 t + \frac{1}{2} \alpha t^2
+        } \\
+        \omega_\mathrm{f} = \omega_0 + \alpha t \\
+        \omega_\mathrm{f}^2 = \omega_0^2 + 2 \alpha \Delta{\theta} \\
+        \Delta{\theta} = \frac{\omega_0 + \omega_\mathrm{f}}{2} t
+    \end{gather}
+\end{subequations}
 where
 \begin{itemize}
     \item
@@ -1409,6 +1413,8 @@ When something is oscillating,
 and an external force is applied at the same frequency as the oscillation,
 the amplitude of the oscillation will increase.
 This phenomena is known as \textbf{resonance}.
+
+
 \appendix
 
 \input{../math/vectors.tex}
