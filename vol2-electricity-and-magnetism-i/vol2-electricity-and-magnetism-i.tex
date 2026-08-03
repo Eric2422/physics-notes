@@ -43,7 +43,7 @@ The magnitude of the electric force around a charged particle or sphere
 can be given by \textbf{Coulomb's law}:
 \begin{equation} \label{eq:coulombs-law}
     \begin{aligned}
-        F &= \frac{q_1 q_2}{r^2} \\
+        F &= k \frac{q_1 q_2}{r^2} \\
         &= \frac{q_1 q_2}{4 \pi \epsilon_0 r^2}
     \end{aligned}
 \end{equation}
@@ -74,18 +74,31 @@ or wish to find the force exerted on multiple different particles.
 The electric field formula for a particle or sphere is
 \begin{equation} \label{eq:sphere-electric-field}
     \begin{aligned}
-        F &= \frac{q}{r^2} \\
+        E &= k \frac{q}{r^2} \\
         &= \frac{q}{4 \pi \epsilon_0 r^2}
     \end{aligned}
 \end{equation}
 
+To find the force exerted on a charged particle,
+we multiply the electric field it is in by its charge:
+\begin{equation}
+    \bm{F_E} = \bm{E} q
+\end{equation}
+where
+\begin{itemize}
+    \item \(\bm{F_E}\) is the electric force.
+    \item \(\bm{E}\) is the electric field.
+    \item \(q\) is the charge.
+\end{itemize}
+
 \subsection{Uniform Electric Fields}
 
-The line between a positive and negative point particle,
+The line between a positive and negative charge,
 regardless of their respective magnitudes,
 is a \textbf{uniform electric field}.
 Outside of this line,
 the electric field is not uniform due to \textbf{edge effects}.
+We will explore this idea further in \nameRef{sec:capacitors}.
 
 \section{Electric Flux and Gauss's Law}
 
@@ -93,7 +106,7 @@ the electric field is not uniform due to \textbf{edge effects}.
 is the amount of field that passes through a \textbf{surface},
 which may be imaginary.
 The word "flux" is derived from the Latin word for "flow"
-in analogy to flowing water.
+in analogy with flowing water.
 
 The general formula for flux is
 \begin{equation}
@@ -211,8 +224,11 @@ and has SI units of joules per coulomb (\unit{\joule \per \coulomb})
 or volts (\unit{\volt}).
 
 
-\chapter{Conductors and Capacitors}
+\chapter{Conductors and Capacitors} \label{ch:conductors-and-capacitors}
 
+\section{Conductors}
+
+\section{Capacitors} \label{sec:capacitors}
 
 \chapter{Electric Circuits}
 
