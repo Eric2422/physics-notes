@@ -5,15 +5,12 @@
 ]{biblatex}
 \addbibresource{references.bib}
 
-
 %% General typesetting
 \usepackage{csquotes}
 \MakeOuterQuote{"}
 
-
 %% Graphics and plots
 \usepackage{pgf}
-
 
 %% Math and science
 \usepackage{amsmath}
@@ -25,12 +22,10 @@
 \usepackage{esint}
 \usepackage{physics2}
 
-
 %% Page formatting
 \usepackage{indentfirst}
 \usepackage{setspace}
 \doublespacing
-
 
 %% References
 \usepackage{hyperref}
@@ -41,7 +36,6 @@
 \usepackage[capitalize]{cleveref}
 \crefname{page}{p.}{pp.}
 
-
 %% Units and time
 \usepackage[useregional]{datetime2}
 \DTMsetstyle{iso}
@@ -51,8 +45,8 @@
     inter-unit-product = \cdot,
 }
 
-
 %% Custom commands
+% Create custom title page.
 \newcommand{\titlePage}[2]{
     \begin{titlepage}
         \centering
@@ -75,15 +69,12 @@
         \today
     \end{titlepage}
 }
-
 % List math sections.
 \newcommand{\mathTopics}[1]{\noindent Recommended mathematical topics:~#1}
-
 % Reference number, name, and page number.
-\newcommand{\nameRef}[1]{\Cref*{#1}:~\nameref{#1} (\cpageref{#1})}
-% Reference equation with page number
+\newcommand{\namePgRef}[1]{\Cref*{#1}:~\nameref{#1} (\cpageref{#1})}
+% Reference equation with page number.
 \newcommand{\eqPgRef}[1]{\cref{#1} (\cpageref{#1})}
-
 % Make curly epsilon default.
 \let\temp\epsilon
 \let\epsilon\varepsilon
