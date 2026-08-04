@@ -15,6 +15,7 @@
         "sisetup",
         "siunitx",
         "textbf",
+        "tikz",
         "Undriven"
     ],
     "latex-workshop.latex.watch.files.ignore": ["./template/*"]

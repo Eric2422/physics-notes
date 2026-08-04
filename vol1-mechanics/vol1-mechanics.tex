@@ -200,7 +200,11 @@ Draw the body as a simple shape such as a dot or box,
 then add labeled arrows to represent the forces acting in each direction.
 Larger arrows indicate larger forces.
 
-% To-do: add images
+\vspace{1cm}
+
+\begin{center}
+    \input{assets/free-body-diagram.tikz}
+\end{center}
 
 \section{Gravity}
 
@@ -458,6 +462,12 @@ Revolution period:
 \begin{equation} \label{eq:revolution-period}
     T = \frac{2 \pi r}{v}
 \end{equation}
+where
+\begin{itemize}
+    \item \(T\) is the revolution period.
+    \item \(r\) is the revolution radius.
+    \item \(v\) is the tangential velocity.
+\end{itemize}
 
 \textbf{Centripetal force}:
 \begin{equation} \label{eq:centripetal-force}
@@ -1119,7 +1129,10 @@ describe the motion of planets orbiting around a star.
         The line between the star and an orbiting planet
         sweeps across equal amounts of area in equal amounts of time.
     \item
-        \(T^2 \propto r^3\).
+        The square of the orbital period \(T\) is proportional to the cube of the radius \(r\):
+        \begin{equation}
+            T^2 \propto r^3
+        \end{equation}
         See \namePgRef{subsec:orbital-velocity} for the derivation.
 \end{enumerate}
 
