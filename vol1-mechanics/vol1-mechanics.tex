@@ -98,18 +98,21 @@ there are two ways to experimentally determine an object's center of mass:
 Determing the CoM theoretically
 depends on whether the mass distribution is \textbf{discrete} or \textbf{continuous}.
 
-For discrete masses (e.g., several balls):
-\begin{equation}
-    \begin{aligned}
-        x_{\mathrm{cm}} = \frac{\sum_i m_i x_i}{m_i} \\
-        y_{\mathrm{cm}} = \frac{\sum_i m_i y_i}{m_i} \\
-        z_{\mathrm{cm}} = \frac{\sum_i m_i z_i}{m_i}
-    \end{aligned}
-\end{equation}
-More compactly,
-\begin{equation}
-    \bm{r_{\mathrm{cm}}} = \frac{\sum_i m_i \bm{r}_i}{m_i}
-\end{equation}
+\begin{subequations}
+    For discrete masses (e.g., several balls):
+    \begin{equation}
+        \begin{aligned}
+            x_{\mathrm{cm}} = \frac{\sum_i m_i x_i}{\sum_i m_i} \\
+            y_{\mathrm{cm}} = \frac{\sum_i m_i y_i}{\sum_i m_i} \\
+            z_{\mathrm{cm}} = \frac{\sum_i m_i z_i}{\sum_i m_i}
+        \end{aligned}
+    \end{equation}
+    More compactly,
+    \begin{equation}
+        \bm{r_{\mathrm{cm}}} = \frac{\sum_i m_i \bm{r}_i}{m_i}
+    \end{equation}
+\end{subequations}
+
 For a continuous mass distribution:
 \begin{equation} \label{eq:continuous-com}
     \bm{r_{\mathrm{cm}}} = \frac{\int \bm{r} \odif{m}}{\int \odif{m}}
@@ -1413,7 +1416,6 @@ When something is oscillating,
 and an external force is applied at the same frequency as the oscillation,
 the amplitude of the oscillation will increase.
 This phenomena is known as \textbf{resonance}.
-
 
 \appendix
 
