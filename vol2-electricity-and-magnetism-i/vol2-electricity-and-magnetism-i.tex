@@ -265,6 +265,8 @@ where
 
 \chapter{Electric Circuits}
 
+\section{Ohm's Law}
+
 Electric currents are the flow of electrons through a conductor.
 \textbf{Electric current} (\(I\)) is measured in amperes (\unit{\ampere}),
 also informally called amps.
@@ -275,13 +277,11 @@ this is called "\textbf{conventional current}".
 
 Electric currents occur in response
 to a difference in electric potential between two points,
-which is called "\textbf{voltage}" (\(V\))
+which is \textbf{voltage} (\(V\))
 and has SI units of volts (\unit{\volt}).
 
-\section{Ohm's Law}
-
 The relation between voltage and current is given by \textbf{Ohm's law}:
-\begin{equation}
+\begin{equation} \label{eq:ohms-law}
     V = I R
 \end{equation}
 where
@@ -290,6 +290,10 @@ where
     \item \(I\) is the current.
     \item \(R\) is the \textbf{resistance}, which has SI units of ohms (\unit{\ohm}).
 \end{itemize}
+
+\textbf{Resistors} are devices that produce resistance.
+From a practical viewpoint,
+electrical devices such as lights and computers may also be considered resistors.
 
 \section{Kirchoff's Laws}
 
@@ -310,6 +314,31 @@ where
             \sum_i V_i = 0
         \end{equation}
 \end{enumerate}
+
+\section{Power}
+
+\textbf{Power} (\(P\)) is the work done per unit of time
+and has units of watts (\unit{\watt}),
+which are equivalent to \unit{\joule \per \second}.
+
+In circuits,
+power is most commonly discussed in the context of heat dissipated from resistors.
+Volts are equal to \unit{\joule \per \coulomb},
+and amperes are equal to \unit{\coulomb \per \second}.
+Therefore:
+\begin{equation*}
+    \begin{aligned}
+        I V
+        &= \left( \unit{\joule \per \coulomb} \right) \left( \unit{\coulomb \per \second} \right)
+        = \unit{\joule \per \second} \\
+        &= P
+    \end{aligned}
+\end{equation*}
+\begin{equation}
+    P = IV
+\end{equation}
+Of course,
+we can apply Ohm's law: \eqPgRef{eq:ohms-law} to replace either \(I\) or \(V\).
 
 \section{Gauss's Law of Magnetism}
 
