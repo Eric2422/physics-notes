@@ -536,9 +536,6 @@ where
     \item \(v\) is the velocity of the object.
 \end{itemize}
 
-By definition, \textbf{conservative forces} are ones where the \textbf{work} done is \textbf{path-independent},
-i.e., work along a \textbf{closed loop} is 0.
-
 The equation for \textbf{potential energy} is
 \begin{equation} \label{eq:potential-energy}
     U = - \int \bm{F} \cdot \odif{\bm{r}}
@@ -594,19 +591,27 @@ For example, for a spring with force function \(F(x) = -k x^\frac{4}{3}\),
 
 \section{Work}
 
-Work formula:
+\textbf{Conservative forces} are ones where the \textbf{work} done is \textbf{path-independent},
+i.e., work along a \textbf{closed loop} is 0.
+
+General work formula:
 \begin{equation} \label{eq:work}
     \begin{aligned}
-        W &= \int \bm{F} \cdot \odif{\bm{x}} \\
-        &= \int_{b}^{a} \bm{F}(\bm{r}(t)) \cdot \bm{r}'(t) \odif{t} \\
-        &= \int_{\mathrm{C}} \bm{F} \cdot \bm{T} \odif{s}
+        W &= \int_C \bm{F}(r) \cdot \odif{\bm{r}} \\
+        &= \int_C \bm{F}(t) \cdot \bm{r}'(t) \odif{t} \\
     \end{aligned}
 \end{equation}
 where
 \begin{itemize}
-    \item \(\int_{\mathrm{C}}\) is a contour integral.
-    \item \(\bm{T}\) is the tangent.
+    \item \(\bm{r}\) is the displacement.
+    \item \(\int_{\mathrm{C}}\) is a line integral along a curve.
 \end{itemize}
+
+For a straight path and constant force,
+the formula simplifies down to
+\begin{equation*}
+    W = \bm{F} \cdot \bm{r}
+\end{equation*}
 
 Compare the equation for work, \eqPgRef{eq:work},
 with the equation for potential energy, \eqPgRef{eq:potential-energy}.
@@ -619,6 +624,7 @@ Be careful about the signs for work.
 If a \emph{system} does positive work, it \emph{loses} potential energy.
 Conversely, if an external force acts does positive work \emph{upon the system},
 it \emph{gains} potential energy.
+
 \section{Power}
 
 Power is work done per unit of time.
@@ -694,7 +700,7 @@ In the simple case where \(\odv{\bm{F}}{t} = 0\),
 \end{equation}
 The more general equation is
 \begin{equation}
-    \int \bm{F}(t) \odif{t}
+    \bm{J} = \int \bm{F}(t) \odif{t}
 \end{equation}
 \begin{equation}
     \therefore \bm{J} = \Delta{\bm{p}}
