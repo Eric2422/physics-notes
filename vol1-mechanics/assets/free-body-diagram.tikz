@@ -1,3 +1,4 @@
 \begin{tikzpicture}
     \fill (0,0) circle (0.25);
+    \draw[-{stealth[width=1cm]}] (0, 0) -- (2, 0) node[midway, below] {\(\bm{F_a}\)};
 \end{tikzpicture}

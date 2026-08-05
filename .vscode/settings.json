@@ -16,7 +16,8 @@
         "siunitx",
         "textbf",
         "tikz",
-        "Undriven"
+        "Undriven",
+        "usetikzlibrary"
     ],
     "latex-workshop.latex.watch.files.ignore": ["./template/*"]
 }
