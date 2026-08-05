@@ -16,6 +16,7 @@
         "siunitx",
         "textbf",
         "tikz",
+        "tikzset",
         "Undriven",
         "usetikzlibrary"
     ],
