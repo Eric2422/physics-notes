@@ -820,9 +820,15 @@ For continuous masses:
     \therefore I = \int r^2 \lambda(r) \odif{r}
 \end{gather}
 
-As an example,
-for a rod of uniform density \(\lambda\), length \(\ell\) and mass \(M\)
-rotating about an axis perpendicular to its length and passing through the center:
+Imagine a cylindrical rod of uniform density \(\lambda\), length \(\ell\), and mass \(M\)
+rotating about an axis perpendicular to its length and passing through the center.
+
+\begin{figure}[h]
+    \centering
+    \input{assets/rotating-rod.tikz}
+\end{figure}
+
+Deriving the moment of inertia:
 \begin{equation} \label{eq:uniform-rod-rotational-inertia}
     \begin{aligned}
         I &= 2 \int_{0}^{\frac{\ell}{2}} r^2 \odif{m} \\
@@ -834,8 +840,6 @@ rotating about an axis perpendicular to its length and passing through the cente
         &= \frac{1}{12} M \ell^2
     \end{aligned}
 \end{equation}
-
-% To-do: add image
 
 Note that the \(r\) in these formulas
 means that objects have lower moment of inertia

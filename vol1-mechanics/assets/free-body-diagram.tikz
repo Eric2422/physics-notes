@@ -1,12 +1,12 @@
 \begin{tikzpicture}
     \tikzset{
         ->/.style={
-            line width=1.5pt,
-            -{Latex[scale=1.5]}
+            line width=1mm,
+            -{Latex[scale=1]}
         }
     }
 
     \fill (0, 0) circle (0.25);
-    \draw[->] (0, 0) -- (-2, 0) node[midway, below] {\(\bm{F_a}\)} node[midway, above] {\qty{1}{\newton}};
-    \draw[->] (0, 0) -- (4, 0) node[midway, below] {\(\bm{F_b}\)} node[midway, above] {\qty{2}{\newton}};
+    \draw[->] (0, 0) -- (-3, 0) node[midway, below] {\(F_a = \qty{2}{\newton}\)};
+    \draw[->] (0, 0) -- (4.5, 0) node[midway, below] {\(F_b = \qty{3}{\newton}\)};
 \end{tikzpicture}
