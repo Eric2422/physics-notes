@@ -74,8 +74,10 @@
 }
 % List math sections.
 \newcommand{\mathTopics}[1]{\noindent Recommended mathematical topics:~#1}
-% Reference with page number.
+% Cross reference with page number.
 \newcommand{\pgRef}[1]{\cref{#1}~(\cpageref{#1})}
+% Cross reference with page number but sentence-initial.
+\newcommand{\PgRef}[1]{\Cref{#1}~(\cpageref{#1})}
 % Make curly epsilon default.
 \let\temp\epsilon
 \let\epsilon\varepsilon
