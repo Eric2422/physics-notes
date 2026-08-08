@@ -60,8 +60,8 @@ but we are going to skip that.
 
 General solutions:
 \begin{itemize}
-    \item \(x(t) = A\cos\left(\omega_0 t\right) + B\sin\left(\omega_0 t\right)\)
-    \item \(x(t) = A\cos\left(\omega_0 t + \phi\right)\)
+    \item \(x(t) = A\cos\ab( \omega_0 t ) + B\sin\ab( \omega_0 t )\)
+    \item \(x(t) = A\cos\ab( \omega_0 t + \phi )\)
     \item \(x(t) = z_0 e^{i \omega_0 t} + z^*_0 e^{i \omega_0 t}\)
     \item \(\tilde{x}(t) = A e^{i \phi} e^{i \omega_0 t}\)
 \end{itemize}
@@ -125,7 +125,14 @@ into the equation and get
 \end{equation}
 \begin{equation}
     \boldsymbol{\hat{x}}(t)
-    = A e^{i\phi} e^{-\frac{\gamma}{2}t} e^{\pm i \left(\sqrt{\omega_0^2 - \frac{\gamma^2}{4}}\right) t}
+    = A
+    e^{i\phi}
+    e^{-\frac{\gamma}{2}t}
+    e^{
+        \pm i
+        \ab( \sqrt{\omega_0^2 - \frac{\gamma^2}{4}} )
+        t
+    }
 \end{equation}
 
 Damped oscillators have three possible behaviors
@@ -239,15 +246,15 @@ with the x-axis being the real part (i.e., \(a\)),
 and the y-axis being the imaginary part (i.e., \(b\)).
 
 Given a complex number \(z\),
-its magnitude \(\left\|z\right\|\) is given by Pythagorean's Theorem:
+its magnitude \(\ab\| z \|\) is given by Pythagorean's Theorem:
 \begin{equation}
-    \left\|z\right\| = \sqrt{\Re[z]^2 + \Im[z]^2} = \sqrt{z z^*}
+    \ab\| z \| = \sqrt{\Re[z]^2 + \Im[z]^2} = \sqrt{z z^*}
 \end{equation}
 
 Its angle \(\phi\) is derived through trigonometry
 (be careful about the general limitations of \(\arctan\) on calculators):
 \begin{equation}
-    \phi = \arctan\left(\frac{\Im[z]}{\Re[z]}\right)
+    \phi = \arctan\ab( \frac{\Im[z]}{\Re[z]} )
 \end{equation}
 
 \section{Euler's Formula}
@@ -258,7 +265,7 @@ Euler's formula:
 \end{equation}
 
 \begin{equation}
-    \therefore e^{a + bi} = e^a e^{bi} = e^a \left(\cos b + i \sin b\right)
+    \therefore e^{a + bi} = e^a e^{bi} = e^a \ab( \cos b + i \sin b )
 \end{equation}
 
 Oftentimes, working with the complex exponential is easier than the trigonometric functions.
@@ -266,7 +273,7 @@ Oftentimes, working with the complex exponential is easier than the trigonometri
 \section{Complex-Valued Functions}
 
 A \textbf{complex-valued function} is a function that returns a complex number.
-It is denoted with a overhead tilde, e.g., \(\tilde{f}\left(x\right)\).
+It is denoted with a overhead tilde, e.g., \(\tilde{f}(x)\).
 
 
 \chapter{Fourier Analysis}

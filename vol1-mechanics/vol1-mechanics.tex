@@ -376,24 +376,24 @@ Solving for \(C\) using the initial condition \(v(0) = v_0\):
             v_0 &= \frac{m}{b} g + C \\
             C &= \frac{m}{b} g - v_0 \\
         \end{aligned} \\
-        v = \frac{m}{b} g + \left( \frac{m}{b} g - v_0 \right) e^{-\frac{b}{m} t}
+        v = \frac{m}{b} g + \ab( \frac{m}{b} g - v_0 ) e^{-\frac{b}{m} t}
     \end{gathered}
 \end{equation}
 Using terminal velocity as given in \cref{eq:linear-terminal-velocity}
 (\cpageref{eq:linear-terminal-velocity}),
 the velocity of a falling body with linear drag is
 \begin{equation}
-    v = v_\mathrm{t} + \left( v_\mathrm{t} - v_0 \right) e^{-\frac{b}{m} t}
+    v = v_\mathrm{t} + \ab( v_\mathrm{t} - v_0 ) e^{-\frac{b}{m} t}
 \end{equation}
 
 Integrate again to find position:
 \begin{equation}
     \begin{aligned}
-        \odv{y}{t} &= v_\mathrm{t} + \left( v_\mathrm{t} - v_0 \right) e^{-\frac{b}{m} t} \\
-        y &= \int v_\mathrm{t} + \left( v_\mathrm{t} - v_0 \right) e^{-\frac{b}{m} t} \odif{t} \\
+        \odv{y}{t} &= v_\mathrm{t} + \ab( v_\mathrm{t} - v_0 ) e^{-\frac{b}{m} t} \\
+        y &= \int v_\mathrm{t} + \ab( v_\mathrm{t} - v_0 ) e^{-\frac{b}{m} t} \odif{t} \\
         y &= y_0
              + v_\mathrm{t} t
-             + \left( v_0 - v_\mathrm{t} \right)
+             + \ab( v_0 - v_\mathrm{t} )
                \frac{m}{b}
                e^{-\frac{b}{m} t}
     \end{aligned}
@@ -876,7 +876,7 @@ its rotational inertia would be
 \begin{equation}
     \begin{aligned}
         I &= \frac{1}{12} M \ell^2
-             + M \left( \frac{\ell}{2} \right)^2 \\
+             + M \ab( \frac{\ell}{2} )^2 \\
         &= \frac{1}{3} M \ell^2
     \end{aligned}
 \end{equation}
@@ -962,15 +962,15 @@ From \pgRef{eq:newtons-2nd-law-rotational},
     \begin{aligned}
         R F_\mathrm{T2} - R F_\mathrm{T1} &= \frac{1}{2} M R a \\
         F_\mathrm{T2} - F_\mathrm{T1} &= \frac{1}{2} M a \\
-        m_2 a + m_2 g - \left( m_1 a + m_1 g \right) &= \frac{1}{2} M a \\
+        m_2 a + m_2 g - \ab( m_1 a + m_1 g ) &= \frac{1}{2} M a \\
         m_2 g - m_1 g &= \frac{1}{2} M a - m_2 a + m_1 a \\
-        \left( m_2 - m_1 \right) g &= \left( \frac{1}{2} M - m_2 + m_1 \right) a \\
+        \ab( m_2 - m_1 ) g &= \ab( \frac{1}{2} M - m_2 + m_1 ) a \\
     \end{aligned}
 \end{equation}
 \begin{equation}
     \begin{aligned}
-        a &= \frac{\left( m_2 - m_1 \right) g}{\frac{1}{2} M - m_2 + m_1} \\
-        &= \frac{2 \left( m_2 - m_1 \right) g}{M - 2 \left( m_2 + m_1 \right)}
+        a &= \frac{\ab( m_2 - m_1 ) g}{\frac{1}{2} M - m_2 + m_1} \\
+        &= \frac{2 \ab( m_2 - m_1 ) g}{M - 2 \ab( m_2 + m_1 )}
     \end{aligned}
 \end{equation}
 
@@ -1046,7 +1046,7 @@ Plug \cref{eq:rolling-accleration} into \pgRef{eq:rolling-static-friction}:
                         + \tan\theta \\
         &= - \frac{\mu_\mathrm{s} m r^2}{I} + \tan\theta \\
         \mu_\mathrm{s} + \frac{\mu_\mathrm{s} m r^2}{I} &= \tan\theta \\
-        \mu_\mathrm{s} \left( 1 + \frac{m r^2}{I} \right) &= \tan\theta \\
+        \mu_\mathrm{s} \ab( 1 + \frac{m r^2}{I} ) &= \tan\theta \\
         \mu_\mathrm{s} &= \frac{\tan\theta}{1 + \frac{m r^2}{I}} \\
         &= \frac{I \tan\theta}{I + m r^2}
     \end{aligned}

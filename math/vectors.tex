@@ -18,16 +18,16 @@
     \begin{equation}
         \vec{v}
         = \bm{v}
-        = \langle v_x, v_y \rangle
-        = \left( v_x, v_y \right)
+        = \ab< v_x, v_y >
+        = \ab( v_x, v_y )
         = v_x \bm{\hat{\imath}} + v_y \bm{\hat{\jmath}}
     \end{equation}
     3D:
     \begin{equation}
         \vec{v}
         = \bm{v}
-        = \langle v_x, v_y, v_z \rangle
-        = \left( v_x, v_y, v_z \right)
+        = \ab< v_x, v_y, v_z >
+        = \ab( v_x, v_y, v_z )
         = v_x \bm{\hat{\imath}} + v_y \bm{\hat{\jmath}} + v_z \bm{\hat{k}}
     \end{equation}
 \end{subequations}
@@ -45,11 +45,11 @@ See \pgRef{sec:unit-vectors} for information about \(\bm{\hat{\imath}}\),
 \begin{subequations}
     2D:
     \begin{equation}
-        \left\|\bm{v}\right\| = \sqrt{{v_x}^2 + {v_y}^2}
+        \ab\| \bm{v} \| = \sqrt{{v_x}^2 + {v_y}^2}
     \end{equation}
     3D:
     \begin{equation}
-        \left\|\bm{v}\right\| = \sqrt{{v_x}^2 + {v_y}^2 + {v_z}^2}
+        \ab\| \bm{v} \| = \sqrt{{v_x}^2 + {v_y}^2 + {v_z}^2}
     \end{equation}
 \end{subequations}
 
@@ -61,9 +61,9 @@ They are denoted using a "hat", e.g., \(\hat{v}\) is "v-hat".
 The \textbf{standard unit vectors} are
 \begin{equation}
     \begin{aligned}
-        \bm{\hat{\imath}} &= \bm{\hat{x}} = \langle 1, 0, 0 \rangle, \\
-        \bm{\hat{\jmath}} &= \bm{\hat{y}} = \langle 0, 1, 0 \rangle, \\
-        \bm{\hat{k}} &= \bm{\hat{z}} = \langle 0, 0, 1 \rangle
+        \bm{\hat{\imath}} &= \bm{\hat{x}} = \ab< 1, 0, 0 >, \\
+        \bm{\hat{\jmath}} &= \bm{\hat{y}} = \ab< 0, 1, 0 >, \\
+        \bm{\hat{k}} &= \bm{\hat{z}} = \ab< 0, 0, 1 >
     \end{aligned}
 \end{equation}
 \vfil
@@ -72,19 +72,19 @@ The \textbf{standard unit vectors} are
 
 Vector addition:
 \begin{equation}
-    \bm{u} + \bm{v} = \langle u_x + v_x, u_y + v_y, u_z + v_z \rangle
+    \bm{u} + \bm{v} = \ab< u_x + v_x, u_y + v_y, u_z + v_z >
 \end{equation}
 
 Scalar multiplication:
 \begin{equation}
-    c \bm{v} = \langle c v_x, c v_y, c v_z \rangle
+    c \bm{v} = \ab< c v_x, c v_y, c v_z >
 \end{equation}
 
 Dot product:
 \begin{equation}
     \begin{aligned}
         \bm{u} \cdot \bm{v} &= u_x v_x + u_y v_y + u_z v_z \\
-        &= \left\|\bm{u}\right\| \left\|\bm{v}\right\| \cos\theta
+        &= \ab\| \bm{u} \| \ab\| \bm{v} \| \cos\theta
     \end{aligned}
 \end{equation}
 
@@ -92,8 +92,8 @@ Cross product:
 \begin{equation}
     \begin{aligned}
         \bm{u} \times \bm{v}
-        &= \langle u_y v_z - u_z v_y, u_z v_a - u_a v_z, u_a v_y - u_y v_a\rangle \\
-        &= \left\|\bm{u}\right\| \left\|\bm{v}\right\| \bm{\hat{w}} \sin\theta \\
+        &= \ab< u_y v_z - u_z v_y, u_z v_a - u_a v_z, u_a v_y - u_y v_a > \\
+        &= \ab\| \bm{u} \| \ab\| \bm{v} \| \bm{\hat{w}} \sin\theta \\
         &= \bm{w}
     \end{aligned}
 \end{equation}
