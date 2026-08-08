@@ -9,6 +9,7 @@
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 
 %% General typesetting
+\usepackage{setspace}
 \usepackage{csquotes}
 \MakeOuterQuote{"}
 
@@ -59,11 +60,10 @@
 \newcommand{\titlePage}[2]{
     \begin{titlepage}
         \centering
+        \doublespacing
 
         \Huge
         \textbf{Physics Notes} \\
-        \vspace{0.5cm}
-
         \huge
         Volume #1: #2 \\
         \vfill
@@ -74,8 +74,6 @@
 
         \Large
         \url{https://github.com/Eric2422/physics-notes} \\
-        \smallskip
-
         \today
     \end{titlepage}
 }
