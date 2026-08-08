@@ -77,8 +77,12 @@
         \today
     \end{titlepage}
 }
+\newcommand{\backToContents}{
+    \noindent
+    Back to \hyperref[contents]{Contents}
+}
 % List math sections.
-\newcommand{\mathTopics}[1]{\noindent Recommended mathematical topics:~#1}
+\newcommand{\mathTopics}[1]{Recommended mathematical topics:~#1}
 % Cross reference with page number.
 \newcommand{\pgRef}[1]{\cref{#1}~(\cpageref{#1})}
 % Cross reference with page number but sentence-initial.
