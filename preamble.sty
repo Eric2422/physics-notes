@@ -27,6 +27,7 @@
 \usepackage{derivative}
 % Special integral, e.g., closed integrals.
 \usepackage{esint}
+\usepackage{mathtools}
 \usepackage{physics2}
 \usephysicsmodule{ab}
 
@@ -55,7 +56,6 @@
     inter-unit-product = \cdot,
 }
 
-%% Custom commands
 % Create custom title page.
 \newcommand{\titlePage}[2]{
     \begin{titlepage}
@@ -81,18 +81,24 @@
     \noindent
     Back to \hyperref[contents]{Contents}
 }
+
 % List math sections.
 \newcommand{\mathTopics}[1]{Recommended mathematical topics:~#1}
 % Cross reference with page number.
 \newcommand{\pgRef}[1]{\cref{#1}~(\cpageref{#1})}
 % Cross reference with page number but sentence-initial.
 \newcommand{\PgRef}[1]{\Cref{#1}~(\cpageref{#1})}
-% Make curly epsilon default.
-\let\temp\epsilon
-\let\epsilon\varepsilon
-\let\varepsilon\temp
+
 % Vector bold.
 \newcommand{\vecb}[1]{\bm{\mathrm{#1}}}
 % Matrix bold.
 \newcommand{\mat}[1]{\underline{#1}}
 \newcommand{\matb}[1]{\bm{\mathrm{#1}}}
+
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+
+% Make curly epsilon default.
+\let\temp\epsilon
+\let\epsilon\varepsilon
+\let\varepsilon\temp

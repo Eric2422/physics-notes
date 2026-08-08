@@ -68,7 +68,7 @@ General solutions:
 where 
 \begin{itemize}
     \item \(\omega_0 = \sqrt{\frac{k}{m}}\) is the \textbf{natural frequency}.
-    \item \(\Re[\tilde{x}(t)] = x(t)\)
+    \item \(\Re(\tilde{x}(t)) = x(t)\)
     \item \(A\) and \(B\) are amplitudes.
     \item \(\phi\) is a phase shift.
     \item \(z_0\) is a complex amplitude, which combines both amplitude and phase shift.
@@ -235,7 +235,7 @@ where \(a,~b \in \mathbb{R}\).
 and \(b\) is known as the \textbf{imaginary part}.
 Note that this means the imaginary part is \emph{real}.
 Given the complex number \(z = a + bi\),
-\(\mathrm{Re}[z] = \Re[z] = a\), and \(\mathrm{Im}[z] = \Im[z] = b\).
+\(\Re(z) = a\), and \(\Im(z) = b\).
 
 The \textbf{complex conjugate} of \(z = a + bi\) is given by \(z^* = a - bi\).
 
@@ -248,13 +248,13 @@ and the y-axis being the imaginary part (i.e., \(b\)).
 Given a complex number \(z\),
 its magnitude \(\ab\| z \|\) is given by Pythagorean's Theorem:
 \begin{equation}
-    \ab\| z \| = \sqrt{\Re[z]^2 + \Im[z]^2} = \sqrt{z z^*}
+    \ab\| z \| = \sqrt{\Re(z)^2 + \Im(z)^2} = \sqrt{z z^*}
 \end{equation}
 
 Its angle \(\phi\) is derived through trigonometry
 (be careful about the general limitations of \(\arctan\) on calculators):
 \begin{equation}
-    \phi = \arctan\ab( \frac{\Im[z]}{\Re[z]} )
+    \phi = \arctan\ab( \frac{\Im(z)}{\Re(z)} )
 \end{equation}
 
 \section{Euler's Formula}
