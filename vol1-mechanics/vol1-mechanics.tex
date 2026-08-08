@@ -25,13 +25,13 @@
         until acted upon by an external force.
     \item
         \begin{equation} \label{eq:newtons-2nd-law}
-            \bm{F} = m\bm{a}
+            \vecb{F} = m\vecb{a}
         \end{equation}
         where
         \begin{itemize}
-            \item \(\bm{F}\) is the the force exerted on the object.
+            \item \(\vecb{F}\) is the the force exerted on the object.
             \item \(m\) is the mass of the object.
-            \item \(\bm{a}\) is the acceleration of the object.
+            \item \(\vecb{a}\) is the acceleration of the object.
         \end{itemize}
     \item \label{itm:newtons-3rd-law}
         Each force has an equal and opposite reacting force.
@@ -108,13 +108,13 @@ depends on whether the mass distribution is \textbf{discrete} or \textbf{continu
     \end{equation}
     More compactly,
     \begin{equation}
-        \bm{r_{\mathrm{cm}}} = \frac{\sum_i m_i \bm{r}_i}{m_i}
+        \vecb{r_{\mathrm{cm}}} = \frac{\sum_i m_i \vecb{r}_i}{m_i}
     \end{equation}
 \end{subequations}
 
 For a continuous mass distribution:
 \begin{equation} \label{eq:continuous-com}
-    \bm{r_{\mathrm{cm}}} = \frac{\int \bm{r} \odif{m}}{\int \odif{m}}
+    \vecb{r_{\mathrm{cm}}} = \frac{\int \vecb{r} \odif{m}}{\int \odif{m}}
 \end{equation}
 where \(\odif{m}\) is a small amount of mass.
 
@@ -205,7 +205,7 @@ Some examples:
     \input{assets/free-body-diagram.tikz}
     \caption{
         Diagram to scale.
-        \(\bm{F_b}\) is of greater magnitude than and opposite direction to \(\bm{F_a}\).
+        \(\vecb{F_b}\) is of greater magnitude than and opposite direction to \(\vecb{F_a}\).
     }
 \end{figure}
 
@@ -245,7 +245,7 @@ the magnitude of the gravitational field at \(R_\mathrm{i}\) distance from the c
 \end{equation}
 
 For a sphere of constant density \(\rho\), mass \(M\), and radius \(R\),
-the gravitational field \(\bm{g}\) increases linearly
+the gravitational field \(\vecb{g}\) increases linearly
 as distance from the center \(R_\mathrm{i}\) increases, when \(R_\mathrm{i} < R\).
 \begin{equation}
     \begin{aligned}
@@ -325,11 +325,11 @@ where
 However, this is way too complicated for AP Physics C:~Mechanics.
 A simpler approximation for drag is
 \begin{equation}
-    \bm{F_\mathrm{D}} = - b \bm{v}
+    \vecb{F_\mathrm{D}} = - b \vecb{v}
 \end{equation}
 where
 \begin{itemize}
-    \item \(\bm{F}_\mathrm{D}\) is the drag acting upon the object.
+    \item \(\vecb{F}_\mathrm{D}\) is the drag acting upon the object.
     \item \(b\) is an experimentally-determined constant.
     \item \(v\) is the relative velocity between object and fluid.
 \end{itemize}
@@ -535,7 +535,7 @@ where
 
 The equation for \textbf{potential energy} is
 \begin{equation} \label{eq:potential-energy}
-    U = - \int \bm{F} \cdot \odif{\bm{r}}
+    U = - \int \vecb{F} \cdot \odif{\vecb{r}}
 \end{equation}
 
 \subsection{Gravitational Potential Energy}
@@ -593,20 +593,20 @@ i.e., work along a \textbf{closed loop} is 0.
 General work formula:
 \begin{equation} \label{eq:work}
     \begin{aligned}
-        W &= \int_C \bm{F}(r) \cdot \odif{\bm{r}} \\
-        &= \int_C \bm{F}(t) \cdot \bm{r}'(t) \odif{t} \\
+        W &= \int_C \vecb{F}(r) \cdot \odif{\vecb{r}} \\
+        &= \int_C \vecb{F}(t) \cdot \vecb{r}'(t) \odif{t} \\
     \end{aligned}
 \end{equation}
 where
 \begin{itemize}
-    \item \(\bm{r}\) is the displacement.
+    \item \(\vecb{r}\) is the displacement.
     \item \(\int_{\mathrm{C}}\) is a line integral along a curve.
 \end{itemize}
 
 For a straight path and constant force,
 the formula simplifies down to
 \begin{equation*}
-    W = \bm{F} \cdot \bm{r}
+    W = \vecb{F} \cdot \vecb{r}
 \end{equation*}
 
 Compare the equation for work, \pgRef{eq:work},
@@ -649,15 +649,15 @@ Instantaneous power:
 
 \section{Momentum}
 
-\textbf{Momentum} is symbolized by \(\bm{p}\):
+\textbf{Momentum} is symbolized by \(\vecb{p}\):
 \begin{equation}
-    \bm{p} = m \bm{v}
+    \vecb{p} = m \vecb{v}
 \end{equation}
 where
 \begin{itemize}
-    \item \(\bm{p}\) is the momentum.
+    \item \(\vecb{p}\) is the momentum.
     \item \(m\) is the mass.
-    \item \(\bm{v}\) is the velocity.
+    \item \(\vecb{v}\) is the velocity.
 \end{itemize}
 
 The SI unit of momentum is \(\unit{\kilogram \metre \per \second}\)
@@ -665,50 +665,50 @@ or \(\unit{\newton \second}\).
 
 A system's momentum is the sum of its parts' momenta:
 \begin{equation}
-    \bm{p}_\mathrm{system} = \sum_i m_i \bm{v}_i
+    \vecb{p}_\mathrm{system} = \sum_i m_i \vecb{v}_i
 \end{equation}
 
 For objects with constant mass,
 \begin{equation}
-    \Delta{\bm{p}} = m \Delta{\bm{v}}
+    \Delta{\vecb{p}} = m \Delta{\vecb{v}}
 \end{equation}
 
 \begin{equation} \label{eq:force-momentum}
     \begin{aligned}
-        \odv{\bm{p}}{t} &= m \odv{\bm{v}}{t} \\
-        \odv{\bm{p}}{t} &= m \bm{a} \\
-        \bm{F} &= \odv{\bm{p}}{t}
+        \odv{\vecb{p}}{t} &= m \odv{\vecb{v}}{t} \\
+        \odv{\vecb{p}}{t} &= m \vecb{a} \\
+        \vecb{F} &= \odv{\vecb{p}}{t}
     \end{aligned}
 \end{equation}
 
 In integral form,
 \begin{equation}
-    \int \bm{F}_\mathrm{net} \odif{t} = \Delta{\bm{p}}
+    \int \vecb{F}_\mathrm{net} \odif{t} = \Delta{\vecb{p}}
 \end{equation}
 
 \section{Impulse}
 
-\textbf{Impulse} is symbolized by \(\bm{J}\)
+\textbf{Impulse} is symbolized by \(\vecb{J}\)
 and has SI units of \(\unit{\newton \second}\) or \(\unit{\kilogram \metre \per \second}\)
-In the simple case where \(\odv{\bm{F}}{t} = 0\),
+In the simple case where \(\odv{\vecb{F}}{t} = 0\),
 \begin{equation}
-    \bm{J} = \bm{F} t
+    \vecb{J} = \vecb{F} t
 \end{equation}
 The more general equation is
 \begin{equation}
-    \bm{J} = \int \bm{F}(t) \odif{t}
+    \vecb{J} = \int \vecb{F}(t) \odif{t}
 \end{equation}
 \begin{equation}
-    \therefore \bm{J} = \Delta{\bm{p}}
+    \therefore \vecb{J} = \Delta{\vecb{p}}
 \end{equation}
-where \(\Delta{\bm{p}}\) is the change in momentum.
+where \(\Delta{\vecb{p}}\) is the change in momentum.
 
 \section{Conservation of Momentum}
 
 Because of \pgRef{eq:force-momentum}
 and \hyperref[itm:newtons-1st-law]{Newton's first law of motion}
 (\cpageref{itm:newtons-1st-law}),
-when there is no external force, \(\Delta{\bm{p}} = \bm{0}\),
+when there is no external force, \(\Delta{\vecb{p}} = \vecb{0}\),
 i.e, the final and initial momentum have to be equal.
 
 Types of \textbf{collisions}:
@@ -886,18 +886,18 @@ its rotational inertia would be
 \textbf{Torque} is the rotational analogue to linear force:
 \begin{equation}
     \begin{aligned}
-        \bm{\tau} &= \bm{r} \times \bm{F} \\
+        \vecb{\tau} &= \vecb{r} \times \vecb{F} \\
         \tau &= r F \sin\theta
     \end{aligned}
 \end{equation}
 where
 \begin{itemize}
-    \item \(\bm{\tau}\) is the torque vector and \(\tau\) is its magnitude.
+    \item \(\vecb{\tau}\) is the torque vector and \(\tau\) is its magnitude.
     \item
-        \(\bm{r}\) is the position vector from the point of rotation
+        \(\vecb{r}\) is the position vector from the point of rotation
         to the point where the force is applied 
         and \(r\) is its magnitude.
-    \item \(\bm{F}\) is the force applied and \(F\) is its magnitude.
+    \item \(\vecb{F}\) is the force applied and \(F\) is its magnitude.
     \item \(\theta\) is the angle between the force and the position vector.
 \end{itemize}
 
@@ -914,7 +914,7 @@ and the direction of the applied force is given by the \textbf{right-hand rule}.
 \textbf{Newton's second law for rotational movement}:
 \begin{equation} \label{eq:newtons-2nd-law-rotational}
     \begin{aligned}
-        \bm{\tau} &= I \bm{\alpha} \\
+        \vecb{\tau} &= I \vecb{\alpha} \\
         \tau &= I \alpha
     \end{aligned}
 \end{equation}
@@ -1100,13 +1100,13 @@ Let
 Unsurprisingly, \textbf{angular momentum} is the rotational analogue to linear momentum.
 It is defined by the following equation:
 \begin{equation}
-    \bm{L} = I \bm{\omega}
+    \vecb{L} = I \vecb{\omega}
 \end{equation}
 
 Objects moving in a straight lines also have angular momentum:
 \begin{equation}
     \begin{aligned}
-        \bm{L} &= \bm{r} \times \bm{p} \\
+        \vecb{L} &= \vecb{r} \times \vecb{p} \\
         &= m v r \sin\theta
     \end{aligned}
 \end{equation}

@@ -81,12 +81,12 @@ The electric field formula for a particle or sphere is
 To find the force exerted on a charged particle,
 we multiply the electric field it is in by its charge:
 \begin{equation}
-    \bm{F_E} = \bm{E} q
+    \vecb{F_E} = \vecb{E} q
 \end{equation}
 where
 \begin{itemize}
-    \item \(\bm{F_E}\) is the electric force.
-    \item \(\bm{E}\) is the electric field.
+    \item \(\vecb{F_E}\) is the electric force.
+    \item \(\vecb{E}\) is the electric field.
     \item \(q\) is the charge.
 \end{itemize}
 
@@ -109,12 +109,12 @@ in analogy with flowing water.
 
 The general formula for flux is
 \begin{equation}
-    \Phi = \iint_S \bm{F}(\bm{r}) \cdot \odif{\bm{S}}
+    \Phi = \iint_S \vecb{F}(\vecb{r}) \cdot \odif{\vecb{S}}
 \end{equation}
 where
 \begin{itemize}
     \item \(S\) is the surface to integrate over.
-    \item \(\bm{F}(\bm{r})\) is the function of the field in 3D space.
+    \item \(\vecb{F}(\vecb{r})\) is the function of the field in 3D space.
 \end{itemize}
 
 For introductory electricity and magnetism,
@@ -126,17 +126,17 @@ For the case of a uniform electric field passing through an flat open surface,
 the flux equation simplifies to
 \begin{equation}
     \begin{aligned}
-        \Phi_E = \bm{E} \cdot \bm{A} \\
+        \Phi_E = \vecb{E} \cdot \vecb{A} \\
         \Phi_E = E A \cos\theta
     \end{aligned}
 \end{equation}
 where
 \begin{itemize}
     \item \(\Phi_E\) is the electric flux.
-    \item \(\bm{E}\) is the electric field vector and \(E\) is its magnitude.
+    \item \(\vecb{E}\) is the electric field vector and \(E\) is its magnitude.
     \item
-        \(\bm{A}\) is area vector and \(A\) is its magnitude.
-        Note \(\bm{A}\) is in the direction of the area's normal vector.
+        \(\vecb{A}\) is area vector and \(A\) is its magnitude.
+        Note \(\vecb{A}\) is in the direction of the area's normal vector.
     \item
         \(\theta\) is the angle between the electric field
         and the area's normal vector.
@@ -157,12 +157,12 @@ This means that only electric charges inside a closed surface
 contributes to the electric flux,
 which leads us to \textbf{Gauss's law} in integral form:
 \begin{equation} \label{eq:gausss-law}
-    \oiint \bm{E} \cdot \odif{\bm{A}} = \frac{q}{\epsilon_0}
+    \oiint \vecb{E} \cdot \odif{\vecb{A}} = \frac{q}{\epsilon_0}
 \end{equation}
 where
 \begin{itemize}
-    \item \(\bm{E}\) is the electric field.
-    \item \(\bm{A}\) is the area vector of the surface.
+    \item \(\vecb{E}\) is the electric field.
+    \item \(\vecb{A}\) is the area vector of the surface.
     \item
         \(q\) is the charge enclosed by the surface.
         Some authors may use \(q_\mathrm{en}\)
@@ -175,10 +175,10 @@ for the case of a charge particle in a spheral surface.
 Let 
 \begin{itemize}
     \item
-        \(\bm{A}\) be the area vector of the spherical surface
+        \(\vecb{A}\) be the area vector of the spherical surface
         and \(A\) be its magnitude.
     \item \(r\) be the radius of the spherical surface.
-    \item \(\bm{E}\) be the electric field and \(E\) be its magnitude.
+    \item \(\vecb{E}\) be the electric field and \(E\) be its magnitude.
     \item \(\Phi_E\) is the electric flux.
     \item \(q\) be the enclosed charge.
 \end{itemize}
@@ -189,7 +189,7 @@ The surface area of sphere is given by
 Since electric fields radiate in a sphere,
 the electric field and area are orthogonal at all points:
 \begin{equation}
-    \bm{E} \cdot \odif{\bm{A}} = E \odif{A}
+    \vecb{E} \cdot \odif{\vecb{A}} = E \odif{A}
 \end{equation}
 If we integrate the electric field over the surface of the sphere, we find
 \begin{equation}
@@ -346,8 +346,8 @@ we can apply Ohm's law: \pgRef{eq:ohms-law} to replace either \(I\) or \(V\).
 \chapter{Magnetic Fields and Electromagnetism}
 
 There are actually two different magnetic fields:
-the \textbf{\(\bm{B}\) field} and the \textbf{\(\bm{H}\) field}.
-For this volume, we are only concerned with the \(\bm{B}\) field.
+the \textbf{\(\vecb{B}\) field} and the \textbf{\(\vecb{H}\) field}.
+For this volume, we are only concerned with the \(\vecb{B}\) field.
 
 \section{Ampère's Law}
 

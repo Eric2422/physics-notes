@@ -11,6 +11,7 @@
         "esint",
         "fnsymbol",
         "Kirchoff",
+        "matb",
         "mathrm",
         "Savart",
         "sisetup",
@@ -19,7 +20,8 @@
         "tikz",
         "tikzset",
         "Undriven",
-        "usetikzlibrary"
+        "usetikzlibrary",
+        "vecb"
     ],
     "latex-workshop.latex.watch.files.ignore": ["./template/*"]
 }
