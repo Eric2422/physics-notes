@@ -862,17 +862,13 @@ where
     \item \(I\) is the new moment of inertia.
     \item
         \(I_\mathrm{cm}\) is the moment of inertia
-        when rotating around the center of mass.
+        when rotating around an axis passing through the center of mass.
     \item \(m\) is the mass of the object.
-    \item \(d\) is the distance between the two axes.
+    \item \(d\) is the distance between the two parallel axes.
 \end{itemize}
 
-% To-do: add image
-
-Using the uniform rod as an example again,
-\pgRef{eq:uniform-rod-rotational-inertia},
-if we rotated the rod around its end instead of its center,
-its rotational inertia would be
+Using the uniform rod from \pgRef{eq:uniform-rod-rotational-inertia} as an example again,
+if we rotated the rod around its end instead of its center, its rotational inertia would be
 \begin{equation}
     \begin{aligned}
         I &= \frac{1}{12} M \ell^2
@@ -880,6 +876,11 @@ its rotational inertia would be
         &= \frac{1}{3} M \ell^2
     \end{aligned}
 \end{equation}
+
+\begin{figure}[h]
+    \centering
+    \input{assets/parallel-axis-thm.tikz}
+\end{figure}
 
 \section{Torque}
 
