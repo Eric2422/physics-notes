@@ -2,7 +2,7 @@
     \draw (-6, -0.3) rectangle (6, 0.3);
     \draw[{|[scale=2]}-{|[scale=2]}] (-6, -0.667) -- (6, -0.667) node[midway, below] {\(\ell\)};
     \fill (0, 0) circle (0.25);
-    \draw[dotted, line width = 0.333mm, line cap=round] (0, -0.5) -- (6, 1);
+    \draw[dotted, line width = 0.333mm, line cap=round] (0, -0.5) -- (0, 1);
     \draw[dotted, line width = 0.333mm, line cap=round] (6, -0.5) -- (6, 1);
     \draw[->, thick] (6, 0) arc [start angle=-90, end angle=225, radius=0.4cm];
 \end{tikzpicture}
