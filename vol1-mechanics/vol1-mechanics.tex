@@ -72,7 +72,7 @@ where
 
 \section{Center of Mass}
 
-The \textbf{center of mass} (\textbf{CoM}) allows us to simplify many physical calculations.
+The \textbf{center of mass} (\textbf{c.m.}) allows us to simplify many physical calculations.
 In many cases, objects can be treated as point masses at their center of mass.
 
 Assuming that there is gravity,
@@ -94,7 +94,7 @@ there are two ways to experimentally determine an object's center of mass:
         \end{enumerate}
 \end{itemize}
 
-Determing the CoM theoretically
+Determing the c.m. theoretically
 depends on whether the mass distribution is \textbf{discrete} or \textbf{continuous}.
 
 \begin{subequations}
@@ -125,7 +125,7 @@ e.g., distance.
 \subsection{Linear Mass Density}
 
 \textbf{Linear mass density} is mass per length, e.g.,
-kilograms per meter \(\unit{\kilogram \per \meter}\).
+kilograms per metre \(\unit{\kilogram \per \metre}\).
 \begin{equation}
     \lambda = \frac{m}{\ell}
 \end{equation}
@@ -144,16 +144,16 @@ Plugging back into \cref{eq:continuous-com} (\cpageref{eq:continuous-com}):
     r_{\mathrm{c.m.}} = \frac{\int r \lambda(r) \odif{r}}{\int \lambda(r) \odif{r}}
 \end{equation}
 With this equation,
-we can find the CoM as long as the linear mass density is integrable.
+we can find the c.m. as long as the linear mass density is integrable.
 
 \subsection{Area and Volume Mass Density}
 
 For higher dimensions, area and volume mass density exist,
 with symbols of \(\sigma\) and \(\rho\)
 and SI units of \unit{\kilogram \per \metre\squared}
-and \unit{\kilogram \per \metre \cubed}, respectively.
+and \unit{\kilogram \per \metre\cubed}, respectively.
 
-They allow us to find the CoM in higher dimensions,
+They allow us to find the c.m. in higher dimensions,
 However, this requires multivariable calculus,
 so AP Physics C:~Mechanics does not ask us to do this.
 
@@ -506,7 +506,7 @@ Using \pgRef{eq:revolution-period}:
         \frac{T}{2 \pi r} &= \frac{1}{\sqrt{G \frac{M}{r}}} \\
         &= \sqrt{\frac{r}{G M}} \\
         T &= \frac{2 \pi r^{3/2}}{\sqrt{G M}} \\
-        T^2 &= \frac{4 \pi^2}{GM} r^3 \\
+        T^2 &= \frac{4 \pi^2}{G M} r^3 \\
     \end{aligned}
 \end{equation}
 
@@ -545,8 +545,8 @@ Assuming a constant gravitational field,
 the difference in gravitational potential energy is
 \begin{equation}
     \begin{aligned}
-        U_\mathrm{g} &= - \int -mg \odif{y} \\
-        \Delta{U_\mathrm{g}} &= mg \Delta{y}
+        U_\mathrm{g} &= - \int - m g \odif{y} \\
+        \Delta{U_\mathrm{g}} &= m g \Delta{y}
     \end{aligned}
 \end{equation}
 
@@ -571,7 +571,7 @@ If the gravitational field is not constant, use Newton's law of gravity
 For ideal springs, we use Hooke's law, \pgRef{eq:hookes-law}:
 \begin{equation}
     \begin{aligned}
-        \Delta{U_\mathrm{e}} &= - \int -k x \odif{x} \\
+        \Delta{U_\mathrm{e}} &= - \int - k x \odif{x} \\
         &= \frac{1}{2} k (\Delta{x})^2
     \end{aligned}
 \end{equation}
@@ -1262,7 +1262,7 @@ Let
 \end{itemize}
 Thus, the general form looks like
 \begin{equation}
-    f(t) = A \cos(\omega + \phi)
+    f(t) = A \cos(\omega t + \phi)
 \end{equation}
 
 Several other measurements are related to angular frequency.

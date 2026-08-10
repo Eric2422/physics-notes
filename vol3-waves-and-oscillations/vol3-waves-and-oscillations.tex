@@ -32,13 +32,13 @@ For angles less than approximately \qty{0.24}{\radian} (\(\approx\qty{14.3}{\deg
 the small-angle approximation results in a error of less than 1\% in the gravitational force:
 \begin{align}
     \sin\theta \approx \theta \\
-    \therefore -mg\theta            &\approx m \ell \ddot{\theta} \\
+    \therefore - m g \theta            &\approx m \ell \ddot{\theta} \\
     \ddot{\theta} + \omega^2 \theta &\approx 0,~\omega = \sqrt{\frac{g}{\ell}}
 \end{align}
 
 For physical pendulums, rotational inertia \(\ne 0\).
 \begin{align}
-    -mgd \sin\theta                &=       I \ddot{\theta} \\
+    -m g d \sin\theta                &=       I \ddot{\theta} \\
     \ddot{\theta} + \omega^2\theta &\approx 0,~\omega = \sqrt{\frac{mgd}{I}}
 \end{align}
 where \(d\) is the distance between the center of mass and pivot.
@@ -48,10 +48,10 @@ where \(d\) is the distance between the center of mass and pivot.
 Simple springs operate are governed by only Newton's second law and Hooke's law.
 \begin{equation}
     \begin{aligned}
-        F              &= ma = m\ddot{x} \\
-        F              &= -kx \\
-        m\ddot{x}      &= -kx \\
-        m\ddot{x} + kx &= 0
+        F              &= m a = m \ddot{x} \\
+        F              &= - k x \\
+        m \ddot{x}      &= - k x \\
+        m \ddot{x} + k x &= 0
     \end{aligned}
 \end{equation}
 
@@ -60,8 +60,8 @@ but we are going to skip that.
 
 General solutions:
 \begin{itemize}
-    \item \(x(t) = A\cos\ab( \omega_0 t ) + B\sin\ab( \omega_0 t )\)
-    \item \(x(t) = A\cos\ab( \omega_0 t + \phi )\)
+    \item \(x(t) = A \cos\ab( \omega_0 t ) + B\sin\ab( \omega_0 t )\)
+    \item \(x(t) = A \cos\ab( \omega_0 t + \phi )\)
     \item \(x(t) = z_0 e^{i \omega_0 t} + z^*_0 e^{i \omega_0 t}\)
     \item \(\tilde{x}(t) = A e^{i \phi} e^{i \omega_0 t}\)
 \end{itemize}
@@ -85,18 +85,18 @@ may also be valid.
 Finding velocity and acceleration is straightforward: simply differentiate position.
 \begin{equation}
     \begin{aligned}
-        \tilde{v}(t) &= \frac{d}{dt} \tilde{x}(t) \\
-        &= i\omega_0 A e^{i\phi} e^{\omega_0 t} \\
-        &= i\omega_0 \tilde{x}(t)
+        \tilde{v}(t) &= \odv{}{t} \tilde{x}(t) \\
+        &= i \omega_0 A e^{i \phi} e^{\omega_0 t} \\
+        &= i \omega_0 \tilde{x}(t)
     \end{aligned}
 \end{equation}
 The factor of \(i\) gives a \qty{90}{\degree} phase shift ahead of position.
 
 \begin{equation}
     \begin{aligned}
-            \tilde{a}(t) &= \frac{d}{dt} \tilde{v}(t) \\
-            &= -\omega_0^2 A e^{i\phi} e^{\omega_0 t} \\
-            &= -\omega_0^2 \tilde{x}(t)
+            \tilde{a}(t) &= \odv{}{t} \tilde{v}(t) \\
+            &= - \omega_0^2 A e^{i \phi} e^{\omega_0 t} \\
+            &= - \omega_0^2 \tilde{x}(t)
     \end{aligned}
 \end{equation}
 The minus indicates a \qty{180}{\degree} phase shift ahead of position.
@@ -105,12 +105,12 @@ The minus indicates a \qty{180}{\degree} phase shift ahead of position.
 
 Realistically, springs eventually lose energy.
 For our purposes, we assume a velocity-dependent spring \textbf{damping} \(b\).
-with units of \(\unit{\newton \second \per \meter}\),
+with units of \(\unit{\newton \second \per \metre}\),
 and the equation of motion is:
 \begin{equation}
     \begin{aligned}
-        m \ddot{x} = -kx - b \dot{x} \\
-        m \ddot{x} + b \dot{x} + kx = 0 \\
+        m \ddot{x} = - k x - b \dot{x} \\
+        m \ddot{x} + b \dot{x} + k x = 0 \\
         \ddot{x} + \frac{b}{m} \dot{x} + \frac{k}{m} x = 0 \\
         \ddot{x} + \gamma \dot{x} + \omega_0^2 x = 0 \\
     \end{aligned}
@@ -126,8 +126,8 @@ into the equation and get
 \begin{equation}
     \boldsymbol{\hat{x}}(t)
     = A
-    e^{i\phi}
-    e^{-\frac{\gamma}{2}t}
+    e^{i \phi}
+    e^{- \frac{\gamma}{2} t}
     e^{
         \pm i
         \ab( \sqrt{\omega_0^2 - \frac{\gamma^2}{4}} )
@@ -160,11 +160,11 @@ Where the \textbf{damped frequency} is
     \omega_u = \sqrt{\omega_0^2 - \frac{\gamma^2}{4}}
 \end{equation}
 \begin{equation}
-    \tilde{x}(t) = A e^{i\phi} e^{-\frac{\gamma}{2} t} e^{\pm i \omega_u t}
+    \tilde{x}(t) = A e^{i \phi} e^{- \frac{\gamma}{2} t} e^{\pm i \omega_u t}
 \end{equation}
 
-\(e^{-\frac{\gamma}{2} t}\) forms an envelope for the solution,
-i.e., \(\left|x(t) \le A e^{-\frac{\gamma}{2} t}\right|\).
+\(e^{- \frac{\gamma}{2} t}\) forms an envelope for the solution,
+i.e., \(\left|x(t) \le A e^{- \frac{\gamma}{2} t}\right|\).
 
 Note that although the amplitude decays, the frequency does \emph{not}.
 
@@ -184,7 +184,7 @@ Note that although the amplitude decays, the frequency does \emph{not}.
 \begin{equation}
     \begin{aligned}
         \boldsymbol{\hat{x}}(t)
-        = A e^{i \phi} e^{-\mu t}
+        = A e^{i \phi} e^{- \mu t}
     \end{aligned}
 \end{equation}
 
@@ -248,7 +248,9 @@ and the y-axis being the imaginary part (i.e., \(b\)).
 Given a complex number \(z\),
 its magnitude \(\ab\| z \|\) is given by Pythagorean's Theorem:
 \begin{equation}
-    \ab\| z \| = \sqrt{\Re(z)^2 + \Im(z)^2} = \sqrt{z z^*}
+    \ab\| z \|
+    = \sqrt{\Re(z)^2 + \Im(z)^2}
+    = \sqrt{z z^*}
 \end{equation}
 
 Its angle \(\phi\) is derived through trigonometry
