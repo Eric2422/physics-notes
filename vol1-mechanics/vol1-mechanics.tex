@@ -101,20 +101,20 @@ depends on whether the mass distribution is \textbf{discrete} or \textbf{continu
     For discrete masses (e.g., several balls):
     \begin{equation}
         \begin{aligned}
-            x_{\mathrm{cm}} = \frac{\sum_i m_i x_i}{\sum_i m_i} \\
-            y_{\mathrm{cm}} = \frac{\sum_i m_i y_i}{\sum_i m_i} \\
-            z_{\mathrm{cm}} = \frac{\sum_i m_i z_i}{\sum_i m_i}
+            x_{\mathrm{c.m.}} = \frac{\sum_i m_i x_i}{\sum_i m_i} \\
+            y_{\mathrm{c.m.}} = \frac{\sum_i m_i y_i}{\sum_i m_i} \\
+            z_{\mathrm{c.m.}} = \frac{\sum_i m_i z_i}{\sum_i m_i}
         \end{aligned}
     \end{equation}
     More compactly,
     \begin{equation}
-        \vecb{r_{\mathrm{cm}}} = \frac{\sum_i m_i \vecb{r}_i}{m_i}
+        \vecb{r_{\mathrm{c.m.}}} = \frac{\sum_i m_i \vecb{r}_i}{m_i}
     \end{equation}
 \end{subequations}
 
 For a continuous mass distribution:
 \begin{equation} \label{eq:continuous-com}
-    \vecb{r_{\mathrm{cm}}} = \frac{\int \vecb{r} \odif{m}}{\int \odif{m}}
+    \vecb{r_{\mathrm{c.m.}}} = \frac{\int \vecb{r} \odif{m}}{\int \odif{m}}
 \end{equation}
 where \(\odif{m}\) is a small amount of mass.
 
@@ -141,7 +141,7 @@ which we can arrange into
 
 Plugging back into \cref{eq:continuous-com} (\cpageref{eq:continuous-com}):
 \begin{equation}
-    r_{\mathrm{cm}} = \frac{\int r \lambda(r) \odif{r}}{\int \lambda(r) \odif{r}}
+    r_{\mathrm{c.m.}} = \frac{\int r \lambda(r) \odif{r}}{\int \lambda(r) \odif{r}}
 \end{equation}
 With this equation,
 we can find the CoM as long as the linear mass density is integrable.
@@ -168,10 +168,10 @@ down into a linear density function using integration.
 For an area density:
 \begin{equation}
     \begin{aligned}
-        x_\mathrm{cm} &=
+        x_\mathrm{c.m.} &=
             \frac{\iint_A x \sigma(x, y, z) \odif{A}}
             {\iint_A \sigma(x, y) \odif{A}} \\
-        y_\mathrm{cm} &=
+        y_\mathrm{c.m.} &=
             \frac{\iint_A y \sigma(x, y, z) \odif{A}}
             {\iint_A \sigma(x, y) \odif{A}}
     \end{aligned}
@@ -180,13 +180,13 @@ For an area density:
 For a volume density:
 \begin{equation}
     \begin{aligned}
-        x_\mathrm{cm} &=
+        x_\mathrm{c.m.} &=
             \frac{\iiint_V x \rho(x, y, z) \odif{V}}
             {\iiint_V \rho(x, y, z) \odif{V}} \\
-        y_\mathrm{cm} &=
+        y_\mathrm{c.m.} &=
             \frac{\iiint_V y \rho(x, y, z) \odif{V}}
             {\iiint_V \rho(x, y, z) \odif{V}} \\
-        z_\mathrm{cm} &=
+        z_\mathrm{c.m.} &=
             \frac{\iiint_V z \rho(x, y, z) \odif{V}}
             {\iiint_V \rho(x, y, z) \odif{V}} \\
     \end{aligned}
@@ -857,13 +857,13 @@ when rotating about an axis passing through its center of mass,
 the \textbf{parallel axis theorem} allows us to determine the rotational inertia
 when it is rotating around a new axis parallel to the original axis.
 \begin{equation}
-    I = I_\mathrm{cm} + m d^2
+    I = I_\mathrm{c.m.} + m d^2
 \end{equation}
 where
 \begin{itemize}
     \item \(I\) is the new moment of inertia.
     \item
-        \(I_\mathrm{cm}\) is the moment of inertia
+        \(I_\mathrm{c.m.}\) is the moment of inertia
         when rotating around the center of mass.
     \item \(m\) is the mass of the object.
     \item \(d\) is the distance between the two axes.
@@ -993,7 +993,7 @@ If the static friction reaches a critical point, it \textbf{rolls without slippi
 which does not cause energy loss.
 The tangential velocity and the velocity of the center of mass are equal.
 \begin{equation}
-    a_\mathrm{t} = a_\mathrm{cm}
+    a_\mathrm{t} = a_\mathrm{c.m.}
 \end{equation}
 
 Imagine an object rolling down a ramp without slipping.
