@@ -38,12 +38,12 @@ while \textbf{insulators} do not.
 \section{Electric Force and Coulomb's Law}
 
 Charged objects exert an \textbf{electric force} on other charged objects around them.
-The magnitude of the electric force around a charged particle or sphere
-can be given by \textbf{Coulomb's law}:
+The magnitude of the electric force around a charged particle or sphere can be given by \textbf{Coulomb's law},
+which states
 \begin{equation} \label{eq:coulombs-law}
     \begin{aligned}
         F &= k \frac{q_1 q_2}{r^2} \\
-        &= \frac{q_1 q_2}{4 \pi \epsilon_0 r^2}
+        &= \frac{q_1 q_2}{4 \pi \epsilon_0 r^2},
     \end{aligned}
 \end{equation}
 where
@@ -74,21 +74,19 @@ The electric field formula for a particle or sphere is
 \begin{equation} \label{eq:sphere-electric-field}
     \begin{aligned}
         E &= k \frac{q}{r^2} \\
-        &= \frac{q}{4 \pi \epsilon_0 r^2}
+        &= \frac{q}{4 \pi \epsilon_0 r^2}.
     \end{aligned}
 \end{equation}
 
 To find the force exerted on a charged particle,
-we multiply the electric field it is in by its charge:
+we multiply the electric field it is in by its charge,
+i.e.,
 \begin{equation}
-    \vecb{F_E} = \vecb{E} q
+    \vecb{F_E} = \vecb{E} q,
 \end{equation}
-where
-\begin{itemize}
-    \item \(\vecb{F_E}\) is the electric force.
-    \item \(\vecb{E}\) is the electric field.
-    \item \(q\) is the charge.
-\end{itemize}
+where \(\vecb{F_E}\) is the electric force,
+\(\vecb{E}\) is the electric field,
+and \(q\) is the charge.
 
 \subsection{Uniform Electric Fields}
 
@@ -109,13 +107,10 @@ in analogy with flowing water.
 
 The general formula for flux is
 \begin{equation}
-    \Phi = \iint_S \vecb{F}(\vecb{r}) \cdot \odif{\vecb{S}}
+    \Phi = \iint_S \vecb{F}(\vecb{r}) \cdot \odif{\vecb{S}},
 \end{equation}
-where
-\begin{itemize}
-    \item \(S\) is the surface to integrate over.
-    \item \(\vecb{F}(\vecb{r})\) is the function of the field in 3D space.
-\end{itemize}
+where \(S\) is the surface to integrate over
+and \(\vecb{F}(\vecb{r})\) is the function of the field in 3D space.
 
 For introductory electricity and magnetism,
 we usually focus on a few simpler cases.
@@ -150,19 +145,19 @@ The case of a closed surface is slightly more complicated.
 For a closed surface, fields can flow both in and out.
 When a field enters a closed surface, the flux is negative,
 and when a field exits, the flux is positive.
-As a result, all fields that originate outside the closed surface
-result in a net flux of 0.
+As a result,
+all fields that originate outside the closed surface result in a net flux of 0.
 
 This means that only electric charges inside a closed surface
 contributes to the electric flux,
 which leads us to \textbf{Gauss's law} in integral form:
 \begin{equation} \label{eq:gausss-law}
-    \oiint \vecb{E} \cdot \odif{\vecb{A}} = \frac{q}{\epsilon_0}
+    \oiint \vecb{E} \cdot \odif{\vecb{A}} = \frac{q}{\epsilon_0},
 \end{equation}
 where
 \begin{itemize}
-    \item \(\vecb{E}\) is the electric field.
-    \item \(\vecb{A}\) is the area vector of the surface.
+    \item \(\vecb{E}\) is the electric field,
+    \item \(\vecb{A}\) is the area vector of the surface,
     \item
         \(q\) is the charge enclosed by the surface.
         Some authors may use \(q_\mathrm{en}\)
@@ -174,32 +169,30 @@ so we can show that Gauss's law simplies down to Coulomb's law
 for the case of a charge particle in a spheral surface.
 Let 
 \begin{itemize}
-    \item
-        \(\vecb{A}\) be the area vector of the spherical surface
-        and \(A\) be its magnitude.
-    \item \(r\) be the radius of the spherical surface.
-    \item \(\vecb{E}\) be the electric field and \(E\) be its magnitude.
-    \item \(\Phi_E\) is the electric flux.
+    \item \(\vecb{A}\) be the area vector of the spherical surface and \(A\) be its magnitude,
+    \item \(r\) be the radius of the spherical surface,
+    \item \(\vecb{E}\) be the electric field and \(E\) be its magnitude,
+    \item \(\Phi_E\) is the electric flux,
     \item \(q\) be the enclosed charge.
 \end{itemize}
-The surface area of sphere is given by
+The surface area of a sphere is given by
 \begin{equation}
-    A = 4 \pi r^2
+    A = 4 \pi r^2.
 \end{equation}
 Since electric fields radiate in a sphere,
 the electric field and area are orthogonal at all points:
 \begin{equation}
-    \vecb{E} \cdot \odif{\vecb{A}} = E \odif{A}
+    \vecb{E} \cdot \odif{\vecb{A}} = E \odif{A}.
 \end{equation}
 If we integrate the electric field over the surface of the sphere, we find
 \begin{equation}
-    \Phi_E = 4 E \pi r^2
+    \Phi_E = 4 E \pi r^2.
 \end{equation}
 By Gauss's law, \pgRef{eq:gausss-law},
 \begin{equation}
     \begin{aligned}
         4 E \pi r^2 &= \frac{q}{\epsilon_0} \\
-        E &= \frac{q}{4 \epsilon_0 \pi r^2}
+        E &= \frac{q}{4 \epsilon_0 \pi r^2}.
     \end{aligned}
 \end{equation}
 To get an electric force,
@@ -207,7 +200,7 @@ let \(q_1 = q\) and multiply by the other particle's charge \(q_2\):
 \begin{equation*}
     \begin{aligned}
         4 E \pi r^2 &= \frac{q_1 q_2}{\epsilon_0} \\
-        E &= \frac{q_1 q_2}{4 \epsilon_0 \pi r^2}
+        E &= \frac{q_1 q_2}{4 \epsilon_0 \pi r^2}.
     \end{aligned}
 \end{equation*}
 This leads us back to Coulomb's law: \pgRef{eq:coulombs-law}.
@@ -237,30 +230,24 @@ which have opposite charges of equal magnitude when charged.
 
 How well a capacitor stores charge is its \textbf{capacitance} (\(C\)),
 with SI units of farads \unit{\farad}.
-The relation betwen capacitance, charge, and voltage is
+The capacitance is defined as
 \begin{equation}
-    C = \frac{q}{V}
+    C = \frac{q}{V},
 \end{equation}
-where
-\begin{itemize}
-    \item \(q\) is the magnitude of charge on each conductor.
-    \item \(V\) is the voltage between the two conductors.
-\end{itemize}
+where \(q\) is the magnitude of charge on each conductor
+and \(V\) is the voltage between the two conductors.
 
 \subsection{Parallel Plate Capcitors}
 
 \textbf{Parallel plate capacitors} are the most common type of capacitor.
 They are composed of two parallel plates,
-and their capacitance is given by
+and their capacitance \(C\) is given by
 \begin{equation}
-    C = \frac{\epsilon_\mathrm{d} A}{d}
+    C = \frac{\epsilon_\mathrm{d} A}{d},
 \end{equation}
-where
-\begin{itemize}
-    \item \(\epsilon_\mathrm{d}\) is the permittivity of the \textbf{dielectric}.
-    \item \(A\) is the area of each plate.
-    \item \(d\) is the distance between the plates.
-\end{itemize}
+where \(\epsilon_\mathrm{d}\) is the permittivity of the \textbf{dielectric},
+\(A\) is the area of each plate,
+and \(d\) is the distance between the plates.
 
 
 \chapter{Electric Circuits}
@@ -280,16 +267,11 @@ to a difference in electric potential between two points,
 which is \textbf{voltage} (\(V\))
 and has SI units of volts (\unit{\volt}).
 
-The relation between voltage and current is given by \textbf{Ohm's law}:
+The relation between the voltage \(V\) and current \(I\) is given by \textbf{Ohm's law}:
 \begin{equation} \label{eq:ohms-law}
     V = I R
 \end{equation}
-where
-\begin{itemize}
-    \item \(V\) is the voltage.
-    \item \(I\) is the current.
-    \item \(R\) is the \textbf{resistance}, which has SI units of ohms (\unit{\ohm}).
-\end{itemize}
+where \(R\) is the \textbf{resistance}, which has SI units of ohms (\unit{\ohm}).
 
 \textbf{Resistors} are devices that produce resistance.
 From a practical viewpoint,
@@ -304,14 +286,14 @@ electrical devices such as lights and computers may also be considered resistors
         states that the total input current and total output current of a junction
         must be equal to each other:
         \begin{equation}
-            I_\mathrm{in} = I_\mathrm{out}
+            I_\mathrm{in} = I_\mathrm{out}.
         \end{equation}
         This follows from the conservation of charge (\cpageref{sec:electric-charges}).
     \item
         \textbf{Kirchoff's loop rule} states that all the voltages in a closed circuit
         must add up to \(\qty{0}{\volt}\):
         \begin{equation}
-            \sum_i V_i = 0
+            \sum_i V_i = 0.
         \end{equation}
 \end{enumerate}
 
@@ -325,20 +307,17 @@ In circuits,
 power is most commonly discussed in the context of heat dissipated from resistors.
 Volts are equal to \unit{\joule \per \coulomb},
 and amperes are equal to \unit{\coulomb \per \second}.
-Therefore:
-\begin{equation*}
+Therefore, we can use dimensional analysis to find that
+\begin{equation}
     \begin{aligned}
         I V
         &= \ab( \unit{\joule \per \coulomb} ) \ab( \unit{\coulomb \per \second} )
         = \unit{\joule \per \second} \\
-        &= P
+        &= P \\
+        P = I V.
     \end{aligned}
-\end{equation*}
-\begin{equation}
-    P = IV
 \end{equation}
-Of course,
-we can apply Ohm's law: \pgRef{eq:ohms-law} to replace either \(I\) or \(V\).
+We can apply Ohm's law: \pgRef{eq:ohms-law} to replace either current or voltage.
 
 \section{Gauss's Law of Magnetism}
 
@@ -355,7 +334,7 @@ Electric currents generate magnetic fields around themselves.
 Ignoring edge effects, for a sufficiently long wire with constant current,
 the magnetic field is given by \textbf{Ampere's law}:
 \begin{equation}
-    B = \frac{I \mu_0}{2 \pi r}
+    B = \frac{I \mu_0}{2 \pi r},
 \end{equation}
 where
 \begin{itemize}
