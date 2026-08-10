@@ -235,18 +235,20 @@ where
     \item \(m\) is the mass of the sphere.
 \end{itemize}
 
+The gravity at all points inside a hollow spherical shell is 0.
+
 For the gravitational field \emph{inside} a sphere,
 if \(r\) is the distance from the center,
 \(\rho(r)\) is the density as a function of \(r\),
 and \(R_\mathrm{i}\) is the radius of an imaginary inner sphere,
-the magnitude of the gravitational field at \(R_\mathrm{i}\) distance from the center is
+the magnitude of the gravitational field at distance \(R_\mathrm{i}\) from the center is
 \begin{equation}
-        g = \frac{G}{R_\mathrm{i}^2} \int_{0}^{R_\mathrm{i}} 4\pi r^2 \rho(r) \odif{r}
+    g = \frac{G}{R_\mathrm{i}^2} \int_{0}^{R_\mathrm{i}} 4\pi r^2 \rho(r) \odif{r}.
 \end{equation}
 
 For a sphere of constant density \(\rho\), mass \(M\), and radius \(R\),
 the gravitational field \(\vecb{g}\) increases linearly
-as distance from the center \(R_\mathrm{i}\) increases, when \(R_\mathrm{i} < R\).
+as distance from the center \(R_\mathrm{i}\) increases, when \(R_\mathrm{i} < R\):
 \begin{equation}
     \begin{aligned}
         g &= \frac{G}{R_\mathrm{i}^2} \int_{0}^{R_\mathrm{i}} 4\pi r^2 \rho \odif{r} \\
