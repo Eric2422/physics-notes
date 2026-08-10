@@ -308,8 +308,7 @@ In other words, kinetic friction is always less than the maximum static friction
 \subsection{Drag}
 
 \textbf{Drag} is a force that acts opposite to the movement of a body in fluid.
-
-The proper formula for drag is
+The proper formula for the magnitude of drag is
 \begin{equation}
     F_\mathrm{D} = \frac{1}{2} \rho v^2 C_\mathrm{D} A
 \end{equation}
@@ -341,8 +340,8 @@ balance out each other. Therefore, acceleration is 0 at terminal velocity.
 With linear drag, given that up is positive, terminal velocity is achieved at
 \begin{equation} \label{eq:linear-terminal-velocity}
     \begin{aligned}
-        bv_\mathrm{t} - mg &= 0 \\
-        bv_\mathrm{t} &= mg \\
+        bv_\mathrm{t} - m g &= 0 \\
+        bv_\mathrm{t} &= m g \\
         v_\mathrm{t} &= \frac{m}{b} g \\
     \end{aligned}
 \end{equation}
@@ -366,8 +365,8 @@ using Newton's second law of motion, \pgRef{eq:newtons-2nd-law}
         \odv{v}{t} e^{\frac{b}{m} t} + \frac{b}{m} e^{\frac{b}{m} t} v &= g e^{\frac{b}{m} t} \\
         \odv{}{t} \left[ v e^{\frac{b}{m} t} \right] &= g e^{\frac{b}{m} t} \\
         v e^{\frac{b}{m} t} &= \int g e^{\frac{b}{m} t} \odif{t} \\
-        v e^{\frac{b}{m} t} &= \frac{m}{b} g e^{\frac{b}{m}t} + C \\
-        v &= \frac{m}{b} g + C e^{-\frac{b}{m} t} \\
+        v e^{\frac{b}{m} t} &= \frac{m}{b} g e^{\frac{b}{m} t} + C \\
+        v &= \frac{m}{b} g + C e^{- \frac{b}{m} t} \\
     \end{aligned}
 \end{equation}
 Solving for \(C\) using the initial condition \(v(0) = v_0\):
