@@ -18,6 +18,7 @@
 
 \section{Newton's Laws of Motion}
 
+\textbf{Newton's laws of motion} state
 \begin{enumerate}
     \item \label{itm:newtons-1st-law}
         An stationary object stays at rest,
@@ -27,12 +28,8 @@
         \begin{equation} \label{eq:newtons-2nd-law}
             \vecb{F} = m\vecb{a}
         \end{equation}
-        where
-        \begin{itemize}
-            \item \(\vecb{F}\) is the the force exerted on the object.
-            \item \(m\) is the mass of the object.
-            \item \(\vecb{a}\) is the acceleration of the object.
-        \end{itemize}
+        where \(\vecb{F}\) is the the force exerted, \(m\) is the mass,
+        and \(\vecb{a}\) is the acceleration.
     \item \label{itm:newtons-3rd-law}
         Each force has an equal and opposite reacting force.
 \end{enumerate}
@@ -55,13 +52,10 @@ The below \textbf{kinematic equations} are only true under constant acceleration
 where
 \begin{itemize}
     \item
-        \(x_0\) is the initial position,
-        \(x_\mathrm{f}\) is the final position,
-        and \(\Delta{x}\) is the change in position.
-    \item
-        \(v_0\) is the initial velocity,
-        and \(v_\mathrm{f}\) is the final velocity.
-    \item \(a\) is the acceleration.
+        \(x_0\) is the initial position, \(x_\mathrm{f}\) is the final position,
+        and \(\Delta{x}\) is the change in position;
+    \item \(v_0\) is the initial velocity, and \(v_\mathrm{f}\) is the final velocity;
+    \item \(a\) is the acceleration;
     \item \(t\) is the time elapsed.
 \end{itemize}
 
@@ -80,7 +74,8 @@ there are two ways to experimentally determine an object's center of mass:
 \begin{itemize}
     \item Balancing the object, e.g., on your finger or penciltip.
     \item
-        Plumb lines (in AP Physics C:~Mechanics, I did this with irregularly-shaped cardboard cutouts)
+        Plumb lines
+        (in AP Physics C:~Mechanics, I did this with irregularly-shaped cardboard cutouts)
         \begin{enumerate}
             \item Hang the object from any point, allowing it to hang freely.
             \item
@@ -98,23 +93,23 @@ Determing the c.m. theoretically
 depends on whether the mass distribution is \textbf{discrete} or \textbf{continuous}.
 
 \begin{subequations}
-    For discrete masses (e.g., several balls):
+    For discrete masses (e.g., several balls), the center of mass is
     \begin{equation}
         \begin{aligned}
-            x_{\mathrm{cm}} = \frac{\sum_i m_i x_i}{\sum_i m_i} \\
-            y_{\mathrm{cm}} = \frac{\sum_i m_i y_i}{\sum_i m_i} \\
-            z_{\mathrm{cm}} = \frac{\sum_i m_i z_i}{\sum_i m_i}
-        \end{aligned}
+            x_{\mathrm{c.m.}} = \frac{\sum_i m_i x_i}{\sum_i m_i} \\
+            y_{\mathrm{c.m.}} = \frac{\sum_i m_i y_i}{\sum_i m_i} \\
+            z_{\mathrm{c.m.}} = \frac{\sum_i m_i z_i}{\sum_i m_i}
+        \end{aligned}.
     \end{equation}
-    More compactly,
+    More compactly, we can re-write it as the vector
     \begin{equation}
-        \vecb{r_{\mathrm{cm}}} = \frac{\sum_i m_i \vecb{r}_i}{m_i}
+        \vecb{r_{\mathrm{c.m.}}} = \frac{\sum_i m_i \vecb{r}_i}{m_i}.
     \end{equation}
 \end{subequations}
 
-For a continuous mass distribution:
-\begin{equation} \label{eq:continuous-com}
-    \vecb{r_{\mathrm{cm}}} = \frac{\int \vecb{r} \odif{m}}{\int \odif{m}}
+For a continuous mass distribution, the c.m. is given by
+\begin{equation} \label{eq:continuous-cm}
+    \vecb{r_{\mathrm{c.m.}}} = \frac{\int \vecb{r} \odif{m}}{\int \odif{m}},
 \end{equation}
 where \(\odif{m}\) is a small amount of mass.
 
@@ -124,24 +119,24 @@ e.g., distance.
 
 \subsection{Linear Mass Density}
 
-\textbf{Linear mass density} is mass per length, e.g.,
-kilograms per meter \(\unit{\kilogram \per \meter}\).
+\textbf{Linear mass density} is mass per length,
+e.g., kilograms per metre \unit{\kilogram \per \metre}.
+Thus, the formula is
 \begin{equation}
-    \lambda = \frac{m}{\ell}
+    \lambda = \frac{m}{\ell}.
 \end{equation}
 
-Therefore, instantaneous linear mass density as a function of distance is
+Instantaneous linear mass density as a function of distance is
 \begin{equation}
-    \lambda(r) = \odv{m}{r}
+    \lambda(r) = \odv{m}{r},
 \end{equation}
 which we can arrange into
 \begin{equation}
-    \odif{m} = \lambda(r) \odif{r}
+    \odif{m} = \lambda(r) \odif{r}.
 \end{equation}
-
-Plugging back into \cref{eq:continuous-com} (\cpageref{eq:continuous-com}):
+Plugging back into \pgRef{eq:continuous-cm}, the center of mass is
 \begin{equation}
-    r_{\mathrm{cm}} = \frac{\int r \lambda(r) \odif{r}}{\int \lambda(r) \odif{r}}
+    r_{\mathrm{c.m.}} = \frac{\int r \lambda(r) \odif{r}}{\int \lambda(r) \odif{r}}.
 \end{equation}
 With this equation,
 we can find the c.m. as long as the linear mass density is integrable.
@@ -151,7 +146,7 @@ we can find the c.m. as long as the linear mass density is integrable.
 For higher dimensions, area and volume mass density exist,
 with symbols of \(\sigma\) and \(\rho\)
 and SI units of \unit{\kilogram \per \metre\squared}
-and \unit{\kilogram \per \metre \cubed}, respectively.
+and \unit{\kilogram \per \metre\cubed}, respectively.
 
 They allow us to find the c.m. in higher dimensions,
 However, this requires multivariable calculus,
@@ -165,30 +160,30 @@ The concept itself is not that difficult actually.
 You just compress the higher dimension density functions
 down into a linear density function using integration.
 
-For an area density:
+For an area density,
 \begin{equation}
     \begin{aligned}
-        x_\mathrm{cm} &=
+        x_\mathrm{c.m.} &=
             \frac{\iint_A x \sigma(x, y, z) \odif{A}}
-            {\iint_A \sigma(x, y) \odif{A}} \\
-        y_\mathrm{cm} &=
+            {\iint_A \sigma(x, y) \odif{A}}, \\
+        y_\mathrm{c.m.} &=
             \frac{\iint_A y \sigma(x, y, z) \odif{A}}
-            {\iint_A \sigma(x, y) \odif{A}}
+            {\iint_A \sigma(x, y) \odif{A}}.
     \end{aligned}
 \end{equation}
 
-For a volume density:
+For a volume density,
 \begin{equation}
     \begin{aligned}
-        x_\mathrm{cm} &=
+        x_\mathrm{c.m.} &=
             \frac{\iiint_V x \rho(x, y, z) \odif{V}}
-            {\iiint_V \rho(x, y, z) \odif{V}} \\
-        y_\mathrm{cm} &=
+            {\iiint_V \rho(x, y, z) \odif{V}}, \\
+        y_\mathrm{c.m.} &=
             \frac{\iiint_V y \rho(x, y, z) \odif{V}}
-            {\iiint_V \rho(x, y, z) \odif{V}} \\
-        z_\mathrm{cm} &=
+            {\iiint_V \rho(x, y, z) \odif{V}}, \\
+        z_\mathrm{c.m.} &=
             \frac{\iiint_V z \rho(x, y, z) \odif{V}}
-            {\iiint_V \rho(x, y, z) \odif{V}} \\
+            {\iiint_V \rho(x, y, z) \odif{V}}.
     \end{aligned}
 \end{equation}
 
@@ -211,48 +206,47 @@ Some examples:
 
 \section{Gravity}
 
-\textbf{Gravitational force} outside of a sphere is given by \textbf{Newton's law of gravity}:
+\textbf{Gravitational force} outside of a sphere is given by \textbf{Newton's law of gravity},
 \begin{equation} \label{eq:newtons-law-of-gravity}
-    F = G \frac{m_1 m_2}{r^2}
+    F = G \frac{m_1 m_2}{r^2},
 \end{equation}
 where
 \begin{itemize}
-    \item \(F\) is the magnitude of the gravitational force.
+    \item \(F\) is the magnitude of the gravitational force,
     \item
         \(G = \qty{6.674 30(15)e-11}{\metre\cubed \per \kilogram \per \second\squared}\)
-        is the universal gravitational constant. \autocite{nist-G}
-    \item \(m_1\) and \(m_2\) are the masses of the two objects.
+        is the universal gravitational constant, \autocite{nist-G}
+    \item \(m_1\) and \(m_2\) are the masses of the two objects,
     \item \(r\) is the distance between the two.
 \end{itemize}
 
-\textbf{Gravitational field} outside of a sphere:
+The \textbf{gravitational field} \(g\) outside of a sphere is
 \begin{equation}
-    g = G \frac{m}{r^2}
+    g = G \frac{m}{r^2},
 \end{equation}
-where
-\begin{itemize}
-    \item \(g\) is the gravitational force.
-    \item \(m\) is the mass of the sphere.
-\end{itemize}
+where \(m\) is the mass of the sphere. 
+
+The gravity at all points inside a hollow spherical shell is 0.
 
 For the gravitational field \emph{inside} a sphere,
 if \(r\) is the distance from the center,
 \(\rho(r)\) is the density as a function of \(r\),
 and \(R_\mathrm{i}\) is the radius of an imaginary inner sphere,
-the magnitude of the gravitational field at \(R_\mathrm{i}\) distance from the center is
+the magnitude of the gravitational field at distance \(R_\mathrm{i}\) from the center is
 \begin{equation}
-        g = \frac{G}{R_\mathrm{i}^2} \int_{0}^{R_\mathrm{i}} 4\pi r^2 \rho(r) \odif{r}
+    g = \frac{G}{R_\mathrm{i}^2} \int_{0}^{R_\mathrm{i}} 4\pi r^2 \rho(r) \odif{r}.
 \end{equation}
+The mass beyond radius \(r\) can be ignored.
 
 For a sphere of constant density \(\rho\), mass \(M\), and radius \(R\),
 the gravitational field \(\vecb{g}\) increases linearly
-as distance from the center \(R_\mathrm{i}\) increases, when \(R_\mathrm{i} < R\).
+as distance from the center \(R_\mathrm{i}\) increases, when \(R_\mathrm{i} < R\),
 \begin{equation}
     \begin{aligned}
         g &= \frac{G}{R_\mathrm{i}^2} \int_{0}^{R_\mathrm{i}} 4\pi r^2 \rho \odif{r} \\
         &= \frac{4 G \pi \rho}{R_\mathrm{i}^2} \int_{0}^{R_\mathrm{i}} r^2 \odif{r} \\
         &= \frac{4 G \pi \rho}{R_\mathrm{i}^2} \frac{R_\mathrm{i}^3}{3} \\
-        &= \frac{4}{3} \pi G \rho R_\mathrm{i}
+        &= \frac{4}{3} \pi G \rho R_\mathrm{i}.
     \end{aligned}
 \end{equation}
 
@@ -272,77 +266,64 @@ Types of \textbf{friction}:
         and increases as the force attempting to move the object increases.
 \end{itemize}
 
-Kinetic friction:
+The magnitude of kinetic friction \(F_\mathrm{fk}\) is given by
 \begin{equation}
-    F_\mathrm{fk} = \mu_\mathrm{k} F_\mathrm{N}
+    F_\mathrm{fk} = \mu_\mathrm{k} F_\mathrm{N},
 \end{equation}
-where
-\begin{itemize}
-    \item \(F_\mathrm{fk}\) is the magnitude of kinetic friction.
-    \item \(\mu_\mathrm{k}\) is the coefficient of kinetic friction.
-    \item \(F_\mathrm{N}\) is the normal force.
-\end{itemize}
+where \(\mu_\mathrm{k}\) is the coefficient of kinetic friction
+and \(F_\mathrm{N}\) is the normal force.
 
-Static friction:
+The magnitude of static friction \(F_\mathrm{fs}\) is
 \begin{equation}
-    F_\mathrm{fs} \le \mu_\mathrm{s} F_\mathrm{N}
+    F_\mathrm{fs} \le \mu_\mathrm{s} F_\mathrm{N},
 \end{equation}
-where
-\begin{itemize}
-    \item \(F_\mathrm{fs}\) is the magnitude of static friction.
-    \item \(\mu_\mathrm{s}\) is the coefficient of static friction.
-    \item \(F_\mathrm{N}\) is the normal force.
-\end{itemize}
+where \(\mu_\mathrm{s}\) is the coefficient of static friction
+and \(F_\mathrm{N}\) is the normal force. 
 
 In all cases,
 \begin{equation}
-    \mu_\mathrm{k} < \mu_\mathrm{s}
+    \mu_\mathrm{k} < \mu_\mathrm{s}.
 \end{equation}
 In other words, kinetic friction is always less than the maximum static friction:
 \begin{equation}
-    F_\mathrm{fk} < \mu_\mathrm{s} F_\mathrm{N}
+    F_\mathrm{fk} < \mu_\mathrm{s} F_\mathrm{N}.
 \end{equation}
 
 \subsection{Drag}
 
 \textbf{Drag} is a force that acts opposite to the movement of a body in fluid.
-
-The proper formula for drag is
+The proper formula for the magnitude of drag is
 \begin{equation}
-    F_\mathrm{D} = \frac{1}{2} \rho v^2 C_\mathrm{D} A
+    F_\mathrm{D} = \frac{1}{2} \rho v^2 C_\mathrm{D} A,
 \end{equation}
 where
 \begin{itemize}
-    \item \(F_\mathrm{D}\) is the magnitude of the drag force.
-    \item \(A\) is the frontal area.
-    \item \(\rho\) is the fluid density.
-    \item \(v\) is the relative velocity between object and fluid.
+    \item \(F_\mathrm{D}\) is the magnitude of the drag force;
+    \item \(A\) is the frontal area;
+    \item \(\rho\) is the fluid density;
+    \item \(v\) is the relative velocity between object and fluid;
     \item
         \(C_\mathrm{D}\) is an experimentally-determined drag coefficient,
         which is influenced by factors such as material, shape, etc.
 \end{itemize}
 
 However, this is way too complicated for AP Physics C:~Mechanics.
-A simpler approximation for drag is
-\begin{equation}
-    \vecb{F_\mathrm{D}} = - b \vecb{v}
+A simpler approximation for the drag \(\vecb{F}_\mathrm{D}\) is
+\begin{equation} \label{eq:linear-drag}
+    \vecb{F_\mathrm{D}} = - b \vecb{v},
 \end{equation}
-where
-\begin{itemize}
-    \item \(\vecb{F}_\mathrm{D}\) is the drag acting upon the object.
-    \item \(b\) is an experimentally-determined constant.
-    \item \(v\) is the relative velocity between object and fluid.
-\end{itemize}
+where \(b\) is an experimentally-determined constant
+and \(v\) is the relative velocity between object and fluid.
 
 \textbf{Terminal velocity} is when the forces of gravity and drag
 balance out each other. Therefore, acceleration is 0 at terminal velocity.
 With linear drag, given that up is positive, terminal velocity is achieved at
 \begin{equation} \label{eq:linear-terminal-velocity}
     \begin{aligned}
-        bv_\mathrm{t} - mg &= 0 \\
-        bv_\mathrm{t} &= mg \\
+        bv_\mathrm{t} - m g &= 0 \\
+        bv_\mathrm{t} &= m g \\
         v_\mathrm{t} &= \frac{m}{b} g \\
-    \end{aligned}
+    \end{aligned}.
 \end{equation}
 
 Let us derive the velocity of a free-falling object experiencing linear drag
@@ -354,7 +335,9 @@ using Newton's second law of motion, \pgRef{eq:newtons-2nd-law}
     The following has been solved
     using a technique I learned from a later differential equations class,
     so it probably differs from what was taught in AP Physics C:~Mechanics.
-}:
+}.
+We start with Newton's 2nd law of motion, \pgRef{eq:newtons-2nd-law}, and \pgRef{eq:linear-drag}.
+We find
 \begin{equation}
     \begin{aligned}
         F &= m a\\
@@ -364,29 +347,29 @@ using Newton's second law of motion, \pgRef{eq:newtons-2nd-law}
         \odv{v}{t} e^{\frac{b}{m} t} + \frac{b}{m} e^{\frac{b}{m} t} v &= g e^{\frac{b}{m} t} \\
         \odv{}{t} \left[ v e^{\frac{b}{m} t} \right] &= g e^{\frac{b}{m} t} \\
         v e^{\frac{b}{m} t} &= \int g e^{\frac{b}{m} t} \odif{t} \\
-        v e^{\frac{b}{m} t} &= \frac{m}{b} g e^{\frac{b}{m}t} + C \\
-        v &= \frac{m}{b} g + C e^{-\frac{b}{m} t} \\
+        v e^{\frac{b}{m} t} &= \frac{m}{b} g e^{\frac{b}{m} t} + C \\
+        v &= \frac{m}{b} g + C e^{- \frac{b}{m} t}. \\
     \end{aligned}
 \end{equation}
-Solving for \(C\) using the initial condition \(v(0) = v_0\):
+Solving for \(C\) using the initial condition \(v(0) = v_0\), we obtain
+\begin{gather}
+    \begin{aligned}
+        v_0 &= \frac{m}{b} g + C e^{-\frac{b}{m} 0} \\
+        v_0 &= \frac{m}{b} g + C \\
+        C &= \frac{m}{b} g - v_0.
+    \end{aligned} \\
+\end{gather}
+Therefore the velocity is
 \begin{equation}
-    \begin{gathered}
-        \begin{aligned}
-            v_0 &= \frac{m}{b} g + C e^{-\frac{b}{m} 0} \\
-            v_0 &= \frac{m}{b} g + C \\
-            C &= \frac{m}{b} g - v_0 \\
-        \end{aligned} \\
-        v = \frac{m}{b} g + \ab( \frac{m}{b} g - v_0 ) e^{-\frac{b}{m} t}
-    \end{gathered}
+    v = \frac{m}{b} g + \ab( \frac{m}{b} g - v_0 ) e^{-\frac{b}{m} t}.
 \end{equation}
-Using terminal velocity as given in \cref{eq:linear-terminal-velocity}
-(\cpageref{eq:linear-terminal-velocity}),
+Using terminal velocity as given in \pgRef{eq:linear-terminal-velocity},
 the velocity of a falling body with linear drag is
 \begin{equation}
-    v = v_\mathrm{t} + \ab( v_\mathrm{t} - v_0 ) e^{-\frac{b}{m} t}
+    v = v_\mathrm{t} + \ab( v_\mathrm{t} - v_0 ) e^{-\frac{b}{m} t}.
 \end{equation}
 
-Integrate again to find position:
+Integrating again to find position, we find
 \begin{equation}
     \begin{aligned}
         \odv{y}{t} &= v_\mathrm{t} + \ab( v_\mathrm{t} - v_0 ) e^{-\frac{b}{m} t} \\
@@ -395,23 +378,23 @@ Integrate again to find position:
              + v_\mathrm{t} t
              + \ab( v_0 - v_\mathrm{t} )
                \frac{m}{b}
-               e^{-\frac{b}{m} t}
+               e^{-\frac{b}{m} t}.
     \end{aligned}
 \end{equation}
 
 \section{Springs}
 
-\textbf{Ideal springs} are springs that perfectly follow \textbf{Hooke's law}:
+\textbf{Ideal springs} are springs that perfectly follow \textbf{Hooke's law},
 \begin{equation} \label{eq:hookes-law}
-    F_\mathrm{s} = -k \Delta{x}
+    F_\mathrm{s} = -k \Delta{x},
 \end{equation}
 where
 \begin{itemize}
-    \item \(F_\mathrm{s}\) is the magnitude of the spring force.
+    \item \(F_\mathrm{s}\) is the magnitude of the spring force;
     \item
         \(k\) is the \textbf{spring constant},
         essentially a measure of how stiff the spring is,
-        with SI units of \(\unit{\newton \per \metre}\).
+        with SI units of \unit{\newton \per \metre};
     \item \(\Delta{x}\) is the displacement of the end of the spring from its rest position.
 \end{itemize}
 
@@ -422,9 +405,9 @@ In either case, they act like a single spring.
 
 Springs in series are connected side by side.
 Each spring experiences the same force.
-The net spring constant is given by
+The net spring constant \(k_\mathrm{net}\)is given by
 \begin{equation}
-    \frac{1}{k_\mathrm{k}} = \sum_i \frac{1}{k_i}
+    \frac{1}{k_\mathrm{net}} = \sum_i \frac{1}{k_i}.
 \end{equation}
 In practice,
 this means that springs connected in series are equivalent to a single weaker spring.
@@ -433,7 +416,7 @@ Springs in parallel are connected end to end.
 Each spring stretches the same distance.
 The net spring constant is given by
 \begin{equation}
-    k_\mathrm{net} = \sum_i k_i
+    k_\mathrm{net} = \sum_i k_i.
 \end{equation}
 In practice,
 this means that springs connected in parallel are equivalent to a single stronger spring.
@@ -443,41 +426,30 @@ this means that springs connected in parallel are equivalent to a single stronge
 \textbf{Centripetal acceleration} is "center-seeking" acceleration.
 
 Moving in a circle with constant speed is \textbf{uniform circular motion}.
-Its velocity is given by
+Its velocity \(v\) is given by
 \begin{equation}
-    v = \frac{2 \pi r}{T}
+    v = \frac{2 \pi r}{T},
 \end{equation}
-where
-\begin{itemize}
-    \item \(v\) is the velocity.
-    \item \(r\) is the radius.
-    \item \(T\) is the revolution period.
-\end{itemize}
-Its acceleration is given by
+where \(r\) is the radius and \(T\) is the revolution period.
+Its centripetal acceleration \(a_\mathrm{c}\) is
 \begin{equation} \label{eq:centripetal-acceleration}
-    a = \frac{2 \pi v}{T} = \frac{4 \pi ^2 r}{T^2} = \frac{v^2}{r}
+    a_\mathrm{c} = \frac{2 \pi v}{T} = \frac{4 \pi ^2 r}{T^2} = \frac{v^2}{r}.
 \end{equation}
-where \(a\) is the acceleration.
 
-Revolution period:
+The revolution period \(T\) is
 \begin{equation} \label{eq:revolution-period}
-    T = \frac{2 \pi r}{v}
+    T = \frac{2 \pi r}{v},
 \end{equation}
-where
-\begin{itemize}
-    \item \(T\) is the revolution period.
-    \item \(r\) is the revolution radius.
-    \item \(v\) is the tangential velocity.
-\end{itemize}
+where \(r\) is the revolution radius and \(v\) is the tangential velocity.
 
-\textbf{Centripetal force}:
+The \textbf{centripetal force} \(F_\mathrm{c}\) is
 \begin{equation} \label{eq:centripetal-force}
-    F = m \frac{v^2}{r}
+    F_\mathrm{c} = m \frac{v^2}{r}.
 \end{equation}
 
 \textbf{Critical velocity} is the minimum velocity need for circular motion.
 To find the critical velocity for a given centripetal force \(F\),
-use \pgRef{eq:centripetal-force}:
+use \pgRef{eq:centripetal-force}.
 \begin{equation}
     \begin{aligned}
         m \frac{v^2}{r} &= F \\
@@ -488,30 +460,30 @@ use \pgRef{eq:centripetal-force}:
 \subsection{Orbital Velocity} \label{subsec:orbital-velocity}
 
 Let \(m\) and \(M\) be the masses of two bodies such that \(m \ll M\).
-Combining Newton's law of gravity,
+Combing Newton's law of gravity,
 \pgRef{eq:newtons-law-of-gravity},
-with \pgRef{eq:centripetal-force}:
+with \pgRef{eq:centripetal-force}, we find
 \begin{equation}
     \begin{aligned}
         G \frac{M m}{r^2} &= m \frac{v^2}{r} \\
         G \frac{M}{r} &= v^2 \\
-        v &= \sqrt{G \frac{M}{r}} \\
-    \end{aligned}
+        v &= \sqrt{G \frac{M}{r}}
+    \end{aligned}.
 \end{equation}
-Using \pgRef{eq:revolution-period}:
+Using \pgRef{eq:revolution-period}, we find the period \(T\) is
 \begin{equation}
     \begin{aligned}
         \frac{2 \pi r}{T} &= \sqrt{G \frac{M}{r}} \\
         \frac{T}{2 \pi r} &= \frac{1}{\sqrt{G \frac{M}{r}}} \\
         &= \sqrt{\frac{r}{G M}} \\
         T &= \frac{2 \pi r^{3/2}}{\sqrt{G M}} \\
-        T^2 &= \frac{4 \pi^2}{GM} r^3 \\
-    \end{aligned}
+        T^2 &= \frac{4 \pi^2}{G M} r^3 \\
+    \end{aligned}.
 \end{equation}
 
 This derivation leads us to \textbf{Kepler's third law of planetary motion}:
 \begin{equation} \label{eq:kepler-3rd-law}
-    T^2 \propto r^3
+    T^2 \propto r^3.
 \end{equation}
 For more details on planetary motion, see \pgRef{sec:orbits}.
 
@@ -522,35 +494,30 @@ For more details on planetary motion, see \pgRef{sec:orbits}.
 
 \section{Energy}
 
-In Newtonian mechanics, kinetic energy is given by
+In Newtonian mechanics, the kinetic energy \(E_\mathrm{K}\) is given by
 \begin{equation} \label{eq:linear-kinetic-energy}
-    E_\mathrm{K} = \frac{1}{2} m v^2
+    E_\mathrm{K} = \frac{1}{2} m v^2,
 \end{equation}
-where
-\begin{itemize}
-    \item \(E_\mathrm{K}\) is the kinetic energy of the object.
-    \item \(m\) is the mass of the object.
-    \item \(v\) is the velocity of the object.
-\end{itemize}
+where \(m\) is the mass and \(v\) is the velocity.
 
-The equation for \textbf{potential energy} is
+The equation for \textbf{potential energy} \(U\) is
 \begin{equation} \label{eq:potential-energy}
-    U = - \int \vecb{F} \cdot \odif{\vecb{r}}
+    U = - \int \vecb{F} \cdot \odif{\vecb{r}}.
 \end{equation}
 
 \subsection{Gravitational Potential Energy}
 
 Assuming a constant gravitational field,
-the difference in gravitational potential energy is
+the difference in gravitational potential energy \(U_\mathrm{g}\) is
 \begin{equation}
     \begin{aligned}
-        U_\mathrm{g} &= - \int -mg \odif{y} \\
-        \Delta{U_\mathrm{g}} &= mg \Delta{y}
-    \end{aligned}
+        U_\mathrm{g} &= - \int - m g \odif{y} \\
+        \Delta{U_\mathrm{g}} &= m g \Delta{y}
+    \end{aligned}.
 \end{equation}
 
-If the gravitational field is not constant, use Newton's law of gravity
---- \pgRef{eq:newtons-law-of-gravity}:
+If the gravitational field is not constant,
+use Newton's law of gravity: \pgRef{eq:newtons-law-of-gravity}.
 \begin{equation}
     \begin{aligned}
         U_\mathrm{g} &= - \int -G \frac{m_1 m_2}{r^2} \odif{r} \\
@@ -560,28 +527,25 @@ If the gravitational field is not constant, use Newton's law of gravity
 
 \subsection{Elastic Potential Energy}
 
-\textbf{Elastic potential energy} for a general spring with force function \(F(x)\):
+The \textbf{elastic potential energy} for a general spring with force function \(F(x)\) is
 \begin{equation} \label{eq:general-elastic-potential-energy}
-    \begin{aligned}
-        U_\mathrm{e} &= - \int F(x) \odif{x} \\
-    \end{aligned}
+    U_\mathrm{e} = - \int F(x) \odif{x}
 \end{equation}
 
-For ideal springs, we use Hooke's law, \pgRef{eq:hookes-law}:
+For ideal springs, we use Hooke's law, \pgRef{eq:hookes-law}, to find
 \begin{equation}
     \begin{aligned}
-        \Delta{U_\mathrm{e}} &= - \int -k x \odif{x} \\
+        \Delta{U_\mathrm{e}} &= - \int - k x \odif{x} \\
         &= \frac{1}{2} k (\Delta{x})^2
-    \end{aligned}
+    \end{aligned}.
 \end{equation}
 
-The derivation from \pgRef{eq:general-elastic-potential-energy}
-can also be used with non-linear springs.
+The derivation from \pgRef{eq:general-elastic-potential-energy} can also be used with non-linear springs.
 For example, for a spring with force function \(F(x) = -k x^\frac{4}{3}\),
 \begin{equation}
     \begin{aligned}
         U_\mathrm{e} &= - \int -k x^\frac{4}{3} \odif{x} \\
-        \Delta{U_\mathrm{e}} &= \frac{3}{7} k x^\frac{7}{3}
+        \Delta{U_\mathrm{e}} &= \frac{3}{7} k x^\frac{7}{3}.
     \end{aligned}
 \end{equation}
 
@@ -590,31 +554,28 @@ For example, for a spring with force function \(F(x) = -k x^\frac{4}{3}\),
 \textbf{Conservative forces} are ones where the \textbf{work} done is \textbf{path-independent},
 i.e., work along a \textbf{closed loop} is 0.
 
-General work formula:
+The general formula for work \(W\) is
 \begin{equation} \label{eq:work}
     \begin{aligned}
         W &= \int_C \vecb{F}(r) \cdot \odif{\vecb{r}} \\
         &= \int_C \vecb{F}(t) \cdot \vecb{r}'(t) \odif{t} \\
-    \end{aligned}
+    \end{aligned},
 \end{equation}
-where
-\begin{itemize}
-    \item \(\vecb{r}\) is the displacement.
-    \item \(\int_{\mathrm{C}}\) is a line integral along a curve.
-\end{itemize}
+where \(\vecb{r}\) is the displacement.
 
 For a straight path and constant force,
 the formula simplifies down to
 \begin{equation*}
-    W = \vecb{F} \cdot \vecb{r}
+    W = \vecb{F} \cdot \vecb{r}.
 \end{equation*}
 
 Compare the equation for work, \pgRef{eq:work},
 with the equation for potential energy, \pgRef{eq:potential-energy}.
 Therefore, for conservative forces,
 \begin{equation}
-    W = - \Delta{U}
+    W = - \Delta{U},
 \end{equation}
+where \(U\) is the potential energy.
 
 Be careful about the signs for work.
 If a \emph{system} does positive work, it \emph{loses} potential energy.
@@ -625,21 +586,16 @@ it \emph{gains} potential energy.
 
 Power is work done per unit of time.
 
-Average power:
+The average power \(P_\mathrm{avg}\) is given by
 \begin{equation}
-    P_\mathrm{avg} = \frac{W}{\Delta{t}} = \frac{\Delta{E}}{\Delta{t}}
+    P_\mathrm{avg} = \frac{W}{\Delta{t}} = \frac{\Delta{E}}{\Delta{t}},
 \end{equation}
-where
-\begin{itemize}
-    \item \(P_\mathrm{avg}\) is the average power.
-    \item \(W\) is work done.
-    \item \(\Delta{t}\) is the change in time.
-    \item \(\Delta{E}\) is the change in energy.
-\end{itemize}
+where \(W\) is work done, \(\Delta{t}\) is the change in time,
+and \(\Delta{E}\) is the change in energy.
 
-Instantaneous power:
+The instantaneous power \(P\) is given by
 \begin{equation}
-    P = \odv{E}{t}
+    P = \odv{E}{t}.
 \end{equation}
 
 
@@ -649,28 +605,22 @@ Instantaneous power:
 
 \section{Momentum}
 
-\textbf{Momentum} is symbolized by \(\vecb{p}\):
+\textbf{Momentum} (\(\vecb{p}\)) has SI units of \unit{\kilogram \metre \per \second}
+or \unit{\newton \second},
+and is given by the formula
 \begin{equation}
-    \vecb{p} = m \vecb{v}
+    \vecb{p} = m \vecb{v},
 \end{equation}
-where
-\begin{itemize}
-    \item \(\vecb{p}\) is the momentum.
-    \item \(m\) is the mass.
-    \item \(\vecb{v}\) is the velocity.
-\end{itemize}
+where \(m\) is the mass and \(\vecb{v}\) is the velocity.
 
-The SI unit of momentum is \(\unit{\kilogram \metre \per \second}\)
-or \(\unit{\newton \second}\).
-
-A system's momentum is the sum of its parts' momenta:
+A system's momentum is the sum of its parts' momenta, i.e.,
 \begin{equation}
-    \vecb{p}_\mathrm{system} = \sum_i m_i \vecb{v}_i
+    \vecb{p}_\mathrm{system} = \sum_i m_i \vecb{v}_i.
 \end{equation}
 
 For objects with constant mass,
 \begin{equation}
-    \Delta{\vecb{p}} = m \Delta{\vecb{v}}
+    \Delta{\vecb{p}} = m \Delta{\vecb{v}}.
 \end{equation}
 
 \begin{equation} \label{eq:force-momentum}
@@ -683,23 +633,19 @@ For objects with constant mass,
 
 In integral form,
 \begin{equation}
-    \int \vecb{F}_\mathrm{net} \odif{t} = \Delta{\vecb{p}}
+    \int \vecb{F}_\mathrm{net} \odif{t} = \Delta{\vecb{p}}.
 \end{equation}
 
 \section{Impulse}
 
-\textbf{Impulse} is symbolized by \(\vecb{J}\)
-and has SI units of \(\unit{\newton \second}\) or \(\unit{\kilogram \metre \per \second}\)
+\textbf{Impulse} (\(\vecb{J}\)) has SI units of \unit{\newton \second} or \unit{\kilogram \metre \per \second}.
 In the simple case where \(\odv{\vecb{F}}{t} = 0\),
 \begin{equation}
-    \vecb{J} = \vecb{F} t
+    \vecb{J} = \vecb{F} t.
 \end{equation}
 The more general equation is
 \begin{equation}
-    \vecb{J} = \int \vecb{F}(t) \odif{t}
-\end{equation}
-\begin{equation}
-    \therefore \vecb{J} = \Delta{\vecb{p}}
+    \vecb{J} = \int \vecb{F}(t) \odif{t} = \Delta{\vecb{p}},
 \end{equation}
 where \(\Delta{\vecb{p}}\) is the change in momentum.
 
@@ -748,10 +694,9 @@ they are on a sliding continuum between the two.
 Rotational motion is the motion of spinning objects.
 Instead of measuring distance, we measure angle.
 
-Similarly to the linear kinematic equations
-under constant linear acceleration (\cpageref{eq:linear-kinematic}),
-there are \textbf{rotational kinematic equations}
-under constant \textbf{angular acceleration}:
+Similarly to the linear kinematic equations under constant linear acceleration (\cpageref{eq:linear-kinematic}),
+there are \textbf{rotational kinematic equations} under constant \textbf{angular acceleration},
+namely
 \begin{subequations}
     \begin{gather}
         {
@@ -769,55 +714,51 @@ where
     \item
         \(\theta_0\) is the initial angle,
         \(\theta_\mathrm{f}\) is the final angle,
-        and \(\Delta{\theta}\) is the change in angle.
+        and \(\Delta{\theta}\) is the change in angle;
     \item
         \(\omega_0\) is the initial \textbf{angular velocity},
-        and \(\omega_\mathrm{f}\) is the final angular velocity.
-    \item \(\alpha\) is the angular acceleration.
+        and \(\omega_\mathrm{f}\) is the final angular velocity;
+    \item \(\alpha\) is the angular acceleration;
     \item \(t\) is the time elapsed.
 \end{itemize}
 
-\textbf{Arc length}:
+The \textbf{arc length} \(s\) is given by
 \begin{equation}
-    s = r \theta
+    s = r \theta,
 \end{equation}
 where \(\theta\) is the angle in radians.
 It does not work in degrees.
 
-\textbf{Tangential velocity}:
+The \textbf{tangential velocity} \(v_\mathrm{t}\) is given by
 \begin{equation}
-    v_\mathrm{t} = r \omega
+    v_\mathrm{t} = r \omega.
 \end{equation}
 
-\textbf{Tangential acceleration}:
+The \textbf{tangential acceleration} \(a_\mathrm{t}\) is given by
 \begin{equation}
-    a_\mathrm{t} = r \alpha
+    a_\mathrm{t} = r \alpha.
 \end{equation}
 
 \subsection{Moment of Inertia}
 
-\textbf{Moment of inertia} or \textbf{rotational inertia} is the angular analogue of mass,
+\textbf{Moment of inertia} or \textbf{rotational inertia} (\(I\)) is the angular analogue of mass,
 describing how much a body resists rotational acceleration.
 
-For discrete masses:
+For discrete masses, the rotational inertia \(I\) is
 \begin{equation}
-    I = \sum_i m_i r_i^2
+    I = \sum_i m_i r_i^2,
 \end{equation}
-where
-\begin{itemize}
-    \item \(I\) is the overall moment of inertia.
-    \item \(m_i\) is the mass of each particle.
-    \item \(r_i\) is the distance of each particle from the \textbf{axis of rotation}.
-\end{itemize}
+where \(m_i\) is the mass of each particle,
+and \(r_i\) is the distance of each particle from the \textbf{axis of rotation}.
 
-For continuous masses:
+For continuous masses, the rotational inertia \(I\) is
 \begin{gather}
     I = \int r^2 \odif{m} \\
     \begin{aligned}
         \lambda(r) &= \odv{m}{r} \\
         \odif{m} &= \lambda(r) \odif{r}
     \end{aligned} \\
-    \therefore I = \int r^2 \lambda(r) \odif{r}
+    \therefore I = \int r^2 \lambda(r) \odif{r}.
 \end{gather}
 
 Imagine a cylindrical rod of uniform density \(\lambda\), length \(\ell\), and mass \(M\)
@@ -828,7 +769,7 @@ rotating about an axis perpendicular to its length and passing through the cente
     \input{assets/rotating-rod.tikz}
 \end{figure}
 
-Deriving the moment of inertia:
+The moment of inertia can be derived as
 \begin{equation} \label{eq:uniform-rod-rotational-inertia}
     \begin{aligned}
         I &= 2 \int_{0}^{\frac{\ell}{2}} r^2 \odif{m} \\
@@ -838,11 +779,10 @@ Deriving the moment of inertia:
         &= \frac{2 \lambda}{3} \frac{\ell^3}{8} \\
         &= \lambda \frac{\ell^3}{12} \\
         &= \frac{1}{12} M \ell^2
-    \end{aligned}
+    \end{aligned}.
 \end{equation}
 
-Note that the \(r\) in these formulas
-means that objects have lower moment of inertia
+Note that the \(r\) in these formulas means that objects have lower moment of inertia
 when the axis of rotation is closer to their center of mass
 than when it is far from the center of mass,
 e.g., it is easier to spin a stick at the middle than at either end.
@@ -854,14 +794,15 @@ If we already know the rotational inertia of an object
 when rotating about an axis passing through its center of mass,
 the \textbf{parallel axis theorem} allows us to determine the rotational inertia
 when it is rotating around a new axis parallel to the original axis.
+It states
 \begin{equation}
-    I = I_\mathrm{cm} + m d^2
+    I = I_\mathrm{c.m.} + m d^2,
 \end{equation}
 where
 \begin{itemize}
     \item \(I\) is the new moment of inertia.
     \item
-        \(I_\mathrm{cm}\) is the moment of inertia
+        \(I_\mathrm{c.m.}\) is the moment of inertia
         when rotating around an axis passing through the center of mass.
     \item \(m\) is the mass of the object.
     \item \(d\) is the distance between the two parallel axes.
@@ -884,11 +825,12 @@ if we rotated the rod around its end instead of its center, its rotational inert
 
 \section{Torque}
 
-\textbf{Torque} is the rotational analogue to linear force:
+\textbf{Torque} (\(\vecb{\tau}\)) is the rotational analogue to linear force
+and is given by the equation
 \begin{equation}
     \begin{aligned}
         \vecb{\tau} &= \vecb{r} \times \vecb{F} \\
-        \tau &= r F \sin\theta
+        \tau &= r F \sin\theta,
     \end{aligned}
 \end{equation}
 where
@@ -903,7 +845,7 @@ where
 \end{itemize}
 
 The relationship between the direction of the torque
-and the direction of the applied force is given by the \textbf{right-hand rule}.
+and the direction of the applied force is given by the \textbf{right-hand rule}:
 \begin{itemize}
     \item Curl the fingers of your right hand in the direction of the force.
     \item Make a thumbs-up gesture with your right thumb.
@@ -912,11 +854,11 @@ and the direction of the applied force is given by the \textbf{right-hand rule}.
 
 % To-do: add image
 
-\textbf{Newton's second law for rotational movement}:
+\textbf{Newton's second law for rotational movement} states that
 \begin{equation} \label{eq:newtons-2nd-law-rotational}
     \begin{aligned}
         \vecb{\tau} &= I \vecb{\alpha} \\
-        \tau &= I \alpha
+        \tau &= I \alpha.
     \end{aligned}
 \end{equation}
 
@@ -990,9 +932,9 @@ The tangential velocity is less than the velocity of the center of mass.
 
 If the static friction reaches a critical point, it \textbf{rolls without slipping},
 which does not cause energy loss.
-The tangential velocity and the velocity of the center of mass are equal.
+The tangential velocity and the velocity of the center of mass are equal, i.e.,
 \begin{equation}
-    a_\mathrm{t} = a_\mathrm{cm}
+    a_\mathrm{t} = a_\mathrm{c.m.}
 \end{equation}
 
 Imagine an object rolling down a ramp without slipping.
@@ -1037,7 +979,7 @@ Plug in \pgRef{eq:rolling-angular-accleration}:
         &= \frac{r^2 \mu_\mathrm{s} m g \cos\theta}{I} \\
     \end{aligned}
 \end{equation}
-Plug \cref{eq:rolling-accleration} into \pgRef{eq:rolling-static-friction}:
+Plug \cref{eq:rolling-accleration} into \pgRef{eq:rolling-static-friction}.
 \begin{equation}
     \begin{aligned}
         \mu_\mathrm{s} &= - \frac{
@@ -1063,52 +1005,46 @@ Plug \cref{eq:rolling-accleration} into \pgRef{eq:rolling-static-friction}:
 Similarly to the formula for linear kinetic energy in \pgRef{eq:linear-kinetic-energy},
 the formula for \textbf{rotational kinetic energy} is
 \begin{equation}
-    E_\mathrm{k} = \frac{1}{2} I \omega^2
+    E_\mathrm{k} = \frac{1}{2} I \omega^2,
 \end{equation}
-where
-\begin{itemize}
-    \item \(E_\mathrm{k}\) is the kinetic energy of the rotating object.
-    \item \(I\) is the moment of inertia of the object spinning around its axis of rotation.
-    \item \(\omega\) is the angular velocity.
-\end{itemize}
+where \(E_\mathrm{k}\) is the kinetic energy of the rotating object,
+\(I\) is the moment of inertia of the object spinning around its axis of rotation,
+and \(\omega\) is the angular velocity.
 
 \section{Rotational Work}
 
-\textbf{Rotational work}:
+The \textbf{rotational work} \(W\) is given by
 \begin{equation}
-    W = \int \tau(\theta) \odif{\theta}
+    W = \int \tau(\theta) \odif{\theta}.
 \end{equation}
 
 For example, let us find the the work done by gravity
 as a rod swings from horizontal to vertical.
-Let
-\begin{itemize}
-    \item
-        \(r\) be the distance between the axis of rotation
-        and the rod's center of mass.
-    \item \(m\) be the mass of the rod.
-\end{itemize}
+Let \(r\) be the distance between the axis of rotation and the rod's center of mass
+and \(m\) be the mass of the rod.
+Then the work \(W\) is
 \begin{equation}
     \begin{aligned}
         W &= \int_0^\frac{\pi}{2} \frac{1}{2} m g \cos\theta \odif{\theta} \\
         &= \frac{3}{2} g [\sin\theta]_0^\frac{\pi}{2} \\
-        &= \frac{3}{2} g
+        &= \frac{3}{2} g.
     \end{aligned}
 \end{equation}
 
 \section{Angular Momentum}
 
 Unsurprisingly, \textbf{angular momentum} is the rotational analogue to linear momentum.
-It is defined by the following equation:
+It is given by the equation
 \begin{equation}
-    \vecb{L} = I \vecb{\omega}
+    \vecb{L} = I \vecb{\omega}.
 \end{equation}
 
-Objects moving in a straight lines also have angular momentum:
+Objects moving in a straight lines also have angular momentum.
+The formula for such objects is
 \begin{equation}
     \begin{aligned}
         \vecb{L} &= \vecb{r} \times \vecb{p} \\
-        &= m v r \sin\theta
+        &= m v r \sin\theta.
     \end{aligned}
 \end{equation}
 
@@ -1216,12 +1152,13 @@ Let
     \item \(v\) be the escape velocity.
 \end{itemize}
 \(- \frac{G M m}{r} + \frac{1}{2} m v^2\) is the total energy.
-To escape, you need both 0 gravitational potential energy and 0 kinetic energy:
+To escape, you need both 0 gravitational potential energy and 0 kinetic energy.
+Therefore, we find that
 \begin{equation}
     \begin{aligned}
         - \frac{G M m}{r} + \frac{1}{2} m v^2 &= 0 \\
         \frac{1}{2} m v^2 &= \frac{G M m}{r} \\
-        v &= \sqrt{\frac{2 G M}{r}}
+        v &= \sqrt{\frac{2 G M}{r}}.
     \end{aligned}
 \end{equation}
 
@@ -1248,43 +1185,39 @@ Let
         \(A\) be the \textbf{amplitude},
         which is half the difference between the maximum and minimum values.
         Its SI units depends on what we are measuring,
-        e.g., \(\unit{\metre}\) for distance, \(\unit{\radian}\) for angle,
-        \(\unit{\metre \per \second}\) for velocity,
-        \(\unit{\ampere}\) for current, etc.
+        e.g., \unit{\metre} for distance, \unit{\radian} for angle,
+        \unit{\metre \per \second} for velocity,
+        \unit{\ampere} for current, etc.
     \item
         \(\omega\) be the \textbf{angular frequency},
         which is a measure of how fast the oscillation cycles
-        and has SI units of \(\unit{\radian \per \second}\).
+        and has SI units of \unit{\radian \per \second}.
     \item
         \(\phi\) be the \textbf{phase},
         which is the horizontal translation of the cycle,
-        and has SI units of \(\unit{\radian}\).
+        and has SI units of \unit{\radian}.
 \end{itemize}
 Thus, the general form looks like
 \begin{equation}
-    f(t) = A \cos(\omega + \phi)
+    f(t) = A \cos(\omega t + \phi).
 \end{equation}
 
 Several other measurements are related to angular frequency.
 
-\textbf{Rotational frequency} or simply \textbf{frequency}
+\textbf{Rotational frequency} or simply \textbf{frequency} (\(f\))
 is the number of oscillations per unit of time,
-with SI units of hertz (\(\unit{\hertz}\)) or \(\unit{\per \second}\).
+with SI units of hertz (\unit{\hertz}) or \unit{\per \second}.
 The relationship between angular frequency and rotational frequency is
 \begin{equation}
-    f = \frac{\omega}{2 \pi}
+    f = \frac{\omega}{2 \pi},
 \end{equation}
-where
-\begin{itemize}
-    \item \(f\) is the rotational frequency.
-    \item \(\omega\) is the angular frequency.
-\end{itemize}
+where \(\omega\) is the angular frequency.
 
-\textbf{Period} is the time for one complete oscillation,
-with SI units of \(\unit{\second}\).
-The period \(T\) can be expressed in terms of angular frequency as
+\textbf{Period} (\(T\)) is the time for one complete oscillation,
+with SI units of \unit{\second}.
+The period \(T\) can be expressed in terms of angular frequency \(\omega\) as
 \begin{equation}
-    T = \frac{2 \pi}{\omega}
+    T = \frac{2 \pi}{\omega}.
 \end{equation}
 
 \section{Spring Oscillators}
@@ -1301,21 +1234,21 @@ Let
     \item \(t\) be the time.
 \end{itemize}
 
-Derivation of the position function:
+The position function can be derived from
 \begin{equation}
     \begin{aligned}
         F &= m a \\
         -k x &= m \odv[2]{x}{t} \\
-        \odv[2]{x}{t} &= - \frac{k}{m} x
+        \odv[2]{x}{t} &= - \frac{k}{m} x.
     \end{aligned}
 \end{equation}
 We know that the answer when differentiated twice
 is is proportional to the negative of itself,
-so we can guess the following solution:
+so we can guess the solution
 \begin{align}
     x(t) &= A \cos(\omega t + \phi) \\
     v(t) = \odv{x}{t} &= - A \omega \sin(\omega t + \phi) \\
-    a(t) = \odv{v}{t} = \odv[2]{x}{t} &= - A \omega^2 \cos(\omega t + \phi)
+    a(t) = \odv{v}{t} = \odv[2]{x}{t} &= - A \omega^2 \cos(\omega t + \phi),
 \end{align}
 where
 \begin{itemize}
@@ -1338,8 +1271,8 @@ The oscillation of pendulums is determined by gravity.
 
 \subsection{Ideal Pendulums}
 
-Derivation of the angle function for ideal pendulums,
-i.e., ones with negligible moment of inertia:
+For ideal pendulums, i.e., ones with negligible moment of inertia,
+the angle function can be derived as following:
 \begin{equation} \label{eq:pendulum-forces}
     \begin{aligned}
         F = m a \\
@@ -1350,11 +1283,11 @@ i.e., ones with negligible moment of inertia:
 The arc length \(s\) is given by
 \begin{equation}
     \begin{aligned}
-        s = \ell \theta \\
+        s = \ell \theta. \\
         \therefore a = \ell \odv[2]{\theta}{t}
     \end{aligned}
 \end{equation}
-Plug back into \cref{eq:pendulum-forces}:
+Plug back into \cref{eq:pendulum-forces}.
 \begin{equation}
     \begin{aligned}
         - g \sin\theta &= \ell \odv[2]{\theta}{t} \\
@@ -1365,11 +1298,11 @@ The \textbf{small-angle approximation} tells us that for sufficiently small angl
 (\qty{0.24}{\radian} gives less than 1\% error),
 \begin{gather}
     \sin\theta \approx \theta \\
-    \therefore \odv[2]{\theta}{t} + \frac{g}{\ell} \theta \approx 0
+    \therefore \odv[2]{\theta}{t} + \frac{g}{\ell} \theta \approx 0.
 \end{gather}
-If we guess like we did for the spring oscillators, we find
+If we guess like we did for the spring oscillators, we find that
 \begin{equation}
-    \theta(t) = A \cos(\omega t + \phi)
+    \theta(t) = A \cos(\omega t + \phi).
 \end{equation}
 where
 \begin{equation}
@@ -1381,7 +1314,7 @@ where
 \textbf{Physical pendulums} have non-negligible moment of inertia.
 
 Let \(r\) be the distance between the axis of rotation and center of mass.
-Derivation of angle function for a physical pendulum:
+The angle function for a physical pendulum is derived as follows:
 \begin{equation}
     \begin{aligned}
         \tau &= I \alpha \\
@@ -1391,9 +1324,9 @@ Derivation of angle function for a physical pendulum:
         \odv[2]{\theta}{t} + \frac{r m g \theta}{I} &\approx 0 \\
     \end{aligned}
 \end{equation}
-We get the result
+We get
 \begin{equation}
-    \theta(t) = A \cos(\omega t + \phi)
+    \theta(t) = A \cos(\omega t + \phi),
 \end{equation}
 where
 \begin{equation}
@@ -1408,7 +1341,7 @@ and the string is twisted,
 which creates a restorative force of torsion
 that causes the object to rotate in an oscillatory manner.
 For a torsion pendulum,
-the SI units for the spring constant \(k\) is \(\unit{\newton \per \radian}\).
+the SI units for the spring constant \(k\) is \unit{\newton \per \radian}.
 
 Skipping the differential equations, the derivation for a torsion pendulum is
 \begin{equation}
@@ -1416,7 +1349,7 @@ Skipping the differential equations, the derivation for a torsion pendulum is
         - \tau &= I \alpha \\
         - k \theta &= I \odv[2]{\theta}{t} \\
         - \frac{k}{I} \theta &= \odv[2]{\theta}{t} \\
-        \theta(t) = \theta_\mathrm{max} \cos(\omega t + \phi)
+        \theta(t) = \theta_\mathrm{max} \cos(\omega t + \phi),
     \end{aligned}
 \end{equation}
 where
@@ -1427,7 +1360,11 @@ where
         then \(\theta_\mathrm{max}\) will be the initial angle.
         Elsewise, you will have to solve for \(\theta_\mathrm{max}\)
         using the initial angle and angular velocity.
-    \item \(\omega = \sqrt{\frac{k}{I}}\) is the angular frequency.
+    \item
+        \begin{equation}
+            \omega = \sqrt{\frac{k}{I}}
+        \end{equation}
+        is the angular frequency.
     \item
         \(\phi\) is the phase shift.
         If the initial angular velocity is 0, \(\phi = 0\).
