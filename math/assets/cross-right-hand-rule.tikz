@@ -1,5 +1,5 @@
 \begin{tikzpicture}
-    \draw[->] (0, 0) -- (-3, 0) node[midway, above] {\(\vecb{u}\)};
-    \draw[->] (0, 0) -- (3, -3) node[midway, right] {\(\vecb{v}\)};
-    \draw[->] (0, 0) -- (0, 3) node[midway, right] {\(\vecb{w}\)};
+    \draw[->] (0, 0) -- (-150:3) node[midway, above] {\(\vecb{u}\)};
+    \draw[->] (0, 0) -- (-30:3) node[midway, right] {\(\vecb{v}\)};
+    \draw[->] (0, 0) -- (90:3) node[midway, right] {\(\vecb{w}\)};
 \end{tikzpicture}
