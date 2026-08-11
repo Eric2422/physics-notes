@@ -20,7 +20,7 @@
         = \vecb{v}
         = \ab< v_x, v_y >
         = \ab( v_x, v_y )
-        = v_x \vecb{\hat{i}} + v_y \vecb{\hat{j}}
+        = v_x \vecb{\iHat} + v_y \vecb{\jHat}
     \end{equation}
     3D:
     \begin{equation}
@@ -28,15 +28,15 @@
         = \vecb{v}
         = \ab< v_x, v_y, v_z >
         = \ab( v_x, v_y, v_z )
-        = v_x \vecb{\hat{i}} + v_y \vecb{\hat{j}} + v_z \vecb{\hat{k}}
+        = v_x \vecb{\iHat} + v_y \vecb{\jHat} + v_z \vecb{\hat{k}}
     \end{equation}
 \end{subequations}
 
 Note that \(\vec{v}\) is more common in handwriting,
 and \(\vecb{v}\) is more common in print.
 
-See \pgRef{sec:unit-vectors} for information about \(\vecb{\hat{i}}\),
-\(\vecb{\hat{j}}\), and \(\vecb{\hat{k}}\).
+See \pgRef{sec:unit-vectors} for information about \(\vecb{\iHat}\),
+\(\vecb{\jHat}\), and \(\vecb{\hat{k}}\).
 
 \section{Magnitude}
 
@@ -61,9 +61,9 @@ They are denoted using a "hat", e.g., \(\vecb{\hat{v}}\) is "v-hat".
 The \textbf{standard unit vectors} are
 \begin{equation}
     \begin{aligned}
-        \vecb{\hat{i}} &= \vecb{\hat{x}} = \ab< 1, 0, 0 >, \\
-        \vecb{\hat{j}} &= \vecb{\hat{y}} = \ab< 0, 1, 0 >, \\
-        \vecb{\hat{k}} &= \vecb{\hat{z}} = \ab< 0, 0, 1 >
+        \vecb{\iHat} &\coloneq \vecb{\hat{x}} \coloneq \ab< 1, 0, 0 >, \\
+        \vecb{\jHat} &\coloneq \vecb{\hat{y}} \coloneq \ab< 0, 1, 0 >, \\
+        \vecb{\hat{k}} &\coloneq \vecb{\hat{z}} \coloneq \ab< 0, 0, 1 >
     \end{aligned}
 \end{equation}
 \vfil
@@ -103,6 +103,8 @@ Hold your index, middle, and thumb fingers such that all three are perpendicular
 Your index finger represents \(\vecb{u}\), your middle finger \(\vecb{v}\),
 and your thumb \(\vecb{w}\).
 
+\include{assets/cross-right-hand-rule.tikz}
+
 \section{Direction of Rotation}
 
 Vectors can be used to represent things that are curled or rotating,
@@ -112,4 +114,4 @@ Curl the fingers of your right hand in the direction of the rotation.
 Make a thumbs-up gesture with your right thumb;
 your right thumb points in the direction of the vector.
 
-% To-do: add image
+\include{assets/curl-right-hand-rule.tikz}

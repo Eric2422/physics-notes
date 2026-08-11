@@ -99,6 +99,10 @@
 \renewcommand{\Re}{\operatorname{Re}}
 \renewcommand{\Im}{\operatorname{Im}}
 
+% For some reason, \imath and \jmath do not respond well to bold, italics, and hats.
+\newcommand{\iHat}{\textbf{\^{\i}}}
+\newcommand{\jHat}{\textbf{\^{\j}}}
+
 % Make curly epsilon default.
 \let\temp\epsilon
 \let\epsilon\varepsilon
