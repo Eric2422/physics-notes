@@ -1,0 +1,3 @@
+\begin{tikzpicture}
+    \draw[->] (0, 0) -- (-3, 0) node[midway, below] {\(\vecb{w}\)};
+\end{tikzpicture}
