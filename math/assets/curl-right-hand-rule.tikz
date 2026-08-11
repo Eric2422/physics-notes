@@ -1,4 +1,4 @@
 \begin{tikzpicture}
     \draw[->] (0, 0) -- (0, 3) node[midway, right] {\(\vecb{v}\)};
-    \draw[->] (0, 0) arc [start angle=-90, end angle=225, radius=4mm];
+    \draw[->] (1.5, 0) arc [start angle=0, end angle=345, x radius=1.5cm, y radius=0.75cm];
 \end{tikzpicture}
