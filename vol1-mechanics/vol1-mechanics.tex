@@ -301,33 +301,42 @@ where
     \item \(F_\mathrm{D}\) is the magnitude of the drag force;
     \item \(A\) is the frontal area;
     \item \(\rho\) is the fluid density;
-    \item \(v\) is the relative velocity between object and fluid;
+    \item \(v\) is the relative velocity between the object and fluid;
     \item
         \(C_\mathrm{D}\) is an experimentally-determined drag coefficient,
         which is influenced by factors such as material, shape, etc.
 \end{itemize}
+However, this results in a differential equations problem
+that is too mathematically complicated for AP Physics C:~Mechanics.
 
-However, this is way too complicated for AP Physics C:~Mechanics.
 A simpler approximation for the drag \(\vecb{F}_\mathrm{D}\) is
 \begin{equation} \label{eq:linear-drag}
     \vecb{F_\mathrm{D}} = - b \vecb{v},
 \end{equation}
 where \(b\) is an experimentally-determined constant
-and \(v\) is the relative velocity between object and fluid.
+and \(\vecb{v}\) is the relative velocity between the object and fluid.
 
 \textbf{Terminal velocity} is when the forces of gravity and drag
-balance out each other. Therefore, acceleration is 0 at terminal velocity.
-With linear drag, given that up is positive, terminal velocity is achieved at
+balance each other out.
+Therefore, acceleration is 0 at terminal velocity.
+If an object is fallling vertically, with up as positive,
+terminal velocity is achieved at
 \begin{equation} \label{eq:linear-terminal-velocity}
     \begin{aligned}
         bv_\mathrm{t} - m g &= 0 \\
         bv_\mathrm{t} &= m g \\
-        v_\mathrm{t} &= \frac{m}{b} g \\
-    \end{aligned}.
+        v_\mathrm{t} &= \frac{m}{b} g. \\
+    \end{aligned} \\
 \end{equation}
 
-Let us derive the velocity of a free-falling object experiencing linear drag
-using Newton's second law of motion, \pgRef{eq:newtons-2nd-law}
+Intuitively, we know that a falling object must approach terminal velocity.
+Thus, we can conjecture that
+\begin{equation} \label{eq:terminal-velocity-limit}
+    \lim_{t \to \infty} v = v_\mathrm{t}.
+\end{equation}
+
+Now that we know the terminal velocity of a falling object,
+let us derive its velocity as a function of time.
 \footnote{
     I do not have the derivations
     for the position and velocity of fallling objects with linear drag in my notes,
@@ -335,39 +344,48 @@ using Newton's second law of motion, \pgRef{eq:newtons-2nd-law}
     The following has been solved
     using a technique I learned from a later differential equations class,
     so it probably differs from what was taught in AP Physics C:~Mechanics.
-}.
-We start with Newton's 2nd law of motion, \pgRef{eq:newtons-2nd-law}, and \pgRef{eq:linear-drag}.
-We find
-\begin{equation}
-    \begin{aligned}
-        F &= m a\\
-        mg - bv &= m a\\
-        mg - bv &= m \odv{v}{t} \\
-        \odv{v}{t} + \frac{b}{m} v &= g \\
-        \odv{v}{t} e^{\frac{b}{m} t} + \frac{b}{m} e^{\frac{b}{m} t} v &= g e^{\frac{b}{m} t} \\
-        \odv{}{t} \left[ v e^{\frac{b}{m} t} \right] &= g e^{\frac{b}{m} t} \\
-        v e^{\frac{b}{m} t} &= \int g e^{\frac{b}{m} t} \odif{t} \\
-        v e^{\frac{b}{m} t} &= \frac{m}{b} g e^{\frac{b}{m} t} + C \\
-        v &= \frac{m}{b} g + C e^{- \frac{b}{m} t}. \\
-    \end{aligned}
-\end{equation}
-Solving for \(C\) using the initial condition \(v(0) = v_0\), we obtain
-\begin{gather}
-    \begin{aligned}
-        v_0 &= \frac{m}{b} g + C e^{-\frac{b}{m} 0} \\
-        v_0 &= \frac{m}{b} g + C \\
-        C &= \frac{m}{b} g - v_0.
-    \end{aligned} \\
-\end{gather}
-Therefore the velocity is
-\begin{equation}
-    v = \frac{m}{b} g + \ab( \frac{m}{b} g - v_0 ) e^{-\frac{b}{m} t}.
-\end{equation}
+}
+We start with Newton's second law of motion [\pgRef{eq:newtons-2nd-law}] and \pgRef{eq:linear-drag},
+finding that
+\begin{subequations}
+    \begin{gather} \label{eq:drag-diff-eq}
+        \begin{aligned}
+            F &= m a\\
+            mg - bv &= m a\\
+            mg - bv &= m \odv{v}{t} \\
+            \odv{v}{t} + \frac{b}{m} v &= g \\
+            \odv{v}{t} e^{\frac{b}{m} t} + \frac{b}{m} e^{\frac{b}{m} t} v &= g e^{\frac{b}{m} t} \\
+            \odv{}{t} \left[ v e^{\frac{b}{m} t} \right] &= g e^{\frac{b}{m} t} \\
+            v e^{\frac{b}{m} t} &= \int g e^{\frac{b}{m} t} \odif{t} \\
+            v e^{\frac{b}{m} t} &= \frac{m}{b} g e^{\frac{b}{m} t} + C \\
+            v &= \frac{m}{b} g + C e^{- \frac{b}{m} t}. \\
+        \end{aligned}
+    \end{gather}
+    Solving for \(C\) using the initial condition \(v(0) = v_0\), we obtain
+    \begin{gather}
+        \begin{aligned}
+            v_0 &= \frac{m}{b} g + C e^{-\frac{b}{m} 0} \\
+            v_0 &= \frac{m}{b} g + C \\
+            C &= \frac{m}{b} g - v_0.
+        \end{aligned}
+    \end{gather}
+    Therefore, by plugging \(C\) back into \pgRef{eq:drag-diff-eq},
+    the velocity is
+    \begin{equation}
+        v = \frac{m}{b} g + \ab( \frac{m}{b} g - v_0 ) e^{- \frac{b}{m} t}.
+    \end{equation}
+\end{subequations}
 Using terminal velocity as given in \pgRef{eq:linear-terminal-velocity},
 the velocity of a falling body with linear drag is
 \begin{equation}
     v = v_\mathrm{t} + \ab( v_\mathrm{t} - v_0 ) e^{-\frac{b}{m} t}.
 \end{equation}
+As \(t\) approaches infinity, the exponential component approaches 0.
+Therefore, the limit is
+\begin{equation*}
+    \lim_{t \to \infty} v = v_\mathrm{t}
+\end{equation*}
+This agrees with our intuition in \pgRef{eq:terminal-velocity-limit}.
 
 Integrating again to find position, we find
 \begin{equation}
