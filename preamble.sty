@@ -33,7 +33,7 @@
 \usephysicsmodule{ab}
 
 %% References
-\usepackage{hyperref}
+\usepackage[breaklinks]{hyperref}
 \hypersetup{
     colorlinks = true,
     allcolors = blue,
@@ -86,9 +86,9 @@
 % List math sections.
 \newcommand{\mathTopics}[1]{Recommended mathematical topics:~#1}
 % Cross reference with page number.
-\newcommand{\pgRef}[1]{\cref{#1}~(\cpageref{#1})}
+\newcommand{\pgRef}[1]{\cref{#1} (\cpageref{#1})}
 % Cross reference with page number but sentence-initial.
-\newcommand{\PgRef}[1]{\Cref{#1}~(\cpageref{#1})}
+\newcommand{\PgRef}[1]{\Cref{#1} (\cpageref{#1})}
 
 % Vector bold.
 \newcommand{\vecb}[1]{\bm{\mathrm{#1}}}
