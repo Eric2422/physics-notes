@@ -356,17 +356,17 @@ Solving for \(C\) using the initial condition \(v(0) = v_0\), we obtain
     \begin{aligned}
         v_0 &= \frac{m}{b} g + C e^{-\frac{b}{m} 0} \\
         v_0 &= \frac{m}{b} g + C \\
-        C &= \frac{m}{b} g - v_0.
+        C &= v_0 - \frac{m}{b} g.
     \end{aligned} \\
 \end{gather}
 Therefore the velocity is
 \begin{equation}
-    v = \frac{m}{b} g + \ab( \frac{m}{b} g - v_0 ) e^{-\frac{b}{m} t}.
+    v = \frac{m}{b} g + \ab( v_0 - \frac{m}{b} g ) e^{-\frac{b}{m} t}.
 \end{equation}
 Using terminal velocity as given in \pgRef{eq:linear-terminal-velocity},
 the velocity of a falling body with linear drag is
 \begin{equation}
-    v = v_\mathrm{t} + \ab( v_\mathrm{t} - v_0 ) e^{-\frac{b}{m} t}.
+    v = v_\mathrm{t} + \ab( v_0 - v_\mathrm{t} ) e^{-\frac{b}{m} t}.
 \end{equation}
 
 
