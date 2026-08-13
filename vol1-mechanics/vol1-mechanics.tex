@@ -323,9 +323,9 @@ If an object is fallling vertically, with up as positive,
 terminal velocity is achieved at
 \begin{equation} \label{eq:linear-terminal-velocity}
     \begin{aligned}
-        b v_\mathrm{t} - m g &= 0 \\
-        b v_\mathrm{t} &= m g \\
-        v_\mathrm{t} &= \frac{m}{b} g. \\
+        - b v_\mathrm{t} - m g &= 0 \\
+        - b v_\mathrm{t} &= m g \\
+        v_\mathrm{t} &= - \frac{m}{b} g. \\
     \end{aligned} \\
 \end{equation}
 
@@ -351,33 +351,33 @@ finding that
     \begin{gather} \label{eq:drag-diff-eq}
         \begin{aligned}
             F &= m a \\
-            m g - bv &= m a \\
-            m g - bv &= m \odv{v}{t} \\
-            \odv{v}{t} + \frac{b}{m} v &= g \\
-            \odv{v}{t} e^{\frac{b}{m} t} + \frac{b}{m} e^{\frac{b}{m} t} v &= g e^{\frac{b}{m} t} \\
-            \odv{}{t} \left[ v e^{\frac{b}{m} t} \right] &= g e^{\frac{b}{m} t} \\
-            v e^{\frac{b}{m} t} &= \int g e^{\frac{b}{m} t} \odif{t} \\
-            v e^{\frac{b}{m} t} &= \frac{m}{b} g e^{\frac{b}{m} t} + C \\
-            v &= \frac{m}{b} g + C e^{- \frac{b}{m} t}. \\
+            - m g - bv &= m a \\
+            - m g - bv &= m \odv{v}{t} \\
+            \odv{v}{t} + \frac{b}{m} v &= - g \\
+            \odv{v}{t} e^{\frac{b}{m} t} + \frac{b}{m} e^{\frac{b}{m} t} v &= - g e^{\frac{b}{m} t} \\
+            \odv{}{t} \left[ v e^{\frac{b}{m} t} \right] &= - g e^{\frac{b}{m} t} \\
+            v e^{\frac{b}{m} t} &= \int - g e^{\frac{b}{m} t} \odif{t} \\
+            v e^{\frac{b}{m} t} &= - \frac{m}{b} g e^{\frac{b}{m} t} + C \\
+            v &= - \frac{m}{b} g + C e^{- \frac{b}{m} t}. \\
         \end{aligned}
     \end{gather}
     Solving for \(C\) using the initial condition \(v(0) = v_0\), we obtain
     \begin{gather}
         \begin{aligned}
-            v_0 &= \frac{m}{b} g + C e^{-\frac{b}{m} 0} \\
-            v_0 &= \frac{m}{b} g + C \\
-            C &= \frac{m}{b} g - v_0.
+            v_0 &= - \frac{m}{b} g + C e^{-\frac{b}{m} 0} \\
+            v_0 &= - \frac{m}{b} g + C \\
+            C &= v_0 + \frac{m}{b} g.
         \end{aligned}
     \end{gather}
     Therefore, by plugging \(C\) back into \pgRef{eq:drag-diff-eq},
     the velocity is
     \begin{equation}
-        v = \frac{m}{b} g + \ab( \frac{m}{b} g - v_0 ) e^{- \frac{b}{m} t}.
+        v = - \frac{m}{b} g + \ab( v_0 + \frac{m}{b} g ) e^{- \frac{b}{m} t}.
     \end{equation}
     Using terminal velocity as given in \pgRef{eq:linear-terminal-velocity},
     the velocity of a falling body with linear drag is
     \begin{equation}
-        v = v_\mathrm{t} + \ab( v_\mathrm{t} - v_0 ) e^{-\frac{b}{m} t}.
+        v = v_\mathrm{t} + \ab( v_0 - v_\mathrm{t} ) e^{-\frac{b}{m} t}.
     \end{equation}
 \end{subequations}
 As \(t\) approaches infinity, the exponential component approaches 0.
