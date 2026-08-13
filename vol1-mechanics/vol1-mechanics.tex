@@ -350,8 +350,8 @@ finding that
 \begin{subequations}
     \begin{gather} \label{eq:drag-diff-eq}
         \begin{aligned}
-            F &= m a\\
-            m g - bv &= m a\\
+            F &= m a \\
+            m g - bv &= m a \\
             m g - bv &= m \odv{v}{t} \\
             \odv{v}{t} + \frac{b}{m} v &= g \\
             \odv{v}{t} e^{\frac{b}{m} t} + \frac{b}{m} e^{\frac{b}{m} t} v &= g e^{\frac{b}{m} t} \\
@@ -374,12 +374,12 @@ finding that
     \begin{equation}
         v = \frac{m}{b} g + \ab( \frac{m}{b} g - v_0 ) e^{- \frac{b}{m} t}.
     \end{equation}
+    Using terminal velocity as given in \pgRef{eq:linear-terminal-velocity},
+    the velocity of a falling body with linear drag is
+    \begin{equation}
+        v = v_\mathrm{t} + \ab( v_\mathrm{t} - v_0 ) e^{-\frac{b}{m} t}.
+    \end{equation}
 \end{subequations}
-Using terminal velocity as given in \pgRef{eq:linear-terminal-velocity},
-the velocity of a falling body with linear drag is
-\begin{equation}
-    v = v_\mathrm{t} + \ab( v_\mathrm{t} - v_0 ) e^{-\frac{b}{m} t}.
-\end{equation}
 As \(t\) approaches infinity, the exponential component approaches 0.
 Therefore, the limit is
 \begin{equation*}
