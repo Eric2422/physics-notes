@@ -405,16 +405,16 @@ Therefore, the limit is
 \end{equation*}
 This agrees with our intuition in \pgRef{eq:terminal-velocity-limit}.
 
-Here is a graph to demonstrate what the velocity might look like
+Here is a graph to demonstrate to illustrate the behavior of the velocity:
 \begin{figure}[ht]
     \resizebox{\textwidth}{!}{\input{assets/drag-velocity.pgf}}
     \caption{
-        Velocity graph of objects falling with linear drag.
+        Example velocity graph of an object falling with linear drag.
         For this example,
         the gravity \(g = \qty{9.80665}{\metre \per \second}\),
         the drag coefficient \(b = \qty{1}{\newton \per \metre \per \second}\),
         the mass \(m = \qty{1}{\kilogram}\),
-        and the initial velocity is \qty{0}{\metre \per \second}.
+        and the initial velocity \(v_0 = \qty{0}{\metre \per \second}\).
     }
 \end{figure}
 
@@ -433,6 +433,20 @@ Integrating again to find position, we find
     \end{aligned}
 \end{equation}
 where \(y_0\) is the initial height.
+To illustrate the behavior of the position, here is a an example graph:
+\begin{figure}[ht]
+    \resizebox{\textwidth}{!}{\input{assets/drag-velocity.pgf}}
+    \caption{
+        Example position graph of an object falling with linear drag.
+        For this example,
+        the gravity \(g = \qty{9.80665}{\metre \per \second}\),
+        the drag coefficient \(b = \qty{1}{\newton \per \metre \per \second}\),
+        the mass \(m = \qty{1}{\kilogram}\),
+        the initial velocity \(v_0 = \qty{0}{\metre \per \second}\),
+        and the initial position \(y_0 = \qty{0}{\metre}\).
+    }
+\end{figure}
+The graph becomes approximately linear as time \(t\) approaches infinity.
 
 \section{Springs}
 
