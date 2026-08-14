@@ -405,6 +405,19 @@ Therefore, the limit is
 \end{equation*}
 This agrees with our intuition in \pgRef{eq:terminal-velocity-limit}.
 
+Here is a graph to demonstrate what the velocity might look like
+\begin{figure}[ht]
+    \input{assets/drag-velocity.pgf}
+    \caption{
+        Velocity graph of objects falling with linear drag.
+        For this example,
+        the gravity \(g = \qty{9.80665}{\metre \per \second}\),
+        the drag coefficient \(b = \qty{1}{\newton \per \metre \per \second}\),
+        the mass \(m = \qty{1}{\kilogram}\),
+        and the initial velocity is \qty{0}{\metre \per \second}.
+    }
+\end{figure}
+
 Integrating again to find position, we find
 \begin{equation}
     \begin{aligned}
@@ -416,7 +429,7 @@ Integrating again to find position, we find
         + v_\mathrm{t} t
         + \ab( v_\mathrm{t} - v_0 )
         \frac{m}{b}
-        e^{- \frac{b}{m} t}.
+        e^{- \frac{b}{m} t},
     \end{aligned}
 \end{equation}
 where \(y_0\) is the initial height.
@@ -1049,8 +1062,8 @@ Plug \cref{eq:rolling-accleration} into \pgRef{eq:rolling-static-friction}.
 
 \section{Rotational Kinetic Energy}
 
-Similarly to the formula for linear kinetic energy in \pgRef{eq:
-linear-kinetic-energy},
+Similarly to the formula for linear kinetic energy in
+\pgRef{eq:linear-kinetic-energy},
 the formula for \textbf{rotational kinetic energy} is
 \begin{equation}
     E_\mathrm{k} = \frac{1}{2} I \omega^2,

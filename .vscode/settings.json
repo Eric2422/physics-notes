@@ -21,7 +21,9 @@
         "tikzset",
         "Undriven",
         "usetikzlibrary",
-        "vecb"
+        "vecb",
+        "xlabel",
+        "ylabel"
     ],
     "latex-workshop.latex.watch.files.ignore": ["./template/*"]
 }
