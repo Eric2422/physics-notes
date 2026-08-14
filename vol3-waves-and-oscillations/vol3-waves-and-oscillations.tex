@@ -28,8 +28,10 @@ By Newton's second law,
     \end{aligned}
 \end{equation}
 
-For angles less than approximately \qty{0.24}{\radian} (\(\approx\qty{14.3}{\degree}\)),
-the small-angle approximation results in a error of less than 1\% in the gravitational force.
+For angles less than approximately \qty{0.24}{\radian}
+(\(\approx\qty{14.3}{\degree}\)),
+the small-angle approximation results in a error of less than 1\% in
+the gravitational force.
 Thus, we find
 \begin{align}
     \sin\theta \approx \theta \\
@@ -77,13 +79,14 @@ but we are going to skip to the general solutions:
             \tilde{x}(t) = A e^{i \phi} e^{i \omega_0 t}
         \end{equation},
 \end{itemize}
-where 
+where
 \begin{itemize}
     \item \(\omega_0 = \sqrt{\frac{k}{m}}\) is the \textbf{natural frequency},
     \item \(\Re(\tilde{x}(t)) = x(t)\),
     \item \(A\) and \(B\) are amplitudes,
     \item \(\phi\) is a phase shift,
-    \item \(z_0\) is a complex amplitude, which combines both amplitude and phase shift.
+    \item \(z_0\) is a complex amplitude, which combines both
+        amplitude and phase shift.
 \end{itemize}
 \(A\), \(B\), \(\phi\), and \(z_0\)
 can be found by plugging in and solving for initial conditions,
@@ -91,10 +94,12 @@ i.e., initial position and velocity.
 
 Solutions to differential equations are \textbf{linear},
 i.e., linear combinations of solutions are \emph{also} solutions.
-\(\therefore \tilde{x}(t) = A e^{i \phi} e^{i \omega_0 t} + B e^{i \phi} e^{i \omega_0 t}\)
+\(\therefore \tilde{x}(t) = A e^{i \phi} e^{i \omega_0 t} + B e^{i
+\phi} e^{i \omega_0 t}\)
 may also be valid.
 
-Finding velocity and acceleration is straightforward: simply differentiate position.
+Finding velocity and acceleration is straightforward: simply
+differentiate position.
 We find
 \begin{equation}
     \begin{aligned}
@@ -109,9 +114,9 @@ The factor of \(i\) gives a \qty{90}{\degree} phase shift ahead of position.
 Differentiaing again, we find that the acceleration is
 \begin{equation}
     \begin{aligned}
-            \tilde{a}(t) &= \odv{}{t} \tilde{v}(t) \\
-            &= - \omega_0^2 A e^{i \phi} e^{\omega_0 t} \\
-            &= - \omega_0^2 \tilde{x}(t).
+        \tilde{a}(t) &= \odv{}{t} \tilde{v}(t) \\
+        &= - \omega_0^2 A e^{i \phi} e^{\omega_0 t} \\
+        &= - \omega_0^2 \tilde{x}(t).
     \end{aligned}
 \end{equation}
 The minus indicates a \qty{180}{\degree} phase shift ahead of position.
@@ -133,7 +138,8 @@ and the equation of motion is
 
 Some textbooks define \(\gamma\) as \(\frac{b}{2m}\).
 
-We plug a guess of the form \(\boldsymbol{\hat{x}}(t) = A e^{i \phi} e^{i \beta t}\) into the equation
+We plug a guess of the form \(\boldsymbol{\hat{x}}(t) = A e^{i \phi}
+e^{i \beta t}\) into the equation
 and get
 \begin{equation}
     \boldsymbol{\hat{x}}(t)
@@ -152,7 +158,8 @@ where
 \end{equation}
 
 Damped oscillators have three possible behaviors
-depending on the ratio between the damping coefficient \(\gamma\) and the natural frequency \(\omega_0\).
+depending on the ratio between the damping coefficient \(\gamma\) and
+the natural frequency \(\omega_0\).
 The \textbf{quality factor} or \textbf{\(\boldsymbol{Q}\) factor} is defined as
 \begin{equation}
     Q \coloneq \frac{\omega_0}{\gamma}.
@@ -220,31 +227,27 @@ The spring is \textbf{critically damped} when
 
 \section{Driven, Undamped Springs}
 
-
 \chapter{Electrical Circuits}
-
 
 \chapter{Systems of Oscillators}
 
-
 \chapter{Transverse Waves}
-
 
 \chapter{Longitudinal Waves}
 
-
 \chapter{Dispersion}
-
 
 \chapter{Electromagnetic Waves}
 
 \appendix
 
-\chapter{Complex and Imaginary Numbers} \label{chap:complex-and-imaginary-numbers}
+\chapter{Complex and Imaginary Numbers} \label{chap:
+complex-and-imaginary-numbers}
 
 \(i = \sqrt{-1}\) is the \textbf{imaginary unit}.
 
-\textbf{Imaginary numbers} are the set of all numbers that can be written in the form \(bi\),
+\textbf{Imaginary numbers} are the set of all numbers that can be
+written in the form \(bi\),
 where \(b \in \mathbb{R}\).
 
 \textbf{complex numbers}, denoted by \(\mathbb{C}\),
@@ -290,20 +293,19 @@ Euler's formula:
     \therefore e^{a + bi} = e^a e^{bi} = e^a \ab( \cos b + i \sin b )
 \end{equation}
 
-Oftentimes, working with the complex exponential is easier than the trigonometric functions.
+Oftentimes, working with the complex exponential is easier than the
+trigonometric functions.
 
 \section{Complex-Valued Functions}
 
 A \textbf{complex-valued function} is a function that returns a complex number.
 It is denoted with a overhead tilde, e.g., \(\tilde{f}(x)\).
 
-
 \chapter{Fourier Analysis}
 
 \section{Fourier Series}
 
 \section{Fourier Transform}
-
 
 \backmatter
 

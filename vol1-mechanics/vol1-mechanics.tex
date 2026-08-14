@@ -36,7 +36,8 @@
 
 \section{Kinematic Equations}
 
-The below \textbf{kinematic equations} are only true under constant acceleration.
+The below \textbf{kinematic equations} are only true under constant
+acceleration.
 \begin{subequations}
     \begin{gather} \label{eq:linear-kinematic}
         {
@@ -51,14 +52,14 @@ The below \textbf{kinematic equations} are only true under constant acceleration
 \end{subequations}
 where
 \begin{itemize}
-    \item
-        \(x_0\) is the initial position, \(x_\mathrm{f}\) is the final position,
+    \item \(x_0\) is the initial position, \(x_\mathrm{f}\) is the
+        final position,
         and \(\Delta{x}\) is the change in position;
-    \item \(v_0\) is the initial velocity, and \(v_\mathrm{f}\) is the final velocity;
+    \item \(v_0\) is the initial velocity, and \(v_\mathrm{f}\) is
+        the final velocity;
     \item \(a\) is the acceleration;
     \item \(t\) is the time elapsed.
 \end{itemize}
-
 
 \chapter{Force and Translational Dynamics}
 
@@ -66,31 +67,31 @@ where
 
 \section{Center of Mass}
 
-The \textbf{center of mass} (\textbf{c.m.}) allows us to simplify many physical calculations.
+The \textbf{center of mass} (\textbf{c.m.}) allows us to simplify
+many physical calculations.
 In many cases, objects can be treated as point masses at their center of mass.
 
 Assuming that there is gravity,
 there are two ways to experimentally determine an object's center of mass:
 \begin{itemize}
     \item Balancing the object, e.g., on your finger or penciltip.
-    \item
-        Plumb lines
-        (in AP Physics C:~Mechanics, I did this with irregularly-shaped cardboard cutouts)
+    \item Plumb lines
+        (in AP Physics C:~Mechanics, I did this with
+        irregularly-shaped cardboard cutouts)
         \begin{enumerate}
             \item Hang the object from any point, allowing it to hang freely.
-            \item
-                Using a plumb bob (string with a weight),
+            \item Using a plumb bob (string with a weight),
                 find the line directly down from the point of attachment.
             \item Mark this line on the object.
             \item Repeat steps 1 and 3 multiple times with different points.
-            \item
-                Find where the lines intersect.
+            \item Find where the lines intersect.
                 This should be the center of mass.
         \end{enumerate}
 \end{itemize}
 
 Determing the c.m. theoretically
-depends on whether the mass distribution is \textbf{discrete} or \textbf{continuous}.
+depends on whether the mass distribution is \textbf{discrete} or
+\textbf{continuous}.
 
 \begin{subequations}
     For discrete masses (e.g., several balls), the center of mass is
@@ -136,7 +137,8 @@ which we can arrange into
 \end{equation}
 Plugging back into \pgRef{eq:continuous-cm}, the center of mass is
 \begin{equation}
-    r_{\mathrm{c.m.}} = \frac{\int r \lambda(r) \odif{r}}{\int \lambda(r) \odif{r}}.
+    r_{\mathrm{c.m.}} = \frac{\int r \lambda(r) \odif{r}}{\int
+    \lambda(r) \odif{r}}.
 \end{equation}
 With this equation,
 we can find the c.m. as long as the linear mass density is integrable.
@@ -164,11 +166,11 @@ For an area density,
 \begin{equation}
     \begin{aligned}
         x_\mathrm{c.m.} &=
-            \frac{\iint_A x \sigma(x, y, z) \odif{A}}
-            {\iint_A \sigma(x, y) \odif{A}}, \\
+        \frac{\iint_A x \sigma(x, y, z) \odif{A}}
+        {\iint_A \sigma(x, y) \odif{A}}, \\
         y_\mathrm{c.m.} &=
-            \frac{\iint_A y \sigma(x, y, z) \odif{A}}
-            {\iint_A \sigma(x, y) \odif{A}}.
+        \frac{\iint_A y \sigma(x, y, z) \odif{A}}
+        {\iint_A \sigma(x, y) \odif{A}}.
     \end{aligned}
 \end{equation}
 
@@ -176,20 +178,21 @@ For a volume density,
 \begin{equation}
     \begin{aligned}
         x_\mathrm{c.m.} &=
-            \frac{\iiint_V x \rho(x, y, z) \odif{V}}
-            {\iiint_V \rho(x, y, z) \odif{V}}, \\
+        \frac{\iiint_V x \rho(x, y, z) \odif{V}}
+        {\iiint_V \rho(x, y, z) \odif{V}}, \\
         y_\mathrm{c.m.} &=
-            \frac{\iiint_V y \rho(x, y, z) \odif{V}}
-            {\iiint_V \rho(x, y, z) \odif{V}}, \\
+        \frac{\iiint_V y \rho(x, y, z) \odif{V}}
+        {\iiint_V \rho(x, y, z) \odif{V}}, \\
         z_\mathrm{c.m.} &=
-            \frac{\iiint_V z \rho(x, y, z) \odif{V}}
-            {\iiint_V \rho(x, y, z) \odif{V}}.
+        \frac{\iiint_V z \rho(x, y, z) \odif{V}}
+        {\iiint_V \rho(x, y, z) \odif{V}}.
     \end{aligned}
 \end{equation}
 
 \section{Free-Body Diagrams} \label{sec:free-body-diagrams}
 
-Free-body diagrams are a simple means of illustrating the forces acting upon a body.
+Free-body diagrams are a simple means of illustrating the forces
+acting upon a body.
 Draw the body as a simple shape such as a dot or box,
 then add labeled arrows to represent the forces acting in each direction.
 Larger arrows indicate larger forces.
@@ -200,13 +203,15 @@ Some examples:
     \input{assets/free-body-diagram.tikz}
     \caption{
         Diagram to scale.
-        \(\vecb{F_b}\) is of greater magnitude than and opposite direction to \(\vecb{F_a}\).
+        \(\vecb{F_b}\) is of greater magnitude than and opposite
+        direction to \(\vecb{F_a}\).
     }
 \end{figure}
 
 \section{Gravity}
 
-\textbf{Gravitational force} outside of a sphere is given by \textbf{Newton's law of gravity},
+\textbf{Gravitational force} outside of a sphere is given by
+\textbf{Newton's law of gravity},
 \begin{equation} \label{eq:newtons-law-of-gravity}
     F = G \frac{m_1 m_2}{r^2},
 \end{equation}
@@ -214,7 +219,8 @@ where
 \begin{itemize}
     \item \(F\) is the magnitude of the gravitational force,
     \item
-        \(G = \qty{6.674 30(15)e-11}{\metre\cubed \per \kilogram \per \second\squared}\)
+        \(G = \qty{6.674 30(15)e-11}{\metre\cubed \per \kilogram \per
+        \second\squared}\)
         is the universal gravitational constant, \autocite{nist-G}
     \item \(m_1\) and \(m_2\) are the masses of the two objects,
     \item \(r\) is the distance between the two.
@@ -232,19 +238,24 @@ For the gravitational field \emph{inside} a sphere,
 if \(r\) is the distance from the center,
 \(\rho(r)\) is the density as a function of \(r\),
 and \(R_\mathrm{i}\) is the radius of an imaginary inner sphere,
-the magnitude of the gravitational field at distance \(R_\mathrm{i}\) from the center is
+the magnitude of the gravitational field at distance \(R_\mathrm{i}\)
+from the center is
 \begin{equation}
-    g = \frac{G}{R_\mathrm{i}^2} \int_{0}^{R_\mathrm{i}} 4\pi r^2 \rho(r) \odif{r}.
+    g = \frac{G}{R_\mathrm{i}^2} \int_{0}^{R_\mathrm{i}} 4\pi r^2
+    \rho(r) \odif{r}.
 \end{equation}
 The mass beyond radius \(r\) can be ignored.
 
 For a sphere of constant density \(\rho\), mass \(M\), and radius \(R\),
 the gravitational field \(\vecb{g}\) increases linearly
-as distance from the center \(R_\mathrm{i}\) increases, when \(R_\mathrm{i} < R\),
+as distance from the center \(R_\mathrm{i}\) increases, when
+\(R_\mathrm{i} < R\),
 \begin{equation}
     \begin{aligned}
-        g &= \frac{G}{R_\mathrm{i}^2} \int_{0}^{R_\mathrm{i}} 4\pi r^2 \rho \odif{r} \\
-        &= \frac{4 G \pi \rho}{R_\mathrm{i}^2} \int_{0}^{R_\mathrm{i}} r^2 \odif{r} \\
+        g &= \frac{G}{R_\mathrm{i}^2} \int_{0}^{R_\mathrm{i}} 4\pi
+        r^2 \rho \odif{r} \\
+        &= \frac{4 G \pi \rho}{R_\mathrm{i}^2} \int_{0}^{R_\mathrm{i}}
+        r^2 \odif{r} \\
         &= \frac{4 G \pi \rho}{R_\mathrm{i}^2} \frac{R_\mathrm{i}^3}{3} \\
         &= \frac{4}{3} \pi G \rho R_\mathrm{i}.
     \end{aligned}
@@ -259,10 +270,12 @@ as distance from the center \(R_\mathrm{i}\) increases, when \(R_\mathrm{i} < R\
 Types of \textbf{friction}:
 \begin{itemize}
     \item
-        \textbf{Kinetic friction} is between two surfaces with non-zero relative velocity.
+        \textbf{Kinetic friction} is between two surfaces with
+        non-zero relative velocity.
         It is constant and independent of the object's velocity.
     \item
-        \textbf{Static friction} is between two surfaces with zero relative velocity
+        \textbf{Static friction} is between two surfaces with zero
+        relative velocity
         and increases as the force attempting to move the object increases.
 \end{itemize}
 
@@ -284,7 +297,8 @@ In all cases,
 \begin{equation}
     \mu_\mathrm{k} < \mu_\mathrm{s}.
 \end{equation}
-In other words, kinetic friction is always less than the maximum static friction:
+In other words, kinetic friction is always less than the maximum
+static friction:
 \begin{equation}
     F_\mathrm{fk} < \mu_\mathrm{s} F_\mathrm{N}.
 \end{equation}
@@ -339,13 +353,15 @@ Now that we know the terminal velocity of a falling object,
 let us derive its velocity as a function of time.
 \footnote{
     I do not have the derivations
-    for the position and velocity of fallling objects with linear drag in my notes,
+    for the position and velocity of fallling objects with linear
+    drag in my notes,
     so I do not remember the exact process taught in class.
     The following has been solved
     using a technique I learned from a later differential equations class,
     so it probably differs from what was taught in AP Physics C:~Mechanics.
 }
-We start with Newton's second law of motion [\pgRef{eq:newtons-2nd-law}] and \pgRef{eq:linear-drag},
+We start with Newton's second law of motion [\pgRef{eq:
+newtons-2nd-law}] and \pgRef{eq:linear-drag},
 finding that
 \begin{subequations}
     \begin{gather} \label{eq:drag-diff-eq}
@@ -354,8 +370,10 @@ finding that
             - m g - bv &= m a \\
             - m g - bv &= m \odv{v}{t} \\
             \odv{v}{t} + \frac{b}{m} v &= - g \\
-            \odv{v}{t} e^{\frac{b}{m} t} + \frac{b}{m} e^{\frac{b}{m} t} v &= - g e^{\frac{b}{m} t} \\
-            \odv{}{t} \left[ v e^{\frac{b}{m} t} \right] &= - g e^{\frac{b}{m} t} \\
+            \odv{v}{t} e^{\frac{b}{m} t} + \frac{b}{m} e^{\frac{b}{m}
+            t} v &= - g e^{\frac{b}{m} t} \\
+            \odv{}{t} \left[ v e^{\frac{b}{m} t} \right] &= - g
+            e^{\frac{b}{m} t} \\
             v e^{\frac{b}{m} t} &= \int - g e^{\frac{b}{m} t} \odif{t} \\
             v e^{\frac{b}{m} t} &= - \frac{m}{b} g e^{\frac{b}{m} t} + C \\
             v &= - \frac{m}{b} g + C e^{- \frac{b}{m} t}. \\
@@ -390,13 +408,15 @@ This agrees with our intuition in \pgRef{eq:terminal-velocity-limit}.
 Integrating again to find position, we find
 \begin{equation}
     \begin{aligned}
-        \odv{y}{t} &= v_\mathrm{t} + \ab( v_0 - v_\mathrm{t} ) e^{- \frac{b}{m} t} \\
-        y &= \int v_\mathrm{t} + \ab( v_0 - v_\mathrm{t} ) e^{- \frac{b}{m} t} \odif{t} \\
+        \odv{y}{t} &= v_\mathrm{t} + \ab( v_0 - v_\mathrm{t} ) e^{-
+        \frac{b}{m} t} \\
+        y &= \int v_\mathrm{t} + \ab( v_0 - v_\mathrm{t} ) e^{-
+        \frac{b}{m} t} \odif{t} \\
         y &= y_0
-             + v_\mathrm{t} t
-             + \ab( v_\mathrm{t} - v_0 )
-               \frac{m}{b}
-               e^{- \frac{b}{m} t}.
+        + v_\mathrm{t} t
+        + \ab( v_\mathrm{t} - v_0 )
+        \frac{m}{b}
+        e^{- \frac{b}{m} t}.
     \end{aligned}
 \end{equation}
 where \(y_0\) is the initial height.
@@ -414,7 +434,8 @@ where
         \(k\) is the \textbf{spring constant},
         essentially a measure of how stiff the spring is,
         with SI units of \unit{\newton \per \metre};
-    \item \(\Delta{x}\) is the displacement of the end of the spring from its rest position.
+    \item \(\Delta{x}\) is the displacement of the end of the spring
+        from its rest position.
 \end{itemize}
 
 \subsection{Multiple Springs}
@@ -429,7 +450,8 @@ The net spring constant \(k_\mathrm{net}\)is given by
     \frac{1}{k_\mathrm{net}} = \sum_i \frac{1}{k_i}.
 \end{equation}
 In practice,
-this means that springs connected in series are equivalent to a single weaker spring.
+this means that springs connected in series are equivalent to a
+single weaker spring.
 
 Springs in parallel are connected end to end.
 Each spring stretches the same distance.
@@ -438,7 +460,8 @@ The net spring constant is given by
     k_\mathrm{net} = \sum_i k_i.
 \end{equation}
 In practice,
-this means that springs connected in parallel are equivalent to a single stronger spring.
+this means that springs connected in parallel are equivalent to a
+single stronger spring.
 
 \section{Circular Motion}
 
@@ -506,7 +529,6 @@ This derivation leads us to \textbf{Kepler's third law of planetary motion}:
 \end{equation}
 For more details on planetary motion, see \pgRef{sec:orbits}.
 
-
 \chapter{Work, Energy, and Power}
 
 \mathTopics{\pgRef{chap:vectors}}
@@ -546,7 +568,8 @@ we use Newton's law of gravity [\pgRef{eq:newtons-law-of-gravity}]:
 
 \subsection{Elastic Potential Energy}
 
-The \textbf{elastic potential energy} for a general spring with force function \(F(x)\) is
+The \textbf{elastic potential energy} for a general spring with force
+function \(F(x)\) is
 \begin{equation} \label{eq:general-elastic-potential-energy}
     U_\mathrm{e} = - \int F(x) \odif{x}
 \end{equation}
@@ -559,7 +582,8 @@ For ideal springs, we use Hooke's law [\pgRef{eq:hookes-law}] to find
     \end{aligned}.
 \end{equation}
 
-The derivation from \pgRef{eq:general-elastic-potential-energy} can also be used with non-linear springs.
+The derivation from \pgRef{eq:general-elastic-potential-energy} can
+also be used with non-linear springs.
 For example, for a spring with force function \(F(x) = -k x^\frac{4}{3}\),
 \begin{equation}
     \begin{aligned}
@@ -570,7 +594,8 @@ For example, for a spring with force function \(F(x) = -k x^\frac{4}{3}\),
 
 \section{Work}
 
-\textbf{Conservative forces} are ones where the \textbf{work} done is \textbf{path-independent},
+\textbf{Conservative forces} are ones where the \textbf{work} done is
+\textbf{path-independent},
 i.e., work along a \textbf{closed loop} is 0.
 
 The general formula for work \(W\) is
@@ -617,14 +642,14 @@ The instantaneous power \(P\) is given by
     P = \odv{E}{t}.
 \end{equation}
 
-
 \chapter{Linear Momentum}
 
 \mathTopics{\pgRef{chap:vectors}}
 
 \section{Momentum}
 
-\textbf{Momentum} (\(\vecb{p}\)) has SI units of \unit{\kilogram \metre \per \second}
+\textbf{Momentum} (\(\vecb{p}\)) has SI units of \unit{\kilogram
+\metre \per \second}
 or \unit{\newton \second},
 and is given by the formula
 \begin{equation}
@@ -657,7 +682,8 @@ In integral form,
 
 \section{Impulse}
 
-\textbf{Impulse} (\(\vecb{J}\)) has SI units of \unit{\newton \second} or \unit{\kilogram \metre \per \second}.
+\textbf{Impulse} (\(\vecb{J}\)) has SI units of \unit{\newton \second}
+or \unit{\kilogram \metre \per \second}.
 In the simple case where \(\odv{\vecb{F}}{t} = 0\),
 \begin{equation}
     \vecb{J} = \vecb{F} t.
@@ -689,8 +715,8 @@ Types of \textbf{collisions}:
         \begin{itemize}
             \item Kinetic energy is lost.
             \item Objects bounce apart with less energy or not all.
-                  The case where the objects do not bounce at all
-                  is known as \textbf{perfectly inelastic}
+                The case where the objects do not bounce at all
+                is known as \textbf{perfectly inelastic}
         \end{itemize}
     \item
         \textbf{Explosion}
@@ -703,7 +729,6 @@ Types of \textbf{collisions}:
 Practically speaking, no collision is perfectly elastic or inelastic;
 they are on a sliding continuum between the two.
 
-
 \chapter{Torque and Rotational Dynamics}
 
 \mathTopics{\pgRef{chap:vectors}}
@@ -713,8 +738,10 @@ they are on a sliding continuum between the two.
 Rotational motion is the motion of spinning objects.
 Instead of measuring distance, we measure angle.
 
-Similarly to the linear kinematic equations under constant linear acceleration (\cpageref{eq:linear-kinematic}),
-there are \textbf{rotational kinematic equations} under constant \textbf{angular acceleration},
+Similarly to the linear kinematic equations under constant linear
+acceleration (\cpageref{eq:linear-kinematic}),
+there are \textbf{rotational kinematic equations} under constant
+\textbf{angular acceleration},
 namely
 \begin{subequations}
     \begin{gather}
@@ -760,7 +787,8 @@ The \textbf{tangential acceleration} \(a_\mathrm{t}\) is given by
 
 \subsection{Moment of Inertia}
 
-\textbf{Moment of inertia} or \textbf{rotational inertia} (\(I\)) is the angular analogue of mass,
+\textbf{Moment of inertia} or \textbf{rotational inertia} (\(I\)) is
+the angular analogue of mass,
 describing how much a body resists rotational acceleration.
 
 For discrete masses, the rotational inertia \(I\) is
@@ -780,8 +808,10 @@ For continuous masses, the rotational inertia \(I\) is
     \therefore I = \int r^2 \lambda(r) \odif{r}.
 \end{gather}
 
-Imagine a cylindrical rod of uniform density \(\lambda\), length \(\ell\), and mass \(M\)
-rotating about an axis perpendicular to its length and passing through the center.
+Imagine a cylindrical rod of uniform density \(\lambda\), length
+\(\ell\), and mass \(M\)
+rotating about an axis perpendicular to its length and passing
+through the center.
 
 \begin{figure}[h]
     \centering
@@ -801,11 +831,13 @@ The moment of inertia can be derived as
     \end{aligned}.
 \end{equation}
 
-Note that the \(r\) in these formulas means that objects have lower moment of inertia
+Note that the \(r\) in these formulas means that objects have lower
+moment of inertia
 when the axis of rotation is closer to their center of mass
 than when it is far from the center of mass,
 e.g., it is easier to spin a stick at the middle than at either end.
-A more interesting example is that a full can rolls down a slope faster than an empty can does.
+A more interesting example is that a full can rolls down a slope
+faster than an empty can does.
 The full can's mass is more concentrated in the center,
 reducing its moment of inertia and thus giving it greater acceleration.
 
@@ -827,8 +859,10 @@ where
     \item \(d\) is the distance between the two parallel axes.
 \end{itemize}
 
-Using the uniform rod from \pgRef{eq:uniform-rod-rotational-inertia} as an example again,
-if we rotated the rod around its end instead of its center, its rotational inertia would be
+Using the uniform rod from \pgRef{eq:uniform-rod-rotational-inertia}
+as an example again,
+if we rotated the rod around its end instead of its center, its
+rotational inertia would be
 \begin{equation}
     \begin{aligned}
         I &= \frac{1}{12} M \ell^2 + M \ab( \frac{\ell}{2} )^2 \\
@@ -942,7 +976,8 @@ If the static friction is insufficient, the object \textbf{rolls with slipping},
 which causes energy loss.
 The tangential velocity is less than the velocity of the center of mass.
 
-If the static friction reaches a critical point, it \textbf{rolls without slipping},
+If the static friction reaches a critical point, it \textbf{rolls
+without slipping},
 which does not cause energy loss.
 The tangential velocity and the velocity of the center of mass are equal, i.e.,
 \begin{equation}
@@ -995,10 +1030,10 @@ Plug \cref{eq:rolling-accleration} into \pgRef{eq:rolling-static-friction}.
 \begin{equation}
     \begin{aligned}
         \mu_\mathrm{s} &= - \frac{
-                            \frac{r^2 \mu_\mathrm{s} m g \cos\theta}{I}
-                        }
-                        {g \cos\theta}
-                        + \tan\theta \\
+            \frac{r^2 \mu_\mathrm{s} m g \cos\theta}{I}
+        }
+        {g \cos\theta}
+        + \tan\theta \\
         &= - \frac{\mu_\mathrm{s} m r^2}{I} + \tan\theta \\
         \mu_\mathrm{s} + \frac{\mu_\mathrm{s} m r^2}{I} &= \tan\theta \\
         \mu_\mathrm{s} \ab( 1 + \frac{m r^2}{I} ) &= \tan\theta \\
@@ -1007,20 +1042,21 @@ Plug \cref{eq:rolling-accleration} into \pgRef{eq:rolling-static-friction}.
     \end{aligned}
 \end{equation}
 
-
 \chapter{Energy and Momentum of Rotating Systems}
 
 \mathTopics{\pgRef{chap:vectors}}
 
 \section{Rotational Kinetic Energy}
 
-Similarly to the formula for linear kinetic energy in \pgRef{eq:linear-kinetic-energy},
+Similarly to the formula for linear kinetic energy in \pgRef{eq:
+linear-kinetic-energy},
 the formula for \textbf{rotational kinetic energy} is
 \begin{equation}
     E_\mathrm{k} = \frac{1}{2} I \omega^2,
 \end{equation}
 where \(E_\mathrm{k}\) is the kinetic energy of the rotating object,
-\(I\) is the moment of inertia of the object spinning around its axis of rotation,
+\(I\) is the moment of inertia of the object spinning around its axis
+of rotation,
 and \(\omega\) is the angular velocity.
 
 \section{Rotational Work}
@@ -1032,7 +1068,8 @@ The \textbf{rotational work} \(W\) is given by
 
 For example, let us find the the work done by gravity
 as a rod swings from horizontal to vertical.
-Let \(r\) be the distance between the axis of rotation and the rod's center of mass
+Let \(r\) be the distance between the axis of rotation and the rod's
+center of mass
 and \(m\) be the mass of the rod.
 Then the work \(W\) is
 \begin{equation}
@@ -1045,7 +1082,8 @@ Then the work \(W\) is
 
 \section{Angular Momentum}
 
-Unsurprisingly, \textbf{angular momentum} is the rotational analogue to linear momentum.
+Unsurprisingly, \textbf{angular momentum} is the rotational analogue
+to linear momentum.
 It is given by the equation
 \begin{equation}
     \vecb{L} = I \vecb{\omega}.
@@ -1066,7 +1104,8 @@ Similarly to linear momentum, angular momentum must be conserved.
 
 The most famous demonstration of \textbf{conservation of angular momentum}
 is a person pulling in their arms while they are spinning.
-Pulling in their arms decreases the radius between their arms and center of mass,
+Pulling in their arms decreases the radius between their arms and
+center of mass,
 reducing moment of inertia.
 Since angular momentum must be conserved,
 their angular velocity increases to compensate.
@@ -1076,14 +1115,12 @@ their angular velocity increases to compensate.
 \textbf{Kepler's laws of planetary motion}
 describe the motion of planets orbiting around a star.
 \begin{enumerate}
-    \item
-        Planetary orbits are elliptical,
+    \item Planetary orbits are elliptical,
         with the star at one of the ellipse's foci.
     \item \label{itm:keplers-2nd-law}
         The line between the star and an orbiting planet
         sweeps across equal amounts of area in equal amounts of time.
-    \item
-        The square of the orbital period \(T\) is proportional to the cube of the radius \(r\):
+    \item The square of the orbital period \(T\) is proportional to the cube of the radius \(r\):
         \begin{equation}
             T^2 \propto r^3
         \end{equation}
@@ -1100,10 +1137,13 @@ Imagine a planet of mass \(m\) orbitting around a star.
 There are two points in its orbit: A and B.
 Let
 \begin{itemize}
-    \item \(L_\mathrm{A}\) and \(L_\mathrm{B}\) be the angular momenta at points A and B, respectively.
-    \item \(v_\mathrm{A}\) and \(v_\mathrm{B}\) be the velocities at points A and B, respectively.
+    \item \(L_\mathrm{A}\) and \(L_\mathrm{B}\) be the angular
+        momenta at points A and B, respectively.
+    \item \(v_\mathrm{A}\) and \(v_\mathrm{B}\) be the velocities at
+        points A and B, respectively.
     \item
-        \(r_\mathrm{A}\) and \(r_\mathrm{B}\) be the distances from the star to A and B, respectively.
+        \(r_\mathrm{A}\) and \(r_\mathrm{B}\) be the distances from
+        the star to A and B, respectively.
         Assume \(r_\mathrm{A} < r_\mathrm{B}\).
 \end{itemize}
 \begin{align}
@@ -1121,7 +1161,8 @@ when it is closer to the star, than at point B,
 when it is farther from the star.
 
 This conclusion is actually a consequence of
-\hyperref[itm:keplers-2nd-law]{Kepler's second law of planetary motion} (\cpageref{itm:keplers-2nd-law}).
+\hyperref[itm:keplers-2nd-law]{Kepler's second law of planetary
+motion} (\cpageref{itm:keplers-2nd-law}).
 Since planetary motion is an ellipse,
 for the same amount of time to sweep the same area,
 the planet would have to travel faster to compensate for the smaller radius.
@@ -1174,7 +1215,6 @@ Therefore, we find that
         v &= \sqrt{\frac{2 G M}{r}}.
     \end{aligned}
 \end{equation}
-
 
 \chapter{Oscillations}
 
@@ -1307,7 +1347,8 @@ Plug back into \cref{eq:pendulum-forces}.
         \odv[2]{\theta}{t} + \frac{g}{\ell} \sin\theta &= 0
     \end{aligned}
 \end{equation}
-The \textbf{small-angle approximation} tells us that for sufficiently small angles
+The \textbf{small-angle approximation} tells us that for sufficiently
+small angles
 (\qty{0.24}{\radian} gives less than 1\% error),
 \begin{gather}
     \sin\theta \approx \theta \\
@@ -1348,7 +1389,8 @@ where
 
 \section{Torsion Pendulums}
 
-\textbf{Torsion} is a torque caused by twisting an object around its axis of rotation.
+\textbf{Torsion} is a torque caused by twisting an object around its
+axis of rotation.
 In a \textbf{torsion pendulum}, an object is hung on a string,
 and the string is twisted,
 which creates a restorative force of torsion
@@ -1395,7 +1437,6 @@ This phenomena is known as \textbf{resonance}.
 \appendix
 
 \input{../math/vectors.tex}
-
 
 \chapter{Ellipses} \label{chap:ellipses}
 
