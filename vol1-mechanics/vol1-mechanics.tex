@@ -52,11 +52,11 @@ acceleration.
 \end{subequations}
 where
 \begin{itemize}
-    \item \(x_0\) is the initial position, \(x_\mathrm{f}\) is the
-        final position,
+    \item \(x_0\) is the initial position,
+        \(x_\mathrm{f}\) is the final position,
         and \(\Delta{x}\) is the change in position;
-    \item \(v_0\) is the initial velocity, and \(v_\mathrm{f}\) is
-        the final velocity;
+    \item \(v_0\) is the initial velocity,
+        and \(v_\mathrm{f}\) is the final velocity;
     \item \(a\) is the acceleration;
     \item \(t\) is the time elapsed.
 \end{itemize}
@@ -137,8 +137,8 @@ which we can arrange into
 \end{equation}
 Plugging back into \pgRef{eq:continuous-cm}, the center of mass is
 \begin{equation}
-    r_{\mathrm{c.m.}} = \frac{\int r \lambda(r) \odif{r}}{\int
-    \lambda(r) \odif{r}}.
+    r_{\mathrm{c.m.}} =
+    \frac{\int r \lambda(r) \odif{r}}{\int\lambda(r) \odif{r}}.
 \end{equation}
 With this equation,
 we can find the c.m. as long as the linear mass density is integrable.
@@ -254,8 +254,8 @@ as distance from the center \(R_\mathrm{i}\) increases, when
     \begin{aligned}
         g &= \frac{G}{R_\mathrm{i}^2} \int_{0}^{R_\mathrm{i}} 4\pi
         r^2 \rho \odif{r} \\
-        &= \frac{4 G \pi \rho}{R_\mathrm{i}^2} \int_{0}^{R_\mathrm{i}}
-        r^2 \odif{r} \\
+        &= \frac{4 G \pi \rho}{R_\mathrm{i}^2}
+        \int_{0}^{R_\mathrm{i}} r^2 \odif{r} \\
         &= \frac{4 G \pi \rho}{R_\mathrm{i}^2} \frac{R_\mathrm{i}^3}{3} \\
         &= \frac{4}{3} \pi G \rho R_\mathrm{i}.
     \end{aligned}
@@ -1029,7 +1029,8 @@ Plug in \pgRef{eq:rolling-angular-accleration}:
 Plug \cref{eq:rolling-accleration} into \pgRef{eq:rolling-static-friction}.
 \begin{equation}
     \begin{aligned}
-        \mu_\mathrm{s} &= - \frac{
+        \mu_\mathrm{s} &=
+        - \frac{
             \frac{r^2 \mu_\mathrm{s} m g \cos\theta}{I}
         }
         {g \cos\theta}
