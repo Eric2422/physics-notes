@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+    \tikzmath{
+        \a = 4;
+        \b = 3;
+        \c = sqrt(\a^2 - \b^2);
+    }
+
+    \draw[-{>[scale=2]}] (0.0, \b) arc [
+        start angle=90, end angle=460, x radius=\a, y radius=\b
+    ];
+    \fill (\c, 0.0) circle (0.25) node[above=3.0mm] {Star};
+
+    \fill ({\a*cos(80)}, {\b*sin(80)}) circle (0.125) node[above=3.0mm] {\(m\)};
+    \draw[dotted, line width = 0.25mm, line cap=round] (-\a, 0.0)
+    circle (0.125) node[left=1.5mm] {B};
+    \draw[dotted, line width = 0.25mm, line cap=round] (\a, 0.0)
+    circle (0.125) node[right=1.5mm] {A};
+\end{tikzpicture}
