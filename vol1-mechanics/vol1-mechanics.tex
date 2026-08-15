@@ -407,6 +407,7 @@ This agrees with our intuition in \pgRef{eq:terminal-velocity-limit}.
 
 Here is a graph to demonstrate to illustrate the behavior of the velocity:
 \begin{figure}[ht]
+    \centering
     \resizebox{\textwidth}{!}{\input{assets/drag-velocity.pgf}}
     \caption{
         Example velocity graph of an object falling with linear drag.
@@ -435,6 +436,7 @@ Integrating again to find position, we find
 where \(y_0\) is the initial height.
 To illustrate the behavior of the position, here is a an example graph:
 \begin{figure}[ht]
+    \centering
     \resizebox{\textwidth}{!}{\input{assets/drag-position.pgf}}
     \caption{
         Example position graph of an object falling with linear drag.
@@ -1149,11 +1151,14 @@ describe the motion of planets orbiting around a star.
         The line between the star and an orbiting planet
         sweeps across equal amounts of area in equal amounts of time.
     \item The square of the orbital period \(T\) is proportional to
-        the cube of the radius \(r\):
+        the cube of the semi-major axis \(r\):
         \begin{equation}
             T^2 \propto r^3
         \end{equation}
         See \pgRef{subsec:orbital-velocity} for the derivation.
+        (Strictly speaking, the derivation assumes a circular orbit,
+        but the formula for the perimeter of an ellipse is rather messy,
+        so let us pretend it is circular.)
 \end{enumerate}
 
 In elliptical \textbf{orbits}, both objects orbit around the center of mass,
@@ -1161,6 +1166,15 @@ in this context, called the \textbf{barycenter}.
 Angular momentum is conserved.
 
 % To-do: add image
+\begin{figure}
+    \centering
+    \input{assets/orbit.tikz}
+    \caption{
+        (Not drawn to scale)
+        Diagram of a planet in elliptical orbit around a star.
+        Point A is closer to the star than point B.
+    }
+\end{figure}
 
 Imagine a planet of mass \(m\) orbitting around a star.
 There are two points in its orbit: A and B.
@@ -1172,7 +1186,7 @@ Let
         points A and B, respectively.
     \item
         \(r_\mathrm{A}\) and \(r_\mathrm{B}\) be the distances from
-        the star to A and B, respectively.
+        the star to points A and B, respectively.
         Assume \(r_\mathrm{A} < r_\mathrm{B}\).
 \end{itemize}
 \begin{align}
@@ -1181,7 +1195,7 @@ Let
 \end{align}
 \begin{equation}
     \begin{aligned}
-        v_\mathrm{A} &= v_\mathrm{B} frac{r_\mathrm{B}}{r_\mathrm{A}} \\
+        v_\mathrm{A} &= v_\mathrm{B} \frac{r_\mathrm{B}}{r_\mathrm{A}} \\
         v_\mathrm{B} &= v_\mathrm{A} \frac{r_\mathrm{A}}{r_\mathrm{B}}
     \end{aligned}
 \end{equation}

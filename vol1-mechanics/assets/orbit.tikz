@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+    \tikzmath{
+        \x = 4;
+        \y = 3;
+        \c = sqrt(\x^2 - \y^2);
+    }
+
+    \draw[->] (\x, 0.0) arc [start angle=0, end angle=360, x radius=\x, y radius=\y];
+    \fill (\c, 0.0) circle (0.25) node[above=3.0mm] {Star};
+    \fill (-\x, 0.0) circle (0.125) node[left=1.5mm] {B};
+    \fill (\x, 0.0) circle (0.125) node[right=1.5mm] {A};
+\end{tikzpicture}
