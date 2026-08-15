@@ -1,0 +1,113 @@
+
+\chapter{Work, Energy, and Power}
+
+\mathTopics{\pgRef{chap:vectors}}
+
+\section{Energy}
+
+In Newtonian mechanics, the kinetic energy \(E_\mathrm{K}\) is given by
+\begin{equation} \label{eq:linear-kinetic-energy}
+    E_\mathrm{K} = \frac{1}{2} m v^2,
+\end{equation}
+where \(m\) is the mass and \(v\) is the velocity.
+
+The equation for \textbf{potential energy} \(U\) is
+\begin{equation} \label{eq:potential-energy}
+    U = - \int \vecb{F} \cdot \odif{\vecb{r}}.
+\end{equation}
+
+\subsection{Gravitational Potential Energy}
+
+Assuming a constant gravitational field,
+the difference in gravitational potential energy \(U_\mathrm{g}\) is
+\begin{equation}
+    \begin{aligned}
+        U_\mathrm{g} &= - \int - m g \odif{y} \\
+        \Delta{U_\mathrm{g}} &= m g \Delta{y}.
+    \end{aligned}
+\end{equation}
+
+If the gravitational field is from a sphere,
+we use Newton's law of gravity [\pgRef{eq:newtons-law-of-gravity}]:
+\begin{equation}
+    \begin{aligned}
+        U_\mathrm{g} &= - \int -G \frac{m_1 m_2}{r^2} \odif{r} \\
+        \Delta{U_\mathrm{g}} &= -G \frac{m_1 m_2}{\Delta{r}}.
+    \end{aligned}
+\end{equation}
+
+\subsection{Elastic Potential Energy}
+
+The \textbf{elastic potential energy} for a general spring with force
+function \(F(x)\) is
+\begin{equation} \label{eq:general-elastic-potential-energy}
+    U_\mathrm{e} = - \int F(x) \odif{x}
+\end{equation}
+
+For ideal springs, we use Hooke's law [\pgRef{eq:hookes-law}] to find
+\begin{equation}
+    \begin{aligned}
+        \Delta{U_\mathrm{e}} &= - \int - k x \odif{x} \\
+        &= \frac{1}{2} k (\Delta{x})^2
+    \end{aligned}.
+\end{equation}
+
+The derivation from \pgRef{eq:general-elastic-potential-energy} can
+also be used with non-linear springs.
+For example, for a spring with force function \(F(x) = -k x^\frac{4}{3}\),
+\begin{equation}
+    \begin{aligned}
+        U_\mathrm{e} &= - \int -k x^\frac{4}{3} \odif{x} \\
+        \Delta{U_\mathrm{e}} &= \frac{3}{7} k x^\frac{7}{3}.
+    \end{aligned}
+\end{equation}
+
+\section{Work}
+
+\textbf{Conservative forces} are ones where the \textbf{work} done is
+\textbf{path-independent},
+i.e., work along a \textbf{closed loop} is 0.
+
+The general formula for work \(W\) is
+\begin{equation} \label{eq:work}
+    \begin{aligned}
+        W &= \int_C \vecb{F}(r) \cdot \odif{\vecb{r}} \\
+        &= \int_C \vecb{F}(t) \cdot \vecb{r}'(t) \odif{t} \\
+    \end{aligned},
+\end{equation}
+where \(\vecb{r}\) is the displacement.
+
+For a straight path and constant force,
+the formula simplifies down to
+\begin{equation*}
+    W = \vecb{F} \cdot \vecb{r}.
+\end{equation*}
+
+Compare the equation for work [\pgRef{eq:work}],
+with the equation for potential energy [\pgRef{eq:potential-energy}].
+Therefore, for conservative forces,
+\begin{equation}
+    W = - \Delta{U},
+\end{equation}
+where \(U\) is the potential energy.
+
+Be careful about the signs for work.
+If a \emph{system} does positive work, it \emph{loses} potential energy.
+Conversely, if an external force acts does positive work \emph{upon the system},
+it \emph{gains} potential energy.
+
+\section{Power}
+
+Power is work done per unit of time.
+
+The average power \(P_\mathrm{avg}\) is given by
+\begin{equation}
+    P_\mathrm{avg} = \frac{W}{\Delta{t}} = \frac{\Delta{E}}{\Delta{t}},
+\end{equation}
+where \(W\) is work done, \(\Delta{t}\) is the change in time,
+and \(\Delta{E}\) is the change in energy.
+
+The instantaneous power \(P\) is given by
+\begin{equation}
+    P = \odv{E}{t}.
+\end{equation}

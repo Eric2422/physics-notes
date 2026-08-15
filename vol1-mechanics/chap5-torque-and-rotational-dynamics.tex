@@ -1,0 +1,307 @@
+
+\chapter{Torque and Rotational Dynamics}
+
+\mathTopics{\pgRef{chap:vectors}}
+
+\section{Rotational Kinematics}
+
+Rotational motion is the motion of spinning objects.
+Instead of measuring distance, we measure angle.
+
+Similarly to the linear kinematic equations under constant linear
+acceleration (\cpageref{eq:linear-kinematic}),
+there are \textbf{rotational kinematic equations} under constant
+\textbf{angular acceleration},
+namely
+\begin{subequations}
+    \begin{gather}
+        {
+            \Delta{\theta} = \omega_0 t + \frac{1}{2} \alpha t^2
+            \qquad \mathrm{or} \qquad
+            \theta_\mathrm{f} = \theta_0 + \omega_0 t + \frac{1}{2} \alpha t^2
+        } \\
+        \omega_\mathrm{f} = \omega_0 + \alpha t \\
+        \omega_\mathrm{f}^2 = \omega_0^2 + 2 \alpha \Delta{\theta} \\
+        \Delta{\theta} = \frac{\omega_0 + \omega_\mathrm{f}}{2} t
+    \end{gather}
+\end{subequations}
+where
+\begin{itemize}
+    \item \(\theta_0\) is the initial angle,
+        \(\theta_\mathrm{f}\) is the final angle,
+        and \(\Delta{\theta}\) is the change in angle;
+    \item \(\omega_0\) is the initial \textbf{angular velocity},
+        and \(\omega_\mathrm{f}\) is the final angular velocity;
+    \item \(\alpha\) is the angular acceleration;
+    \item \(t\) is the time elapsed.
+\end{itemize}
+
+The \textbf{arc length} \(s\) is given by
+\begin{equation}
+    s = r \theta,
+\end{equation}
+where \(\theta\) is the angle in radians.
+It does not work in degrees.
+
+The \textbf{tangential velocity} \(v_\mathrm{t}\) is given by
+\begin{equation}
+    v_\mathrm{t} = r \omega.
+\end{equation}
+
+The \textbf{tangential acceleration} \(a_\mathrm{t}\) is given by
+\begin{equation}
+    a_\mathrm{t} = r \alpha.
+\end{equation}
+
+\subsection{Moment of Inertia}
+
+\textbf{Moment of inertia} or \textbf{rotational inertia} (\(I\)) is
+the angular analogue of mass,
+describing how much a body resists rotational acceleration.
+
+For discrete masses, the rotational inertia \(I\) is
+\begin{equation}
+    I = \sum_i m_i r_i^2,
+\end{equation}
+where \(m_i\) is the mass of each particle,
+and \(r_i\) is the distance of each particle from the \textbf{axis of rotation}.
+
+For continuous masses, the rotational inertia \(I\) is
+\begin{gather}
+    I = \int r^2 \odif{m} \\
+    \begin{aligned}
+        \lambda(r) &= \odv{m}{r} \\
+        \odif{m} &= \lambda(r) \odif{r}
+    \end{aligned} \\
+    \therefore I = \int r^2 \lambda(r) \odif{r}.
+\end{gather}
+
+Imagine a cylindrical rod of uniform density \(\lambda\), length
+\(\ell\), and mass \(M\)
+rotating about an axis perpendicular to its length and passing
+through the center.
+
+\begin{figure}[ht]
+    \centering
+    \input{assets/rotating-rod.tikz}
+\end{figure}
+
+The moment of inertia can be derived as
+\begin{equation} \label{eq:uniform-rod-rotational-inertia}
+    \begin{aligned}
+        I &= 2 \int_{0}^{\frac{\ell}{2}} r^2 \odif{m} \\
+        &= 2 \int_{0}^{\frac{\ell}{2}} r^2 \lambda \odif{r} \\
+        &= 2 \lambda \int_{0}^{\frac{\ell}{2}} r^2 \odif{r} \\
+        &= 2 \lambda \left[ \frac{1}{3} r^3 \right]^\frac{\ell}{2}_0 \\
+        &= \frac{2 \lambda}{3} \frac{\ell^3}{8} \\
+        &= \lambda \frac{\ell^3}{12} \\
+        &= \frac{1}{12} M \ell^2
+    \end{aligned}.
+\end{equation}
+
+Note that the \(r\) in these formulas means that objects have lower
+moment of inertia
+when the axis of rotation is closer to their center of mass
+than when it is far from the center of mass,
+e.g., it is easier to spin a stick at the middle than at either end.
+A more interesting example is that a full can rolls down a slope
+faster than an empty can does.
+The full can's mass is more concentrated in the center,
+reducing its moment of inertia and thus giving it greater acceleration.
+
+If we already know the rotational inertia of an object
+when rotating about an axis passing through its center of mass,
+the \textbf{parallel axis theorem} allows us to determine the rotational inertia
+when it is rotating around a new axis parallel to the original axis.
+It states
+\begin{equation}
+    I = I_\mathrm{c.m.} + m d^2,
+\end{equation}
+where
+\begin{itemize}
+    \item \(I\) is the new moment of inertia.
+    \item \(I_\mathrm{c.m.}\) is the moment of inertia
+        around an axis passing through the center of mass.
+    \item \(m\) is the mass of the object.
+    \item \(d\) is the distance between the two parallel axes.
+\end{itemize}
+
+Using the uniform rod from \pgRef{eq:uniform-rod-rotational-inertia}
+as an example again,
+if we rotated the rod around its end instead of its center, its
+rotational inertia would be
+\begin{equation}
+    \begin{aligned}
+        I &= \frac{1}{12} M \ell^2 + M \ab( \frac{\ell}{2} )^2 \\
+        &= \frac{1}{3} M \ell^2
+    \end{aligned}
+\end{equation}
+
+\begin{figure}[ht]
+    \centering
+    \input{assets/parallel-axis-thm.tikz}
+\end{figure}
+
+\section{Torque}
+
+\textbf{Torque} (\(\vecb{\tau}\)) is the rotational analogue to linear force
+and is given by the equation
+\begin{equation}
+    \begin{aligned}
+        \vecb{\tau} &= \vecb{r} \times \vecb{F} \\
+        \tau &= r F \sin\theta,
+    \end{aligned}
+\end{equation}
+where
+\begin{itemize}
+    \item \(\vecb{\tau}\) is the torque vector and \(\tau\) is its magnitude.
+    \item \(\vecb{r}\) is the position vector from the point of rotation
+        to the point where the force is applied
+        and \(r\) is its magnitude.
+    \item \(\vecb{F}\) is the force applied and \(F\) is its magnitude.
+    \item \(\theta\) is the angle between the force and the position vector.
+\end{itemize}
+
+The relationship between the direction of the torque
+and the direction of the applied force is given by the \textbf{right-hand rule}.
+See \pgRef{chap:vectors} for details.
+
+\textbf{Newton's second law for rotational movement} states that
+\begin{equation} \label{eq:newtons-2nd-law-rotational}
+    \begin{aligned}
+        \vecb{\tau} &= I \vecb{\alpha} \\
+        \tau &= I \alpha.
+    \end{aligned}
+\end{equation}
+
+\subsection{Atwood Machines}
+
+An \textbf{Atwood machine} is a pair of masses connected by a rope
+and hung over a pulley.
+
+Let
+\begin{itemize}
+    \item \(m_1\) and \(m_2\) be
+        the masses on the left and right respectively.
+    \item \(M\) be the mass of the pulley.
+    \item \(F_1\) be the total force exerted on \(m_1\),
+        and similarly for \(F_2\).
+    \item \(F_\mathrm{T1}\) be the force of tension exerted on \(m_1\)
+        and similarly for \(F_\mathrm{T2}\).
+    \item \(R\) be the radius of the pulley.
+    \item \(\alpha\) be the angular acceleration of the pulley.
+    \item \(a\) be the linear acceleration that both masses experience.
+\end{itemize}
+
+From \pgRef{eq:newtons-2nd-law-rotational},
+\begin{equation*}
+    \begin{aligned}
+        \tau &= I \alpha \\
+        &= I \frac{a}{R} \\
+    \end{aligned}
+\end{equation*}
+\begin{equation}
+    \begin{aligned}
+        F_1 &= F_\mathrm{T1} - m_1 g \\
+        F_2 &= F_\mathrm{T2} - m_2 g \\
+        F_\mathrm{T1} - m_1 g &= m_1 a \\
+        F_\mathrm{T1} &= m_1 a + m_1 g \\
+        F_\mathrm{T2} - m_2 g &= m_2 a \\
+        F_\mathrm{T2} &= m_2 a + m_2 g \\
+    \end{aligned}
+\end{equation}
+\begin{equation}
+    \begin{aligned}
+        R F_\mathrm{T2} - R F_\mathrm{T1} &= \frac{1}{2} M R a \\
+        F_\mathrm{T2} - F_\mathrm{T1} &= \frac{1}{2} M a \\
+        m_2 a + m_2 g - \ab( m_1 a + m_1 g ) &= \frac{1}{2} M a \\
+        m_2 g - m_1 g &= \frac{1}{2} M a - m_2 a + m_1 a \\
+        \ab( m_2 - m_1 ) g &= \ab( \frac{1}{2} M - m_2 + m_1 ) a \\
+    \end{aligned}
+\end{equation}
+\begin{equation}
+    \begin{aligned}
+        a &= \frac{\ab( m_2 - m_1 ) g}{\frac{1}{2} M - m_2 + m_1} \\
+        &= \frac{2 \ab( m_2 - m_1 ) g}{M - 2 \ab( m_2 + m_1 )}
+    \end{aligned}
+\end{equation}
+
+\section{Rolling}
+
+Objects need friction to roll.
+
+If there is no friction, the object simply slides rather than rolling,
+which does not caused energy loss.
+The tangential velocity is 0,
+but the velocity of the center of mass is non-zero.
+
+If the static friction is insufficient, the object \textbf{rolls with slipping},
+which causes energy loss.
+The tangential velocity is less than the velocity of the center of mass.
+
+If the static friction reaches a critical point, it \textbf{rolls
+without slipping},
+which does not cause energy loss.
+The tangential velocity and the velocity of the center of mass are equal, i.e.,
+\begin{equation}
+    a_\mathrm{t} = a_\mathrm{c.m.}
+\end{equation}
+
+Imagine an object rolling down a ramp without slipping.
+Let
+\begin{itemize}
+    \item \(r\) be the radius of an object rolling down a ramp.
+    \item \(\alpha\) be the angular acceleration of the rolling object.
+    \item \(a\) be the linear acceleration.
+    \item \(m\) be the mass of the rolling object.
+    \item \(\theta\) be the angle of the ramp from the horizontal.
+    \item \(\mu_\mathrm{s}\) be the static friction of the ramp.
+    \item \(F_\mathrm{N}\) be the normal force experienced by the object.
+    \item \(F_\mathrm{f}\) be the frictional force experienced by the object.
+\end{itemize}
+
+Deriving \(\mu_\mathrm{s}\):
+\begin{equation}
+    \begin{aligned}
+        F_\mathrm{N} &= m g \cos\theta \\
+        \therefore F_\mathrm{f} &= \mu_\mathrm{s} m g \cos\theta
+    \end{aligned}
+\end{equation}
+\begin{equation} \label{eq:rolling-static-friction}
+    \begin{aligned}
+        m g \sin\theta - F_\mathrm{f} &= m a \\
+        m g \sin\theta - \mu_\mathrm{s} m g \cos\theta &= m a \\
+        \mu_\mathrm{s} &= - \frac{a}{g \cos\theta} + \tan\theta \\
+    \end{aligned}
+\end{equation}
+\begin{equation} \label{eq:rolling-angular-accleration}
+    \begin{aligned}
+        \tau &= I \alpha \\
+        r F_\mathrm{f} &= I \alpha \\
+        \alpha &= \frac{r F_\mathrm{f}}{I} \\
+        &= \frac{r \mu_\mathrm{s} m g \cos\theta}{I} \\
+    \end{aligned}
+\end{equation}
+Plug in \pgRef{eq:rolling-angular-accleration}:
+\begin{equation}
+    \begin{aligned} \label{eq:rolling-accleration}
+        a &= r \alpha \\
+        &= \frac{r^2 \mu_\mathrm{s} m g \cos\theta}{I} \\
+    \end{aligned}
+\end{equation}
+Plug \cref{eq:rolling-accleration} into \pgRef{eq:rolling-static-friction}.
+\begin{equation}
+    \begin{aligned}
+        \mu_\mathrm{s} &=
+        - \frac{
+            \frac{r^2 \mu_\mathrm{s} m g \cos\theta}{I}
+        }
+        {g \cos\theta}
+        + \tan\theta \\
+        &= - \frac{\mu_\mathrm{s} m r^2}{I} + \tan\theta \\
+        \mu_\mathrm{s} + \frac{\mu_\mathrm{s} m r^2}{I} &= \tan\theta \\
+        \mu_\mathrm{s} \ab( 1 + \frac{m r^2}{I} ) &= \tan\theta \\
+        \mu_\mathrm{s} &= \frac{\tan\theta}{1 + \frac{m r^2}{I}} \\
+        &= \frac{I \tan\theta}{I + m r^2}
+    \end{aligned}
+\end{equation}
