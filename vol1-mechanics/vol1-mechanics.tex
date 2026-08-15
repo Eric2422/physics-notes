@@ -1114,7 +1114,7 @@ The formula for such objects is
 \begin{subequations}
     \begin{align}
         \vecb{L} &= \vecb{r} \times \vecb{p} \\
-        L &= m v r \sin\theta.
+        L &= m v r \sin\theta. \label{eq:angular-momentum-linear-velocity}
     \end{align}
 \end{subequations}
 
@@ -1152,19 +1152,7 @@ describe the motion of planets orbiting around a star.
 \end{enumerate}
 
 In elliptical \textbf{orbits}, both objects orbit around the center of mass,
-in this context, called the \textbf{barycenter}.
-Angular momentum is conserved.
-
-% To-do: add image
-\begin{figure}
-    \centering
-    \input{assets/orbit.tikz}
-    \caption{
-        (Not drawn to scale)
-        Diagram of a planet in elliptical orbit around a star.
-        Point A is closer to the star than point B.
-    }
-\end{figure}
+in this context called the \textbf{barycenter}.
 
 Imagine a planet of mass \(m\) orbitting around a star.
 There are two points in its orbit: A and B.
@@ -1178,14 +1166,28 @@ Let
         the star to points A and B, respectively.
         Assume \(r_\mathrm{A} < r_\mathrm{B}\).
 \end{itemize}
+\begin{figure}
+    \centering
+    \input{assets/orbit.tikz}
+    \caption{
+        (Not drawn to scale)
+        Diagram of a planet with mass \(m\) orbitting around a star.
+        Point A is closer to the star than point B.
+    }
+\end{figure}
+
+From the conservation of angular momentum
+and \pgRef{eq:angular-momentum-linear-velocity},
+we know
 \begin{align}
-    L_\mathrm{A} &= L_\mathrm{B} \\
-    m v_\mathrm{A} r_\mathrm{A} &= m v_\mathrm{B} r_\mathrm{B}
+    L_\mathrm{A} &= L_\mathrm{B}, \\
+    m v_\mathrm{A} r_\mathrm{A} &= m v_\mathrm{B} r_\mathrm{B}.
 \end{align}
+If we solve for either velocity we find
 \begin{equation}
     \begin{aligned}
-        v_\mathrm{A} &= v_\mathrm{B} \frac{r_\mathrm{B}}{r_\mathrm{A}} \\
-        v_\mathrm{B} &= v_\mathrm{A} \frac{r_\mathrm{A}}{r_\mathrm{B}}
+        v_\mathrm{A} &= v_\mathrm{B} \frac{r_\mathrm{B}}{r_\mathrm{A}}, \\
+        v_\mathrm{B} &= v_\mathrm{A} \frac{r_\mathrm{A}}{r_\mathrm{B}}.
     \end{aligned}
 \end{equation}
 The above equations suggest that the planet moves faster at point A,
