@@ -1,0 +1,80 @@
+\chapter{Electric Circuits}
+
+\section{Ohm's Law}
+
+Electric currents are the flow of electrons through a conductor.
+\textbf{Electric current} (\(I\)) is measured in amperes (\unit{\ampere}),
+also informally called amps.
+Despite electrons being the carriers of current,
+the direction of current is conventionally reverse of the direction
+of electron flow,
+as if positive charges are flowing;
+this is called "\textbf{conventional current}".
+
+Electric currents occur in response
+to a difference in electric potential between two points,
+which is \textbf{voltage} (\(V\))
+and has SI units of volts (\unit{\volt}).
+
+The relation between the voltage \(V\) and current \(I\) is given by
+\textbf{Ohm's law}:
+\begin{equation} \label{eq:ohms-law}
+  V = I R
+\end{equation}
+where \(R\) is the \textbf{resistance}, which has SI units of ohms
+(\unit{\ohm}).
+
+\textbf{Resistors} are devices that produce resistance.
+From a practical viewpoint,
+electrical devices such as lights and computers may also be
+considered resistors.
+
+\section{Kirchoff's Laws}
+
+\textbf{Kirchoff's laws}:
+\begin{enumerate}
+  \item
+    \textbf{Kirchoff's junction rule}
+    states that the total input current and total output current
+    of a junction
+    must be equal to each other:
+    \begin{equation}
+      I_\mathrm{in} = I_\mathrm{out}.
+    \end{equation}
+    This follows from the conservation of charge
+    (\cpageref{sec:electric-charges}).
+  \item
+    \textbf{Kirchoff's loop rule} states that all the voltages in
+    a closed circuit
+    must add up to \(\qty{0}{\volt}\):
+    \begin{equation}
+      \sum_i V_i = 0.
+    \end{equation}
+\end{enumerate}
+
+\section{Power}
+
+\textbf{Power} (\(P\)) is the work done per unit of time
+and has units of watts (\unit{\watt}),
+which are equivalent to \unit{\joule \per \second}.
+
+In circuits,
+power is most commonly discussed in the context of heat dissipated
+from resistors.
+Volts are equal to \unit{\joule \per \coulomb},
+and amperes are equal to \unit{\coulomb \per \second}.
+Therefore, we can use dimensional analysis to find that
+\begin{equation}
+  \begin{aligned}
+    I V
+    &= \ab( \unit{\joule \per \coulomb} ) \ab( \unit{\coulomb
+    \per \second} )
+    = \unit{\joule \per \second} \\
+    &= P \\
+    P = I V.
+  \end{aligned}
+\end{equation}
+We can apply Ohm's law [\pgRef{eq:ohms-law}] to replace either
+current or voltage.
+
+\section{Gauss's Law of Magnetism}

@@ -1,0 +1,493 @@
+\chapter{Force and Translational Dynamics}
+
+\mathTopics{\pgRef{chap:vectors}}
+
+\section{Center of Mass}
+
+The \textbf{center of mass} (\textbf{c.m.}) allows us to simplify
+many physical calculations.
+In many cases, objects can be treated as point masses at their center of mass.
+
+Assuming that there is gravity,
+there are two ways to experimentally determine an object's center of mass:
+\begin{itemize}
+    \item Balancing the object, e.g., on your finger or penciltip.
+    \item Plumb lines
+        (in AP Physics C:~Mechanics, I did this with
+        irregularly-shaped cardboard cutouts)
+        \begin{enumerate}
+            \item Hang the object from any point, allowing it to hang freely.
+            \item Using a plumb bob (string with a weight),
+                find the line directly down from the point of attachment.
+            \item Mark this line on the object.
+            \item Repeat steps 1 and 3 multiple times with different points.
+            \item Find where the lines intersect.
+                This should be the center of mass.
+        \end{enumerate}
+\end{itemize}
+
+Determing the c.m. theoretically
+depends on whether the mass distribution is \textbf{discrete} or
+\textbf{continuous}.
+
+\begin{subequations}
+    For discrete masses (e.g., several balls), the center of mass is
+    \begin{equation}
+        \begin{aligned}
+            x_{\mathrm{c.m.}} = \frac{\sum_i m_i x_i}{\sum_i m_i} \\
+            y_{\mathrm{c.m.}} = \frac{\sum_i m_i y_i}{\sum_i m_i} \\
+            z_{\mathrm{c.m.}} = \frac{\sum_i m_i z_i}{\sum_i m_i}
+        \end{aligned}.
+    \end{equation}
+    More compactly, we can re-write it as the vector
+    \begin{equation}
+        \vecb{r_{\mathrm{c.m.}}} = \frac{\sum_i m_i \vecb{r}_i}{m_i}.
+    \end{equation}
+\end{subequations}
+
+For a continuous mass distribution, the c.m. is given by
+\begin{equation} \label{eq:continuous-cm}
+    \vecb{r_{\mathrm{c.m.}}} = \frac{\int \vecb{r} \odif{m}}{\int \odif{m}},
+\end{equation}
+where \(\odif{m}\) is a small amount of mass.
+
+Integrating with respect to mass is difficult,
+so let us find a way to make mass dependent on something easier,
+e.g., distance.
+
+\subsection{Linear Mass Density}
+
+\textbf{Linear mass density} is mass per length,
+e.g., kilograms per metre \unit{\kilogram \per \metre}.
+Thus, the formula is
+\begin{equation}
+    \lambda = \frac{m}{\ell}.
+\end{equation}
+
+Instantaneous linear mass density as a function of distance is
+\begin{equation}
+    \lambda(r) = \odv{m}{r},
+\end{equation}
+which we can arrange into
+\begin{equation}
+    \odif{m} = \lambda(r) \odif{r}.
+\end{equation}
+Plugging back into \pgRef{eq:continuous-cm}, the center of mass is
+\begin{equation}
+    r_{\mathrm{c.m.}} =
+    \frac{\int r \lambda(r) \odif{r}}{\int\lambda(r) \odif{r}}.
+\end{equation}
+With this equation,
+we can find the c.m. as long as the linear mass density is integrable.
+
+\subsection{Area and Volume Mass Density}
+
+For higher dimensions, area and volume mass density exist,
+with symbols of \(\sigma\) and \(\rho\)
+and SI units of \unit{\kilogram \per \metre\squared}
+and \unit{\kilogram \per \metre\cubed}, respectively.
+
+They allow us to find the c.m. in higher dimensions,
+However, this requires multivariable calculus,
+so AP Physics C:~Mechanics does not ask us to do this.
+
+For completeness, it will be included.
+Skip to \pgRef{sec:free-body-diagrams} if you are uninterested
+or unfamiliar with multivariable calculus.
+
+The concept itself is not that difficult actually.
+You just compress the higher dimension density functions
+down into a linear density function using integration.
+
+For an area density,
+\begin{equation}
+    \begin{aligned}
+        x_\mathrm{c.m.} &=
+        \frac{\iint_A x \sigma(x, y, z) \odif{A}}
+        {\iint_A \sigma(x, y) \odif{A}}, \\
+        y_\mathrm{c.m.} &=
+        \frac{\iint_A y \sigma(x, y, z) \odif{A}}
+        {\iint_A \sigma(x, y) \odif{A}}.
+    \end{aligned}
+\end{equation}
+
+For a volume density,
+\begin{equation}
+    \begin{aligned}
+        x_\mathrm{c.m.} &=
+        \frac{\iiint_V x \rho(x, y, z) \odif{V}}
+        {\iiint_V \rho(x, y, z) \odif{V}}, \\
+        y_\mathrm{c.m.} &=
+        \frac{\iiint_V y \rho(x, y, z) \odif{V}}
+        {\iiint_V \rho(x, y, z) \odif{V}}, \\
+        z_\mathrm{c.m.} &=
+        \frac{\iiint_V z \rho(x, y, z) \odif{V}}
+        {\iiint_V \rho(x, y, z) \odif{V}}.
+    \end{aligned}
+\end{equation}
+
+\section{Free-Body Diagrams} \label{sec:free-body-diagrams}
+
+Free-body diagrams are a simple means of illustrating the forces
+acting upon a body.
+Draw the body as a simple shape such as a dot or box,
+then add labeled arrows to represent the forces acting in each direction.
+Larger arrows indicate larger forces.
+
+Some examples:
+\begin{figure}[ht]
+    \centering
+    \input{assets/free-body-diagram.tikz}
+    \caption{
+        Diagram to scale.
+        \(\vecb{F_b}\) is of greater magnitude than and opposite
+        direction to \(\vecb{F_a}\).
+    }
+\end{figure}
+
+\section{Gravity}
+
+\textbf{Gravitational force} outside of a sphere is given by
+\textbf{Newton's law of gravity},
+\begin{equation} \label{eq:newtons-law-of-gravity}
+    F = G \frac{m_1 m_2}{r^2},
+\end{equation}
+where
+\begin{itemize}
+    \item \(F\) is the magnitude of the gravitational force,
+    \item \(G = \qty{6.674 30(15)e-11}{\metre\cubed \per \kilogram \per
+        \second\squared}\)
+        is the universal gravitational constant, \autocite{nist-G}
+    \item \(m_1\) and \(m_2\) are the masses of the two objects,
+    \item \(r\) is the distance between the two.
+\end{itemize}
+
+The \textbf{gravitational field} \(g\) outside of a sphere is
+\begin{equation}
+    g = G \frac{m}{r^2},
+\end{equation}
+where \(m\) is the mass of the sphere.
+
+The gravity at all points inside a hollow spherical shell is 0.
+
+For the gravitational field \emph{inside} a sphere,
+if \(r\) is the distance from the center,
+\(\rho(r)\) is the density as a function of \(r\),
+and \(R_\mathrm{i}\) is the radius of an imaginary inner sphere,
+the magnitude of the gravitational field at distance \(R_\mathrm{i}\)
+from the center is
+\begin{equation}
+    g = \frac{G}{R_\mathrm{i}^2} \int_{0}^{R_\mathrm{i}} 4\pi r^2
+    \rho(r) \odif{r}.
+\end{equation}
+The mass beyond radius \(r\) can be ignored.
+
+For a sphere of constant density \(\rho\), mass \(M\), and radius \(R\),
+the gravitational field \(\vecb{g}\) increases linearly
+as distance from the center \(R_\mathrm{i}\) increases, when
+\(R_\mathrm{i} < R\),
+\begin{equation}
+    \begin{aligned}
+        g &= \frac{G}{R_\mathrm{i}^2} \int_{0}^{R_\mathrm{i}} 4\pi
+        r^2 \rho \odif{r} \\
+        &= \frac{4 G \pi \rho}{R_\mathrm{i}^2}
+        \int_{0}^{R_\mathrm{i}} r^2 \odif{r} \\
+        &= \frac{4 G \pi \rho}{R_\mathrm{i}^2} \frac{R_\mathrm{i}^3}{3} \\
+        &= \frac{4}{3} \pi G \rho R_\mathrm{i}.
+    \end{aligned}
+\end{equation}
+
+\section{Resistive Forces}
+
+\textbf{Resistive forces} act opposite to the direction of movement.
+
+\subsection{Friction}
+
+Types of \textbf{friction}:
+\begin{itemize}
+    \item
+        \textbf{Kinetic friction} is between two surfaces with
+        non-zero relative velocity.
+        It is constant and independent of the object's velocity.
+    \item
+        \textbf{Static friction} is between two surfaces with zero
+        relative velocity
+        and increases as the force attempting to move the object increases.
+\end{itemize}
+
+The magnitude of kinetic friction \(F_\mathrm{fk}\) is given by
+\begin{equation}
+    F_\mathrm{fk} = \mu_\mathrm{k} F_\mathrm{N},
+\end{equation}
+where \(\mu_\mathrm{k}\) is the coefficient of kinetic friction
+and \(F_\mathrm{N}\) is the normal force.
+
+The magnitude of static friction \(F_\mathrm{fs}\) is
+\begin{equation}
+    F_\mathrm{fs} \le \mu_\mathrm{s} F_\mathrm{N},
+\end{equation}
+where \(\mu_\mathrm{s}\) is the coefficient of static friction
+and \(F_\mathrm{N}\) is the normal force.
+
+In all cases,
+\begin{equation}
+    \mu_\mathrm{k} < \mu_\mathrm{s}.
+\end{equation}
+In other words, kinetic friction is always less than the maximum
+static friction:
+\begin{equation}
+    F_\mathrm{fk} < \mu_\mathrm{s} F_\mathrm{N}.
+\end{equation}
+
+\subsection{Drag}
+
+\textbf{Drag} is a force that acts opposite to the movement of a body in fluid.
+The proper formula for the magnitude of drag is
+\begin{equation}
+    F_\mathrm{D} = \frac{1}{2} \rho v^2 C_\mathrm{D} A,
+\end{equation}
+where
+\begin{itemize}
+    \item \(F_\mathrm{D}\) is the magnitude of the drag force;
+    \item \(A\) is the frontal area;
+    \item \(\rho\) is the fluid density;
+    \item \(v\) is the relative velocity between the object and fluid;
+    \item \(C_\mathrm{D}\) is an experimentally-determined drag coefficient,
+        which is influenced by factors such as material, shape, etc.
+\end{itemize}
+However, this results in a differential equations problem
+that is too mathematically complicated for AP Physics C:~Mechanics.
+
+A simpler approximation for the drag \(\vecb{F}_\mathrm{D}\) is
+\begin{equation} \label{eq:linear-drag}
+    \vecb{F_\mathrm{D}} = - b \vecb{v},
+\end{equation}
+where \(b\) is an experimentally-determined constant
+and \(\vecb{v}\) is the relative velocity between the object and fluid.
+
+\textbf{Terminal velocity} is when the forces of gravity and drag
+balance each other out.
+Therefore, acceleration is 0 at terminal velocity.
+If an object is fallling vertically, with up as positive,
+the terminal velocity \(v_\mathrm{t}\) is achieved at
+\begin{equation} \label{eq:linear-terminal-velocity}
+    \begin{aligned}
+        - b v_\mathrm{t} - m g &= 0 \\
+        - b v_\mathrm{t} &= m g \\
+        v_\mathrm{t} &= - \frac{m}{b} g. \\
+    \end{aligned} \\
+\end{equation}
+
+Intuitively, we know that a falling object must approach terminal velocity.
+Thus, we can conjecture that
+\begin{equation} \label{eq:terminal-velocity-limit}
+    \lim_{t \to \infty} v = v_\mathrm{t}.
+\end{equation}
+
+Now that we know the terminal velocity of a falling object,
+let us derive its velocity as a function of time.
+\footnote{
+    I do not have the derivations
+    for the position and velocity of fallling objects with linear
+    drag in my notes,
+    so I do not remember the exact process taught in class.
+    The following has been solved
+    using a technique I learned from a later differential equations class,
+    so it probably differs from what was taught in AP Physics C:~Mechanics.
+}
+We start with Newton's second law of motion [\pgRef{eq:newtons-2nd-law}]
+and \pgRef{eq:linear-drag},
+finding that
+\begin{subequations}
+    \begin{gather} \label{eq:drag-diff-eq}
+        \begin{aligned}
+            F &= m a \\
+            - m g - bv &= m a \\
+            - m g - bv &= m \odv{v}{t} \\
+            \odv{v}{t} + \frac{b}{m} v &= - g \\
+            \odv{v}{t} e^{\frac{b}{m} t} + \frac{b}{m} e^{\frac{b}{m}
+            t} v &= - g e^{\frac{b}{m} t} \\
+            \odv{}{t} \left[ v e^{\frac{b}{m} t} \right] &= - g
+            e^{\frac{b}{m} t} \\
+            v e^{\frac{b}{m} t} &= \int - g e^{\frac{b}{m} t} \odif{t} \\
+            v e^{\frac{b}{m} t} &= - \frac{m}{b} g e^{\frac{b}{m} t} + C \\
+            v &= - \frac{m}{b} g + C e^{- \frac{b}{m} t}. \\
+        \end{aligned}
+    \end{gather}
+    Solving for \(C\) using the initial condition \(v(0) = v_0\), we obtain
+    \begin{gather}
+        \begin{aligned}
+            v_0 &= - \frac{m}{b} g + C e^{- \frac{b}{m} 0} \\
+            v_0 &= - \frac{m}{b} g + C \\
+            C &= v_0 + \frac{m}{b} g.
+        \end{aligned}
+    \end{gather}
+    Therefore, by plugging \(C\) back into \pgRef{eq:drag-diff-eq},
+    the velocity is
+    \begin{equation}
+        v = - \frac{m}{b} g + \ab( v_0 + \frac{m}{b} g ) e^{- \frac{b}{m} t}.
+    \end{equation}
+    Using terminal velocity as given in \pgRef{eq:linear-terminal-velocity},
+    the velocity of a falling body with linear drag is
+    \begin{equation}
+        v = v_\mathrm{t} + \ab( v_0 - v_\mathrm{t} ) e^{- \frac{b}{m} t}.
+    \end{equation}
+\end{subequations}
+As \(t\) approaches infinity, the exponential component approaches 0.
+Therefore, the limit is
+\begin{equation*}
+    \lim_{t \to \infty} v = v_\mathrm{t}.
+\end{equation*}
+This agrees with our intuition in \pgRef{eq:terminal-velocity-limit}.
+
+Here is a graph to demonstrate to illustrate the behavior of the velocity:
+\begin{figure}[ht]
+    \centering
+    \resizebox{\textwidth}{!}{\input{assets/drag-velocity.pgf}}
+    \caption{
+        Example velocity graph of an object falling with linear drag.
+        For this example,
+        the gravity \(g = \qty{9.80665}{\metre \per \second}\),
+        the drag coefficient \(b = \qty{1}{\newton \per \metre \per \second}\),
+        the mass \(m = \qty{1}{\kilogram}\),
+        and the initial velocity \(v_0 = \qty{0}{\metre \per \second}\).
+    }
+\end{figure}
+
+Integrating again to find position, we find
+\begin{equation}
+    \begin{aligned}
+        \odv{y}{t} &= v_\mathrm{t} + \ab( v_0 - v_\mathrm{t} ) e^{-
+        \frac{b}{m} t} \\
+        y &= \int v_\mathrm{t} + \ab( v_0 - v_\mathrm{t} ) e^{-
+        \frac{b}{m} t} \odif{t} \\
+        y &= y_0
+        + v_\mathrm{t} t
+        + \ab( v_\mathrm{t} - v_0 )
+        \frac{m}{b}
+        e^{- \frac{b}{m} t},
+    \end{aligned}
+\end{equation}
+where \(y_0\) is the initial height.
+To illustrate the behavior of the position, here is a an example graph:
+\begin{figure}[ht]
+    \centering
+    \resizebox{\textwidth}{!}{\input{assets/drag-position.pgf}}
+    \caption{
+        Example position graph of an object falling with linear drag.
+        For this example,
+        the gravity \(g = \qty{9.80665}{\metre \per \second}\),
+        the drag coefficient \(b = \qty{1}{\newton \per \metre \per \second}\),
+        the mass \(m = \qty{1}{\kilogram}\),
+        the initial velocity \(v_0 = \qty{0}{\metre \per \second}\),
+        and the initial position \(y_0 = \qty{0}{\metre}\).
+    }
+\end{figure}
+The graph becomes approximately linear as time \(t\) approaches infinity.
+
+\section{Springs}
+
+\textbf{Ideal springs} are springs that perfectly follow \textbf{Hooke's law},
+\begin{equation} \label{eq:hookes-law}
+    F_\mathrm{s} = - k \Delta{x},
+\end{equation}
+where
+\begin{itemize}
+    \item \(F_\mathrm{s}\) is the magnitude of the spring force;
+    \item \(k\) is the \textbf{spring constant},
+        essentially a measure of how stiff the spring is,
+        with SI units of \unit{\newton \per \metre};
+    \item \(\Delta{x}\) is the displacement of the end of the spring
+        from its rest position.
+\end{itemize}
+
+\subsection{Multiple Springs}
+
+Springs can be connected in \textbf{series} or \textbf{parallel}.
+In either case, they act like a single spring.
+
+Springs in series are connected side by side.
+Each spring experiences the same force.
+The net spring constant \(k_\mathrm{net}\)is given by
+\begin{equation}
+    \frac{1}{k_\mathrm{net}} = \sum_i \frac{1}{k_i}.
+\end{equation}
+In practice,
+this means that springs connected in series are equivalent to a
+single weaker spring.
+
+Springs in parallel are connected end to end.
+Each spring stretches the same distance.
+The net spring constant is given by
+\begin{equation}
+    k_\mathrm{net} = \sum_i k_i.
+\end{equation}
+In practice,
+this means that springs connected in parallel are equivalent to a
+single stronger spring.
+
+\section{Circular Motion}
+
+\textbf{Centripetal acceleration} is "center-seeking" acceleration.
+
+Moving in a circle with constant speed is \textbf{uniform circular motion}.
+Its velocity \(v\) is given by
+\begin{equation}
+    v = \frac{2 \pi r}{T},
+\end{equation}
+where \(r\) is the radius and \(T\) is the revolution period.
+Its centripetal acceleration \(a_\mathrm{c}\) is
+\begin{equation} \label{eq:centripetal-acceleration}
+    a_\mathrm{c} = \frac{2 \pi v}{T} = \frac{4 \pi ^2 r}{T^2} = \frac{v^2}{r}.
+\end{equation}
+
+The revolution period \(T\) is
+\begin{equation} \label{eq:revolution-period}
+    T = \frac{2 \pi r}{v},
+\end{equation}
+where \(r\) is the revolution radius and \(v\) is the tangential velocity.
+
+The \textbf{centripetal force} \(F_\mathrm{c}\) is
+\begin{equation} \label{eq:centripetal-force}
+    F_\mathrm{c} = m \frac{v^2}{r}.
+\end{equation}
+
+\textbf{Critical velocity} is the minimum velocity need for circular motion.
+To find the critical velocity for a given centripetal force \(F\),
+use \pgRef{eq:centripetal-force}.
+\begin{equation}
+    \begin{aligned}
+        m \frac{v^2}{r} &= F \\
+        v &= \sqrt{\frac{F r}{m}}
+    \end{aligned}
+\end{equation}
+
+\subsection{Orbital Velocity} \label{subsec:orbital-velocity}
+
+Let \(m\) and \(M\) be the masses of two bodies such that \(m \ll M\).
+Combing Newton's law of gravity,
+\pgRef{eq:newtons-law-of-gravity},
+with \pgRef{eq:centripetal-force}, we find
+\begin{equation}
+    \begin{aligned}
+        G \frac{M m}{r^2} &= m \frac{v^2}{r} \\
+        G \frac{M}{r} &= v^2 \\
+        v &= \sqrt{G \frac{M}{r}}
+    \end{aligned}.
+\end{equation}
+Using \pgRef{eq:revolution-period}, we find the period \(T\) is
+\begin{equation}
+    \begin{aligned}
+        \frac{2 \pi r}{T} &= \sqrt{G \frac{M}{r}} \\
+        \frac{T}{2 \pi r} &= \frac{1}{\sqrt{G \frac{M}{r}}} \\
+        &= \sqrt{\frac{r}{G M}} \\
+        T &= \frac{2 \pi r^{3/2}}{\sqrt{G M}} \\
+        T^2 &= \frac{4 \pi^2}{G M} r^3 \\
+    \end{aligned}.
+\end{equation}
+
+This derivation leads us to \textbf{Kepler's third law of planetary motion}:
+\begin{equation} \label{eq:kepler-3rd-law}
+    T^2 \propto r^3.
+\end{equation}
+For more details on planetary motion, see \pgRef{sec:orbits}.

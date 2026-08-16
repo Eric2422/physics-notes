@@ -1,0 +1,211 @@
+\chapter{Oscillations}
+
+\mathTopics{\pgRef{chap:vectors}, \pgRef{chap:ellipses}}
+
+\section{Simple Harmonic Motion}
+
+\textbf{Periodic motion} is any specific motion that repeats periodically.
+
+\textbf{Periodic oscillation} is a specific type of periodic motion
+where an object moves back and forth in a fix location.
+
+\textbf{Simple harmonic motion} is a type of periodic oscillation
+where the net force is only a restoring force
+that is a function of the object's distance from equilibrium.
+
+Oscillations can be defined by three parameters.
+Let
+\begin{itemize}
+    \item \(A\) be the \textbf{amplitude},
+        which is half the difference between the maximum and minimum values.
+        Its SI units depends on what we are measuring,
+        e.g., \unit{\metre} for distance, \unit{\radian} for angle,
+        \unit{\metre \per \second} for velocity,
+        \unit{\ampere} for current, etc.
+    \item \(\omega\) be the \textbf{angular frequency},
+        which is a measure of how fast the oscillation cycles
+        and has SI units of \unit{\radian \per \second}.
+    \item \(\phi\) be the \textbf{phase},
+        which is the horizontal translation of the cycle,
+        and has SI units of \unit{\radian}.
+\end{itemize}
+Thus, the general form looks like
+\begin{equation}
+    f(t) = A \cos(\omega t + \phi).
+\end{equation}
+
+Several other measurements are related to angular frequency.
+
+\textbf{Rotational frequency} or simply \textbf{frequency} (\(f\))
+is the number of oscillations per unit of time,
+with SI units of hertz (\unit{\hertz}) or \unit{\per \second}.
+The relationship between angular frequency and rotational frequency is
+\begin{equation}
+    f = \frac{\omega}{2 \pi},
+\end{equation}
+where \(\omega\) is the angular frequency.
+
+\textbf{Period} (\(T\)) is the time for one complete oscillation,
+with SI units of \unit{\second}.
+The period \(T\) can be expressed in terms of angular frequency \(\omega\) as
+\begin{equation}
+    T = \frac{2 \pi}{\omega}.
+\end{equation}
+
+\section{Spring Oscillators}
+
+\textbf{Spring oscillators} are composed of a mass
+attached to the end of a spring.
+
+Let
+\begin{itemize}
+    \item \(x\) be the position of the mass.
+    \item \(a\) be the acceleration of the mass.
+    \item \(m\) be the mass attached to the spring.
+    \item \(k\) be the spring constant of the spring.
+    \item \(t\) be the time.
+\end{itemize}
+
+The position function can be derived from
+\begin{equation}
+    \begin{aligned}
+        F &= m a \\
+        -k x &= m \odv[2]{x}{t} \\
+        \odv[2]{x}{t} &= - \frac{k}{m} x.
+    \end{aligned}
+\end{equation}
+We know that the answer when differentiated twice
+is is proportional to the negative of itself,
+so we can guess the solution
+\begin{align}
+    x(t) &= A \cos(\omega t + \phi) \\
+    v(t) = \odv{x}{t} &= - A \omega \sin(\omega t + \phi) \\
+    a(t) = \odv{v}{t} = \odv[2]{x}{t} &= - A \omega^2 \cos(\omega t + \phi),
+\end{align}
+where
+\begin{itemize}
+    \item \(A\) is the amplitude, which is determined by our initial conditions.
+    \item \(\omega\) is the angular frequency as given by the equation
+        \begin{equation}
+            \omega = \sqrt{\frac{k}{m}}
+        \end{equation}
+    \item \(\phi\) is the phase, which is determined by our initial conditions.
+\end{itemize}
+
+\section{Pendulums}
+
+A \textbf{pendulum} is a swinging rod,
+possibly with a mass attached to the end.
+A grandfather clock is a good example of a pendulum.
+
+The oscillation of pendulums is determined by gravity.
+
+\subsection{Ideal Pendulums}
+
+For ideal pendulums, i.e., ones with negligible moment of inertia,
+the angle function can be derived as following:
+\begin{equation} \label{eq:pendulum-forces}
+    \begin{aligned}
+        F = m a \\
+        - m g \sin\theta = m a \\
+        - g \sin\theta = a \\
+    \end{aligned}
+\end{equation}
+The arc length \(s\) is given by
+\begin{equation}
+    \begin{aligned}
+        s = \ell \theta. \\
+        \therefore a = \ell \odv[2]{\theta}{t}
+    \end{aligned}
+\end{equation}
+Plug back into \cref{eq:pendulum-forces}.
+\begin{equation}
+    \begin{aligned}
+        - g \sin\theta &= \ell \odv[2]{\theta}{t} \\
+        \odv[2]{\theta}{t} + \frac{g}{\ell} \sin\theta &= 0
+    \end{aligned}
+\end{equation}
+The \textbf{small-angle approximation} tells us that for sufficiently
+small angles
+(\qty{0.24}{\radian} gives less than 1\% error),
+\begin{gather}
+    \sin\theta \approx \theta \\
+    \therefore \odv[2]{\theta}{t} + \frac{g}{\ell} \theta \approx 0.
+\end{gather}
+If we guess like we did for the spring oscillators, we find that
+\begin{equation}
+    \theta(t) = A \cos(\omega t + \phi).
+\end{equation}
+where
+\begin{equation}
+    \omega = \sqrt{\frac{g}{\ell}}
+\end{equation}
+
+\subsection{Physical Pendulums}
+
+\textbf{Physical pendulums} have non-negligible moment of inertia.
+
+Let \(r\) be the distance between the axis of rotation and center of mass.
+The angle function for a physical pendulum is derived as follows:
+\begin{equation}
+    \begin{aligned}
+        \tau &= I \alpha \\
+        &= I \odv[2]{\theta}{t} \\
+        - r m g \sin\theta &= I \odv[2]{\theta}{t} \\
+        \odv[2]{\theta}{t} + \frac{r m g \sin\theta}{I} &= 0 \\
+        \odv[2]{\theta}{t} + \frac{r m g \theta}{I} &\approx 0 \\
+    \end{aligned}
+\end{equation}
+We get
+\begin{equation}
+    \theta(t) = A \cos(\omega t + \phi),
+\end{equation}
+where
+\begin{equation}
+    \omega = \sqrt{\frac{r m g}{I}}
+\end{equation}
+
+\section{Torsion Pendulums}
+
+\textbf{Torsion} is a torque caused by twisting an object around its
+axis of rotation.
+In a \textbf{torsion pendulum}, an object is hung on a string,
+and the string is twisted,
+which creates a restorative force of torsion
+that causes the object to rotate in an oscillatory manner.
+For a torsion pendulum,
+the SI units for the spring constant \(k\) is \unit{\newton \per \radian}.
+
+Skipping the differential equations, the derivation for a torsion pendulum is
+\begin{equation}
+    \begin{aligned}
+        - \tau &= I \alpha \\
+        - k \theta &= I \odv[2]{\theta}{t} \\
+        - \frac{k}{I} \theta &= \odv[2]{\theta}{t} \\
+        \theta(t) = \theta_\mathrm{max} \cos(\omega t + \phi),
+    \end{aligned}
+\end{equation}
+where
+\begin{itemize}
+    \item \(\theta_\mathrm{max}\) is the amplitude.
+        If the initial angular velocity is 0,
+        then \(\theta_\mathrm{max}\) will be the initial angle.
+        Elsewise, you will have to solve for \(\theta_\mathrm{max}\)
+        using the initial angle and angular velocity.
+    \item
+        \begin{equation}
+            \omega = \sqrt{\frac{k}{I}}
+        \end{equation}
+        is the angular frequency.
+    \item \(\phi\) is the phase shift.
+        If the initial angular velocity is 0, \(\phi = 0\).
+        Elsewise, you will have to solve for \(\phi\)
+        using the initial angle and angular velocity.
+\end{itemize}
+
+\section{Resonance}
+
+When something is oscillating,
+and an external force is applied at the same frequency as the oscillation,
+the amplitude of the oscillation will increase.
+This phenomena is known as \textbf{resonance}.

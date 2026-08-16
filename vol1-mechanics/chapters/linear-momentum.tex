@@ -1,0 +1,86 @@
+\chapter{Linear Momentum}
+
+\mathTopics{\pgRef{chap:vectors}}
+
+\section{Momentum}
+
+\textbf{Momentum} (\(\vecb{p}\)) has SI units of \unit{\kilogram
+\metre \per \second}
+or \unit{\newton \second},
+and is given by the formula
+\begin{equation}
+    \vecb{p} = m \vecb{v},
+\end{equation}
+where \(m\) is the mass and \(\vecb{v}\) is the velocity.
+
+A system's momentum is the sum of its parts' momenta, i.e.,
+\begin{equation}
+    \vecb{p}_\mathrm{system} = \sum_i m_i \vecb{v}_i.
+\end{equation}
+
+For objects with constant mass,
+\begin{equation}
+    \Delta{\vecb{p}} = m \Delta{\vecb{v}}.
+\end{equation}
+
+\begin{equation} \label{eq:force-momentum}
+    \begin{aligned}
+        \odv{\vecb{p}}{t} &= m \odv{\vecb{v}}{t} \\
+        \odv{\vecb{p}}{t} &= m \vecb{a} \\
+        \vecb{F} &= \odv{\vecb{p}}{t}
+    \end{aligned}
+\end{equation}
+
+In integral form,
+\begin{equation}
+    \int \vecb{F}_\mathrm{net} \odif{t} = \Delta{\vecb{p}}.
+\end{equation}
+
+\section{Impulse}
+
+\textbf{Impulse} (\(\vecb{J}\)) has SI units of \unit{\newton \second}
+or \unit{\kilogram \metre \per \second}.
+In the simple case where \(\odv{\vecb{F}}{t} = 0\),
+\begin{equation}
+    \vecb{J} = \vecb{F} t.
+\end{equation}
+The more general equation is
+\begin{equation}
+    \vecb{J} = \int \vecb{F}(t) \odif{t} = \Delta{\vecb{p}},
+\end{equation}
+where \(\Delta{\vecb{p}}\) is the change in momentum.
+
+\section{Conservation of Momentum}
+
+Because of \pgRef{eq:force-momentum}
+and \hyperref[itm:newtons-1st-law]{Newton's first law of motion}
+(\cpageref{itm:newtons-1st-law}),
+when there is no external force, \(\Delta{\vecb{p}} = \vecb{0}\),
+i.e, the final and initial momentum have to be equal.
+
+Types of \textbf{collisions}:
+\begin{itemize}
+    \item
+        \textbf{Elastic}
+        \begin{itemize}
+            \item Kinetic energy is conserved.
+            \item Objects bounce apart with the same energy they collided with.
+        \end{itemize}
+    \item
+        \textbf{Inelastic}
+        \begin{itemize}
+            \item Kinetic energy is lost.
+            \item Objects bounce apart with less energy or not all.
+                The case where the objects do not bounce at all
+                is known as \textbf{perfectly inelastic}
+        \end{itemize}
+    \item
+        \textbf{Explosion}
+        \begin{itemize}
+            \item Kinetic energy is gained.
+            \item Objects bounce apart.
+        \end{itemize}
+\end{itemize}
+
+Practically speaking, no collision is perfectly elastic or inelastic;
+they are on a sliding continuum between the two.
