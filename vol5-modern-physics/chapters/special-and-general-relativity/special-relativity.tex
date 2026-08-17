@@ -1,1 +1,51 @@
 \chapter{Special Relativity}
+
+\section{Relativistic Energy}
+
+The energy \(E\) of an object moving at relativistic speed \(v\) is
+\begin{equation} \label{eq:total-relativistic-energy}
+    E = \frac{m c^2}{\sqrt{1 - \frac{v^2}{c^2}}} = \gamma m c^2,
+\end{equation}
+where
+\(m\) is the mass of the object,
+\(c \coloneq \qty{299792458}{\metre \per \second}\) is the speed of
+light in a vacuum,
+and
+\begin{equation}
+    \gamma \coloneq \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}}.
+\end{equation}
+
+From \pgRef{eq:total-relativistic-energy},
+we can conclude that the energy \(E_\mathrm{S}\) of a stationary object
+(i.e., \(v = \qty{0}{\metre \per \second}\))
+is
+\begin{equation}
+    E_\mathrm{S} = \frac{m c^2}{\sqrt{1 - \frac{0}{c^2}}} = m c^2.
+\end{equation}
+Thus, the kinetic energy \(E_\mathrm{K}\) is
+\begin{equation}
+    E_\mathrm{K}
+    = E - E_\mathrm{S}
+    = m c^2 (\gamma - 1).
+\end{equation}
+
+\begin{subequations}
+    In the limit where \(v \ll c\),
+    we can use the binomial approximation to find
+    \begin{equation}
+        \begin{aligned}
+            \gamma
+            = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}}
+            &= \ab(1 - \frac{v^2}{c^2})^{-\frac{1}{2}}
+            &\approx 1 + \frac{v^2}{2c^2}.
+        \end{aligned}
+    \end{equation}
+    Therefore, in the classical limit,
+    \begin{equation}
+        E_\mathrm{K}
+        \approx m c^2 (1 + \frac{v^2}{2c^2} - 1)
+        = m v^2
+    \end{equation}
+\end{subequations}
+
+\section{Relativistic Momentum}
