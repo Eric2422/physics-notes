@@ -19,7 +19,7 @@ and has SI units of volts (\unit{\volt}).
 The relation between the voltage \(V\) and current \(I\) is given by
 \textbf{Ohm's law}:
 \begin{equation} \label{eq:ohms-law}
-  V = I R
+    V = I R
 \end{equation}
 where \(R\) is the \textbf{resistance}, which has SI units of ohms
 (\unit{\ohm}).
@@ -33,23 +33,19 @@ considered resistors.
 
 \textbf{Kirchoff's laws}:
 \begin{enumerate}
-  \item
-    \textbf{Kirchoff's junction rule}
-    states that the total input current and total output current
-    of a junction
-    must be equal to each other:
-    \begin{equation}
-      I_\mathrm{in} = I_\mathrm{out}.
-    \end{equation}
-    This follows from the conservation of charge
-    (\cpageref{sec:electric-charges}).
-  \item
-    \textbf{Kirchoff's loop rule} states that all the voltages in
-    a closed circuit
-    must add up to \(\qty{0}{\volt}\):
-    \begin{equation}
-      \sum_i V_i = 0.
-    \end{equation}
+    \item \textbf{Kirchoff's junction rule}
+        states that the total input current and total output current
+        of a junction must be equal to each other:
+        \begin{equation}
+            I_\mathrm{in} = I_\mathrm{out}.
+        \end{equation}
+        This follows from the conservation of charge
+        (\cpageref{sec:electric-charges}).
+    \item \textbf{Kirchoff's loop rule} states that all the voltages
+        in a closed circuit must add up to \(\qty{0}{\volt}\):
+        \begin{equation}
+            \sum_i V_i = 0.
+        \end{equation}
 \end{enumerate}
 
 \section{Power}
@@ -65,14 +61,14 @@ Volts are equal to \unit{\joule \per \coulomb},
 and amperes are equal to \unit{\coulomb \per \second}.
 Therefore, we can use dimensional analysis to find that
 \begin{equation}
-  \begin{aligned}
-    I V
-    &= \ab( \unit{\joule \per \coulomb} ) \ab( \unit{\coulomb
-    \per \second} )
-    = \unit{\joule \per \second} \\
-    &= P \\
-    P = I V.
-  \end{aligned}
+    \begin{aligned}
+        I V
+        &= \ab(\unit{\joule \per \coulomb})
+        \ab(\unit{\coulomb\per \second})
+        = \unit{\joule \per \second} \\
+        &= P \\
+        P &= I V.
+    \end{aligned}
 \end{equation}
 We can apply Ohm's law [\pgRef{eq:ohms-law}] to replace either
 current or voltage.
