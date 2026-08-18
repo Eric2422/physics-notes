@@ -118,9 +118,9 @@ in analogy with flowing water.
 
 The general formula for flux is
 \begin{equation}
-    \Phi = \iint_S \vecb{F}(\vecb{r}) \cdot \odif{\vecb{S}},
+    \Phi = \iint_S \vecb{F}(\vecb{r}) \cdot \odif{\vecb{A}},
 \end{equation}
-where \(S\) is the surface to integrate over
+where \(\vecb{A}\) is the area vector
 and \(\vecb{F}(\vecb{r})\) is the function of the field in 3D space.
 
 For introductory electricity and magnetism,
@@ -161,7 +161,7 @@ This means that only electric charges inside a closed surface
 contributes to the electric flux,
 which leads us to \textbf{Gauss's law} in integral form:
 \begin{equation} \label{eq:gausss-law}
-    \oiint \vecb{E} \cdot \odif{\vecb{A}} = \frac{q}{\epsilon_0},
+    \oiint_S \vecb{E} \cdot \odif{\vecb{A}} = \frac{q}{\epsilon_0},
 \end{equation}
 where
 \begin{itemize}
@@ -213,3 +213,49 @@ let \(q_1 = q\) and multiply by the other particle's charge \(q_2\):
     \end{aligned}
 \end{equation*}
 This leads us back to Coulomb's law [\pgRef{eq:coulombs-law}].
+
+We can also apply Gauss's law to the electric field inside of a charged sphere.
+If we draw our imaginary surface inside a sphere,
+the charge outside of it can be ignored.
+Let
+\begin{itemize}
+    \item \(r\) be the distance from the center of the sphere,
+    \item \(R_\mathrm{S}\) is the radius of the imaginary Gaussian surface,
+    \item \(R\) be the radius of the sphere,
+    \item \(\rho(r)\) be the charge density as a function of radius.
+\end{itemize}
+The charge inside the sphere is thus
+\begin{equation}
+    q = \int_0^{\mathrm{R_\mathrm{S}}} 4 \rho(r) \pi r^2 \odif{r}.
+\end{equation}
+Similarly to the above derivation of Coulomb's law,
+the flux \(\Phi_E\) is \(4 E \pi r^2\),
+so we find
+\begin{equation}
+    \begin{aligned}
+        4 E \pi R_\mathrm{S}^2
+        &= \frac{
+            \int_0^{\mathrm{R_\mathrm{S}}} 4 \rho(r) \pi r^2 \odif{r}
+        }{\epsilon_0} \\
+        E
+        &= \frac{
+            \int_0^{\mathrm{R_\mathrm{S}}} \rho(r) r^2 \odif{r}
+        }{R_\mathrm{S}^2 \epsilon_0} \\
+    \end{aligned}
+\end{equation}
+In the case where \(\rho(r)\) is a constant density \(\rho\),
+we find
+\begin{equation}
+    \begin{aligned}
+        E
+        &= \frac{
+            \int_0^{\mathrm{R_\mathrm{S}}} \rho r^2 \odif{r}
+        }{R_\mathrm{S}^2 \epsilon_0} \\
+        &= \frac{
+            \rho R_\mathrm{S}^3
+        }{3 R_\mathrm{S}^2 \epsilon_0} \\
+        &= \frac{
+            \rho R_\mathrm{S}
+        }{3 \epsilon_0} \\
+    \end{aligned}
+\end{equation}
