@@ -58,13 +58,25 @@ and a \emph{positive} value for repulsion.
 and have SI units of newtons per coulomb (\unit{\newton \per \coulomb}).
 They are useful for cases where we only know the charge of one particle,
 or wish to find the force exerted on multiple different particles.
-The electric field formula for a particle or sphere is
-\begin{equation} \label{eq:sphere-electric-field}
-    \begin{aligned}
-        E &= k \frac{q}{r^2} \\
-        &= \frac{q}{4 \pi \epsilon_0 r^2}.
-    \end{aligned}
-\end{equation}
+
+\begin{subequations}
+    The magnitude of the a charged sphere's electric field is given by
+    \begin{equation} \label{eq:sphere-electric-field}
+        \begin{aligned}
+            E &= k \frac{q}{r^2} \\
+            &= \frac{q}{4 \pi \epsilon_0 r^2}.
+        \end{aligned}
+    \end{equation}
+    In vector form the equation is
+    \begin{equation} \label{eq:sphere-electric-field-vector}
+        \begin{aligned}
+            \vecb{E} &= k \frac{q}{\|\vecb{r}\|^2} \hat{\vecb{r}} \\
+            &= \frac{q}{4 \pi \epsilon_0 \|\vecb{r}\|^2}  \hat{\vecb{r}}.
+        \end{aligned}
+    \end{equation}
+\end{subequations}
+By convention,
+the field points in the direction that a positive particle would move in.
 
 To find the force exerted on a charged particle,
 we multiply the electric field it is in by its charge,
