@@ -1,8 +1,33 @@
 \chapter{Electric Potential}
 
-\textbf{Electric potential energy} is denoted by \(U_E\)
-and has SI units of joules (\unit{\joule}).
+\textbf{Electric potential energy} (\(U_E\))
+has SI units of joules (\unit{\joule}).
+Electric potential energy can be found by integrating electric force
+over distance,
+i.e.,
+\begin{equation}
+    U_E = - \int \vecb{F_E} \cdot \odif{\vecb{r}}
+\end{equation}
 
-\textbf{Electric potential} is denoted by \(V_E\) or simply \(V\)
-and has SI units of joules per coulomb (\unit{\joule \per \coulomb})
+\textbf{Electric potential} (\(V_E\) or simply \(V\))
+has SI units of joules per coulomb (\unit{\joule \per \coulomb})
 or volts (\unit{\volt}).
+The difference in electric potential between two points
+is also known as \textbf{voltage}.
+Electric potential can be found be integrating electric field over distance,
+i.e.,
+\begin{equation}
+    V = - \int \vecb{E} \cdot \odif{\vecb{r}}
+\end{equation}
+If we apply this to Coulomb's law [\pgRef{eq:coulombs-law}],
+we find
+\begin{gather}
+    \begin{aligned}
+        V &= \int \frac{k q}{r^2} \odif{r} \\
+        &= \int - \frac{k q}{r} \odif{r}.
+    \end{aligned}
+\end{gather}
+
+Similarly to how we can multiply electric field by charge to find
+electric force,
+we can multiply electric potential by charge to find electric potential energy.
