@@ -132,18 +132,15 @@ For the case of a uniform electric field passing through an flat open surface,
 the flux equation simplifies to
 \begin{equation}
     \begin{aligned}
-        \Phi_E = \vecb{E} \cdot \vecb{A} \\
-        \Phi_E = E A \cos\theta
+        \Phi_E = \vecb{E} \cdot \vecb{A}
     \end{aligned}
 \end{equation}
 where
 \begin{itemize}
     \item \(\Phi_E\) is the electric flux,
-    \item \(\vecb{E}\) is the electric field vector and \(E\) is its magnitude,
-    \item \(\vecb{A}\) is area vector and \(A\) is its magnitude,
-        Note \(\vecb{A}\) is in the direction of the area's normal vector,
-    \item \(\theta\) is the angle between the electric field
-        and the area's normal vector.
+    \item \(\vecb{E}\) is the electric field vector,
+    \item \(\vecb{A}\) is the area vector.
+        Note \(\vecb{A}\) is in the direction of the area's normal vector.
 \end{itemize}
 Our surface in this case is infinitely thin.
 By intuition, when \(\theta\) is \(\qty{90}{\degree}\),
@@ -181,7 +178,7 @@ Let
         and \(A\) be its magnitude,
     \item \(r\) be the radius of the spherical surface,
     \item \(\vecb{E}\) be the electric field and \(E\) be its magnitude,
-    \item \(\Phi_E\) is the electric flux,
+    \item \(\Phi_E\) be the electric flux,
     \item \(q\) be the enclosed charge.
 \end{itemize}
 The surface area of a sphere is given by
@@ -189,11 +186,12 @@ The surface area of a sphere is given by
     A = 4 \pi r^2.
 \end{equation}
 Since electric fields radiate in a sphere,
-the electric field and area are orthogonal at all points:
+the electric field and surface area are orthogonal at all points:
 \begin{equation}
     \vecb{E} \cdot \odif{\vecb{A}} = E \odif{A}.
 \end{equation}
-If we integrate the electric field over the surface of the sphere, we find
+Since electric field is of equal magnitude at all points,
+we can multiply the electric field by area to find the flux is
 \begin{equation}
     \Phi_E = 4 E \pi r^2.
 \end{equation}
