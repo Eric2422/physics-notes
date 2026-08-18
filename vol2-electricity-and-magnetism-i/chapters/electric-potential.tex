@@ -21,7 +21,7 @@ Electric potential energy can be found by integrating electric force
 over distance,
 i.e.,
 \begin{equation}
-    U_E = - \int \vecb{F_E} \cdot \odif{\vecb{r}}
+    U_E = - \int_C \vecb{F_E} \cdot \odif{\vecb{r}}
 \end{equation}
 
 \section{Electric Potential}
@@ -34,7 +34,7 @@ is also known as \textbf{voltage}.
 Electric potential can be found be integrating electric field over distance,
 i.e.,
 \begin{equation}
-    V = - \int \vecb{E} \cdot \odif{\vecb{r}}
+    V = - \int_C \vecb{E} \cdot \odif{\vecb{r}}
 \end{equation}
 If we apply this to Coulomb's law [\pgRef{eq:coulombs-law}],
 we find
@@ -48,3 +48,8 @@ we find
 Similarly to how we can multiply electric field by charge
 to find electric force,
 we can multiply electric potential by charge to find electric potential energy.
+
+Electric fields are a \textbf{conservative field}.
+If we integrate the electric field along a closed loop
+(i.e., a loop that starts and ends at the same position)
+we find that the electric potential is \qty{0}{\volt}.
