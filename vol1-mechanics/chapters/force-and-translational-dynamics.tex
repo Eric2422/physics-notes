@@ -168,35 +168,33 @@ The \textbf{gravitational field} \(g\) outside of a sphere is
 \end{equation}
 where \(m\) is the mass of the sphere.
 
-The gravity at all points inside a hollow spherical shell is 0.
-
 For the gravitational field \emph{inside} a sphere,
-if \(r\) is the distance from the center,
-\(\rho(r)\) is the density as a function of \(r\),
-and \(R\) is the radius of an imaginary inner sphere,
-the magnitude of the gravitational field at distance \(R\)
+if \(r'\) is a dummy integration variable for radius from the center,
+\(\rho(r')\) is the density as a function of \(r'\),
+and \(r\) is the radius of an imaginary inner sphere,
+the magnitude of the gravitational field at distance \(r\)
 from the center is
 \begin{equation}
-    g = \frac{G}{R^2}
-    \int_{0}^{R} 4\pi r^2 \rho(r) \odif{r}.
+    g = \frac{G}{r^2}
+    \int_{0}^{r} 4\pi (r')^2 \rho(r') \odif{r'}.
 \end{equation}
-The mass beyond radius \(r\) can be ignored.
+The gravity at all points inside a hollow spherical shell is 0,
+so the mass beyond radius \(r'\) can be ignored.
 
 For a sphere of constant density \(\rho\), mass \(M\),
-and radius \(R_\mathrm{outer}\),
-when the the distance from the center \(R < R_\mathrm{outer}\),
+and radius \(R\),
+when the distance from the center \(r\) is less than \(R\) (\(r < R\)),
 the gravitational field \(\vecb{g}\) is given by
 \begin{equation}
     \begin{aligned}
-        g &= \frac{G}{R^2} \int_{0}^{R} 4\pi
-        r^2 \rho \odif{r} \\
-        &= \frac{4 G \pi \rho}{R^2}
-        \int_{0}^{R} r^2 \odif{r} \\
-        &= \frac{4 G \pi \rho}{R^2} \frac{R^3}{3} \\
-        &= \frac{4}{3} \pi G \rho R \\
-        &= \frac{4}{3} \pi G R \frac{M}{\frac{4}{3} \pi R_\mathrm{outer}^3} \\
-        &= \frac{4}{3} \pi G R \frac{M}{\frac{4}{3} \pi R_\mathrm{outer}^3} \\
-        &= \frac{G M R}{R_\mathrm{outer}^3}
+        g &= \frac{G}{r^2} \int_{0}^{r} 4\pi
+        (r')^2 \rho \odif{r'} \\
+        &= \frac{4 G \pi \rho}{r^2}
+        \int_{0}^{R} (r')^2 \odif{r'} \\
+        &= \frac{4 G \pi \rho}{r^2} \frac{r^3}{3} \\
+        &= \frac{4}{3} \pi G \rho r \\
+        &= \frac{4}{3} \pi G \frac{M}{\frac{4}{3} \pi R^3} r \\
+        &= \frac{G M r}{R^3}.
     \end{aligned}
 \end{equation}
 
