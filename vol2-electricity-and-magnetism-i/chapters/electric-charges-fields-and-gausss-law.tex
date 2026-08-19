@@ -215,30 +215,27 @@ This leads us back to Coulomb's law [\pgRef{eq:coulombs-law}].
 We can also apply Gauss's law to the electric field inside of a charged sphere.
 If we draw our imaginary surface inside a sphere,
 the charge outside of it can be ignored.
-Let
-\begin{itemize}
-    \item \(r\) be the distance from the center of the sphere,
-    \item \(R_\mathrm{S}\) is the radius of the imaginary Gaussian surface,
-    \item \(R\) be the radius of the sphere,
-    \item \(\rho(r)\) be the charge density as a function of radius.
-\end{itemize}
-The charge inside the sphere is thus
+Let \(r\) be the distance from the center of the sphere,
+\(R\) is the radius of the imaginary Gaussian surface,
+and \(\rho(r)\) be the charge density as a function of radius.
+
+The charge inside the sphere is
 \begin{equation}
-    q = \int_0^{\mathrm{R_\mathrm{S}}} 4 \rho(r) \pi r^2 \odif{r}.
+    q = \int_0^{\mathrm{R}} 4 \pi r^2 \rho(r) \odif{r}.
 \end{equation}
 Similarly to the above derivation of Coulomb's law,
-the flux \(\Phi_E\) is \(4 E \pi r^2\),
+the electric flux \(\Phi_E\) is \(4 E \pi R^2\),
 so we find
 \begin{equation}
     \begin{aligned}
-        4 E \pi R_\mathrm{S}^2
+        4 E \pi R^2
         &= \frac{
-            \int_0^{\mathrm{R_\mathrm{S}}} 4 \rho(r) \pi r^2 \odif{r}
+            \int_0^{\mathrm{R}} 4 \pi r^2 \rho(r) \odif{r}
         }{\epsilon_0} \\
         E
         &= \frac{
-            \int_0^{\mathrm{R_\mathrm{S}}} \rho(r) r^2 \odif{r}
-        }{R_\mathrm{S}^2 \epsilon_0} \\
+            \int_0^{\mathrm{R}} r^2 \rho(r) \odif{r}
+        }{R^2 \epsilon_0} \\
     \end{aligned}
 \end{equation}
 In the case where \(\rho(r)\) is a constant density \(\rho\),
@@ -247,13 +244,13 @@ we find
     \begin{aligned}
         E
         &= \frac{
-            \int_0^{\mathrm{R_\mathrm{S}}} \rho r^2 \odif{r}
-        }{R_\mathrm{S}^2 \epsilon_0} \\
+            \int_0^{\mathrm{R}} r^2 \rho \odif{r}
+        }{R^2 \epsilon_0} \\
         &= \frac{
-            \rho R_\mathrm{S}^3
-        }{3 R_\mathrm{S}^2 \epsilon_0} \\
+            R^3 \rho
+        }{3 R^2 \epsilon_0} \\
         &= \frac{
-            \rho R_\mathrm{S}
+            R \rho
         }{3 \epsilon_0} \\
     \end{aligned}
 \end{equation}
