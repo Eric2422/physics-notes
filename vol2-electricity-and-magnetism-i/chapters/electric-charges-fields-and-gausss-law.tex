@@ -221,7 +221,7 @@ and \(\rho(r)\) be the charge density as a function of radius.
 
 The charge inside the sphere is
 \begin{equation}
-    q = \int_0^{\mathrm{R}} 4 \pi r^2 \rho(r) \odif{r}.
+    q = \int_{0}^{\mathrm{R}} 4 \pi r^2 \rho(r) \odif{r}.
 \end{equation}
 Similarly to the above derivation of Coulomb's law,
 the electric flux \(\Phi_E\) is \(4 E \pi R^2\),
@@ -230,11 +230,11 @@ so we find
     \begin{aligned}
         4 E \pi R^2
         &= \frac{
-            \int_0^{\mathrm{R}} 4 \pi r^2 \rho(r) \odif{r}
+            \int_{0}^{\mathrm{R}} 4 \pi r^2 \rho(r) \odif{r}
         }{\epsilon_0} \\
         E
         &= \frac{
-            \int_0^{\mathrm{R}} r^2 \rho(r) \odif{r}
+            \int_{0}^{\mathrm{R}} r^2 \rho(r) \odif{r}
         }{R^2 \epsilon_0} \\
     \end{aligned}
 \end{equation}
@@ -244,7 +244,7 @@ we find
     \begin{aligned}
         E
         &= \frac{
-            \int_0^{\mathrm{R}} r^2 \rho \odif{r}
+            \int_{0}^{\mathrm{R}} r^2 \rho \odif{r}
         }{R^2 \epsilon_0} \\
         &= \frac{
             R^3 \rho
