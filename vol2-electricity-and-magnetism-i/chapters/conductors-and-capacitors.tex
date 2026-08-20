@@ -19,14 +19,23 @@ The capacitance is defined as
 where \(q\) is the magnitude of charge on each conductor
 and \(V\) is the voltage between the two conductors.
 
-\subsection{Parallel Plate Capcitors}
+\subsection{Parallel Plate Capacitors}
 
 \textbf{Parallel plate capacitors} are the most common type of capacitor.
 They are composed of two parallel plates,
 and their capacitance \(C\) is given by
 \begin{equation}
-    C = \frac{\epsilon_\mathrm{d} A}{d},
+    C = \frac{\epsilon_0 \kappa \mathrm{d} A}{d},
 \end{equation}
-where \(\epsilon_\mathrm{d}\) is the permittivity of the \textbf{dielectric},
+where \(\kappa\) is the unitless constant of the \textbf{dielectric},
 \(A\) is the area of each plate,
 and \(d\) is the distance between the plates.
+
+A dielectric is a insulator inserted between the plates of the capacitors
+to increase the capacitance.
+A vacuum will have a constant of \(\kappa = 1\),
+since \(\epsilon_0\) is the vacuum permittivity after all.
+Air has a dielectric constant of slightly less than 1.
+When the voltage across the capacitor is too high,
+\textbf{dielectric breakdown} occurs;
+the voltage at which this occurs is dependant on the dielectric.
