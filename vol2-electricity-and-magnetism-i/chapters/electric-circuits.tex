@@ -2,24 +2,26 @@
 
 \section{Ohm's Law}
 
-Electric currents are the flow of electrons through a conductor.
-\textbf{Electric current} (\(I\)) is measured in amperes (\unit{\ampere}),
-also informally called amps.
+\textbf{Electric current} \(I\) is the flow of electrons through a conductor.
+It is measured in amperes (\unit{\ampere}),
+also informally called "amps".
+Although the unit of current is amperes,
+a device that measures current is an \textbf{ammeter}.
+
 Despite electrons being the carriers of current,
 the direction of current is conventionally reverse of the direction
 of electron flow,
 as if positive charges are flowing;
 this is called "\textbf{conventional current}".
 
-Electric currents occur in response
-to a difference in electric potential between two points,
-which is \textbf{voltage} (\(V\))
-and has SI units of volts (\unit{\volt}).
+Electric currents occur in response to a voltage,
+and the voltage that drives a circuit is the \textbf{electromotive
+force}~(\textbf{emf}), which is symbolized by \(\epsilon\).
 
 The relation between the voltage \(V\) and current \(I\) is given by
 \textbf{Ohm's law}:
 \begin{equation} \label{eq:ohms-law}
-    V = I R
+    V = I R,
 \end{equation}
 where \(R\) is the \textbf{resistance}, which has SI units of ohms
 (\unit{\ohm}).
@@ -46,7 +48,8 @@ considered resistors.
         \begin{equation}
             \sum_i V_i = 0.
         \end{equation}
-        This results from the fact that electric fields are conservative.
+        This results from the fact that electric fields are conservative
+        [\pgRef{sec:electric-potential}].
 \end{enumerate}
 
 \section{Power}
@@ -73,5 +76,3 @@ Therefore, we can use dimensional analysis to find that
 \end{equation}
 We can apply Ohm's law [\pgRef{eq:ohms-law}] to replace either
 current or voltage.
-
-\section{Gauss's Law of Magnetism}
