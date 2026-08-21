@@ -19,14 +19,35 @@ The capacitance is defined as
 where \(q\) is the magnitude of charge on each conductor
 and \(V\) is the voltage between the two conductors.
 
-\subsection{Parallel Plate Capcitors}
+\subsection{Parallel Plate Capacitors}
 
 \textbf{Parallel plate capacitors} are the most common type of capacitor.
 They are composed of two parallel plates,
 and their capacitance \(C\) is given by
 \begin{equation}
-    C = \frac{\epsilon_\mathrm{d} A}{d},
+    C = \frac{\epsilon_0 \kappa \mathrm{d} A}{d},
 \end{equation}
-where \(\epsilon_\mathrm{d}\) is the permittivity of the \textbf{dielectric},
-\(A\) is the area of each plate,
-and \(d\) is the distance between the plates.
+where
+\begin{itemize}
+    \item \(\kappa\) is the ratio of the \textbf{dielectric}'s permittivity
+        to the permittivity of free space,
+        i.e., if \(\epsilon_\mathrm{d}\) is the dielectric's permittivity,
+        then
+        \begin{equation}
+            \kappa = \frac{\epsilon_\mathrm{d}}{\epsilon_0};
+        \end{equation}
+    \item \(A\) is the area of each plate;
+    \item \(d\) is the distance between the plates.
+\end{itemize}
+
+A dielectric is a insulator inserted between the plates of the capacitors,
+usually to increase its capacitance,
+though materials with a dielectric constant of less than 1 exist.
+A vacuum has a constant of \(\kappa = 1\)
+since \(\epsilon_0\) is the vacuum permittivity after all.
+Air has a dielectric constant of slightly less than 1.
+When the voltage across the capacitor is too high,
+\textbf{dielectric breakdown} occurs,
+where the electric charge jumps across the capacitor,
+usually damaging the dielectric;
+the voltage at which this occurs is dependant on the dielectric.

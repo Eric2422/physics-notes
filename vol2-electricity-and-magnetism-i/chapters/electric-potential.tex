@@ -1,13 +1,30 @@
 \chapter{Electric Potential}
 
+\section{Work}
+
+\textbf{Work} (\(W\)) is measured in joules (\unit{\joule})
+and is defined as the change in the energy of a system.
+For work done \emph{by} the system,
+\begin{equation}
+    W = - \Delta E.
+\end{equation}
+For work done \emph{upon} the system,
+\begin{equation}
+    W = \Delta E.
+\end{equation}
+
+\section{Electric Potential Energy}
+
 \textbf{Electric potential energy} (\(U_E\))
 has SI units of joules (\unit{\joule}).
 Electric potential energy can be found by integrating electric force
 over distance,
 i.e.,
 \begin{equation}
-    U_E = - \int \vecb{F_E} \cdot \odif{\vecb{r}}
+    U_E = - \int_C \vecb{F_E} \cdot \odif{\vecb{r}}
 \end{equation}
+
+\section{Electric Potential}
 
 \textbf{Electric potential} (\(V_E\) or simply \(V\))
 has SI units of joules per coulomb (\unit{\joule \per \coulomb})
@@ -17,7 +34,7 @@ is also known as \textbf{voltage}.
 Electric potential can be found be integrating electric field over distance,
 i.e.,
 \begin{equation}
-    V = - \int \vecb{E} \cdot \odif{\vecb{r}}
+    V = - \int_C \vecb{E} \cdot \odif{\vecb{r}}
 \end{equation}
 If we apply this to Coulomb's law [\pgRef{eq:coulombs-law}],
 we find
@@ -28,6 +45,11 @@ we find
     \end{aligned}
 \end{gather}
 
-Similarly to how we can multiply electric field by charge to find
-electric force,
+Similarly to how we can multiply electric field by charge
+to find electric force,
 we can multiply electric potential by charge to find electric potential energy.
+
+Electric fields are a \textbf{conservative field}.
+If we integrate the electric field along a closed loop
+(i.e., a loop that starts and ends at the same position)
+we find that the electric potential is \qty{0}{\volt}.
