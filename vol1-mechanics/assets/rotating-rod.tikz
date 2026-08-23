@@ -1,6 +1,12 @@
 \begin{tikzpicture}
     \draw (-6, -0.3) rectangle (6, 0.3);
-    \draw[{|[scale=2]}-{|[scale=2]}] (-6, -0.667) -- (6, -0.667) node[midway, below] {\(\ell\)};
+    \draw[{|[scale=2]}-{|[scale=2]}] (-6, -0.667) -- (6, -0.667)
+    node[midway, below] {\(\ell\)};
     \draw[dotted, line width = 0.333mm, line cap=round] (0, -0.5) -- (0, 1);
-    \draw[->, thick] (0, 0) arc [start angle=-90, end angle=225, radius=4mm];
+    \draw[->, thick] (0, 0) arc [
+        start angle=-90,
+        end angle=240,
+        x radius=6mm,
+        y radius=3mm
+    ];
 \end{tikzpicture}
