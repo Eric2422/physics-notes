@@ -7,6 +7,8 @@
     }
 
     \fill (0, 0) circle (0.25);
-    \draw[->] (0, 0) -- (-3, 0) node[midway, below] {\(F_a = \qty{2}{\newton}\)};
-    \draw[->] (0, 0) -- (4.5, 0) node[midway, below] {\(F_b = \qty{3}{\newton}\)};
+    \draw[->] (0, 0) -- (-3, 0) node[midway, below]
+    {\(F_a = \qty{2}{\newton}\)};
+    \draw[->] (0, 0) -- (4.5, 0) node[midway, below]
+    {\(F_b = \qty{3}{\newton}\)};
 \end{tikzpicture}
