@@ -3,10 +3,15 @@
 \section{Ohm's Law}
 
 \textbf{Electric current}~\(I\) is the flow of electrons through a conductor.
-It is measured in amperes (\unit{\ampere}),
+It is a scalar measured in amperes (\unit{\ampere}),
 also informally called "amps".
 Although the unit of current is amperes,
 a device that measures current is an \textbf{ammeter}.
+
+Current is the derivative of charge, i.e.,
+\begin{equation} \label{eq:current-charge}
+    I = \odv{q}{t}.
+\end{equation}
 
 Despite electrons being the carriers of current,
 the direction of current is conventionally reverse of the direction
@@ -44,7 +49,7 @@ considered resistors.
         (\cpageref{sec:electric-charges}).
     \item \textbf{Kirchoff's loop rule} states that all the voltages
         in a closed circuit must add up to \(\qty{0}{\volt}\):
-        \begin{equation}
+        \begin{equation} \label{eq:kirchoffs-loop-rule}
             \sum_i V_i = 0.
         \end{equation}
         This results from the fact that electric fields are conservative
@@ -75,3 +80,39 @@ Therefore, we can use dimensional analysis to find that
 \end{equation}
 We can apply Ohm's law~[\pgRef{eq:ohms-law}] to replace either
 current or voltage.
+
+\section{RC Circuits}
+
+\textbf{RC circuits} are composed of a resistor and capacitor
+hooked up to a voltage source.
+They charge and and discharge gradually.
+Practically, any time you charge or discharge a capacitor,
+it is going to take time since wires have an inherent resistance.
+(You could try superconductors, but I doubt you have access to them.)
+
+From Kirchoff's loop rule~[\pgRef{eq:kirchoffs-loop-rule}],
+Ohm's law~[\pgRef{eq:ohms-law}], and \pgRef{eq:capacitance-def} we know
+\begin{equation}
+    \epsilon - I R - \frac{q}{C} = 0.
+\end{equation}
+From \pgRef{eq:current-charge}, we get
+\begin{equation}
+    \begin{aligned}
+        \epsilon - \odv{q}{t} R - \frac{q}{C} &= 0 \\
+        \odv{q}{t} R + \frac{q}{C} &= \epsilon \\
+        \odv{q}{t} + \frac{q}{R C} &= \epsilon \\
+        \odv{q}{t} e^{\frac{t}{R C}}
+        + \frac{q}{R C} e^{\frac{t}{R C}}
+        &= \epsilon e^{\frac{t}{R C}} \\
+        \odv{}{t} \ab[q e^{\frac{t}{R C}}] &= \epsilon e^{\frac{t}{R C}} \\
+        q e^{\frac{t}{R C}} &= \int \epsilon e^{\frac{t}{R C}} \odif{t}
+    \end{aligned}
+\end{equation}
+Awkwardly, we need an integration constant but \(C\) is already taken.
+Let us use \(C_\mathrm{i}\) instead, giving us
+\begin{equation}
+    \begin{aligned}
+        q e^{\frac{t}{R C}} &=  \epsilon R C e^{\frac{t}{R C}} + C_\mathrm{i} \\
+        q &=  \epsilon R C + C_\mathrm{i} e^{- \frac{t}{R C}} \\
+    \end{aligned}
+\end{equation}
