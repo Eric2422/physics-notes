@@ -1,0 +1,107 @@
+\chapter{Electromagnetic Induction}
+
+\section{Faraday's Law and Lenz's Law}
+
+\textbf{Faraday's law} and \textbf{Lenz's law} are usually written together as
+\begin{equation} \label{eq:faraday-lenz-law}
+    \epsilon = - \odv{\Phi_B}{t}
+\end{equation}
+Strictly speaking, Faraday's law gives the magnitude,
+while Lenz's law gives the sign.
+
+This should not be surprising at this point,
+but the direction of the induced emf is also based on the right-hand rule.
+Point your right thumb in the direction that the flux is \emph{changing}.
+If the magnitude of the flux is \emph{increasing},
+point your right thumb in the \emph{same} direction as the magnetic field.
+If the magnitude of the flux is \emph{decreasing},
+point your right thumb in the \emph{opposite} direction of the magnetic field,
+or alternatively, point your \emph{left} thumb
+and point in the \emph{same} direction as the magnetic field.
+In any case,
+the induced emf will be in the same direction as your curled fingers.
+
+\section{Inductors}
+
+Physically speaking, \textbf{inductors} are not much different from solenoids;
+they are both coils of wire.
+The only difference is how they are used.
+
+Circuits are essentially large loops of conducting metal,
+which means they are also very effective at catching changing magnetic flux
+and generating an emf.
+The problem is that this emf will likely overload our devices and fry them.
+To solve this issue, we add an inductor.
+When the emf changes,
+the inductor will generate a counter emf to help stabilize the current.
+
+The effectiveness of an inductor is its \textbf{inductance}~(symbol: \(L\)),
+which has SI units of henries~(\unit{\henry}) and is defined as
+\begin{equation}
+    L \coloneq \frac{V}{\odv{I}{t}}.
+\end{equation}
+
+\section{LC Circuits}
+
+\textbf{LC circuits}, as the name suggests,
+are composed of an inductor and a capacitor.
+If we hook up a charged capacitor to an inductor
+it forms an oscillation between storing energy in electric and magnetic fields.
+
+The angular frequency~\(\omega\) of the LC circuit is given by
+\begin{equation}
+    \omega = \frac{1}{\sqrt{L C}}.
+\end{equation}
+
+\section{Maxwell's Equations}
+
+\textbf{Maxwell's equations} are essentially the essence
+of electricity and magnetism distilled into four equations.
+You have more or less seen them already.
+The equations are
+\begin{subequations}
+    \begin{equation}
+        \oiint_S \vecb{E} \cdot \odif{\vecb{A}} = \frac{q}{\epsilon_0},
+    \end{equation}
+    \begin{equation}
+        \oiint_S \vecb{B} \cdot \odif{\vecb{A}} = 0,
+    \end{equation}
+    \begin{equation}
+        \oint_C \vecb{E} \cdot \odif{\vecb{\ell}} = - \odv{\Phi_B}{t},
+    \end{equation}
+    \begin{equation}
+        \oint_C \vecb{B} \cdot \odif{\vecb{\ell}}
+        = \mu_0 I + \mu_0 \epsilon \odv{\Phi_E}{t}.
+    \end{equation}
+\end{subequations}
+Indeed, these are Gauss's law for electricity~[\pgRef{eq:gausss-law}],
+Gauss' law for magnetism~[\pgRef{eq:gausss-law-magnetism}],
+the Faraday-Lenz law~[\pgRef{eq:faraday-lenz-law}],
+and Ampère's law~[\pgRef{eq:amperes-law}] (sort of).
+It turns out that Ampère's law was incomplete,
+and Maxwell added the
+\begin{equation*}
+    \mu_0 \epsilon \odv{\Phi_E}{t}
+\end{equation*}
+term, which is often uncreatively called "Mawell's addition to Ampère's law".
+The new combined equation is known as the \textbf{Ampère-Maxwell law}.
+
+The Faraday-Lenz law suggests that changing magnetic fields
+create electric fields,
+and the Ampère-Maxwell law suggests that changing electricity fields
+create magnetic fields.
+This suggests that it is possible for these two effects to chain together
+into oscillating electric and magnetic fields,
+known as \textbf{electromagnetic waves} or \textbf{EM waves}.
+Maxwell correctly postulated that his mathematical electromagnetic waves
+were in fact light.
+From Maxwell's equations,
+we can derive that the speed of light \(c\) is
+\begin{equation}
+    c = \frac{1}{\sqrt{\epsilon_0 \mu_0}}
+\end{equation}
+The exact derivation is too advanced for this volume
+and will be provided in Vol.~3: Waves and Oscillations.
+
+The discovery that light has a fixed speed would be crucial to the
+discovery of the theory of relativity in the early 1900s.
