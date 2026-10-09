@@ -3,6 +3,8 @@
         "Ampère",
         "amsmath",
         "amssymb",
+        "axhline",
+        "axvline",
         "biber",
         "Biot",
         "cleveref",
@@ -10,7 +12,6 @@
         "csquotes",
         "esint",
         "fnsymbol",
-        "Kirchoff",
         "Lenz",
         "matb",
         "mathrm",
@@ -24,8 +25,12 @@
         "Undriven",
         "usetikzlibrary",
         "vecb",
+        "xbound",
         "xlabel",
-        "ylabel"
+        "xticks",
+        "ybound",
+        "ylabel",
+        "yticks"
     ],
     "latex-workshop.latex.watch.files.ignore": ["./template/*"]
 }
