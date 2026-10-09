@@ -7,24 +7,20 @@
 \frontmatter
 
 \titlePage{5}{Modern Physics}
-
 \tableofcontents \label{contents}
 
 \mainmatter
 
-\part{Special and General Relativity}
+\input{chapters/domains-of-physics.tex}
 
-\input{chapters/special-and-general-relativity/special-relativity.tex}
-\input{chapters/special-and-general-relativity/general-relativity.tex}
+\part{Special Relativity}
+
+\input{chapters/special-relativity/momentum-energy.tex}
 
 \part{Quantum Mechanics}
 
 \input{chapters/quantum-mechanics/photons.tex}
 \input{chapters/quantum-mechanics/schroedingers-equation.tex}
-
-\part{Statistical Mechanics}
-
-\input{chapters/statistical-mechanics/thermodynamics.tex}
 
 \appendix
 
@@ -32,9 +28,9 @@
 
 \backmatter
 
-\printbibliography[
-    heading=bibintoc,
-    title={References}
-]
+% \printbibliography[
+%     heading=bibintoc,
+%     title={References},
+% ]
 
 \end{document}

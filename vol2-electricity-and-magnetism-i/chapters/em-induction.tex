@@ -27,13 +27,14 @@ Physically speaking, \textbf{inductors} are not much different from solenoids;
 they are both coils of wire.
 The only difference is how they are used.
 
-Circuits are essentially large loops of conducting metal,
-which means they are also very effective at catching changing magnetic flux
-and generating an emf.
-The problem is that this emf will likely overload our devices and fry them.
+Circuits are essentially loops of conductive metal,
+which make them also effective at catching changing magnetic flux and
+generating an emf.
+The generated emf may overload the electrical devices in the circuit
+or counteract the power source.
 To solve this issue, we add an inductor.
-When the emf changes,
-the inductor will generate a counter emf to help stabilize the current.
+When the current changes,
+the inductor will generate a counter-emf to help stabilize the current.
 
 The effectiveness of an inductor is its \textbf{inductance}~(symbol: \(L\)),
 which has SI units of henries~(\unit{\henry}) and is defined as
@@ -59,6 +60,10 @@ The angular frequency~\(\omega\) of the LC circuit is given by
 of electricity and magnetism distilled into four equations.
 You have more or less seen them already.
 The equations are
+\footnote{
+    The following equations are actually taken from my notes for
+    Waves and Oscillations.
+}
 \begin{subequations}
     \begin{equation}
         \oiint_S \vecb{E} \cdot \odif{\vecb{A}} = \frac{q}{\epsilon_0},
@@ -83,7 +88,7 @@ and Maxwell added the
 \begin{equation*}
     \mu_0 \epsilon \odv{\Phi_E}{t}
 \end{equation*}
-term, which is often uncreatively called "Mawell's addition to Ampère's law".
+term, which is often uncreatively called "Maxwell's addition to Ampère's law".
 The new combined equation is known as the \textbf{Ampère-Maxwell law}.
 
 The Faraday-Lenz law suggests that changing magnetic fields
