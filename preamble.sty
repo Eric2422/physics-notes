@@ -59,23 +59,22 @@
 }
 
 % Create custom title page.
-\newcommand{\titlePage}[2]{
+\newcommand{\titlePage}[1]{
     \begin{titlepage}
         \centering
         \doublespacing
 
         \Huge
-        \textbf{Physics Notes} \\
-        \huge
-        Volume #1: #2 \\
+        \textbf{#1} \\
         \vfill
 
-        \LARGE
+        \huge
         Eric Zhang \\
         \vfill
 
-        \Large
-        \url{https://github.com/Eric2422/physics-notes} \\
+        \huge
+        \href{https://github.com/Eric2422/physics-notes}
+        {github.com/Eric2422/physics-notes} \\
         \today
     \end{titlepage}
 }
