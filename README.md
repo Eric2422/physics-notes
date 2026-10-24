@@ -1,21 +1,23 @@
 # Physics Notes
 
 These documents were created as a collection and expansion of my physics notes
-from AP Physics C: Electricity and Magnetism, AP Physics C: Mechanics,
-and the University of Maryland's PHYS273: Intermediate Oscillations and Waves,
-PHYS313: Electricity and Magnetism I, and PHYS371: Modern Physics.
+from high school and college.
 
-Note that the above classes are listed in the order that I took them.
-However, the notes are arranged with introductory electricity and magnetism
-*after* mechanics,
-since that is the order that most people take them in.
-
-The electricity and magnetism volumes have been retroactively renamed
-starting from one (I).
+Strictly speaking,
+it is possible to learn Electricity and Magnetism I before Mechanics
+(in fact, that's the order I learned it in),
+but it's generally recommended to learn Mechanics first.
 
 ## Mathematics
 
-These notes do not contain information on calculus, linear algebra,
+To avoid inserting math material into the middle of physics notes,
+I have separated them out into a separate appendix.
+Generally,
+each volume assumes that you are familiar with math from the previous volume.
+The only exception is that Electricity and Magnetism I
+re-includes math from Mechanics.
+
+Note that these notes do not contain information on calculus, linear algebra,
 or differential equations.
 
 ## Contents
