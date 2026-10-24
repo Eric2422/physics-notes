@@ -15,11 +15,7 @@ starting from one (I).
 
 ## Mathematics
 
-These notes are structured in a way to separate physics and mathematical techniques.
-Each volume contains an appendix of the recommended mathematical topics,
-and each chapter lists the relevant sections.
-
-However, these notes currently do not cover calculus, linear algebra,
+These notes do not contain information on calculus, linear algebra,
 or differential equations.
 
 ## Contents
