@@ -68,13 +68,13 @@ or wish to find the force exerted on multiple different particles.
     In vector form, the electric field is
     \begin{equation} \label{eq:sphere-electric-field-vector}
         \begin{aligned}
-            \vecb{E} &= k \frac{q}{\|\vecb{r}\|^2} \hat{\vecb{r}} \\
-            &= \frac{q}{4 \pi \epsilon_0 \|\vecb{r}\|^2}  \hat{\vecb{r}},
+            \vec{E} &= k \frac{q}{\|\vec{r}\|^2} \hat{\vec{r}} \\
+            &= \frac{q}{4 \pi \epsilon_0 \|\vec{r}\|^2}  \hat{\vec{r}},
         \end{aligned}
     \end{equation}
-    where \(\vecb{r}\) is the difference in position between the
+    where \(\vec{r}\) is the difference in position between the
     sphere exerting the field and the particle receiving it,
-    i.e., \(\vecb{r} = \vecb{r_\mathrm{receive}} - \vecb{r_\mathrm{exert}}\).
+    i.e., \(\vec{r} = \vec{r_\mathrm{receive}} - \vec{r_\mathrm{exert}}\).
 \end{subequations}
 Positive charges experience a force in the direction of the field,
 and negative charges experience a force in the opposite direction.
@@ -83,10 +83,10 @@ To find the force exerted on a charged particle,
 we multiply the electric field it is in by its charge,
 i.e.,
 \begin{equation}
-    \vecb{F_E} = \vecb{E} q,
+    \vec{F_E} = \vec{E} q,
 \end{equation}
-where \(\vecb{F_E}\) is the electric force,
-\(\vecb{E}\) is the electric field,
+where \(\vec{F_E}\) is the electric force,
+\(\vec{E}\) is the electric field,
 and \(q\) is the charge.
 
 \subsection{Vector Fields}
@@ -116,10 +116,10 @@ in analogy with flowing water.
 
 The general formula for flux is
 \begin{equation}
-    \Phi = \iint_S \vecb{F}(\vecb{r}) \cdot \odif{\vecb{A}},
+    \Phi = \iint_S \vec{F}(\vec{r}) \cdot \odif{\vec{A}},
 \end{equation}
-where \(\vecb{A}\) is the area vector
-and \(\vecb{F}(\vecb{r})\) is the function of the field in 3D space.
+where \(\vec{A}\) is the area vector
+and \(\vec{F}(\vec{r})\) is the function of the field in 3D space.
 
 For introductory electricity and magnetism,
 we usually focus on a few simpler cases.
@@ -130,15 +130,15 @@ For the case of a uniform electric field passing through an flat open surface,
 the flux equation simplifies to
 \begin{equation}
     \begin{aligned}
-        \Phi_E = \vecb{E} \cdot \vecb{A}
+        \Phi_E = \vec{E} \cdot \vec{A}
     \end{aligned}
 \end{equation}
 where
 \begin{itemize}
     \item \(\Phi_E\) is the electric flux,
-    \item \(\vecb{E}\) is the electric field vector,
-    \item \(\vecb{A}\) is the area vector.
-        Note \(\vecb{A}\) is in the direction of the area's normal vector.
+    \item \(\vec{E}\) is the electric field vector,
+    \item \(\vec{A}\) is the area vector.
+        Note \(\vec{A}\) is in the direction of the area's normal vector.
 \end{itemize}
 Our surface in this case is infinitely thin.
 By intuition, when \(\theta\) is \(\qty{90}{\degree}\),
@@ -156,12 +156,12 @@ This means that only electric charges inside a closed surface
 contributes to the electric flux,
 which leads us to \textbf{Gauss's law} in integral form:
 \begin{equation} \label{eq:gausss-law}
-    \oiint_S \vecb{E} \cdot \odif{\vecb{A}} = \frac{q}{\epsilon_0},
+    \oiint_S \vec{E} \cdot \odif{\vec{A}} = \frac{q}{\epsilon_0},
 \end{equation}
 where
 \begin{itemize}
-    \item \(\vecb{E}\) is the electric field,
-    \item \(\vecb{A}\) is the area vector of the surface,
+    \item \(\vec{E}\) is the electric field,
+    \item \(\vec{A}\) is the area vector of the surface,
     \item \(q\) is the charge enclosed by the surface.
         Some authors may use \(q_\mathrm{en}\)
         to emphasized that it must be enclosed.
@@ -172,10 +172,10 @@ so we can show that Gauss's law simplies down to Coulomb's law
 for the case of a charge particle in a spheral surface.
 Let
 \begin{itemize}
-    \item \(\vecb{A}\) be the area vector of the spherical surface
+    \item \(\vec{A}\) be the area vector of the spherical surface
         and \(A\) be its magnitude,
     \item \(r\) be the radius of the spherical surface,
-    \item \(\vecb{E}\) be the electric field and \(E\) be its magnitude,
+    \item \(\vec{E}\) be the electric field and \(E\) be its magnitude,
     \item \(\Phi_E\) be the electric flux,
     \item \(q\) be the enclosed charge.
 \end{itemize}
@@ -186,7 +186,7 @@ The surface area of a sphere is given by
 Since electric fields radiate in a sphere,
 the electric field and surface area are orthogonal at all points:
 \begin{equation}
-    \vecb{E} \cdot \odif{\vecb{A}} = E \odif{A}.
+    \vec{E} \cdot \odif{\vec{A}} = E \odif{A}.
 \end{equation}
 Since electric field is of equal magnitude at all points,
 we can multiply the electric field by area to find the flux is
