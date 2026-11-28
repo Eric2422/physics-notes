@@ -90,11 +90,14 @@
 % Cross reference with page number but sentence-initial.
 \newcommand{\PgRef}[1]{\Cref{#1} (\cpageref{#1})}
 
-% Vector bold.
-\newcommand{\vecb}[1]{\bm{\mathrm{#1}}}
+% Set vector arrow to a different command and make vectors bold.
+\newcommand{\arrow}[1]{\vec{#1}}
+\renewcommand{\vec}[1]{\bm{\mathrm{#1}}}
+\newcommand{\uvec}[1]{\vec{\hat{#1}}}
 % Matrix bold.
 \newcommand{\mat}[1]{\underline{#1}}
 \newcommand{\matb}[1]{\bm{\mathrm{#1}}}
+\newcommand{\adj}{\operatorname{adj}}
 
 % Use roman font rather than fraktur.
 % Most modern publications favor roman
