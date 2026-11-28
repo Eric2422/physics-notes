@@ -41,13 +41,13 @@ depends on whether the mass distribution is \textbf{discrete} or
     \end{equation}
     More compactly, we can re-write it as the vector
     \begin{equation}
-        \vecb{r_{\mathrm{c.m.}}} = \frac{\sum_i m_i \vecb{r}_i}{m_i}.
+        \vec{r_{\mathrm{c.m.}}} = \frac{\sum_i m_i \vec{r}_i}{m_i}.
     \end{equation}
 \end{subequations}
 
 For a continuous mass distribution, the c.m. is given by
 \begin{equation} \label{eq:continuous-cm}
-    \vecb{r_{\mathrm{c.m.}}} = \frac{\int \vecb{r} \odif{m}}{\int \odif{m}},
+    \vec{r_{\mathrm{c.m.}}} = \frac{\int \vec{r} \odif{m}}{\int \odif{m}},
 \end{equation}
 where \(\odif{m}\) is a small amount of mass.
 
@@ -140,8 +140,8 @@ Some examples:
     \input{assets/free-body-diagram.tikz}
     \caption{
         Diagram to scale.
-        \(\vecb{F_b}\) is of greater magnitude than and opposite
-        direction to \(\vecb{F_a}\).
+        \(\vec{F_b}\) is of greater magnitude than and opposite
+        direction to \(\vec{F_a}\).
     }
 \end{figure}
 
@@ -184,7 +184,7 @@ so the mass beyond radius \(r'\) can be ignored.
 For a sphere of constant density~\(\rho\), mass~\(M\),
 and radius~\(R\),
 when the distance from the center~\(r\) is less than \(R\) (\(r < R\)),
-the gravitational field \(\vecb{g}\) is given by
+the gravitational field \(\vec{g}\) is given by
 \begin{equation}
     \begin{aligned}
         g &= \frac{G}{r^2} \int_{0}^{r} 4\pi
@@ -259,12 +259,12 @@ where
 However, this results in a differential equations problem
 that is too mathematically complicated for AP Physics C:~Mechanics.
 
-A simpler approximation for the drag~\(\vecb{F}_\mathrm{D}\) is
+A simpler approximation for the drag~\(\vec{F}_\mathrm{D}\) is
 \begin{equation} \label{eq:linear-drag}
-    \vecb{F_\mathrm{D}} = - b \vecb{v},
+    \vec{F_\mathrm{D}} = - b \vec{v},
 \end{equation}
 where \(b\) is an experimentally-determined constant
-and \(\vecb{v}\) is the relative velocity between the object and fluid.
+and \(\vec{v}\) is the relative velocity between the object and fluid.
 
 \textbf{Terminal velocity} is when the forces of gravity and drag
 balance each other out.
